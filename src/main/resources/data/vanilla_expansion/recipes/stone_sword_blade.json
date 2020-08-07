@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x",
+    "x",
+    "y"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "y":
+    {
+      "item": "minecraft:flint"
+    }
+  },
+  "result":
+  {
+    "item": "vanilla_expansion:stone_sword_blade",
+    "count": 1
+  }
+}

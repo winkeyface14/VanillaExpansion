@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:wooden_shovel",
+    "minecraft:stone_shovel",
+    "minecraft:golden_shovel",
+    "vanilla_expansion:redstone_shovel",
+}

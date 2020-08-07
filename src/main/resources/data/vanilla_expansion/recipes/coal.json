@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "x x",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "vanilla_expansion:coal_chunk"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:coal",
+    "count": 1
+  }
+}

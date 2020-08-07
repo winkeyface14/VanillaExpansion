@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vanilla_expansion:block_of_bundled_sticks"
+    }
+  ],
+  "result":
+  {
+    "item": "vanilla_expansion:bundle_of_sticks",
+    "count": 9
+  }
+}

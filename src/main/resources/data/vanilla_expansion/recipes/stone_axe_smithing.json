@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:wooden_axe"
+  },
+  "addition": {
+    "item": "vanilla_expansion:stone_axe_head"
+  },
+  "result": {
+    "item": "minecraft:stone_axe"
+  }
+}

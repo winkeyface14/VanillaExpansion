@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "vanilla_expansion:block/block_of_bundled_sticks",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "vanilla_expansion:block/block_of_bundled_sticks"
+    },
+    "axis=z": {
+      "model": "vanilla_expansion:block/block_of_bundled_sticks",
+      "x": 90
+    }
+  }
+}

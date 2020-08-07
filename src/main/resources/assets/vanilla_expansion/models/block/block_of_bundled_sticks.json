@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "vanilla_expansion:blocks/block_of_bundled_sticks_end",
+    "side": "vanilla_expansion:blocks/block_of_bundled_sticks_side"
+  }
+}

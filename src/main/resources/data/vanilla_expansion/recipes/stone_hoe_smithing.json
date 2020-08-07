@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:wooden_hoe"
+  },
+  "addition": {
+    "item": "vanilla_expansion:stone_hoe_head"
+  },
+  "result": {
+    "item": "minecraft:stone_hoe"
+  }
+}

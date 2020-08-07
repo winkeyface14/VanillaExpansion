@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "vanilla_expansion:bundle_of_sticks"
+    }
+  },
+  "result":
+  {
+    "item": "vanilla_expansion:block_of_bundled_sticks",
+    "count": 1
+  }
+}
