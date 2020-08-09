@@ -1,0 +1,8 @@
+{
+  "type": "vanilla_expansion:stonecutting",
+  "ingredient": {
+    "item": "minecraft:quartz_bricks"
+  },
+  "result": "vanilla_expansion:quartz_bricks_slab",
+  "count": 2
+}

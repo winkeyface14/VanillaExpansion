@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "vanilla_expansion:blocks/smoked_quartz_chiseled_top",
+    "side": "vanilla_expansion:blocks/smoked_quartz_chiseled"
+  }
+}

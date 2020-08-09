@@ -1,0 +1,9 @@
+{
+  "type": "vanilla_expansion:smelting",
+  "ingredient": {
+    "item": "vanilla_expansion:smoked_quartz_block"
+  },
+  "result": "vanilla_expansion:smooth_smoked_quartz",
+  "experience": 0.1,
+  "cookingtime": 200
+}

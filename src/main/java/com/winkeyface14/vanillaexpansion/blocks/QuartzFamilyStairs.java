@@ -22,15 +22,9 @@ import java.util.function.Supplier;
 
 public class QuartzFamilyStairs extends StairsBlock {
 
-    private static final DirectionProperty FACING = StairsBlock.FACING;
-
     public QuartzFamilyStairs() {
         super(() -> RegistryHandler.SMOKED_QUARTZ_BLOCK.get().getDefaultState(),
-                Properties.from(RegistryHandler.SMOKED_QUARTZ_BLOCK.get())
-                .hardnessAndResistance(0.8f,0.8f)
-                .sound(SoundType.STONE)
-                .harvestLevel(0)
-                .harvestTool(ToolType.PICKAXE));
+                Properties.from(RegistryHandler.SMOKED_QUARTZ_BLOCK.get()));
     }
 
 }

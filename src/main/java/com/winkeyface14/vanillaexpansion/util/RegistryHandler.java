@@ -7,6 +7,7 @@ import com.winkeyface14.vanillaexpansion.items.*;
 import com.winkeyface14.vanillaexpansion.tools.ModItemTier;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.inventory.container.ContainerType;
@@ -92,6 +93,10 @@ public class RegistryHandler {
     public static final RegistryObject<Block> BARREL_OF_CARROTS_BLOCK = BLOCKS.register("barrel_of_carrots", BarrelOfAnyBlock::new);
     public static final RegistryObject<Block> BARREL_OF_CHORUS_BLOCK = BLOCKS.register("barrel_of_chorus_fruits", BarrelOfAnyBlock::new);
     public static final RegistryObject<Block> SMOKED_QUARTZ_BLOCK = BLOCKS.register("smoked_quartz_block", QuartzFamilyBlock::new);
+    public static final RegistryObject<Block> SMOKED_QUARTZ_PILLAR = BLOCKS.register("smoked_quartz_pillar", QuartzFamilyPillar::new);
+    public static final RegistryObject<Block> CHISELED_SMOKED_QUARTZ_BLOCK = BLOCKS.register("chiseled_smoked_quartz_block", QuartzFamilyBlock::new);
+    public static final RegistryObject<Block> SMOOTH_SMOKED_QUARTZ = BLOCKS.register("smooth_smoked_quartz", QuartzFamilyBlock::new);
+    public static final RegistryObject<Block> SMOKED_QUARTZ_BRICKS = BLOCKS.register("smoked_quartz_bricks", QuartzFamilyBlock::new);
 
     // Block Items
     public static final RegistryObject<Item> CHARCOAL_BLOCK_ITEM = ITEMS.register("charcoal_block", () -> new CharcoalBlockItem(CHARCOAL_BLOCK.get()));
@@ -101,24 +106,38 @@ public class RegistryHandler {
     public static final RegistryObject<Item> BARREL_OF_CARROTS_BLOCK_ITEM = ITEMS.register("barrel_of_carrots", () -> new BarrelOfAnyBlockItem(BARREL_OF_CARROTS_BLOCK.get()));
     public static final RegistryObject<Item> BARREL_OF_CHORUS_BLOCK_ITEM = ITEMS.register("barrel_of_chorus_fruits", () -> new BarrelOfAnyBlockItem(BARREL_OF_CHORUS_BLOCK.get()));
     public static final RegistryObject<Item> SMOKED_QUARTZ_BLOCK_ITEM = ITEMS.register("smoked_quartz_block", () -> new BlockItemBase(SMOKED_QUARTZ_BLOCK.get()));
+    public static final RegistryObject<Item> SMOKED_QUARTZ_PILLAR_ITEM = ITEMS.register("smoked_quartz_pillar", () -> new BlockItemBase(SMOKED_QUARTZ_PILLAR.get()));
+    public static final RegistryObject<Item> CHISELED_SMOKED_QUARTZ_BLOCK_ITEM = ITEMS.register("chiseled_smoked_quartz_block", () -> new BlockItemBase(CHISELED_SMOKED_QUARTZ_BLOCK.get()));
+    public static final RegistryObject<Item> SMOOTH_SMOKED_QUARTZ_ITEM = ITEMS.register("smooth_smoked_quartz", () -> new BlockItemBase(SMOOTH_SMOKED_QUARTZ.get()));
+    public static final RegistryObject<Item> SMOKED_QUARTZ_BRICKS_ITEM = ITEMS.register("smoked_quartz_bricks", () -> new BlockItemBase(SMOKED_QUARTZ_BRICKS.get()));
 
     // Stairs
-    public static final RegistryObject<Block> SMOKED_QUARTZ_STAIRS = BLOCKS.register("smoked_quartz_stairs", QuartzFamilyBlock::new);
+    public static final RegistryObject<Block> SMOKED_QUARTZ_STAIRS = BLOCKS.register("smoked_quartz_stairs", QuartzFamilyStairs::new);
+    public static final RegistryObject<Block> SMOOTH_SMOKED_QUARTZ_STAIRS = BLOCKS.register("smooth_smoked_quartz_stairs", QuartzFamilyStairs::new);
 
     // Stairs
     public static final RegistryObject<Item> SMOKED_QUARTZ_STAIRS_ITEM = ITEMS.register("smoked_quartz_stairs", () -> new BlockItemBase(SMOKED_QUARTZ_STAIRS.get()));
+    public static final RegistryObject<Item> SMOOTH_SMOKED_QUARTZ_STAIRS_ITEM = ITEMS.register("smooth_smoked_quartz_stairs", () -> new BlockItemBase(SMOOTH_SMOKED_QUARTZ_STAIRS.get()));
 
     // Walls
     public static final RegistryObject<Block> SMOKED_QUARTZ_WALL = BLOCKS.register("smoked_quartz_wall", QuartzFamilyWall::new);
+    public static final RegistryObject<Block> QUARTZ_WALL = BLOCKS.register("quartz_wall", QuartzFamilyWall::new);
 
     // Walls Item
     public static final RegistryObject<Item> SMOKED_QUARTZ_WALL_ITEM = ITEMS.register("smoked_quartz_wall", () -> new BlockItemBase(SMOKED_QUARTZ_WALL.get()));
+    public static final RegistryObject<Item> QUARTZ_WALL_ITEM = ITEMS.register("quartz_wall", () -> new BlockItemBase(QUARTZ_WALL.get()));
 
     // Slabs
     public static final RegistryObject<Block> SMOKED_QUARTZ_SLAB = BLOCKS.register("smoked_quartz_slab", QuartzFamilySlab::new);
+    public static final RegistryObject<Block> SMOOTH_SMOKED_QUARTZ_SLAB = BLOCKS.register("smooth_smoked_quartz_slab", QuartzFamilySlab::new);
+    public static final RegistryObject<Block> QUARTZ_BRICKS_SLAB = BLOCKS.register("quartz_bricks_slab", QuartzFamilySlab::new);
+    public static final RegistryObject<Block> SMOKED_QUARTZ_BRICKS_SLAB = BLOCKS.register("smoked_quartz_bricks_slab", QuartzFamilySlab::new);
 
     // Slab Item
-    public static final RegistryObject<Item> SMOKED_QUARTZ_SLAB_ITEMS = ITEMS.register("smoked_quartz_slab", () -> new BlockItemBase(SMOKED_QUARTZ_SLAB.get()));
+    public static final RegistryObject<Item> SMOKED_QUARTZ_SLAB_ITEM = ITEMS.register("smoked_quartz_slab", () -> new BlockItemBase(SMOKED_QUARTZ_SLAB.get()));
+    public static final RegistryObject<Item> SMOOTH_SMOKED_QUARTZ_SLAB_ITEM = ITEMS.register("smooth_smoked_quartz_slab", () -> new BlockItemBase(SMOOTH_SMOKED_QUARTZ_SLAB.get()));
+    public static final RegistryObject<Item> QUARTZ_BRICKS_SLAB_ITEM = ITEMS.register("quartz_bricks_slab", () -> new BlockItemBase(QUARTZ_BRICKS_SLAB.get()));
+    public static final RegistryObject<Item> SMOKED_QUARTZ_BRICKS_SLAB_ITEM = ITEMS.register("smoked_quartz_bricks_slab", () -> new BlockItemBase(SMOKED_QUARTZ_BRICKS_SLAB.get()));
 
     // Tile Entity
 

@@ -1,6 +1,5 @@
 package com.winkeyface14.vanillaexpansion.blocks;
 
-import com.winkeyface14.vanillaexpansion.util.RegistryHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
@@ -16,7 +15,7 @@ import net.minecraftforge.common.ToolType;
 public class QuartzFamilySlab extends SlabBlock {
 
     public QuartzFamilySlab() {
-        super(Properties.from(RegistryHandler.SMOKED_QUARTZ_BLOCK.get())
+        super(Properties.create(Material.ROCK)
                 .hardnessAndResistance(0.8f,0.8f)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)

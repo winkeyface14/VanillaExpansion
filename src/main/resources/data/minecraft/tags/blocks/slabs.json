@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "vanilla_expansion:smoked_quartz_slab"
+    "vanilla_expansion:smoked_quartz_slab",
+    "vanilla_expansion:smoked_quartz_bricks_slab",
+    "vanilla_expansion:smooth_smoked_quartz_slab",
+    "vanilla_expansion:quartz_bricks_slab"
   ]
 }

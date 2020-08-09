@@ -1,0 +1,8 @@
+{
+  "type": "vanilla_expansion:stonecutting",
+  "ingredient": {
+    "item": "vanilla_expansion:smoked_quartz_block"
+  },
+  "result": "vanilla_expansion:smoked_quartz_slab",
+  "count": 2
+}

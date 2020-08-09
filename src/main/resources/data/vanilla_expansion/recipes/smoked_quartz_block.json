@@ -1,0 +1,15 @@
+{
+  "type": "vanilla_expansion:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "vanilla_expansion:smoked_quartz"
+    }
+  },
+  "result": {
+    "item": "vanilla_expansion:smoked_quartz_block"
+  }
+}
