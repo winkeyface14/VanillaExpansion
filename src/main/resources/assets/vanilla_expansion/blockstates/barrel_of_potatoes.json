@@ -1,6 +1,29 @@
 {
   "variants": {
-    "": {
+    "facing=down": {
+      "x": 180,
+      "model": "vanilla_expansion:block/barrel_of_potatoes"
+    },
+    "facing=east": {
+      "x": 90,
+      "y": 90,
+      "model": "vanilla_expansion:block/barrel_of_potatoes"
+    },
+    "facing=north": {
+      "x": 90,
+      "model": "vanilla_expansion:block/barrel_of_potatoes"
+    },
+    "facing=south": {
+      "x": 90,
+      "y": 180,
+      "model": "vanilla_expansion:block/barrel_of_potatoes"
+    },
+    "facing=up": {
+      "model": "vanilla_expansion:block/barrel_of_potatoes"
+    },
+    "facing=west": {
+      "x": 90,
+      "y": 270,
       "model": "vanilla_expansion:block/barrel_of_potatoes"
     }
   }
