@@ -24,34 +24,14 @@ public class QuartzFamilyStairs extends StairsBlock {
 
     private static final DirectionProperty FACING = StairsBlock.FACING;
 
-    public QuartzFamilyStairs(BlockState state, Properties properties) {
+    public QuartzFamilyStairs() {
         super(() -> RegistryHandler.SMOKED_QUARTZ_BLOCK.get().getDefaultState(),
-                Properties.create(Material.ROCK)
+                Properties.from(RegistryHandler.SMOKED_QUARTZ_BLOCK.get())
                 .hardnessAndResistance(0.8f,0.8f)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)
                 .harvestTool(ToolType.PICKAXE));
     }
 
-    @Nullable
-    @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context) {
-        return this.getDefaultState().with(FACING, context.getFace());
-    }
-
-    @Override
-    public BlockState rotate(BlockState state, Rotation rot) {
-        return state.with(FACING, rot.rotate(state.get(FACING)));
-    }
-
-    @Override
-    public BlockState mirror(BlockState state, Mirror mirrorIn) {
-        return state.rotate(mirrorIn.toRotation(state.get(FACING)));
-    }
-
-    @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
-    }
 }
 
