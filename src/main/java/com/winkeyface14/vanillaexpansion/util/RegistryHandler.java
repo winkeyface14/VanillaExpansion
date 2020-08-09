@@ -5,7 +5,9 @@ import com.winkeyface14.vanillaexpansion.armor.ModArmorMaterial;
 import com.winkeyface14.vanillaexpansion.blocks.*;
 import com.winkeyface14.vanillaexpansion.items.*;
 import com.winkeyface14.vanillaexpansion.tools.ModItemTier;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.*;
@@ -14,6 +16,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.lwjgl.system.CallbackI;
 
 public class RegistryHandler {
 
@@ -88,6 +91,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> BARREL_OF_POTATOES_BLOCK = BLOCKS.register("barrel_of_potatoes", BarrelOfAnyBlock::new);
     public static final RegistryObject<Block> BARREL_OF_CARROTS_BLOCK = BLOCKS.register("barrel_of_carrots", BarrelOfAnyBlock::new);
     public static final RegistryObject<Block> BARREL_OF_CHORUS_BLOCK = BLOCKS.register("barrel_of_chorus_fruits", BarrelOfAnyBlock::new);
+    public static final RegistryObject<Block> SMOKED_QUARTZ_BLOCK = BLOCKS.register("smoked_quartz_block", QuartzFamilyBlock::new);
 
     // Block Items
     public static final RegistryObject<Item> CHARCOAL_BLOCK_ITEM = ITEMS.register("charcoal_block", () -> new CharcoalBlockItem(CHARCOAL_BLOCK.get()));
@@ -96,6 +100,25 @@ public class RegistryHandler {
     public static final RegistryObject<Item> BARREL_OF_POTATOES_BLOCK_ITEM = ITEMS.register("barrel_of_potatoes", () -> new BarrelOfAnyBlockItem(BARREL_OF_POTATOES_BLOCK.get()));
     public static final RegistryObject<Item> BARREL_OF_CARROTS_BLOCK_ITEM = ITEMS.register("barrel_of_carrots", () -> new BarrelOfAnyBlockItem(BARREL_OF_CARROTS_BLOCK.get()));
     public static final RegistryObject<Item> BARREL_OF_CHORUS_BLOCK_ITEM = ITEMS.register("barrel_of_chorus_fruits", () -> new BarrelOfAnyBlockItem(BARREL_OF_CHORUS_BLOCK.get()));
+    public static final RegistryObject<Item> SMOKED_QUARTZ_BLOCK_ITEM = ITEMS.register("smoked_quartz_block", () -> new BlockItemBase(SMOKED_QUARTZ_BLOCK.get()));
+
+    // Stairs
+    public static final RegistryObject<Block> SMOKED_QUARTZ_STAIRS = BLOCKS.register("smoked_quartz_stairs", QuartzFamilyBlock::new);
+
+    // Stairs
+    public static final RegistryObject<Item> SMOKED_QUARTZ_STAIRS_ITEM = ITEMS.register("smoked_quartz_stairs", () -> new BlockItemBase(SMOKED_QUARTZ_STAIRS.get()));
+
+    // Walls
+    public static final RegistryObject<Block> SMOKED_QUARTZ_WALL = BLOCKS.register("smoked_quartz_wall", QuartzFamilyWall::new);
+
+    // Walls Item
+    public static final RegistryObject<Item> SMOKED_QUARTZ_WALL_ITEM = ITEMS.register("smoked_quartz_wall", () -> new BlockItemBase(SMOKED_QUARTZ_WALL.get()));
+
+    // Slabs
+    public static final RegistryObject<Block> SMOKED_QUARTZ_SLAB = BLOCKS.register("smoked_quartz_slab", QuartzFamilySlab::new);
+
+    // Slab Item
+    public static final RegistryObject<Item> SMOKED_QUARTZ_SLAB_ITEMS = ITEMS.register("smoked_quartz_slab", () -> new BlockItemBase(SMOKED_QUARTZ_SLAB.get()));
 
     // Tile Entity
 

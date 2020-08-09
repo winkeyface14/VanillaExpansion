@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "vanilla_expansion:blocks/smoked_quartz_block",
+    "top": "vanilla_expansion:blocks/smoked_quartz_block",
+    "side": "vanilla_expansion:blocks/smoked_quartz_block"
+  }
+}

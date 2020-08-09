@@ -1,0 +1,57 @@
+package com.winkeyface14.vanillaexpansion.blocks;
+
+import com.winkeyface14.vanillaexpansion.util.RegistryHandler;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.StairsBlock;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.state.DirectionProperty;
+import net.minecraft.state.EnumProperty;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.state.properties.Half;
+import net.minecraft.state.properties.StairsShape;
+import net.minecraft.util.Mirror;
+import net.minecraft.util.Rotation;
+import net.minecraftforge.common.ToolType;
+
+import javax.annotation.Nullable;
+import java.util.function.Supplier;
+
+public class QuartzFamilyStairs extends StairsBlock {
+
+    private static final DirectionProperty FACING = StairsBlock.FACING;
+
+    public QuartzFamilyStairs(BlockState state, Properties properties) {
+        super(() -> RegistryHandler.SMOKED_QUARTZ_BLOCK.get().getDefaultState(),
+                Properties.create(Material.ROCK)
+                .hardnessAndResistance(0.8f,0.8f)
+                .sound(SoundType.STONE)
+                .harvestLevel(0)
+                .harvestTool(ToolType.PICKAXE));
+    }
+
+    @Nullable
+    @Override
+    public BlockState getStateForPlacement(BlockItemUseContext context) {
+        return this.getDefaultState().with(FACING, context.getFace());
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, Rotation rot) {
+        return state.with(FACING, rot.rotate(state.get(FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, Mirror mirrorIn) {
+        return state.rotate(mirrorIn.toRotation(state.get(FACING)));
+    }
+
+    @Override
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+        builder.add(FACING);
+    }
+}
+
