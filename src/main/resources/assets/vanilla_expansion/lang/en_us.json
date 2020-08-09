@@ -39,5 +39,13 @@
   "item.vanilla_expansion.redstone_axe": "Redstone Axe",
   "item.vanilla_expansion.redstone_shovel": "Redstone Shovel",
   "item.vanilla_expansion.redstone_hoe": "Redstone Hoe",
-  "item.vanilla_expansion.magnified_book": "Magnified Book"
+  "item.vanilla_expansion.smoked_quartz": "Smoked Nether Quartz",
+  "item.vanilla_expansion.burnt_quartz": "Burnt Nether Quartz",
+  "item.vanilla_expansion.quartz_shard": "Nether Quartz Shard",
+  "item.vanilla_expansion.smoked_quartz_shard": "Smoked Nether Quartz Shard",
+  "item.vanilla_expansion.burnt_quartz_shard": "Burnt Nether Quartz Shard"
+
+
+
+
 }

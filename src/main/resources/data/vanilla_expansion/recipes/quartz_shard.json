@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:quartz"
+    }
+  ],
+  "result":
+  {
+    "item": "vanilla_expansion:quartz_shard",
+    "count": 4
+  }
+}

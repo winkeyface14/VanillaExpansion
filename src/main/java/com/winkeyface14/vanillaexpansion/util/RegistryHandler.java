@@ -33,7 +33,12 @@ public class RegistryHandler {
     public static final RegistryObject<Item> BUNDLED_STICKS = ITEMS.register("bundle_of_sticks", BundledSticks::new);
     public static final RegistryObject<Item> EMERALD_SHARD = ITEMS.register("emerald_shard", ItemBase::new);
     public static final RegistryObject<Item> DIAMOND_SHARD = ITEMS.register("diamond_shard", ItemBase::new);
-    // public static final RegistryObject<Item> MAGNIFIED_BOOK = ITEMS.register("magnified_book", MagnifiedBook::new);
+    public static final RegistryObject<Item> SMOKED_QUARTZ = ITEMS.register("smoked_quartz", ItemBase::new);
+    public static final RegistryObject<Item> BURNT_QUARTZ = ITEMS.register("burnt_quartz", ItemBase::new);
+    public static final RegistryObject<Item> QUARTZ_SHARD = ITEMS.register("quartz_shard", ItemBase::new);
+    public static final RegistryObject<Item> SMOKED_QUARTZ_SHARD = ITEMS.register("smoked_quartz_shard", ItemBase::new);
+    public static final RegistryObject<Item> BURNT_QUARTZ_SHARD = ITEMS.register("burnt_quartz_shard", ItemBase::new);
+
 
     // Tool Head and Sword Blade
     public static final RegistryObject<Item> STONE_SWORD_BLADE = ITEMS.register("stone_sword_blade", ItemBase::new);

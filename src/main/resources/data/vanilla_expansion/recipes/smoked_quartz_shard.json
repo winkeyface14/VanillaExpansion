@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vanilla_expansion:smoked_quartz"
+    }
+  ],
+  "result":
+  {
+    "item": "vanilla_expansion:smoked_quartz_shard",
+    "count": 4
+  }
+}
