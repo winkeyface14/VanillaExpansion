@@ -3,6 +3,7 @@ package com.winkeyface14.vanillaexpansion;
 import com.winkeyface14.vanillaexpansion.util.RegistryHandler;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -35,6 +36,11 @@ public class VanillaExpansion
         public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.COAL_CHUNK.get());
         }
+
+        @Override
+        public void fill(NonNullList<ItemStack> items) {
+            super.fill(items);
+        }
     };
 
     public static final ItemGroup TOOL_TAB = new ItemGroup("VnlExtToolsTab") {
@@ -42,12 +48,32 @@ public class VanillaExpansion
         public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.EMERALD_PICKAXE.get());
         }
+
+        @Override
+        public boolean hasSearchBar() {
+            return super.hasSearchBar();
+        }
+
+        @Override
+        public int getSearchbarWidth() {
+            return 40;
+        }
     };
 
     public static final ItemGroup BLOCK_TAB = new ItemGroup("VnlExtBlocksTab") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.CHARCOAL_BLOCK.get());
+        }
+
+        @Override
+        public boolean hasSearchBar() {
+            return super.hasSearchBar();
+        }
+
+        @Override
+        public int getSearchbarWidth() {
+            return 40;
         }
     };
 

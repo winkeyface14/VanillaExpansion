@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vanilla_expansion:barrel_of_carrots"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:carrot",
+    "count": 9
+  }
+}

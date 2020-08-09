@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vanilla_expansion:barrel_of_apples"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:apple",
+    "count": 9
+  }
+}

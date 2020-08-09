@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vanilla_expansion:barrel_of_potatoes"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:potato",
+    "count": 9
+  }
+}

@@ -1,12 +1,19 @@
 {
+  "item.minecraft.shears": "Iron Shears",
+  "block.minecraft.stonecutter": "Block Cutter",
   "itemGroup.VnlExtItemsTab": "Vanilla Expansion: Items",
   "itemGroup.VnlExtToolsTab": "Vanilla Expansion: Tools",
   "itemGroup.VnlExtBlocksTab": "Vanilla Expansion: Blocks",
+  "block.vanilla_expansion.charcoal_block": "Charcoal Block",
+  "block.vanilla_expansion.block_of_bundled_sticks": "Block of Bundled Sticks",
+  "block.vanilla_expansion.barrel_of_apples": "Barrel of Apples",
+  "block.vanilla_expansion.barrel_of_potatoes": "Barrel of Potatoes",
+  "block.vanilla_expansion.barrel_of_carrots": "Barrel of Carrots",
+  "block.vanilla_expansion.barrel_of_chorus_fruits": "Barrel of Chorus Fruits",
   "item.vanilla_expansion.coal_chunk": "Coal Chunk",
   "item.vanilla_expansion.charcoal_chunk": "Charcoal Chunk",
   "item.vanilla_expansion.emerald_shard": "Emerald Shard",
   "item.vanilla_expansion.diamond_shard": "Diamond Shard",
-  "block.vanilla_expansion.charcoal_block": "Charcoal Block",
   "item.vanilla_expansion.emerald_sword": "Emerald Sword",
   "item.vanilla_expansion.emerald_pickaxe": "Emerald Pickaxe",
   "item.vanilla_expansion.emerald_axe": "Emerald Axe",
@@ -17,7 +24,6 @@
   "item.vanilla_expansion.emerald_leggings": "Emerald Leggings",
   "item.vanilla_expansion.emerald_boots": "Emerald Boots",
   "item.vanilla_expansion.bundle_of_sticks": "Bundle of Sticks",
-  "block.vanilla_expansion.block_of_bundled_sticks": "Block of Bundled Sticks",
   "item.vanilla_expansion.wooden_sword_blade": "Wooden Sword Blade",
   "item.vanilla_expansion.wooden_pickaxe_head": "Wooden Pickaxe Head",
   "item.vanilla_expansion.wooden_axe_head": "Wooden Axe Head",
@@ -33,5 +39,5 @@
   "item.vanilla_expansion.redstone_axe": "Redstone Axe",
   "item.vanilla_expansion.redstone_shovel": "Redstone Shovel",
   "item.vanilla_expansion.redstone_hoe": "Redstone Hoe",
-  "item.vanilla_expansion.redstone_helmet": "Redstone Helmet"
+  "item.vanilla_expansion.magnified_book": "Magnified Book"
 }

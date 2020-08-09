@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vanilla_expansion:barrel_of_chorus_fruits"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:chorus_fruit",
+    "count": 9
+  }
+}
