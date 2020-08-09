@@ -1,8 +1,8 @@
 {
-  "type": "vanilla_expansion:stonecutting",
+  "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "vanilla_expansion:smoked_quartz_block"
   },
-  "result": "vanilla_expansion:quartz_bricks",
+  "result": "vanilla_expansion:smoked_quartz_bricks",
   "count": 1
 }

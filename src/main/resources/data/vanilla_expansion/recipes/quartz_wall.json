@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:smoked_quartz_block"
+      "item": "minecraft:quartz_block"
     }
   },
   "result": {
-    "item": "minecraft:smoked_quartz_wall",
+    "item": "vanilla_expansion:quartz_wall",
     "count": 6
   }
 }

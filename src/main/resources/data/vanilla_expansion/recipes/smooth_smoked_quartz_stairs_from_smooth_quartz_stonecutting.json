@@ -1,5 +1,5 @@
 {
-  "type": "vanilla_expansion:stonecutting",
+  "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "vanilla_expansion:smooth_smoked_quartz"
   },

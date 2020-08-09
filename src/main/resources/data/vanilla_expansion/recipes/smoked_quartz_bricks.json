@@ -1,5 +1,5 @@
 {
-  "type": "vanilla_expansion:crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "##",
     "##"

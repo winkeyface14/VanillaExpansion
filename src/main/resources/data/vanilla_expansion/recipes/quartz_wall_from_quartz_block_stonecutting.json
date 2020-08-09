@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "minecraft:smoked_quartz_block"
+    "item": "minecraft:quartz_block"
   },
-  "result": "minecraft:smoked_quartz_wall",
+  "result": "vanilla_expansion:quartz_wall",
   "count": 1
 }
