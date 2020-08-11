@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "vanilla_expansion:burnt_quartz_block"
+  },
+  "result": "vanilla_expansion:burnt_quartz_pillar",
+  "count": 1
+}

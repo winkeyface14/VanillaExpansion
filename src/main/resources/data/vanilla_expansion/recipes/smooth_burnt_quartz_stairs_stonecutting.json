@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "vanilla_expansion:smooth_burnt_quartz"
+  },
+  "result": "vanilla_expansion:smooth_burnt_quartz_stairs",
+  "count": 1
+}

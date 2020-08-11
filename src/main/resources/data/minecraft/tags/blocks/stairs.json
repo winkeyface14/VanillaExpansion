@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "vanilla_expansion:smoked_quartz_stairs",
-    "vanilla_expansion:smooth_smoked_quartz_stairs"
+    "vanilla_expansion:smooth_smoked_quartz_stairs",
+	"vanilla_expansion:smooth_burnt_quartz_stairs",
+	"vanilla_expansion:smooth_burnt_quartz_stairs"
   ]
 }

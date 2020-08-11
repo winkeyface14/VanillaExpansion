@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "vanilla_expansion:blocks/smooth_burnt_quartz",
+    "top": "vanilla_expansion:blocks/smooth_burnt_quartz",
+    "side": "vanilla_expansion:blocks/smooth_burnt_quartz"
+  }
+}

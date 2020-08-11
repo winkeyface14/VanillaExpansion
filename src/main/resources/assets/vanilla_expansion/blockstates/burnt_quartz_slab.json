@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vanilla_expansion:block/burnt_quartz_slab"
+    },
+    "type=double": {
+      "model": "vanilla_expansion:block/burnt_quartz_block"
+    },
+    "type=top": {
+      "model": "vanilla_expansion:block/burnt_quartz_slab_top"
+    }
+  }
+}

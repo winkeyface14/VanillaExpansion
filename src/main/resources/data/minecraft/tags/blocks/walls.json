@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "vanilla_expansion:smoked_quartz_wall",
+	"vanilla_expansion:burnt_quartz_wall",
     "vanilla_expansion:quartz_wall"
   ]
 }
