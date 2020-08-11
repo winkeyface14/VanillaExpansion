@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:iron_upgrade_pickaxes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:iron_pickaxe_head"
+  },
+  "result": {
+    "item": "minecraft:iron_pickaxe"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "minecraft:quartz"
+    "item": "minecraft:quartz"
   },
   "result": "vanilla_expansion:burnt_quartz",
   "experience": 0.7,

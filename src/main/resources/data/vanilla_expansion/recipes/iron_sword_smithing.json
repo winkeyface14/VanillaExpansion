@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:iron_upgrade_swords"
+  },
+  "addition": {
+    "item": "vanilla_expansion:iron_sword_blade"
+  },
+  "result": {
+    "item": "minecraft:iron_sword"
+  }
+}

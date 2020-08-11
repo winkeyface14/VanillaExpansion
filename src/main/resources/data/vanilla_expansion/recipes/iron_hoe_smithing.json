@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:iron_upgrade_hoes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:iron_hoe_head"
+  },
+  "result": {
+    "item": "minecraft:iron_hoe"
+  }
+}

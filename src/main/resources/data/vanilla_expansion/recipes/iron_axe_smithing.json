@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:iron_upgrade_axes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:iron_axe_head"
+  },
+  "result": {
+    "item": "minecraft:iron_axe"
+  }
+}

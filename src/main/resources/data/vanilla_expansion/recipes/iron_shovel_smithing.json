@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:iron_upgrade_shovels"
+  },
+  "addition": {
+    "item": "vanilla_expansion:iron_shovel_head"
+  },
+  "result": {
+    "item": "minecraft:iron_shovel"
+  }
+}

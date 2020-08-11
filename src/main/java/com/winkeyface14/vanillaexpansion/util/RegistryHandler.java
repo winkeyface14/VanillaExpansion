@@ -23,8 +23,8 @@ public class RegistryHandler {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, VanillaExpansion.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, VanillaExpansion.MOD_ID);
-    public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, VanillaExpansion.MOD_ID);
-    public static final DeferredRegister<ContainerType<?>> CONTAINER_TYPES = DeferredRegister.create(ForgeRegistries.CONTAINERS, VanillaExpansion.MOD_ID);
+    //public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, VanillaExpansion.MOD_ID);
+    //public static final DeferredRegister<ContainerType<?>> CONTAINER_TYPES = DeferredRegister.create(ForgeRegistries.CONTAINERS, VanillaExpansion.MOD_ID);
 
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -50,6 +50,11 @@ public class RegistryHandler {
     public static final RegistryObject<Item> STONE_AXE_HEAD = ITEMS.register("stone_axe_head", ItemBase::new);
     public static final RegistryObject<Item> STONE_SHOVEL_HEAD = ITEMS.register("stone_shovel_head", ItemBase::new);
     public static final RegistryObject<Item> STONE_HOE_HEAD = ITEMS.register("stone_hoe_head", ItemBase::new);
+    public static final RegistryObject<Item> IRON_SWORD_BLADE = ITEMS.register("iron_sword_blade", ItemBase::new);
+    public static final RegistryObject<Item> IRON_PICKAXE_HEAD = ITEMS.register("iron_pickaxe_head", ItemBase::new);
+    public static final RegistryObject<Item> IRON_AXE_HEAD = ITEMS.register("iron_axe_head", ItemBase::new);
+    public static final RegistryObject<Item> IRON_SHOVEL_HEAD = ITEMS.register("iron_shovel_head", ItemBase::new);
+    public static final RegistryObject<Item> IRON_HOE_HEAD = ITEMS.register("iron_hoe_head", ItemBase::new);
 
 
     // Tools

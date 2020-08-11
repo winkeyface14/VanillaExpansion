@@ -48,11 +48,6 @@
   "item.vanilla_expansion.emerald_leggings": "Emerald Leggings",
   "item.vanilla_expansion.emerald_boots": "Emerald Boots",
   "item.vanilla_expansion.bundle_of_sticks": "Bundle of Sticks",
-  "item.vanilla_expansion.wooden_sword_blade": "Wooden Sword Blade",
-  "item.vanilla_expansion.wooden_pickaxe_head": "Wooden Pickaxe Head",
-  "item.vanilla_expansion.wooden_axe_head": "Wooden Axe Head",
-  "item.vanilla_expansion.wooden_shovel_head": "Wooden Shovel Head",
-  "item.vanilla_expansion.wooden_hoe_head": "Wooden Hoe Head",
   "item.vanilla_expansion.stone_sword_blade": "Stone Sword Blade",
   "item.vanilla_expansion.stone_pickaxe_head": "Stone Pickaxe Head",
   "item.vanilla_expansion.stone_axe_head": "Stone Axe Head",
@@ -67,9 +62,10 @@
   "item.vanilla_expansion.burnt_quartz": "Burnt Nether Quartz",
   "item.vanilla_expansion.quartz_shard": "Nether Quartz Shard",
   "item.vanilla_expansion.smoked_quartz_shard": "Smoked Nether Quartz Shard",
-  "item.vanilla_expansion.burnt_quartz_shard": "Burnt Nether Quartz Shard"
-
-
-
-
+  "item.vanilla_expansion.burnt_quartz_shard": "Burnt Nether Quartz Shard",
+  "item.vanilla_expansion.iron_sword_blade": "Iron Sword Blade",
+  "item.vanilla_expansion.iron_pickaxe_head": "Iron Pickaxe Head",
+  "item.vanilla_expansion.iron_axe_head": "Iron Axe Head",
+  "item.vanilla_expansion.iron_shovel_head": "Iron Shovel Head",
+  "item.vanilla_expansion.iron_hoe_head": "Iron Hoe Head"
 }
