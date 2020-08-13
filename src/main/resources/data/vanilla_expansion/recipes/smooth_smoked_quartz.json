@@ -1,5 +1,5 @@
 {
-  "type": "vanilla_expansion:smelting",
+  "type": "minecraft:smelting",
   "ingredient": {
     "item": "vanilla_expansion:smoked_quartz_block"
   },
