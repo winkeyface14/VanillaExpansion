@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "x x",
+    "x x"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:lapis_lazuli_block"
+    }
+  },
+  "result":
+  {
+    "item": "vanilla_expansion:lapis_lazuli_leggings",
+    "count": 1
+  }
+}

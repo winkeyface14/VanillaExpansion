@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "vanilla_expansion:burnt_quartz_shard"
+    }
+  },
+  "result": {
+    "item": "vanilla_expansion:burnt_quartz"
+  }
+}
