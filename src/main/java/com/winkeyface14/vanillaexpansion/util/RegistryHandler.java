@@ -90,6 +90,16 @@ public class RegistryHandler {
     public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
             new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
+    public static final RegistryObject<ArmorItem> LAPIS_HELMET = ITEMS.register("lapis_lazuli_helmet", () ->
+            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.HEAD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ArmorItem> LAPIS_CHEST = ITEMS.register("lapis_lazuli_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.CHEST, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ArmorItem> LAPIS_LEGGINGS = ITEMS.register("lapis_lazuli_leggings", () ->
+            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.LEGS, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ArmorItem> LAPIS_BOOTS = ITEMS.register("lapis_lazuli_boots", () ->
+            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+
+
     // Blocks
     public static final RegistryObject<Block> CHARCOAL_BLOCK = BLOCKS.register("charcoal_block", CharcoalBlock::new);
     public static final RegistryObject<Block> BUNDLED_STICKS_BLOCK = BLOCKS.register("block_of_bundled_sticks", BundledSticksBlock::new);

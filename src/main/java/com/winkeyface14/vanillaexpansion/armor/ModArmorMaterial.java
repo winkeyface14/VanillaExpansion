@@ -16,7 +16,9 @@ import java.util.function.Supplier;
 public enum ModArmorMaterial implements IArmorMaterial {
 
     EMERALD(VanillaExpansion.MOD_ID + ":emerald", 24, new int[] { 2, 6, 7, 3 }, 18,
-        SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.5F, () -> { return Ingredient.fromItems(Items.EMERALD); } , 0);
+            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.5F, () -> { return Ingredient.fromItems(Items.EMERALD); } , 0),
+    LAPIS(VanillaExpansion.MOD_ID + ":lapis_lazuli", 18, new int[] { 2, 5, 4, 2 }, 27,
+            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> { return Ingredient.fromItems(Items.LAPIS_BLOCK); } , 0);
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] {11, 16, 15, 13};
     private final String name;

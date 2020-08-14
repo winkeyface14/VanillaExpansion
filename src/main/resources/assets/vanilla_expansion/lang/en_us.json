@@ -34,10 +34,6 @@
   "block.vanilla_expansion.smooth_burnt_quartz_stairs": "Smooth Burnt Quartz Stairs",
   "block.vanilla_expansion.smooth_burnt_quartz_slab": "Smooth Burnt Quartz Slab",
   "block.vanilla_expansion.burnt_quartz_bricks_slab": "Burnt Quartz Bricks Slab",
-  "block.vanilla_expansion.special_block": "OUR Valedictorian",
-  "block.vanilla_expansion.special_block1": "Ed Caluag",
-  "block.vanilla_expansion.special_block2": "Longsword",
-  "block.vanilla_expansion.special_block3": "Addison",
   "item.vanilla_expansion.coal_chunk": "Coal Chunk",
   "item.vanilla_expansion.charcoal_chunk": "Charcoal Chunk",
   "item.vanilla_expansion.emerald_shard": "Emerald Shard",
@@ -71,5 +67,9 @@
   "item.vanilla_expansion.iron_pickaxe_head": "Iron Pickaxe Head",
   "item.vanilla_expansion.iron_axe_head": "Iron Axe Head",
   "item.vanilla_expansion.iron_shovel_head": "Iron Shovel Head",
-  "item.vanilla_expansion.iron_hoe_head": "Iron Hoe Head"
+  "item.vanilla_expansion.iron_hoe_head": "Iron Hoe Head",
+  "item.vanilla_expansion.lapis_lazuli_helmet": "Lapis Lazuli Helmet",
+  "item.vanilla_expansion.lapis_lazuli_chestplate": "Lapis Lazuli Chestplate",
+  "item.vanilla_expansion.lapis_lazuli_leggings": "Lapis Lazuli Leggings",
+  "item.vanilla_expansion.lapis_lazuli_boots": "Lapis Lazuli Boots"
 }
