@@ -107,10 +107,6 @@ public class RegistryHandler {
     public static final RegistryObject<Block> CHISELED_BURNT_QUARTZ_BLOCK = BLOCKS.register("chiseled_burnt_quartz_block", QuartzFamilyBlock::new);
     public static final RegistryObject<Block> SMOOTH_BURNT_QUARTZ = BLOCKS.register("smooth_burnt_quartz", QuartzFamilyBlock::new);
     public static final RegistryObject<Block> BURNT_QUARTZ_BRICKS = BLOCKS.register("burnt_quartz_bricks", QuartzFamilyBlock::new);
-    public static final RegistryObject<Block> HANS_BLOCK = BLOCKS.register("special_block", SpecialBlock::new);
-    public static final RegistryObject<Block> ELIS_BLOCK = BLOCKS.register("special_block1", SpecialBlock::new);
-    public static final RegistryObject<Block> KEVIN_BLOCK = BLOCKS.register("special_block2", SpecialBlock::new);
-    public static final RegistryObject<Block> J_BLOCK = BLOCKS.register("special_block3", SpecialBlock::new);
 
     // Block Items
     public static final RegistryObject<Item> CHARCOAL_BLOCK_ITEM = ITEMS.register("charcoal_block", () -> new CharcoalBlockItem(CHARCOAL_BLOCK.get()));
@@ -129,11 +125,6 @@ public class RegistryHandler {
     public static final RegistryObject<Item> CHISELED_BURNT_QUARTZ_BLOCK_ITEM = ITEMS.register("chiseled_burnt_quartz_block", () -> new BlockItemBase(CHISELED_BURNT_QUARTZ_BLOCK.get()));
     public static final RegistryObject<Item> SMOOTH_BURNT_QUARTZ_ITEM = ITEMS.register("smooth_burnt_quartz", () -> new BlockItemBase(SMOOTH_BURNT_QUARTZ.get()));
     public static final RegistryObject<Item> BURNT_QUARTZ_BRICKS_ITEM = ITEMS.register("burnt_quartz_bricks", () -> new BlockItemBase(BURNT_QUARTZ_BRICKS.get()));
-    public static final RegistryObject<Item> HANS_BLOCK_ITEM = ITEMS.register("special_block", () -> new SpecialBlockItemBase(HANS_BLOCK.get()));
-    public static final RegistryObject<Item> ELIS_BLOCK_ITEM = ITEMS.register("special_block1", () -> new SpecialBlockItemBase(ELIS_BLOCK.get()));
-    public static final RegistryObject<Item> KEVIN_BLOCK_ITEM = ITEMS.register("special_block2", () -> new SpecialBlockItemBase(KEVIN_BLOCK.get()));
-    public static final RegistryObject<Item> J_BLOCK_ITEM = ITEMS.register("special_block3", () -> new SpecialBlockItemBase(J_BLOCK.get()));
-
 
     // Stairs
     public static final RegistryObject<Block> SMOKED_QUARTZ_STAIRS = BLOCKS.register("smoked_quartz_stairs", QuartzFamilyStairs::new);
