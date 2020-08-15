@@ -13,13 +13,19 @@ public enum ModItemTier implements IItemTier {
     EMERALD(3, 946, 7.0F, 3.5F, 16, () -> {
         return Ingredient.fromItems(Items.EMERALD);
     }),
-    EMERALD_HOE(3, 946, 7.0F, 3F, 16, () -> {
+    EMERALD_HOE(3, 946, 7.0F, 0F, 16, () -> {
         return Ingredient.fromItems(Items.EMERALD);
     }),
     REDSTONE(2, 190, 18.0F, 2.5F, 6, () -> {
         return Ingredient.fromItems(Items.REDSTONE_BLOCK);
     }),
-    REDSTONE_HOE(2, 190, 18.0F, 3F, 6, () -> {
+    REDSTONE_HOE(2, 190, 18.0F, 0F, 6, () -> {
+        return Ingredient.fromItems(Items.REDSTONE_BLOCK);
+    }),
+    QUARTZ(2, 46, 6.5F, 6F, 5, () -> {
+        return Ingredient.fromItems(Items.REDSTONE_BLOCK);
+    }),
+    QUARTZ_HOE(2, 46, 6.5F, 0F, 5, () -> {
         return Ingredient.fromItems(Items.REDSTONE_BLOCK);
     });
 

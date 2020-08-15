@@ -71,5 +71,10 @@
   "item.vanilla_expansion.lapis_lazuli_helmet": "Lapis Lazuli Helmet",
   "item.vanilla_expansion.lapis_lazuli_chestplate": "Lapis Lazuli Chestplate",
   "item.vanilla_expansion.lapis_lazuli_leggings": "Lapis Lazuli Leggings",
-  "item.vanilla_expansion.lapis_lazuli_boots": "Lapis Lazuli Boots"
+  "item.vanilla_expansion.lapis_lazuli_boots": "Lapis Lazuli Boots",
+  "item.vanilla_expansion.quartz_sword": "Quartz Sword",
+  "item.vanilla_expansion.quartz_pickaxe": "Quartz Pickaxe",
+  "item.vanilla_expansion.quartz_axe": "Quartz Axe",
+  "item.vanilla_expansion.quartz_shovel": "Quartz Shovel",
+  "item.vanilla_expansion.quartz_hoe": "Quartz Hoe"
 }

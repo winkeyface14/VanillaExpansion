@@ -67,18 +67,29 @@ public class RegistryHandler {
     public static final RegistryObject<ShovelItem> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () ->
             new ShovelItem(ModItemTier.EMERALD, 0.5F, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<HoeItem> EMERALD_HOE = ITEMS.register("emerald_hoe", () ->
-            new HoeItem(ModItemTier.EMERALD_HOE, -3, -0.5F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new HoeItem(ModItemTier.EMERALD_HOE, 0, -0.5F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
     public static final RegistryObject<SwordItem> REDSTONE_SWORD = ITEMS.register("redstone_sword", () ->
             new SwordItem(ModItemTier.REDSTONE, 2, -1.4F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<PickaxeItem> REDSTONE_PICKAXE = ITEMS.register("redstone_pickaxe", () ->
-            new PickaxeItem(ModItemTier.REDSTONE, 0, -2.8F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new PickaxeItem(ModItemTier.REDSTONE, 0, -2.3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<AxeItem> REDSTONE_AXE = ITEMS.register("redstone_axe", () ->
-            new AxeItem(ModItemTier.REDSTONE, 4.5F, -2.8F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new AxeItem(ModItemTier.REDSTONE, 4.5F, -2.3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ShovelItem> REDSTONE_SHOVEL = ITEMS.register("redstone_shovel", () ->
-            new ShovelItem(ModItemTier.REDSTONE, 0.5F, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ShovelItem(ModItemTier.REDSTONE, 0.5F, -2.5F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<HoeItem> REDSTONE_HOE = ITEMS.register("redstone_hoe", () ->
-            new HoeItem(ModItemTier.REDSTONE_HOE, -3, -0.5F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new HoeItem(ModItemTier.REDSTONE_HOE, 0, -0.5F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+
+    public static final RegistryObject<SwordItem> QUARTZ_SWORD = ITEMS.register("quartz_sword", () ->
+            new SwordItem(ModItemTier.QUARTZ, 3, -2.4F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<PickaxeItem> QUARTZ_PICKAXE = ITEMS.register("quartz_pickaxe", () ->
+            new PickaxeItem(ModItemTier.QUARTZ, 0, -2.8F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<AxeItem> QUARTZ_AXE = ITEMS.register("quartz_axe", () ->
+            new AxeItem(ModItemTier.QUARTZ, 4F, -3.1F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ShovelItem> QUARTZ_SHOVEL = ITEMS.register("quartz_shovel", () ->
+            new ShovelItem(ModItemTier.QUARTZ, 1, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<HoeItem> QUARTZ_HOE = ITEMS.register("quartz_hoe", () ->
+            new HoeItem(ModItemTier.QUARTZ_HOE, 0, -1.0F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
     // Armor
     public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->
