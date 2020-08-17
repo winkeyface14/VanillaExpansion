@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:diamond_upgrade_pickaxes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:diamond_pickaxe_head"
+  },
+  "result": {
+    "item": "minecraft:diamond_pickaxe"
+  }
+}

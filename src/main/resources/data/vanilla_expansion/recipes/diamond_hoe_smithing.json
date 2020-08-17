@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:diamond_upgrade_hoes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:diamond_hoe_head"
+  },
+  "result": {
+    "item": "minecraft:diamond_hoe"
+  }
+}

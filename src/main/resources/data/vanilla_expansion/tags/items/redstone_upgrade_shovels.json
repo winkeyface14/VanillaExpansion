@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:wooden_shovel",
+    "minecraft:stone_shovel",
+    "minecraft:iron_shovel",
+    "minecraft:iron_shovel",
+    "vanilla_expansion:quartz_shovel",
+    "vanilla_expansion:smoked_quartz_shovel",
+    "vanilla_expansion:burnt_quartz_shovel"
+    ]
+}

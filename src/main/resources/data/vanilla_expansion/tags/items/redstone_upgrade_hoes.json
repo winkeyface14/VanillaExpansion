@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:wooden_hoe",
+    "minecraft:stone_hoe",
+    "minecraft:iron_hoe",
+    "minecraft:iron_hoe",
+    "vanilla_expansion:quartz_hoe",
+    "vanilla_expansion:smoked_quartz_hoe",
+    "vanilla_expansion:burnt_quartz_hoe"
+  ]
+}

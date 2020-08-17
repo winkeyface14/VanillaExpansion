@@ -4,6 +4,9 @@
     "minecraft:wooden_axe",
     "minecraft:stone_axe",
     "minecraft:golden_axe",
-    "vanilla_expansion:redstone_axe"
+    "vanilla_expansion:redstone_axe",
+    "vanilla_expansion:quartz_axe",
+    "vanilla_expansion:smoked_quartz_axe",
+    "vanilla_expansion:burnt_quartz_axe"
   ]
 }

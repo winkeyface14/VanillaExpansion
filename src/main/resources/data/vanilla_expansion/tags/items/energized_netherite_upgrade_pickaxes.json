@@ -7,6 +7,10 @@
     "minecraft:golden_pickaxe",
     "minecraft:diamond_pickaxe",
     "minecraft:netherite_pickaxe",
-    "vanilla_expansion:emerald_pickaxe"
+    "vanilla_expansion:emerald_pickaxe",
+    "vanilla_expansion:redstone_pickaxe",
+    "vanilla_expansion:quartz_pickaxe",
+    "vanilla_expansion:smoked_quartz_pickaxe",
+    "vanilla_expansion:burnt_quartz_pickaxe"
   ]
 }

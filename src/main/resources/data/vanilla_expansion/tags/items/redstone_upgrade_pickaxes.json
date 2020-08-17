@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:wooden_pickaxe",
+    "minecraft:stone_pickaxe",
+    "minecraft:iron_pickaxe",
+    "minecraft:iron_pickaxe",
+    "vanilla_expansion:quartz_pickaxe",
+    "vanilla_expansion:smoked_quartz_pickaxe",
+    "vanilla_expansion:burnt_quartz_pickaxe"
+  ]
+}

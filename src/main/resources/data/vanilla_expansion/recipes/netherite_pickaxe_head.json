@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "yx",
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:netherite"
+    },
+    "y":
+    {
+      "item": "minecraft:flint"
+    }
+  },
+  "result":
+  {
+    "item": "vanilla_expansion:netherite_pickaxe_head",
+    "count": 1
+  }
+}

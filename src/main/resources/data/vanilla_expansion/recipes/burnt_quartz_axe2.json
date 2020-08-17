@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx",
+    "yx",
+    "y "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "vanilla_expansion:burnt_quartz"
+    },
+    "y":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "vanilla_expansion:burnt_quartz_axe",
+    "count": 1
+  }
+}

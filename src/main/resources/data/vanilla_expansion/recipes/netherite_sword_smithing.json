@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:netherite_upgrade_swords"
+  },
+  "addition": {
+    "item": "vanilla_expansion:netherite_sword_blade"
+  },
+  "result": {
+    "item": "minecraft:netherite_sword"
+  }
+}

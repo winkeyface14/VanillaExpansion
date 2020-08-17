@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:gold_upgrade_axes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:golden_axe_head"
+  },
+  "result": {
+    "item": "minecraft:golden_axe"
+  }
+}

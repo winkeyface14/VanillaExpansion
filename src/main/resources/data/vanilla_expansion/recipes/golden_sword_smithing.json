@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:gold_upgrade_swords"
+  },
+  "addition": {
+    "item": "vanilla_expansion:golden_sword_blade"
+  },
+  "result": {
+    "item": "minecraft:golden_sword"
+  }
+}

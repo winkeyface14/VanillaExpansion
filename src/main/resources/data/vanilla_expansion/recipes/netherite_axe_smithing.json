@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:netherite_upgrade_axes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:netherite_axe_head"
+  },
+  "result": {
+    "item": "minecraft:netherite_axe"
+  }
+}

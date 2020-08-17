@@ -23,10 +23,22 @@ public enum ModItemTier implements IItemTier {
         return Ingredient.fromItems(Items.REDSTONE_BLOCK);
     }),
     QUARTZ(2, 46, 6.5F, 6F, 5, () -> {
-        return Ingredient.fromItems(Items.REDSTONE_BLOCK);
+        return Ingredient.fromItems(Items.QUARTZ);
     }),
     QUARTZ_HOE(2, 46, 6.5F, 0F, 5, () -> {
-        return Ingredient.fromItems(Items.REDSTONE_BLOCK);
+        return Ingredient.fromItems(Items.QUARTZ);
+    }),
+    SQUARTZ(2, 46, 6.5F, 6F, 5, () -> {
+        return Ingredient.fromItems(RegistryHandler.SMOKED_QUARTZ.get());
+    }),
+    SQUARTZ_HOE(2, 46, 6.5F, 0F, 5, () -> {
+        return Ingredient.fromItems(RegistryHandler.SMOKED_QUARTZ.get());
+    }),
+    BQUARTZ(2, 46, 6.5F, 6F, 5, () -> {
+        return Ingredient.fromItems(RegistryHandler.BURNT_QUARTZ.get());
+    }),
+    BQUARTZ_HOE(2, 46, 6.5F, 0F, 5, () -> {
+        return Ingredient.fromItems(RegistryHandler.BURNT_QUARTZ.get());
     });
 
     private final int harvestLevel;

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:gold_upgrade_hoes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:golden_hoe_head"
+  },
+  "result": {
+    "item": "minecraft:golden_hoe"
+  }
+}

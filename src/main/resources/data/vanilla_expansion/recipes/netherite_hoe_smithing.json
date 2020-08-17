@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:netherite_upgrade_hoes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:netherite_hoe_head"
+  },
+  "result": {
+    "item": "minecraft:netherite_hoe"
+  }
+}

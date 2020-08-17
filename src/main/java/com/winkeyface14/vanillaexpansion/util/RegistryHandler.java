@@ -55,6 +55,21 @@ public class RegistryHandler {
     public static final RegistryObject<Item> IRON_AXE_HEAD = ITEMS.register("iron_axe_head", ItemBase::new);
     public static final RegistryObject<Item> IRON_SHOVEL_HEAD = ITEMS.register("iron_shovel_head", ItemBase::new);
     public static final RegistryObject<Item> IRON_HOE_HEAD = ITEMS.register("iron_hoe_head", ItemBase::new);
+    public static final RegistryObject<Item> GOLD_SWORD_BLADE = ITEMS.register("golden_sword_blade", ItemBase::new);
+    public static final RegistryObject<Item> GOLD_PICKAXE_HEAD = ITEMS.register("golden_pickaxe_head", ItemBase::new);
+    public static final RegistryObject<Item> GOLD_AXE_HEAD = ITEMS.register("golden_axe_head", ItemBase::new);
+    public static final RegistryObject<Item> GOLD_SHOVEL_HEAD = ITEMS.register("golden_shovel_head", ItemBase::new);
+    public static final RegistryObject<Item> GOLD_HOE_HEAD = ITEMS.register("golden_hoe_head", ItemBase::new);
+    public static final RegistryObject<Item> DIAMOND_SWORD_BLADE = ITEMS.register("diamond_sword_blade", ItemBase::new);
+    public static final RegistryObject<Item> DIAMOND_PICKAXE_HEAD = ITEMS.register("diamond_pickaxe_head", ItemBase::new);
+    public static final RegistryObject<Item> DIAMOND_AXE_HEAD = ITEMS.register("diamond_axe_head", ItemBase::new);
+    public static final RegistryObject<Item> DIAMOND_SHOVEL_HEAD = ITEMS.register("diamond_shovel_head", ItemBase::new);
+    public static final RegistryObject<Item> DIAMOND_HOE_HEAD = ITEMS.register("diamond_hoe_head", ItemBase::new);
+    public static final RegistryObject<Item> NETHERITE_SWORD_BLADE = ITEMS.register("netherite_sword_blade", ItemBase::new);
+    public static final RegistryObject<Item> NETHERITE_PICKAXE_HEAD = ITEMS.register("netherite_pickaxe_head", ItemBase::new);
+    public static final RegistryObject<Item> NETHERITE_AXE_HEAD = ITEMS.register("netherite_axe_head", ItemBase::new);
+    public static final RegistryObject<Item> NETHERITE_SHOVEL_HEAD = ITEMS.register("netherite_shovel_head", ItemBase::new);
+    public static final RegistryObject<Item> NETHERITE_HOE_HEAD = ITEMS.register("netherite_hoe_head", ItemBase::new);
 
 
     // Tools
@@ -90,6 +105,28 @@ public class RegistryHandler {
             new ShovelItem(ModItemTier.QUARTZ, 1, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<HoeItem> QUARTZ_HOE = ITEMS.register("quartz_hoe", () ->
             new HoeItem(ModItemTier.QUARTZ_HOE, 0, -1.0F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+
+    public static final RegistryObject<SwordItem> SQUARTZ_SWORD = ITEMS.register("smoked_quartz_sword", () ->
+            new SwordItem(ModItemTier.SQUARTZ, 3, -2.4F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<PickaxeItem> SQUARTZ_PICKAXE = ITEMS.register("smoked_quartz_pickaxe", () ->
+            new PickaxeItem(ModItemTier.SQUARTZ, 0, -2.8F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<AxeItem> SQUARTZ_AXE = ITEMS.register("smoked_quartz_axe", () ->
+            new AxeItem(ModItemTier.SQUARTZ, 4F, -3.1F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ShovelItem> SQUARTZ_SHOVEL = ITEMS.register("smoked_quartz_shovel", () ->
+            new ShovelItem(ModItemTier.SQUARTZ, 1, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<HoeItem> SQUARTZ_HOE = ITEMS.register("smoked_quartz_hoe", () ->
+            new HoeItem(ModItemTier.SQUARTZ_HOE, 0, -1.0F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+
+    public static final RegistryObject<SwordItem> BQUARTZ_SWORD = ITEMS.register("burnt_quartz_sword", () ->
+            new SwordItem(ModItemTier.BQUARTZ, 3, -2.4F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<PickaxeItem> BQUARTZ_PICKAXE = ITEMS.register("burnt_quartz_pickaxe", () ->
+            new PickaxeItem(ModItemTier.BQUARTZ, 0, -2.8F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<AxeItem> BQUARTZ_AXE = ITEMS.register("burnt_quartz_axe", () ->
+            new AxeItem(ModItemTier.BQUARTZ, 4F, -3.1F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ShovelItem> BQUARTZ_SHOVEL = ITEMS.register("burnt_quartz_shovel", () ->
+            new ShovelItem(ModItemTier.BQUARTZ, 1, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<HoeItem> BQUARTZ_HOE = ITEMS.register("burnt_quartz_hoe", () ->
+            new HoeItem(ModItemTier.BQUARTZ_HOE, 0, -1.0F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
     // Armor
     public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->

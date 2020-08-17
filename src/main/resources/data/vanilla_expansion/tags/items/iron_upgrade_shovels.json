@@ -4,6 +4,9 @@
     "minecraft:wooden_shovel",
     "minecraft:stone_shovel",
     "minecraft:golden_shovel",
-    "vanilla_expansion:redstone_shovel"
+    "vanilla_expansion:redstone_shovel",
+    "vanilla_expansion:quartz_shovel",
+    "vanilla_expansion:smoked_quartz_shovel",
+    "vanilla_expansion:burnt_quartz_shovel"
     ]
 }

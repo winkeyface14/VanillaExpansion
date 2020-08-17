@@ -7,6 +7,10 @@
     "minecraft:golden_shovel",
     "minecraft:diamond_shovel",
     "minecraft:netherite_shovel",
-    "vanilla_expansion:emerald_shovel"
+    "vanilla_expansion:emerald_shovel",
+    "vanilla_expansion:redstone_shovel",
+    "vanilla_expansion:quartz_shovel",
+    "vanilla_expansion:smoked_quartz_shovel",
+    "vanilla_expansion:burnt_quartz_shovel"
   ]
 }

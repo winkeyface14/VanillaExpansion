@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:netherite_upgrade_pickaxes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:netherite_pickaxe_head"
+  },
+  "result": {
+    "item": "minecraft:netherite_pickaxe"
+  }
+}

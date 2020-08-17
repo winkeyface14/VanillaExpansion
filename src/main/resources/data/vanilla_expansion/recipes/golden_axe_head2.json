@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx",
+    "yx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:gold_ngot"
+    },
+    "y":
+    {
+      "item": "minecraft:flint"
+    }
+  },
+  "result":
+  {
+    "item": "vanilla_expansion:golden_axe_head",
+    "count": 1
+  }
+}

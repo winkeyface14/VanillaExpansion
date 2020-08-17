@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:diamond_upgrade_axes"
+  },
+  "addition": {
+    "item": "vanilla_expansion:diamond_axe_head"
+  },
+  "result": {
+    "item": "minecraft:diamond_axe"
+  }
+}

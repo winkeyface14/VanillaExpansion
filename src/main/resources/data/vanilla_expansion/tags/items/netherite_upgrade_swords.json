@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:wooden_sword",
+    "minecraft:stone_sword",
+    "minecraft:iron_sword",
+    "minecraft:golden_sword",
+    "minecraft:diamond_sword",
+    "vanilla_expansion:emerald_sword",
+    "vanilla_expansion:redstone_sword",
+    "vanilla_expansion:quartz_sword",
+    "vanilla_expansion:smoked_quartz_sword",
+    "vanilla_expansion:burnt_quartz_sword"
+  ]
+}

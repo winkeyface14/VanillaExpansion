@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:gold_upgrade_shovels"
+  },
+  "addition": {
+    "item": "vanilla_expansion:golden_shovel_head"
+  },
+  "result": {
+    "item": "minecraft:golden_shovel"
+  }
+}

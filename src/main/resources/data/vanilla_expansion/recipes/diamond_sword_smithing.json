@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "vanilla_expansion:diamond_upgrade_swords"
+  },
+  "addition": {
+    "item": "vanilla_expansion:diamond_sword_blade"
+  },
+  "result": {
+    "item": "minecraft:diamond_sword"
+  }
+}

@@ -7,6 +7,10 @@
     "minecraft:golden_axe",
     "minecraft:diamond_axe",
     "minecraft:netherite_axe",
-    "vanilla_expansion:emerald_axe"
+    "vanilla_expansion:emerald_axe",
+    "vanilla_expansion:redstone_axe",
+    "vanilla_expansion:quartz_axe",
+    "vanilla_expansion:smoked_quartz_axe",
+    "vanilla_expansion:burnt_quartz_axe"
   ]
 }
