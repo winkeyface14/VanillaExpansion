@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vanilla_expansion:pile_of_paper"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:paper",
+    "count": 9
+  }
+}

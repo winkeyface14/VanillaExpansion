@@ -42,6 +42,11 @@ public class RegistryHandler {
     public static final RegistryObject<Item> QUARTZ_SHARD = ITEMS.register("quartz_shard", ItemBase::new);
     public static final RegistryObject<Item> SMOKED_QUARTZ_SHARD = ITEMS.register("smoked_quartz_shard", ItemBase::new);
     public static final RegistryObject<Item> BURNT_QUARTZ_SHARD = ITEMS.register("burnt_quartz_shard", ItemBase::new);
+    public static final RegistryObject<Item> RAW_REINFORCED_LEATHER = ITEMS.register("raw_reinforced_leather", ItemBase::new);
+    public static final RegistryObject<Item> REINFORCED_LEATHER = ITEMS.register("reinforced_leather", ItemBase::new);
+    //will activate after finalized texture
+    //public static final RegistryObject<Item> EMPOWERED_NETHERITE = ITEMS.register("empowered_netherite", ItemBase::new);
+    public static final RegistryObject<Item> PAPER_PILE = ITEMS.register("pile_of_paper", ItemBase::new);
 
 
     // Tool Head and Sword Blade
@@ -127,6 +132,9 @@ public class RegistryHandler {
             new ShovelItem(ModItemTier.BQUARTZ, 1, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<HoeItem> BQUARTZ_HOE = ITEMS.register("burnt_quartz_hoe", () ->
             new HoeItem(ModItemTier.BQUARTZ_HOE, 0, -1.0F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+
+    // FOR FUTURE IMPLEMENTATION OF MORE SHEARS
+    //public static final RegistryObject<ShearsItem> GOLDEN_SHEARS = ITEMS.register("golden_shears", () -> new ShearsItem(ItemTier.GOLD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
     // Armor
     public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->

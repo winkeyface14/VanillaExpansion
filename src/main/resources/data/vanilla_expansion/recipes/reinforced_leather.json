@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "vanilla_expansion:raw_reinforced_leather"
+  },
+  "result": "vanilla_expansion:reinforced_leather",
+  "experience": 0.7,
+  "cookingtime": 100
+}
