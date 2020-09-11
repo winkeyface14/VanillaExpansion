@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "vanilla_expansion:smooth_burnt_quartz_stairs"
+        }
+      ]
+    }
+  ]
+}
