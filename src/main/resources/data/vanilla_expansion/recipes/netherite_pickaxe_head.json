@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "yx",
+    "yx"
   ],
   "key":
   {
     "x":
     {
-      "item": "minecraft:netherite"
+      "item": "minecraft:netherite_ingot"
     },
     "y":
     {

@@ -33,6 +33,9 @@
   "block.vanilla_expansion.smooth_burnt_quartz_stairs": "Smooth Burnt Quartz Stairs",
   "block.vanilla_expansion.smooth_burnt_quartz_slab": "Smooth Burnt Quartz Slab",
   "block.vanilla_expansion.burnt_quartz_bricks_slab": "Burnt Quartz Bricks Slab",
+  "block.vanilla_expansion.fired_bricks": "Fired Bricks",
+  "block.vanilla_expansion.fired_bricks_stairs": "Fired Bricks Stairs",
+  "block.vanilla_expansion.fired_bricks_slab": "Fired Bricks Slab",
   "item.vanilla_expansion.coal_chunk": "Coal Chunk",
   "item.vanilla_expansion.charcoal_chunk": "Charcoal Chunk",
   "item.vanilla_expansion.emerald_shard": "Emerald Shard",
@@ -103,5 +106,6 @@
   "item.vanilla_expansion.netherite_hoe_head": "Netherite Hoe Head",
   "item.vanilla_expansion.raw_reinforced_leather": "Raw Reinforced Leather",
   "item.vanilla_expansion.reinforced_leather": "Reinforced Leather",
-  "item.vanilla_expansion.pile_of_paper": "Pile of Paper"
+  "item.vanilla_expansion.pile_of_paper": "Pile of Paper",
+  "item.vanilla_expansion.fired_brick": "Fired Brick"
 }

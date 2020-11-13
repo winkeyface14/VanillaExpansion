@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "vanilla_expansion:blocks/fired_bricks",
+    "top": "vanilla_expansion:blocks/fired_bricks",
+    "side": "vanilla_expansion:blocks/fired_bricks"
+  }
+}

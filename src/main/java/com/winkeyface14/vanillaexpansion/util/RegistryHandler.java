@@ -47,6 +47,8 @@ public class RegistryHandler {
     //will activate after finalized texture
     //public static final RegistryObject<Item> EMPOWERED_NETHERITE = ITEMS.register("empowered_netherite", ItemBase::new);
     public static final RegistryObject<Item> PAPER_PILE = ITEMS.register("pile_of_paper", ItemBase::new);
+    public static final RegistryObject<Item> FIRED_BRICK = ITEMS.register("fired_brick", ItemBase::new);
+
 
 
     // Tool Head and Sword Blade
@@ -173,6 +175,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> CHISELED_BURNT_QUARTZ_BLOCK = BLOCKS.register("chiseled_burnt_quartz_block", QuartzFamilyBlock::new);
     public static final RegistryObject<Block> SMOOTH_BURNT_QUARTZ = BLOCKS.register("smooth_burnt_quartz", QuartzFamilyBlock::new);
     public static final RegistryObject<Block> BURNT_QUARTZ_BRICKS = BLOCKS.register("burnt_quartz_bricks", QuartzFamilyBlock::new);
+    public static final RegistryObject<Block> FIRED_BRICKS = BLOCKS.register("fired_bricks", FiredBricks::new);
 
     // Block Items
     public static final RegistryObject<Item> CHARCOAL_BLOCK_ITEM = ITEMS.register("charcoal_block", () -> new CharcoalBlockItem(CHARCOAL_BLOCK.get()));
@@ -191,28 +194,34 @@ public class RegistryHandler {
     public static final RegistryObject<Item> CHISELED_BURNT_QUARTZ_BLOCK_ITEM = ITEMS.register("chiseled_burnt_quartz_block", () -> new BlockItemBase(CHISELED_BURNT_QUARTZ_BLOCK.get()));
     public static final RegistryObject<Item> SMOOTH_BURNT_QUARTZ_ITEM = ITEMS.register("smooth_burnt_quartz", () -> new BlockItemBase(SMOOTH_BURNT_QUARTZ.get()));
     public static final RegistryObject<Item> BURNT_QUARTZ_BRICKS_ITEM = ITEMS.register("burnt_quartz_bricks", () -> new BlockItemBase(BURNT_QUARTZ_BRICKS.get()));
+    public static final RegistryObject<Item> FIRED_BRICKS_ITEM = ITEMS.register("fired_bricks", () -> new BlockItemBase(FIRED_BRICKS.get()));
 
     // Stairs
     public static final RegistryObject<Block> SMOKED_QUARTZ_STAIRS = BLOCKS.register("smoked_quartz_stairs", QuartzFamilyStairs::new);
     public static final RegistryObject<Block> SMOOTH_SMOKED_QUARTZ_STAIRS = BLOCKS.register("smooth_smoked_quartz_stairs", QuartzFamilyStairs::new);
     public static final RegistryObject<Block> BURNT_QUARTZ_STAIRS = BLOCKS.register("burnt_quartz_stairs", QuartzFamilyStairs::new);
     public static final RegistryObject<Block> SMOOTH_BURNT_QUARTZ_STAIRS = BLOCKS.register("smooth_burnt_quartz_stairs", QuartzFamilyStairs::new);
+    public static final RegistryObject<Block> FIRED_BRICKS_STAIRS = BLOCKS.register("fired_bricks_stairs", FiredBricksStairs::new);
+
 
     // Stairs Item
     public static final RegistryObject<Item> SMOKED_QUARTZ_STAIRS_ITEM = ITEMS.register("smoked_quartz_stairs", () -> new BlockItemBase(SMOKED_QUARTZ_STAIRS.get()));
     public static final RegistryObject<Item> SMOOTH_SMOKED_QUARTZ_STAIRS_ITEM = ITEMS.register("smooth_smoked_quartz_stairs", () -> new BlockItemBase(SMOOTH_SMOKED_QUARTZ_STAIRS.get()));
     public static final RegistryObject<Item> BURNT_QUARTZ_STAIRS_ITEM = ITEMS.register("burnt_quartz_stairs", () -> new BlockItemBase(BURNT_QUARTZ_STAIRS.get()));
     public static final RegistryObject<Item> SMOOTH_BURNT_QUARTZ_STAIRS_ITEM = ITEMS.register("smooth_burnt_quartz_stairs", () -> new BlockItemBase(SMOOTH_BURNT_QUARTZ_STAIRS.get()));
+    public static final RegistryObject<Item> FIRED_BRICKS_STAIRS_ITEM = ITEMS.register("fired_bricks_stairs", () -> new BlockItemBase(FIRED_BRICKS_STAIRS.get()));
 
     // Walls
     public static final RegistryObject<Block> SMOKED_QUARTZ_WALL = BLOCKS.register("smoked_quartz_wall", QuartzFamilyWall::new);
     public static final RegistryObject<Block> QUARTZ_WALL = BLOCKS.register("quartz_wall", QuartzFamilyWall::new);
     public static final RegistryObject<Block> BURNT_QUARTZ_WALL = BLOCKS.register("burnt_quartz_wall", QuartzFamilyWall::new);
+    public static final RegistryObject<Block> FIRED_BRICKS_WALL = BLOCKS.register("fired_bricks_wall", FiredBricksWall::new);
 
     // Walls Item
     public static final RegistryObject<Item> SMOKED_QUARTZ_WALL_ITEM = ITEMS.register("smoked_quartz_wall", () -> new BlockItemBase(SMOKED_QUARTZ_WALL.get()));
     public static final RegistryObject<Item> QUARTZ_WALL_ITEM = ITEMS.register("quartz_wall", () -> new BlockItemBase(QUARTZ_WALL.get()));
     public static final RegistryObject<Item> BURNT_QUARTZ_WALL_ITEM = ITEMS.register("burnt_quartz_wall", () -> new BlockItemBase(BURNT_QUARTZ_WALL.get()));
+    public static final RegistryObject<Item> FIRED_BRICKS_WALL_ITEM = ITEMS.register("fired_bricks_wall", () -> new BlockItemBase(FIRED_BRICKS_WALL.get()));
 
     // Slabs
     public static final RegistryObject<Block> SMOKED_QUARTZ_SLAB = BLOCKS.register("smoked_quartz_slab", QuartzFamilySlab::new);
@@ -222,6 +231,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> BURNT_QUARTZ_SLAB = BLOCKS.register("burnt_quartz_slab", QuartzFamilySlab::new);
     public static final RegistryObject<Block> SMOOTH_BURNT_QUARTZ_SLAB = BLOCKS.register("smooth_burnt_quartz_slab", QuartzFamilySlab::new);
     public static final RegistryObject<Block> BURNT_QUARTZ_BRICKS_SLAB = BLOCKS.register("burnt_quartz_bricks_slab", QuartzFamilySlab::new);
+    public static final RegistryObject<Block> FIRED_BRICKS_SLAB = BLOCKS.register("fired_bricks_slab", FiredBricksSlab::new);
 
     // Slab Item
     public static final RegistryObject<Item> SMOKED_QUARTZ_SLAB_ITEM = ITEMS.register("smoked_quartz_slab", () -> new BlockItemBase(SMOKED_QUARTZ_SLAB.get()));
@@ -231,6 +241,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> BURNT_QUARTZ_SLAB_ITEM = ITEMS.register("burnt_quartz_slab", () -> new BlockItemBase(BURNT_QUARTZ_SLAB.get()));
     public static final RegistryObject<Item> SMOOTH_BURNT_QUARTZ_SLAB_ITEM = ITEMS.register("smooth_burnt_quartz_slab", () -> new BlockItemBase(SMOOTH_BURNT_QUARTZ_SLAB.get()));
     public static final RegistryObject<Item> BURNT_QUARTZ_BRICKS_SLAB_ITEM = ITEMS.register("burnt_quartz_bricks_slab", () -> new BlockItemBase(BURNT_QUARTZ_BRICKS_SLAB.get()));
+    public static final RegistryObject<Item> FIRED_BRICKS_SLAB_ITEM = ITEMS.register("fired_bricks_slab", () -> new BlockItemBase(FIRED_BRICKS_SLAB.get()));
 
     // Tile Entity
 
