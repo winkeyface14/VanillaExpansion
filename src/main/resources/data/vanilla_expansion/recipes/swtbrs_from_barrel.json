@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vanilla_expansion:barrel_of_sweet_berries"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:sweet_berries",
+    "count": 9
+  }
+}

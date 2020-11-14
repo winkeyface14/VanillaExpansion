@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "vanilla_expansion:empowered_netherite_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "vanilla_expansion:empowered_netherite_block",
+    "count": 1
+  }
+}

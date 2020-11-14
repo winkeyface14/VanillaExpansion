@@ -18,7 +18,9 @@ public enum ModArmorMaterial implements IArmorMaterial {
     EMERALD(VanillaExpansion.MOD_ID + ":emerald", 24, new int[] { 2, 6, 7, 3 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.5F, () -> { return Ingredient.fromItems(Items.EMERALD); } , 0),
     LAPIS(VanillaExpansion.MOD_ID + ":lapis_lazuli", 15, new int[] { 2, 5, 6, 2 }, 27,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, () -> { return Ingredient.fromItems(Items.LAPIS_BLOCK); } , 0);
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, () -> { return Ingredient.fromItems(Items.LAPIS_BLOCK); } , 0),
+    EMP_NETHERITE(VanillaExpansion.MOD_ID + ":empowered_netherite", 37, new int[] { 3, 6, 8, 3 }, 12,
+    SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, () -> { return Ingredient.fromItems(RegistryHandler.EMPOWERED_NETHERITE.get());} , 0.1F);
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] {13, 15, 16, 11};
     private final String name;
@@ -81,6 +83,6 @@ public enum ModArmorMaterial implements IArmorMaterial {
 
     @Override
     public float getKnockbackResistance() {
-        return 0;
+        return this.knockbackResistance;
     }
 }

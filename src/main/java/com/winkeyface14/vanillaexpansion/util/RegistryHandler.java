@@ -44,11 +44,10 @@ public class RegistryHandler {
     public static final RegistryObject<Item> BURNT_QUARTZ_SHARD = ITEMS.register("burnt_quartz_shard", ItemBase::new);
     public static final RegistryObject<Item> RAW_REINFORCED_LEATHER = ITEMS.register("raw_reinforced_leather", ItemBase::new);
     public static final RegistryObject<Item> REINFORCED_LEATHER = ITEMS.register("reinforced_leather", ItemBase::new);
-    //will activate after finalized texture
-    //public static final RegistryObject<Item> EMPOWERED_NETHERITE = ITEMS.register("empowered_netherite", ItemBase::new);
+    public static final RegistryObject<Item> EMPOWERED_NETHERITE = ITEMS.register("empowered_netherite_ingot", ItemBase::new);
     public static final RegistryObject<Item> PAPER_PILE = ITEMS.register("pile_of_paper", ItemBase::new);
     public static final RegistryObject<Item> FIRED_BRICK = ITEMS.register("fired_brick", ItemBase::new);
-
+    public static final RegistryObject<Item> EMPOWERED_NETHERITE_SCRAP = ITEMS.register("empowered_netherite_scrap", ItemBase::new);
 
 
     // Tool Head and Sword Blade
@@ -129,11 +128,22 @@ public class RegistryHandler {
     public static final RegistryObject<PickaxeItem> BQUARTZ_PICKAXE = ITEMS.register("burnt_quartz_pickaxe", () ->
             new PickaxeItem(ModItemTier.BQUARTZ, 0, -2.8F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<AxeItem> BQUARTZ_AXE = ITEMS.register("burnt_quartz_axe", () ->
-            new AxeItem(ModItemTier.BQUARTZ, 4F, -3.1F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new AxeItem(ModItemTier.BQUARTZ, 4, -3.1F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ShovelItem> BQUARTZ_SHOVEL = ITEMS.register("burnt_quartz_shovel", () ->
             new ShovelItem(ModItemTier.BQUARTZ, 1, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<HoeItem> BQUARTZ_HOE = ITEMS.register("burnt_quartz_hoe", () ->
             new HoeItem(ModItemTier.BQUARTZ_HOE, 0, -1.0F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+
+    public static final RegistryObject<SwordItem> EMP_NETHERITE_SWORD = ITEMS.register("empowered_netherite_sword", () ->
+            new SwordItem(ModItemTier.EMP_NETHERITE, 2, -1.9F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<PickaxeItem> EMP_NETHERITE_PICKAXE = ITEMS.register("empowered_netherite_pickaxe", () ->
+            new PickaxeItem(ModItemTier.EMP_NETHERITE, 0, -2.8F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<AxeItem> EMP_NETHERITE_AXE = ITEMS.register("empowered_netherite_axe", () ->
+            new AxeItem(ModItemTier.EMP_NETHERITE, 4, -2.8F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ShovelItem> EMP_NETHERITE_SHOVEL = ITEMS.register("empowered_netherite_shovel", () ->
+            new ShovelItem(ModItemTier.EMP_NETHERITE, 0.5F, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<HoeItem> EMP_NETHERITE_HOE = ITEMS.register("empowered_netherite_hoe", () ->
+            new HoeItem(ModItemTier.EMP_NETHERITE_HOE, 0, -0.5F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
     // FOR FUTURE IMPLEMENTATION OF MORE SHEARS
     //public static final RegistryObject<ShearsItem> GOLDEN_SHEARS = ITEMS.register("golden_shears", () -> new ShearsItem(ItemTier.GOLD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
@@ -157,6 +167,14 @@ public class RegistryHandler {
     public static final RegistryObject<ArmorItem> LAPIS_BOOTS = ITEMS.register("lapis_lazuli_boots", () ->
             new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
+    public static final RegistryObject<ArmorItem> EMP_NETHERITE_HELMET = ITEMS.register("empowered_netherite_helmet", () ->
+            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.HEAD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ArmorItem> EMP_NETHERITE_CHEST = ITEMS.register("empowered_netherite_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.CHEST, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ArmorItem> EMP_NETHERITE_LEGGINGS = ITEMS.register("empowered_netherite_leggings", () ->
+            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.LEGS, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ArmorItem> EMP_NETHERITE_BOOTS = ITEMS.register("empowered_netherite_boots", () ->
+            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
     // Blocks
     public static final RegistryObject<Block> CHARCOAL_BLOCK = BLOCKS.register("charcoal_block", CharcoalBlock::new);
@@ -165,6 +183,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> BARREL_OF_POTATOES_BLOCK = BLOCKS.register("barrel_of_potatoes", BarrelOfAnyBlock::new);
     public static final RegistryObject<Block> BARREL_OF_CARROTS_BLOCK = BLOCKS.register("barrel_of_carrots", BarrelOfAnyBlock::new);
     public static final RegistryObject<Block> BARREL_OF_CHORUS_BLOCK = BLOCKS.register("barrel_of_chorus_fruits", BarrelOfAnyBlock::new);
+    public static final RegistryObject<Block> BARREL_OF_SWTBRY_BLOCK = BLOCKS.register("barrel_of_sweet_berries", BarrelOfAnyBlock::new);
     public static final RegistryObject<Block> SMOKED_QUARTZ_BLOCK = BLOCKS.register("smoked_quartz_block", QuartzFamilyBlock::new);
     public static final RegistryObject<Block> SMOKED_QUARTZ_PILLAR = BLOCKS.register("smoked_quartz_pillar", QuartzFamilyPillar::new);
     public static final RegistryObject<Block> CHISELED_SMOKED_QUARTZ_BLOCK = BLOCKS.register("chiseled_smoked_quartz_block", QuartzFamilyBlock::new);
@@ -176,6 +195,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> SMOOTH_BURNT_QUARTZ = BLOCKS.register("smooth_burnt_quartz", QuartzFamilyBlock::new);
     public static final RegistryObject<Block> BURNT_QUARTZ_BRICKS = BLOCKS.register("burnt_quartz_bricks", QuartzFamilyBlock::new);
     public static final RegistryObject<Block> FIRED_BRICKS = BLOCKS.register("fired_bricks", FiredBricks::new);
+    public static final RegistryObject<Block> EMPOWERED_NETHERITE_BLOCK = BLOCKS.register("empowered_netherite_block", EmpNetheriteBlock::new);
 
     // Block Items
     public static final RegistryObject<Item> CHARCOAL_BLOCK_ITEM = ITEMS.register("charcoal_block", () -> new CharcoalBlockItem(CHARCOAL_BLOCK.get()));
@@ -184,6 +204,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> BARREL_OF_POTATOES_BLOCK_ITEM = ITEMS.register("barrel_of_potatoes", () -> new BarrelOfAnyBlockItem(BARREL_OF_POTATOES_BLOCK.get()));
     public static final RegistryObject<Item> BARREL_OF_CARROTS_BLOCK_ITEM = ITEMS.register("barrel_of_carrots", () -> new BarrelOfAnyBlockItem(BARREL_OF_CARROTS_BLOCK.get()));
     public static final RegistryObject<Item> BARREL_OF_CHORUS_BLOCK_ITEM = ITEMS.register("barrel_of_chorus_fruits", () -> new BarrelOfAnyBlockItem(BARREL_OF_CHORUS_BLOCK.get()));
+    public static final RegistryObject<Item> BARREL_OF_SWTBRY_BLOCK_ITEM = ITEMS.register("barrel_of_sweet_berries", () -> new BarrelOfAnyBlockItem(BARREL_OF_SWTBRY_BLOCK.get()));
     public static final RegistryObject<Item> SMOKED_QUARTZ_BLOCK_ITEM = ITEMS.register("smoked_quartz_block", () -> new BlockItemBase(SMOKED_QUARTZ_BLOCK.get()));
     public static final RegistryObject<Item> SMOKED_QUARTZ_PILLAR_ITEM = ITEMS.register("smoked_quartz_pillar", () -> new BlockItemBase(SMOKED_QUARTZ_PILLAR.get()));
     public static final RegistryObject<Item> CHISELED_SMOKED_QUARTZ_BLOCK_ITEM = ITEMS.register("chiseled_smoked_quartz_block", () -> new BlockItemBase(CHISELED_SMOKED_QUARTZ_BLOCK.get()));
@@ -195,6 +216,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> SMOOTH_BURNT_QUARTZ_ITEM = ITEMS.register("smooth_burnt_quartz", () -> new BlockItemBase(SMOOTH_BURNT_QUARTZ.get()));
     public static final RegistryObject<Item> BURNT_QUARTZ_BRICKS_ITEM = ITEMS.register("burnt_quartz_bricks", () -> new BlockItemBase(BURNT_QUARTZ_BRICKS.get()));
     public static final RegistryObject<Item> FIRED_BRICKS_ITEM = ITEMS.register("fired_bricks", () -> new BlockItemBase(FIRED_BRICKS.get()));
+    public static final RegistryObject<Item> EMPOWERED_NETHERITE_BLOCK_ITEM = ITEMS.register("empowered_netherite_block", () -> new EmpNetheriteBlockItem(EMPOWERED_NETHERITE_BLOCK.get()));
 
     // Stairs
     public static final RegistryObject<Block> SMOKED_QUARTZ_STAIRS = BLOCKS.register("smoked_quartz_stairs", QuartzFamilyStairs::new);

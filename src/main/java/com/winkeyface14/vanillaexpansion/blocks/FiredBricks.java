@@ -13,6 +13,7 @@ public class FiredBricks extends Block {
                 .sound(SoundType.STONE)
                 .harvestLevel(0)
                 .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool()
         );
     }
 }

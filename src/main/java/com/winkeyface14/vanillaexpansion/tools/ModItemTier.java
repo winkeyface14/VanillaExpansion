@@ -39,6 +39,12 @@ public enum ModItemTier implements IItemTier {
     }),
     BQUARTZ_HOE(2, 46, 6.5F, 0F, 5, () -> {
         return Ingredient.fromItems(RegistryHandler.BURNT_QUARTZ.get());
+    }),
+    EMP_NETHERITE(3, 2031, 16.5F, 5F, 12, () -> {
+        return Ingredient.fromItems(RegistryHandler.EMPOWERED_NETHERITE.get());
+    }),
+    EMP_NETHERITE_HOE(3, 2031, 16.5F, 0F, 12, () -> {
+        return Ingredient.fromItems(RegistryHandler.EMPOWERED_NETHERITE.get());
     });
 
     private final int harvestLevel;

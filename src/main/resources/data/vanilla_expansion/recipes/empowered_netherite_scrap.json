@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xyx",
+    "yxy",
+    "xyx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:redstone_block"
+    },
+    "y":
+    {
+      "item": "minecraft:netherite_scrap"
+    }
+  },
+  "result":
+  {
+    "item": "vanilla_expansion:empowered_netherite_scrap",
+    "count": 4
+  }
+}

@@ -15,10 +15,6 @@ import org.apache.logging.log4j.Logger;
 @Mod("vanilla_expansion")
 public class VanillaExpansion
 {
-    public static final String ID = "vanilla_expansion";
-    public static final String NAME = "The Vanilla Expansion";
-    public static final String VERSION = "0.0.10a_alpha";
-
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "vanilla_expansion";
 
@@ -35,21 +31,21 @@ public class VanillaExpansion
 
     private void doClientStuff(final FMLClientSetupEvent event) { }
 
-    public static final ItemGroup ITEM_TAB = new ItemGroup("VnlExtItemsTab") {
+    public static final ItemGroup ITEM_TAB = new ItemGroup("VEItemsTab") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.COAL_CHUNK.get());
         }
     };
 
-    public static final ItemGroup TOOL_TAB = new ItemGroup("VnlExtToolsTab") {
+    public static final ItemGroup TOOL_TAB = new ItemGroup("VEToolsTab") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.EMERALD_PICKAXE.get());
         }
     };
 
-    public static final ItemGroup BLOCK_TAB = new ItemGroup("VnlExtBlocksTab") {
+    public static final ItemGroup BLOCK_TAB = new ItemGroup("VEBlocksTab") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.CHARCOAL_BLOCK.get());

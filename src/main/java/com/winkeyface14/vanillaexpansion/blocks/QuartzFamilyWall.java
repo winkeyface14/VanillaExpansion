@@ -15,6 +15,7 @@ public class QuartzFamilyWall extends WallBlock {
                 .hardnessAndResistance(0.8f,0.8f)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)
-                .harvestTool(ToolType.PICKAXE));
+                .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool());
     }
 }

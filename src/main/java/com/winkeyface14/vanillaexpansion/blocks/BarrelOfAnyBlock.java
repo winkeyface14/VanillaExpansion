@@ -20,6 +20,7 @@ public class BarrelOfAnyBlock extends DirectionalBlock {
         super(Properties.create(Material.WOOD)
                 .hardnessAndResistance(2f, 4.0f)
                 .sound(SoundType.WOOD)
+                .setRequiresTool()
                 .harvestLevel(0)
                 .harvestTool(ToolType.AXE));
     }

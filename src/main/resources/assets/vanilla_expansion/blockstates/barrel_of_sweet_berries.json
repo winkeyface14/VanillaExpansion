@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "x": 180,
+      "model": "vanilla_expansion:block/barrel_of_sweet_berries"
+    },
+    "facing=east": {
+      "x": 90,
+      "y": 90,
+      "model": "vanilla_expansion:block/barrel_of_sweet_berries"
+    },
+    "facing=north": {
+      "x": 90,
+      "model": "vanilla_expansion:block/barrel_of_sweet_berries"
+    },
+    "facing=south": {
+      "x": 90,
+      "y": 180,
+      "model": "vanilla_expansion:block/barrel_of_sweet_berries"
+    },
+    "facing=up": {
+      "model": "vanilla_expansion:block/barrel_of_sweet_berries"
+    },
+    "facing=west": {
+      "x": 90,
+      "y": 270,
+      "model": "vanilla_expansion:block/barrel_of_sweet_berries"
+    }
+  }
+}

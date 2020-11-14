@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx",
+    "xy",
+    " y"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "vanilla_expansion:empowered_netherite_ingot"
+    },
+    "y":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "vanilla_expansion:empowered_netherite_axe",
+    "count": 1
+  }
+}

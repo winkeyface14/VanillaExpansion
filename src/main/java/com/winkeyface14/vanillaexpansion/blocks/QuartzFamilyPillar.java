@@ -22,7 +22,8 @@ public class QuartzFamilyPillar extends HorizontalBlock {
                 .hardnessAndResistance(0.8f,0.8f)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)
-                .harvestTool(ToolType.PICKAXE));
+                .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool());
     }
 
     public BlockState rotate(BlockState state, Rotation rot) {

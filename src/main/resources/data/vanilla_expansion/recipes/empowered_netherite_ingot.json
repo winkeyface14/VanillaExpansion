@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+   "ingredient":[
+     {
+       "item": "vanilla_expansion:empowered_netherite_scrap",
+       "count": 4
+     },
+     {
+       "item": "minecraft:gold_ingot",
+       "count": 4
+     }],
+  "result":
+  {
+    "item": "vanilla_expansion:empowered_netherite_ingot",
+    "count": 1
+  }
+}

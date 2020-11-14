@@ -16,7 +16,8 @@ public class FiredBricksSlab extends SlabBlock {
                 .hardnessAndResistance(2f,6f)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)
-                .harvestTool(ToolType.PICKAXE));
+                .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool());
     }
 
     @Override
