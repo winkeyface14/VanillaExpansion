@@ -107,6 +107,11 @@
   "item.vanilla_expansion.netherite_axe_head": "Netherite Axe Head",
   "item.vanilla_expansion.netherite_shovel_head": "Netherite Shovel Head",
   "item.vanilla_expansion.netherite_hoe_head": "Netherite Hoe Head",
+  "item.vanilla_expansion.redstone_sword_blade": "Redstone Sword Blade",
+  "item.vanilla_expansion.redstone_pickaxe_head": "Redstone Pickaxe Head",
+  "item.vanilla_expansion.redstone_axe_head": "Redstone Axe Head",
+  "item.vanilla_expansion.redstone_shovel_head": "Redstone Shovel Head",
+  "item.vanilla_expansion.redstone_hoe_head": "Redstone Hoe Head",
   "item.vanilla_expansion.raw_reinforced_leather": "Raw Reinforced Leather",
   "item.vanilla_expansion.reinforced_leather": "Reinforced Leather",
   "item.vanilla_expansion.pile_of_paper": "Pile of Paper",
@@ -121,5 +126,9 @@
   "item.vanilla_expansion.empowered_netherite_helmet": "Empowered Netherite Helmet",
   "item.vanilla_expansion.empowered_netherite_chestplate": "Empowered Netherite Chestplate",
   "item.vanilla_expansion.empowered_netherite_leggings": "Empowered Netherite Leggings",
-  "item.vanilla_expansion.empowered_netherite_boots": "Empowered Netherite Boots"
+  "item.vanilla_expansion.empowered_netherite_boots": "Empowered Netherite Boots",
+  "item.vanilla_expansion.reinforced_leather_helmet": "Reinforced Leather Helmet",
+  "item.vanilla_expansion.reinforced_leather_chestplate": "Reinforced Leather Chestplate",
+  "item.vanilla_expansion.reinforced_leather_leggings": "Reinforced Leather Leggings",
+  "item.vanilla_expansion.reinforced_leather_boots": "Reinforced Leather Boots"
 }

@@ -76,6 +76,11 @@ public class RegistryHandler {
     public static final RegistryObject<Item> NETHERITE_AXE_HEAD = ITEMS.register("netherite_axe_head", ItemBase::new);
     public static final RegistryObject<Item> NETHERITE_SHOVEL_HEAD = ITEMS.register("netherite_shovel_head", ItemBase::new);
     public static final RegistryObject<Item> NETHERITE_HOE_HEAD = ITEMS.register("netherite_hoe_head", ItemBase::new);
+    public static final RegistryObject<Item> REDSTONE_SWORD_BLADE = ITEMS.register("redstone_sword_blade", ItemBase::new);
+    public static final RegistryObject<Item> REDSTONE_PICKAXE_HEAD = ITEMS.register("redstone_pickaxe_head", ItemBase::new);
+    public static final RegistryObject<Item> REDSTONE_AXE_HEAD = ITEMS.register("redstone_axe_head", ItemBase::new);
+    public static final RegistryObject<Item> REDSTONE_SHOVEL_HEAD = ITEMS.register("redstone_shovel_head", ItemBase::new);
+    public static final RegistryObject<Item> REDSTONE_HOE_HEAD = ITEMS.register("redstone_hoe_head", ItemBase::new);
 
 
     // Tools
@@ -175,6 +180,15 @@ public class RegistryHandler {
             new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.LEGS, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> EMP_NETHERITE_BOOTS = ITEMS.register("empowered_netherite_boots", () ->
             new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+
+    public static final RegistryObject<ArmorItem> REINFORCED_LEATHER_HELMET = ITEMS.register("reinforced_leather_helmet", () ->
+            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.HEAD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ArmorItem> REINFORCED_LEATHER_CHEST = ITEMS.register("reinforced_leather_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.CHEST, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ArmorItem> REINFORCED_LEATHER_LEGGINGS = ITEMS.register("reinforced_leather_leggings", () ->
+            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.LEGS, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+    public static final RegistryObject<ArmorItem> REINFORCED_LEATHER_BOOTS = ITEMS.register("reinforced_leather_boots", () ->
+            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
     // Blocks
     public static final RegistryObject<Block> CHARCOAL_BLOCK = BLOCKS.register("charcoal_block", CharcoalBlock::new);

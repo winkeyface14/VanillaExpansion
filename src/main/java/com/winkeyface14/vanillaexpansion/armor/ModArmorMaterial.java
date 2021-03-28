@@ -20,7 +20,9 @@ public enum ModArmorMaterial implements IArmorMaterial {
     LAPIS(VanillaExpansion.MOD_ID + ":lapis_lazuli", 15, new int[] { 2, 5, 6, 2 }, 27,
             SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, () -> { return Ingredient.fromItems(Items.LAPIS_BLOCK); } , 0),
     EMP_NETHERITE(VanillaExpansion.MOD_ID + ":empowered_netherite", 37, new int[] { 3, 6, 8, 3 }, 12,
-    SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, () -> { return Ingredient.fromItems(RegistryHandler.EMPOWERED_NETHERITE.get());} , 0.1F);
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, () -> { return Ingredient.fromItems(RegistryHandler.EMPOWERED_NETHERITE.get());} , 0.1F),
+    REINFORCED_LEATHER(VanillaExpansion.MOD_ID + ":reinforced_leather", 7, new int[] { 1, 2, 3, 1 }, 16,
+    SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 1.0F, () -> { return Ingredient.fromItems(RegistryHandler.REINFORCED_LEATHER.get());} , 0.1F);
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] {13, 15, 16, 11};
     private final String name;
