@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 
 public class BarrelOfAnyBlock extends DirectionalBlock {
 
-    private static final DirectionProperty FACING = BlockStateProperties.FACING;
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public BarrelOfAnyBlock() {
-        super(Properties.copy(Material.WOOD)
+        super(AbstractBlock.Properties.create(Material.WOOD)
                 .hardnessAndResistance(2f, 4.0f)
                 .sound(SoundType.WOOD)
                 .setRequiresTool()
@@ -25,10 +25,11 @@ public class BarrelOfAnyBlock extends DirectionalBlock {
                 .harvestTool(ToolType.AXE));
     }
 
+    @SuppressWarnings("deprecation")
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
-        return this.getDefaultState().with(FACING, context.getFace());
+        return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing());
     }
 
     @Override

@@ -1,9 +1,6 @@
 package com.winkeyface14.vanillaexpansion.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.EnumProperty;
@@ -18,7 +15,7 @@ public class QuartzFamilyPillar extends HorizontalBlock {
     private static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
     public QuartzFamilyPillar() {
-        super(Properties.create(Material.ROCK)
+        super(AbstractBlock.Properties.create(Material.ROCK)
                 .hardnessAndResistance(0.8f,0.8f)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)

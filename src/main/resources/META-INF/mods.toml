@@ -1,11 +1,11 @@
 modLoader="javafml"
-loaderVersion="[34,)"
+loaderVersion="[35,)"
 license="MIT"
 issueTrackerURL="https://github.com/winkeyface14/VanillaExpansion/issues" #optional
 
 [[mods]]
 modId="vanilla_expansion"
-version="1.16.3-0.0.11a"
+version="1.16.3-0.0.12a"
 displayName="The Vanilla Expansion"
 updateJSONURL="https://github.com/winkeyface14/VanillaExpansion"
 displayURL="http://patreon.com/winkeyface14/"
@@ -13,19 +13,19 @@ logoFile="logo.png"
 credits="Thanks to the pandemic I made this mod out of boredom."
 authors="winkeyface14"
 description='''
-This mod just adds blocks and items that should be added to Minecraft, in my opinion.
+This mod just adds blocks and items that has the same essence of vanilla Minecraft, in my opinion.
 '''
 
 [[dependencies.vanilla_expansion]]
-    modId="forge"
-    mandatory=true
-    versionRange="[34.0.0,)"
-    ordering="NONE"
-    side="BOTH"
+modId="forge"
+mandatory=true
+versionRange="[35.0.0,)"
+ordering="NONE"
+side="BOTH"
 
 [[dependencies.vanilla_expansion]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.16.3,1.17)"
-    ordering="NONE"
-    side="BOTH"
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.4,1.17)"
+ordering="NONE"
+side="BOTH"

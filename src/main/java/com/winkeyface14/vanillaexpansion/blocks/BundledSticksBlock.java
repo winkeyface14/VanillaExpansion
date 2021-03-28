@@ -15,7 +15,7 @@ public class BundledSticksBlock extends HorizontalBlock {
     private static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
     public BundledSticksBlock() {
-        super(Properties.create(Material.WOOD)
+        super(AbstractBlock.Properties.create(Material.WOOD)
                 .hardnessAndResistance(2f, 4.0f)
                 .sound(SoundType.WOOD)
                 .harvestLevel(0)

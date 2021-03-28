@@ -32,21 +32,21 @@ public class VanillaExpansion
 
     public static final ItemGroup ITEM_TAB = new ItemGroup("VEItemsTab") {
         @Override
-        public ItemStack makeIcon() {
+        public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.COAL_CHUNK.get());
         }
     };
 
     public static final ItemGroup TOOL_TAB = new ItemGroup("VEToolsTab") {
         @Override
-        public ItemStack makeIcon() {
+        public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.EMERALD_PICKAXE.get());
         }
     };
 
     public static final ItemGroup BLOCK_TAB = new ItemGroup("VEBlocksTab") {
         @Override
-        public ItemStack makeIcon() {
+        public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.CHARCOAL_BLOCK.get());
         }
     };

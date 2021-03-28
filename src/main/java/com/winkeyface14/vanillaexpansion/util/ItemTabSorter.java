@@ -10,7 +10,7 @@ public class ItemTabSorter extends ItemGroup {
     }
 
     @Override
-    public ItemStack makeIcon() {
+    public ItemStack createIcon() {
         return null;
     }
 }
