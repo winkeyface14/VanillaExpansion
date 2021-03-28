@@ -144,51 +144,51 @@ public class RegistryHandler {
     public static final RegistryObject<PickaxeItem> EMP_NETHERITE_PICKAXE = ITEMS.register("empowered_netherite_pickaxe", () ->
             new PickaxeItem(ModItemTier.EMP_NETHERITE, 0, -2.8F, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<AxeItem> EMP_NETHERITE_AXE = ITEMS.register("empowered_netherite_axe", () ->
-            new AxeItem(ModItemTier.EMP_NETHERITE, 4, -2.8F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new AxeItem(ModItemTier.EMP_NETHERITE, 4, -2.8F, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ShovelItem> EMP_NETHERITE_SHOVEL = ITEMS.register("empowered_netherite_shovel", () ->
-            new ShovelItem(ModItemTier.EMP_NETHERITE, 0.5F, -3F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ShovelItem(ModItemTier.EMP_NETHERITE, 0.5F, -3F, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<HoeItem> EMP_NETHERITE_HOE = ITEMS.register("empowered_netherite_hoe", () ->
-            new HoeItem(ModItemTier.EMP_NETHERITE_HOE, 0, -0.5F, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new HoeItem(ModItemTier.EMP_NETHERITE_HOE, 0, -0.5F, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
 
     // FOR FUTURE IMPLEMENTATION OF MORE SHEARS
     //public static final RegistryObject<ShearsItem> GOLDEN_SHEARS = ITEMS.register("golden_shears", () -> new ShearsItem(ItemTier.GOLD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
 
     // Armor
     public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> EMERALD_CHEST = ITEMS.register("emerald_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
 
     public static final RegistryObject<ArmorItem> LAPIS_HELMET = ITEMS.register("lapis_lazuli_helmet", () ->
-            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.HEAD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.HEAD, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> LAPIS_CHEST = ITEMS.register("lapis_lazuli_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.CHEST, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.CHEST, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> LAPIS_LEGGINGS = ITEMS.register("lapis_lazuli_leggings", () ->
-            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.LEGS, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.LEGS, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> LAPIS_BOOTS = ITEMS.register("lapis_lazuli_boots", () ->
-            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.LAPIS, EquipmentSlotType.FEET, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
 
     public static final RegistryObject<ArmorItem> EMP_NETHERITE_HELMET = ITEMS.register("empowered_netherite_helmet", () ->
-            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.HEAD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.HEAD, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> EMP_NETHERITE_CHEST = ITEMS.register("empowered_netherite_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.CHEST, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.CHEST, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> EMP_NETHERITE_LEGGINGS = ITEMS.register("empowered_netherite_leggings", () ->
-            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.LEGS, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.LEGS, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> EMP_NETHERITE_BOOTS = ITEMS.register("empowered_netherite_boots", () ->
-            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.EMP_NETHERITE, EquipmentSlotType.FEET, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
 
     public static final RegistryObject<ArmorItem> REINFORCED_LEATHER_HELMET = ITEMS.register("reinforced_leather_helmet", () ->
-            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.HEAD, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.HEAD, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> REINFORCED_LEATHER_CHEST = ITEMS.register("reinforced_leather_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.CHEST, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.CHEST, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> REINFORCED_LEATHER_LEGGINGS = ITEMS.register("reinforced_leather_leggings", () ->
-            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.LEGS, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.LEGS, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
     public static final RegistryObject<ArmorItem> REINFORCED_LEATHER_BOOTS = ITEMS.register("reinforced_leather_boots", () ->
-            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.FEET, new Item.Properties().group(VanillaExpansion.TOOL_TAB)));
+            new ArmorItem(ModArmorMaterial.REINFORCED_LEATHER, EquipmentSlotType.FEET, new Item.Properties().tab(VanillaExpansion.TOOL_TAB)));
 
     // Blocks
     public static final RegistryObject<Block> CHARCOAL_BLOCK = BLOCKS.register("charcoal_block", CharcoalBlock::new);

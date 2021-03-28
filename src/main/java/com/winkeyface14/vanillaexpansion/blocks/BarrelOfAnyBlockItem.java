@@ -8,6 +8,6 @@ import net.minecraft.item.ItemStack;
 public class BarrelOfAnyBlockItem extends BlockItem {
 
     public BarrelOfAnyBlockItem(Block block) {
-        super(block, new Properties().group(VanillaExpansion.BLOCK_TAB));
+        super(block, new Properties().tab(VanillaExpansion.BLOCK_TAB));
     }
 }

@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 public class CharcoalBlockItem extends BlockItem {
 
     public CharcoalBlockItem(Block block) {
-        super(block, new Properties().group(VanillaExpansion.BLOCK_TAB));
+        super(block, new Properties().tab(VanillaExpansion.BLOCK_TAB));
     }
 
     @Override
