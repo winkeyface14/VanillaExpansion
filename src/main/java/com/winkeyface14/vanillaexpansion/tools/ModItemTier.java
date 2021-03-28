@@ -11,40 +11,40 @@ import java.util.function.Supplier;
 public enum ModItemTier implements IItemTier {
 
     EMERALD(3, 946, 7.0F, 3.5F, 16, () -> {
-        return Ingredient.fromItems(Items.EMERALD);
+        return Ingredient.of(Items.EMERALD);
     }),
     EMERALD_HOE(3, 946, 7.0F, 0F, 16, () -> {
-        return Ingredient.fromItems(Items.EMERALD);
+        return Ingredient.of(Items.EMERALD);
     }),
     REDSTONE(2, 190, 18.0F, 2.5F, 6, () -> {
-        return Ingredient.fromItems(Items.REDSTONE_BLOCK);
+        return Ingredient.of(Items.REDSTONE_BLOCK);
     }),
     REDSTONE_HOE(2, 190, 18.0F, 0F, 6, () -> {
-        return Ingredient.fromItems(Items.REDSTONE_BLOCK);
+        return Ingredient.of(Items.REDSTONE_BLOCK);
     }),
     QUARTZ(2, 46, 6.5F, 6F, 5, () -> {
-        return Ingredient.fromItems(Items.QUARTZ);
+        return Ingredient.of(Items.QUARTZ);
     }),
     QUARTZ_HOE(2, 46, 6.5F, 0F, 5, () -> {
-        return Ingredient.fromItems(Items.QUARTZ);
+        return Ingredient.of(Items.QUARTZ);
     }),
     SQUARTZ(2, 46, 6.5F, 6F, 5, () -> {
-        return Ingredient.fromItems(RegistryHandler.SMOKED_QUARTZ.get());
+        return Ingredient.of(RegistryHandler.SMOKED_QUARTZ.get());
     }),
     SQUARTZ_HOE(2, 46, 6.5F, 0F, 5, () -> {
-        return Ingredient.fromItems(RegistryHandler.SMOKED_QUARTZ.get());
+        return Ingredient.of(RegistryHandler.SMOKED_QUARTZ.get());
     }),
     BQUARTZ(2, 46, 6.5F, 6F, 5, () -> {
-        return Ingredient.fromItems(RegistryHandler.BURNT_QUARTZ.get());
+        return Ingredient.of(RegistryHandler.BURNT_QUARTZ.get());
     }),
     BQUARTZ_HOE(2, 46, 6.5F, 0F, 5, () -> {
-        return Ingredient.fromItems(RegistryHandler.BURNT_QUARTZ.get());
+        return Ingredient.of(RegistryHandler.BURNT_QUARTZ.get());
     }),
     EMP_NETHERITE(3, 2031, 16.5F, 5F, 12, () -> {
-        return Ingredient.fromItems(RegistryHandler.EMPOWERED_NETHERITE.get());
+        return Ingredient.of(RegistryHandler.EMPOWERED_NETHERITE.get());
     }),
     EMP_NETHERITE_HOE(3, 2031, 16.5F, 0F, 12, () -> {
-        return Ingredient.fromItems(RegistryHandler.EMPOWERED_NETHERITE.get());
+        return Ingredient.of(RegistryHandler.EMPOWERED_NETHERITE.get());
     });
 
     private final int harvestLevel;

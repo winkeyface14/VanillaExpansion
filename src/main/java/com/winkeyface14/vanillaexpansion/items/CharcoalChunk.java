@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 public class CharcoalChunk extends Item {
 
     public CharcoalChunk() {
-        super(new Properties().group(VanillaExpansion.ITEM_TAB));
+        super(new Properties().tab(VanillaExpansion.ITEM_TAB));
     }
 
     @Override

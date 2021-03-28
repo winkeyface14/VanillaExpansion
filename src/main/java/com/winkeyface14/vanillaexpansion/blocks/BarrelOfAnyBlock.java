@@ -17,7 +17,7 @@ public class BarrelOfAnyBlock extends DirectionalBlock {
     private static final DirectionProperty FACING = BlockStateProperties.FACING;
 
     public BarrelOfAnyBlock() {
-        super(Properties.create(Material.WOOD)
+        super(Properties.copy(Material.WOOD)
                 .hardnessAndResistance(2f, 4.0f)
                 .sound(SoundType.WOOD)
                 .setRequiresTool()
