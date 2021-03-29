@@ -1,9 +1,6 @@
 package com.winkeyface14.vanillaexpansion;
 
-import com.winkeyface14.vanillaexpansion.util.BlockHandler;
-import com.winkeyface14.vanillaexpansion.util.ItemHandler;
-import com.winkeyface14.vanillaexpansion.util.RegistryHandler;
-import com.winkeyface14.vanillaexpansion.util.ToolHandler;
+import com.winkeyface14.vanillaexpansion.util.*;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,7 +21,10 @@ public class VanillaExpansion
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        RegistryHandler.init();
+        ArmorHandler.init();
+        BlockHandler.init();
+        ItemHandler.init();
+        ToolHandler.init();
 
         MinecraftForge.EVENT_BUS.register(this);
     }

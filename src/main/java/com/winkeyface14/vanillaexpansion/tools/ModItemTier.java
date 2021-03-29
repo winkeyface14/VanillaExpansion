@@ -1,9 +1,7 @@
 package com.winkeyface14.vanillaexpansion.tools;
 
 import com.winkeyface14.vanillaexpansion.util.ItemHandler;
-import com.winkeyface14.vanillaexpansion.util.RegistryHandler;
 import net.minecraft.item.IItemTier;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 
