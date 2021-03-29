@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "vanilla_expansion:items/resdstone_sword_blade"
+    "layer0": "vanilla_expansion:items/redstone_sword_blade"
   }
 }

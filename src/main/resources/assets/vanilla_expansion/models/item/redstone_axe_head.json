@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "vanilla_expansion:items/resdstone_axe_head"
+    "layer0": "vanilla_expansion:items/redstone_axe_head"
   }
 }
