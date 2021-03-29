@@ -1,6 +1,9 @@
 package com.winkeyface14.vanillaexpansion;
 
+import com.winkeyface14.vanillaexpansion.util.BlockHandler;
+import com.winkeyface14.vanillaexpansion.util.ItemHandler;
 import com.winkeyface14.vanillaexpansion.util.RegistryHandler;
+import com.winkeyface14.vanillaexpansion.util.ToolHandler;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,21 +36,21 @@ public class VanillaExpansion
     public static final ItemGroup ITEM_TAB = new ItemGroup("VEItemsTab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.COAL_CHUNK.get());
+            return new ItemStack(ItemHandler.COAL_CHUNK.get());
         }
     };
 
     public static final ItemGroup TOOL_TAB = new ItemGroup("VEToolsTab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.EMERALD_PICKAXE.get());
+            return new ItemStack(ToolHandler.EMERALD_PICKAXE.get());
         }
     };
 
     public static final ItemGroup BLOCK_TAB = new ItemGroup("VEBlocksTab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.CHARCOAL_BLOCK.get());
+            return new ItemStack(BlockHandler.CHARCOAL_BLOCK.get());
         }
     };
 

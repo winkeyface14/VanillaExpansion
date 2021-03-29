@@ -1,6 +1,5 @@
 package com.winkeyface14.vanillaexpansion.blocks;
 
-import com.winkeyface14.vanillaexpansion.util.RegistryHandler;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
