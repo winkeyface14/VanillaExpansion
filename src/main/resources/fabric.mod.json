@@ -18,16 +18,12 @@
 		"main": [
 			"net.winkeyface14.vanilla_expansion.TheVanillaExpansion"
 		],
-		"client": [
-			"net.winkeyface14.vanilla_expansion.client.TheVanillaExpansionClient"
+		"fabric-datagen": [
+			"net.winkeyface14.vanilla_expansion.TheVanillaExpansionDataGenerator"
 		]
 	},
 	"mixins": [
-		"vanilla_expansion.mixins.json",
-		{
-			"config": "vanilla_expansion.client.mixins.json",
-			"environment": "client"
-		}
+		"vanilla_expansion.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
