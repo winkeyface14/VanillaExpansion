@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "net.winkeyface14.vanilla_expansion.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"ExampleClientMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
