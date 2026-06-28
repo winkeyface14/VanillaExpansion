@@ -18,7 +18,7 @@ public class BlockHandler {
 
     // Blocks
     public static final RegistryObject<Block> CHARCOAL_BLOCK = BLOCKS.register("charcoal_block", CharcoalBlock::new);
-    public static final RegistryObject<Block> BUNDLED_STICKS_BLOCK = BLOCKS.register("block_of_bundled_sticks", BundledSticksBlock::new);
+    public static final RegistryObject<Block> BUNDLED_STICKS_BLOCK = BLOCKS.register("", BundledSticksBlock::new);
     public static final RegistryObject<Block> BARREL_OF_APPLES_BLOCK = BLOCKS.register("barrel_of_apples", BarrelOfAnyBlock::new);
     public static final RegistryObject<Block> BARREL_OF_POTATOES_BLOCK = BLOCKS.register("barrel_of_potatoes", BarrelOfAnyBlock::new);
     public static final RegistryObject<Block> BARREL_OF_CARROTS_BLOCK = BLOCKS.register("barrel_of_carrots", BarrelOfAnyBlock::new);

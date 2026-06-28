@@ -1,8 +1,8 @@
 {
   "item.minecraft.shears": "Iron Shears",
-  "itemGroup.VEItemsTab": "The Vanilla Expansion: Items",
-  "itemGroup.VEToolsTab": "The Vanilla Expansion: Tools and Armor",
-  "itemGroup.VEBlocksTab": "The Vanilla Expansion: Blocks",
+  "creativetab.vanilla_expansion.items": "The Vanilla Expansion: Items",
+  "creativetab.vanilla_expansion.tools_and_armor": "The Vanilla Expansion: Tools and Armor",
+  "creativetab.vanilla_expansion.blocks": "The Vanilla Expansion: Blocks",
   "block.vanilla_expansion.charcoal_block": "Charcoal Block",
   "block.vanilla_expansion.block_of_bundled_sticks": "Block of Bundled Sticks",
   "block.vanilla_expansion.barrel_of_apples": "Barrel of Apples",

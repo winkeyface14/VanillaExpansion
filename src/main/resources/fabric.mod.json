@@ -3,7 +3,7 @@
 	"id": "vanilla_expansion",
 	"version": "${version}",
 	"name": "The Vanilla Expansion",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod just adds blocks and items that has the same essence of vanilla Minecraft, in my opinion.",
 	"authors": [
 		"Me!"
 	],
@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT-License",
 	"icon": "assets/vanilla_expansion/icon.png",
 	"environment": "*",
 	"entrypoints": {

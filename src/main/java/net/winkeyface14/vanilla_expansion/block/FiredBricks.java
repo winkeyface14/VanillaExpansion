@@ -1,24 +1,20 @@
-package com.winkeyface14.vanillaexpansion.blocks;
+package net.winkeyface14.vanilla_expansion.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.common.ToolType;
 
-public class QuartzFamilyBlock extends Block {
+public class FiredBricks extends Block {
 
-    public QuartzFamilyBlock() {
+    public FiredBricks() {
         super(AbstractBlock.Properties.create(Material.ROCK)
-                .hardnessAndResistance(0.8f,0.8f)
+                .hardnessAndResistance(2.0f,6.0f)
                 .sound(SoundType.STONE)
                 .harvestLevel(0)
                 .harvestTool(ToolType.PICKAXE)
                 .setRequiresTool()
         );
-    }
-
-    public QuartzFamilyBlock(BlockBehaviour.Properties properties) {
     }
 }

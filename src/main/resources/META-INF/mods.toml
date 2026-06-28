@@ -5,7 +5,7 @@ issueTrackerURL="https://github.com/winkeyface14/VanillaExpansion/issues" #optio
 
 [[mods]]
 modId="vanilla_expansion"
-version="1.16.3-0.0.12a"
+version="0.0.13a-26.2-fabric"
 displayName="The Vanilla Expansion"
 updateJSONURL="https://github.com/winkeyface14/VanillaExpansion"
 displayURL="http://patreon.com/winkeyface14/"
