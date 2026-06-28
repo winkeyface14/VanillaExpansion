@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.world.level.block.Blocks;
 import net.winkeyface14.vanilla_expansion.util.BlockRegHandler;
 import net.winkeyface14.vanilla_expansion.util.ItemRegHandler;
 
@@ -23,36 +24,42 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(BlockRegHandler.BARREL_OF_SWEETBERRY_BLOCK);
         blockModelGenerators.createTrivialCube(BlockRegHandler.BARREL_OF_CHORUS_BLOCK);
         blockModelGenerators.createTrivialCube(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.FIRED_BRICKS);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.FIRED_BRICKS_STAIRS);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.FIRED_BRICKS_SLAB);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.FIRED_BRICKS_WALL);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.QUARTZ_WALL);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.QUARTZ_BRICKS_WALL);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOOTH_SMOKED_QUARTZ);
+
+        blockModelGenerators.family(BlockRegHandler.FIRED_BRICKS)
+                .stairs(BlockRegHandler.FIRED_BRICKS_STAIRS)
+                .slab(BlockRegHandler.FIRED_BRICKS_SLAB)
+                .wall(BlockRegHandler.FIRED_BRICKS_WALL);
+
+        blockModelGenerators.family(Blocks.QUARTZ_BLOCK).wall(BlockRegHandler.QUARTZ_WALL);
+        blockModelGenerators.family(Blocks.QUARTZ_BRICKS).wall(BlockRegHandler.QUARTZ_BRICKS_WALL);
+
+        blockModelGenerators.family(BlockRegHandler.SMOKED_QUARTZ_BLOCK)
+                .stairs(BlockRegHandler.SMOKED_QUARTZ_STAIRS)
+                .slab(BlockRegHandler.SMOKED_QUARTZ_SLAB)
+                .wall(BlockRegHandler.SMOKED_QUARTZ_WALL);
+        blockModelGenerators.family(BlockRegHandler.SMOOTH_SMOKED_QUARTZ)
+                .stairs(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_STAIRS)
+                .slab(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB);
+        blockModelGenerators.family(BlockRegHandler.SMOKED_QUARTZ_BRICKS)
+                .stairs(BlockRegHandler.SMOKED_QUARTZ_BRICKS_STAIRS)
+                .slab(BlockRegHandler.SMOKED_QUARTZ_BRICKS_SLAB)
+                .wall(BlockRegHandler.SMOKED_QUARTZ_BRICKS_WALL);
         blockModelGenerators.createTrivialCube(BlockRegHandler.CHISELED_SMOKED_QUARTZ_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_BRICKS);
         blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_PILLAR);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_STAIRS);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_BRICKS_STAIRS);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_STAIRS);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_SLAB);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_BRICKS_SLAB);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_WALL);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_BRICKS_WALL);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BURNT_QUARTZ_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOOTH_BURNT_QUARTZ);
+
+        blockModelGenerators.family(BlockRegHandler.BURNT_QUARTZ_BLOCK)
+                .stairs(BlockRegHandler.BURNT_QUARTZ_STAIRS)
+                .slab(BlockRegHandler.BURNT_QUARTZ_SLAB)
+                .wall(BlockRegHandler.BURNT_QUARTZ_WALL);
+        blockModelGenerators.family(BlockRegHandler.SMOOTH_BURNT_QUARTZ)
+                .stairs(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS)
+                .slab(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB);
+        blockModelGenerators.family(BlockRegHandler.BURNT_QUARTZ_BRICKS)
+                .stairs(BlockRegHandler.BURNT_QUARTZ_BRICKS_STAIRS)
+                .slab(BlockRegHandler.BURNT_QUARTZ_BRICKS_SLAB)
+                .wall(BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL);
         blockModelGenerators.createTrivialCube(BlockRegHandler.CHISELED_BURNT_QUARTZ_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BURNT_QUARTZ_BRICKS);
         blockModelGenerators.createTrivialCube(BlockRegHandler.BURNT_QUARTZ_PILLAR);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BURNT_QUARTZ_STAIRS);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BURNT_QUARTZ_SLAB);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BURNT_QUARTZ_WALL);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL);
     }
 
     @Override
@@ -103,5 +110,45 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 }

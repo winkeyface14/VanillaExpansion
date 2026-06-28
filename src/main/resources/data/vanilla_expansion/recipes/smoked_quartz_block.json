@@ -5,11 +5,9 @@
     "##"
   ],
   "key": {
-    "#": {
-      "item": "vanilla_expansion:smoked_quartz"
-    }
+    "#": "vanilla_expansion:smoked_quartz"
   },
   "result": {
-    "item": "vanilla_expansion:smoked_quartz_block"
+    "id": "vanilla_expansion:smoked_quartz_block"
   }
 }

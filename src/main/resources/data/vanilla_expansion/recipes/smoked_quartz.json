@@ -1,9 +1,7 @@
 {
   "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "minecraft:quartz"
-  },
-  "result": "vanilla_expansion:smoked_quartz",
   "experience": 0.7,
-  "cookingtime": 100
+  "cookingtime": 100,
+  "ingredient": "minecraft:quartz",
+  "result": {"vanilla_expansion:smoked_quartz"}
 }

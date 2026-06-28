@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.winkeyface14.vanilla_expansion.datagen.ModBlockLootTableProvider;
 import net.winkeyface14.vanilla_expansion.datagen.ModBlockTagsProvider;
 import net.winkeyface14.vanilla_expansion.datagen.ModModelProvider;
+import net.winkeyface14.vanilla_expansion.datagen.ModRecipeProvider;
 
 public class TheVanillaExpansionDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -14,5 +15,6 @@ public class TheVanillaExpansionDataGenerator implements DataGeneratorEntrypoint
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModBlockTagsProvider::new);
 		pack.addProvider(ModBlockLootTableProvider::new);
+		pack.addProvider(ModRecipeProvider::new);
 	}
 }

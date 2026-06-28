@@ -1,7 +1,6 @@
 package com.winkeyface14.vanillaexpansion.armor;
 
 import com.winkeyface14.vanillaexpansion.VanillaExpansion;
-import com.winkeyface14.vanillaexpansion.util.ItemHandler;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Items;

@@ -27,6 +27,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(BlockRegHandler.FIRED_BRICKS_SLAB);
         dropSelf(BlockRegHandler.FIRED_BRICKS_WALL);
         dropSelf(BlockRegHandler.QUARTZ_WALL);
+        dropSelf(BlockRegHandler.QUARTZ_BRICKS_WALL);
         dropSelf(BlockRegHandler.SMOKED_QUARTZ_BLOCK);
         dropSelf(BlockRegHandler.SMOOTH_SMOKED_QUARTZ);
         dropSelf(BlockRegHandler.CHISELED_SMOKED_QUARTZ_BLOCK);
@@ -39,6 +40,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB);
         dropSelf(BlockRegHandler.SMOKED_QUARTZ_BRICKS_SLAB);
         dropSelf(BlockRegHandler.SMOKED_QUARTZ_WALL);
+        dropSelf(BlockRegHandler.SMOKED_QUARTZ_BRICKS_WALL);
         dropSelf(BlockRegHandler.BURNT_QUARTZ_BLOCK);
         dropSelf(BlockRegHandler.SMOOTH_BURNT_QUARTZ);
         dropSelf(BlockRegHandler.CHISELED_BURNT_QUARTZ_BLOCK);
@@ -51,5 +53,6 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB);
         dropSelf(BlockRegHandler.BURNT_QUARTZ_BRICKS_SLAB);
         dropSelf(BlockRegHandler.BURNT_QUARTZ_WALL);
+        dropSelf(BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL);
     }
 }

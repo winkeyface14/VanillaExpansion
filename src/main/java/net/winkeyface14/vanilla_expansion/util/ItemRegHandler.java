@@ -1,7 +1,11 @@
 package net.winkeyface14.vanilla_expansion.util;
 
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ShovelItem;
 import net.winkeyface14.vanilla_expansion.item.ItemBase;
+import net.winkeyface14.vanilla_expansion.item.ToolMaterialsBase;
 
 public class ItemRegHandler extends ItemBase {
     //Regular Items
@@ -53,4 +57,69 @@ public class ItemRegHandler extends ItemBase {
     public static final Item REDSTONE_AXE_HEAD = registerItem("redstone_axe_head", Item::new);
     public static final Item REDSTONE_SHOVEL_HEAD = registerItem("redstone_shovel_head", Item::new);
     public static final Item REDSTONE_HOE_HEAD = registerItem("redstone_hoe_head", Item::new);
+
+    //Emerald Tools
+    public static final Item EMERALD_SWORD = registerItem("emerald_sword", properties -> new Item(properties
+            .sword(ToolMaterialsBase.EMERALD,3, -2.4f)));
+    public static final Item EMERALD_SHOVEL = registerItem("emerald_shovel", properties -> new ShovelItem(ToolMaterialsBase.EMERALD,1.5f, -3, properties));
+    public static final Item EMERALD_PICKAXE = registerItem("emerald_pickaxe", properties -> new Item(properties
+            .pickaxe(ToolMaterialsBase.EMERALD,1, -2.8f)));
+    public static final Item EMERALD_AXE = registerItem("emerald_axe", properties -> new AxeItem(ToolMaterialsBase.EMERALD,6, -3.1f, properties));
+    public static final Item EMERALD_HOE = registerItem("emerald_hoe", properties -> new HoeItem(ToolMaterialsBase.EMERALD,-3, 0, properties));
+    /*public static final Item EMERALD_SPEAR = registerItem("emerald_sword", properties -> new Item(properties
+            .spear(ToolMaterialsBase.EMERALD,3, -2.4f,)));*/
+
+    //Lapis Lazuli Tools
+    public static final Item LAPIS_LAZULI_SWORD = registerItem("lapis_lazuli_sword", properties -> new Item(properties
+            .sword(ToolMaterialsBase.LAPIS_LAZULI,3, -2.4f)));
+    public static final Item LAPIS_LAZULI_SHOVEL = registerItem("lapis_lazuli_shovel", properties -> new ShovelItem(ToolMaterialsBase.LAPIS_LAZULI,1.5f, -3,properties));
+    public static final Item LAPIS_LAZULI_PICKAXE = registerItem("lapis_lazuli_pickaxe", properties -> new Item(properties
+            .pickaxe(ToolMaterialsBase.LAPIS_LAZULI,1, -2.8f)));
+    public static final Item LAPIS_LAZULI_AXE = registerItem("lapis_lazuli_axe", properties -> new AxeItem(ToolMaterialsBase.LAPIS_LAZULI,7, -3.2f,properties));
+    public static final Item LAPIS_LAZULI_HOE = registerItem("lapis_lazuli_hoe", properties -> new HoeItem(ToolMaterialsBase.LAPIS_LAZULI,-1, -2,properties));
+
+    //Redstone Tools
+    public static final Item REDSTONE_SWORD = registerItem("redstone_sword", properties -> new Item(properties
+            .sword(ToolMaterialsBase.REDSTONE,3, -2.2f)));
+    public static final Item REDSTONE_SHOVEL = registerItem("redstone_shovel", properties -> new ShovelItem(ToolMaterialsBase.REDSTONE,1.5f, -3, properties));
+    public static final Item REDSTONE_PICKAXE = registerItem("redstone_pickaxe", properties -> new Item(properties
+            .pickaxe(ToolMaterialsBase.REDSTONE,1, -2.8f)));
+    public static final Item REDSTONE_AXE = registerItem("redstone_axe", properties -> new AxeItem(ToolMaterialsBase.REDSTONE,5, -3f, properties));
+    public static final Item REDSTONE_HOE = registerItem("redstone_hoe", properties -> new HoeItem(ToolMaterialsBase.REDSTONE,-1, -2,properties));
+
+    //Quartz Tools
+    public static final Item QUARTZ_SWORD = registerItem("quartz_sword", properties -> new Item(properties
+            .sword(ToolMaterialsBase.QUARTZ,3, -2.4f)));
+    public static final Item QUARTZ_SHOVEL = registerItem("quartz_shovel", properties -> new ShovelItem(ToolMaterialsBase.QUARTZ,1.5f, -3,properties));
+    public static final Item QUARTZ_PICKAXE = registerItem("quartz_pickaxe", properties -> new Item(properties
+            .pickaxe(ToolMaterialsBase.QUARTZ,1, -2.8f)));
+    public static final Item QUARTZ_AXE = registerItem("quartz_axe", properties -> new AxeItem(ToolMaterialsBase.QUARTZ,6, -3f,properties));
+    public static final Item QUARTZ_HOE = registerItem("quartz_hoe", properties -> new HoeItem(ToolMaterialsBase.QUARTZ,-2, -1,properties));
+
+    //Smoked Quartz Tools
+    public static final Item SMOKED_QUARTZ_SWORD = registerItem("smoked_quartz_sword", properties -> new Item(properties
+            .sword(ToolMaterialsBase.SMOKED_QUARTZ,3, -2.4f)));
+    public static final Item SMOKED_QUARTZ_SHOVEL = registerItem("smoked_quartz_shovel", properties -> new ShovelItem(ToolMaterialsBase.SMOKED_QUARTZ,1.5f, -3,properties));
+    public static final Item SMOKED_QUARTZ_PICKAXE = registerItem("smoked_quartz_pickaxe", properties -> new Item(properties
+            .pickaxe(ToolMaterialsBase.SMOKED_QUARTZ,1, -2.8f)));
+    public static final Item SMOKED_QUARTZ_AXE = registerItem("smoked_quartz_axe", properties -> new AxeItem(ToolMaterialsBase.SMOKED_QUARTZ,6, -3f,properties));
+    public static final Item SMOKED_QUARTZ_HOE = registerItem("smoked_quartz_hoe", properties -> new HoeItem(ToolMaterialsBase.SMOKED_QUARTZ,-2, -1,properties));
+
+    //Burnt Quartz Tools
+    public static final Item BURNT_QUARTZ_SWORD = registerItem("burnt_quartz_sword", properties -> new Item(properties
+            .sword(ToolMaterialsBase.BURNT_QUARTZ,3, -2.4f)));
+    public static final Item BURNT_QUARTZ_SHOVEL = registerItem("burnt_quartz_shovel", properties -> new ShovelItem(ToolMaterialsBase.BURNT_QUARTZ,1.5f, -3,properties));
+    public static final Item BURNT_QUARTZ_PICKAXE = registerItem("burnt_quartz_pickaxe", properties -> new Item(properties
+            .pickaxe(ToolMaterialsBase.BURNT_QUARTZ,1, -2.8f)));
+    public static final Item BURNT_QUARTZ_AXE = registerItem("burnt_quartz_axe", properties -> new AxeItem(ToolMaterialsBase.BURNT_QUARTZ,6, -3f,properties));
+    public static final Item BURNT_QUARTZ_HOE = registerItem("burnt_quartz_hoe", properties -> new HoeItem(ToolMaterialsBase.BURNT_QUARTZ,-2, -1,properties));
+
+    //Empowered Netherite Tools
+    public static final Item EMPOWERED_NETHERITE_SWORD = registerItem("empowered_netherite_sword", properties -> new Item(properties
+            .sword(ToolMaterialsBase.EMPOWERED_NETHERITE,3, -2f).fireResistant()));
+    public static final Item EMPOWERED_NETHERITE_SHOVEL = registerItem("empowered_netherite_shovel", properties -> new ShovelItem(ToolMaterialsBase.EMPOWERED_NETHERITE,1.5f, -3, properties.fireResistant()));
+    public static final Item EMPOWERED_NETHERITE_PICKAXE = registerItem("empowered_netherite_pickaxe", properties -> new Item(properties
+            .pickaxe(ToolMaterialsBase.EMPOWERED_NETHERITE,1, -2.8f).fireResistant()));
+    public static final Item EMPOWERED_NETHERITE_AXE = registerItem("empowered_netherite_axe", properties -> new AxeItem(ToolMaterialsBase.EMPOWERED_NETHERITE,5, -3f,properties.fireResistant()));
+    public static final Item EMPOWERED_NETHERITE_HOE = registerItem("empowered_netherite_hoe", properties -> new HoeItem(ToolMaterialsBase.EMPOWERED_NETHERITE,-3, 0, properties.fireResistant()));
 }

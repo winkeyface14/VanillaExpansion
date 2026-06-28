@@ -1,6 +1,5 @@
 package com.winkeyface14.vanillaexpansion.blocks;
 
-import com.winkeyface14.vanillaexpansion.util.BlockHandler;
 import net.minecraft.block.StairsBlock;
 
 public class QuartzFamilyStairs extends StairsBlock {

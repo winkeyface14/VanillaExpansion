@@ -67,6 +67,36 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.REDSTONE_AXE_HEAD);
                 output.accept(ItemRegHandler.REDSTONE_SHOVEL_HEAD);
                 output.accept(ItemRegHandler.REDSTONE_HOE_HEAD);
+                output.accept(ItemRegHandler.QUARTZ_SWORD);
+                output.accept(ItemRegHandler.QUARTZ_SHOVEL);
+                output.accept(ItemRegHandler.QUARTZ_PICKAXE);
+                output.accept(ItemRegHandler.QUARTZ_AXE);
+                output.accept(ItemRegHandler.QUARTZ_HOE);
+                output.accept(ItemRegHandler.SMOKED_QUARTZ_SWORD);
+                output.accept(ItemRegHandler.SMOKED_QUARTZ_SHOVEL);
+                output.accept(ItemRegHandler.SMOKED_QUARTZ_PICKAXE);
+                output.accept(ItemRegHandler.SMOKED_QUARTZ_AXE);
+                output.accept(ItemRegHandler.SMOKED_QUARTZ_HOE);
+                output.accept(ItemRegHandler.BURNT_QUARTZ_SWORD);
+                output.accept(ItemRegHandler.BURNT_QUARTZ_SHOVEL);
+                output.accept(ItemRegHandler.BURNT_QUARTZ_PICKAXE);
+                output.accept(ItemRegHandler.BURNT_QUARTZ_AXE);
+                output.accept(ItemRegHandler.BURNT_QUARTZ_HOE);
+                output.accept(ItemRegHandler.REDSTONE_SWORD);
+                output.accept(ItemRegHandler.REDSTONE_SHOVEL);
+                output.accept(ItemRegHandler.REDSTONE_PICKAXE);
+                output.accept(ItemRegHandler.REDSTONE_AXE);
+                output.accept(ItemRegHandler.REDSTONE_HOE);
+                output.accept(ItemRegHandler.EMERALD_SWORD);
+                output.accept(ItemRegHandler.EMERALD_SHOVEL);
+                output.accept(ItemRegHandler.EMERALD_PICKAXE);
+                output.accept(ItemRegHandler.EMERALD_AXE);
+                output.accept(ItemRegHandler.EMERALD_HOE);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SWORD);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SHOVEL);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_AXE);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HOE);
             }).build());
 
     public static final CreativeModeTab TVE_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "tve_blocks"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(BlockRegHandler.CHARCOAL_BLOCK))

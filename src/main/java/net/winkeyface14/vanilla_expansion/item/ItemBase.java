@@ -22,5 +22,9 @@ public class ItemBase {
     public static void registerModItems() {
         TheVanillaExpansion.LOGGER.info("Registering Item for " + TheVanillaExpansion.MOD_ID);
     }
+
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
 }
 

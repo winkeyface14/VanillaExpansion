@@ -1,9 +1,7 @@
 package net.winkeyface14.vanilla_expansion.util;
 
-import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.*;
 import net.winkeyface14.vanilla_expansion.block.BlockItemBase;
-import net.winkeyface14.vanilla_expansion.block.QuartzFamilyBlock;
 
 public class BlockRegHandler extends BlockItemBase {
     // Full Blocks
