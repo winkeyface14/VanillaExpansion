@@ -50,7 +50,7 @@ public class ModEquipmentAssetProvider implements DataProvider {
         Map<ResourceKey<EquipmentAsset>, EquipmentClientInfo> equipmentAssets = new HashMap<>();
         bootstrap((id, asset) -> {
             if (equipmentAssets.putIfAbsent(id, asset) != null) {
-                throw new IllegalStateException("Tried to register equipment asset twice for id: " + String.valueOf(id));
+                throw new IllegalStateException("Tried to register equipment asset twice for id: " + id);
             }
         });
         Codec<EquipmentClientInfo> var10001 = EquipmentClientInfo.CODEC;

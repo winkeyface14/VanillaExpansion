@@ -13,6 +13,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
 import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
+import org.jspecify.annotations.NonNull;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -23,13 +24,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
+    protected @NonNull RecipeProvider createRecipeProvider(HolderLookup.@NonNull Provider registries, @NonNull RecipeOutput output) {
         return new RecipeProvider(registries, output) {
             @Override
             public void buildRecipes() {
                 List<ItemLike> REINFORCED_LEATHER_BLASTABLE = List.of(ItemRegHandler.RAW_REINFORCED_LEATHER);
-                List<ItemLike> QUARTZ_SMELTABLE = List.of(Items.QUARTZ);
-                List<ItemLike> QUARTZ_BLOCK_SMELTABLE = List.of(Items.QUARTZ_BLOCK);
+                //List<ItemLike> QUARTZ_SMELTABLE = List.of(Items.QUARTZ);
+                //List<ItemLike> QUARTZ_BLOCK_SMELTABLE = List.of(Items.QUARTZ_BLOCK);
                 List<ItemLike> BRICK_SMELTABLE = List.of(Items.BRICK);
                 List<ItemLike> BRICK_BLOCK_SMELTABLE = List.of(Items.BRICKS);
 
@@ -574,7 +575,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    public String getName() {
+    public @NonNull String getName() {
         return "The Vanilla Expansion Recipes";
     }
 }

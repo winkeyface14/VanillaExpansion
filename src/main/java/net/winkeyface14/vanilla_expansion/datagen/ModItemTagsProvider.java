@@ -8,6 +8,7 @@ import net.minecraft.references.ItemIds;
 import net.minecraft.tags.ItemTags;
 import net.winkeyface14.vanilla_expansion.tags.TagRegHandler;
 import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
+import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -17,7 +18,7 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider registries) {
+    protected void addTags(HolderLookup.@NonNull Provider registries) {
         tag(ItemTags.SWORDS)
                 .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_SWORD))
                 .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_SWORD))

@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.winkeyface14.vanilla_expansion.tags.TagRegHandler;
 import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
+import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -16,7 +17,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider registries) {
+    protected void addTags(HolderLookup.@NonNull Provider registries) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(BlockRegHandler.getRK(BlockRegHandler.CHARCOAL_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK))
