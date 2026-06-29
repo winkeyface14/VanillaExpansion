@@ -129,35 +129,56 @@ public class ModModelProvider extends FabricModelProvider {
 
         //Tool and Weapon Heads
         itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_AXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
         itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
         itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
+        /*
         itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+         */
+
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
 
         //Tool Upgrade Tempalte
         itemModelGenerators.generateFlatItem(ItemRegHandler.BASE_TEMPLATE, ModelTemplates.FLAT_ITEM);
@@ -207,30 +228,37 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        //Spears (To Be Added)
+        //Spears
+        itemModelGenerators.generateSpear(ItemRegHandler.EMERALD_SPEAR);
+        itemModelGenerators.generateSpear(ItemRegHandler.LAPIS_LAZULI_SPEAR);
+        itemModelGenerators.generateSpear(ItemRegHandler.REDSTONE_SPEAR);
+        itemModelGenerators.generateSpear(ItemRegHandler.QUARTZ_SPEAR);
+        itemModelGenerators.generateSpear(ItemRegHandler.SMOKED_QUARTZ_SPEAR);
+        itemModelGenerators.generateSpear(ItemRegHandler.BURNT_QUARTZ_SPEAR);
+        itemModelGenerators.generateSpear(ItemRegHandler.EMPOWERED_NETHERITE_SPEAR);
 
         //Helmet
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_HELMET, ArmorMaterialBase.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_HELMET, ArmorMaterialBase.LAPIS_LAZULI_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_HELMET, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_HELMET, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        //itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_HELMET, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
 
         //Chestplate
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_CHESTPLATE, ArmorMaterialBase.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_CHESTPLATE, ArmorMaterialBase.LAPIS_LAZULI_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_CHESTPLATE, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        //itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
 
         //Leggings
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_LEGGINGS, ArmorMaterialBase.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_LEGGINGS, ArmorMaterialBase.LAPIS_LAZULI_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_LEGGINGS, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        //itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
 
         //Boots
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_BOOTS, ArmorMaterialBase.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_BOOTS, ArmorMaterialBase.LAPIS_LAZULI_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_BOOTS, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+        //itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_BOOTS, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
     }
 }

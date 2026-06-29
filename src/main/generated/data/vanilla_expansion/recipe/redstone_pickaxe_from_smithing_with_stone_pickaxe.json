@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "minecraft:stone_pickaxe",
+  "result": {
+    "id": "vanilla_expansion:redstone_pickaxe"
+  },
+  "template": "vanilla_expansion:redstone_pickaxe_head"
+}

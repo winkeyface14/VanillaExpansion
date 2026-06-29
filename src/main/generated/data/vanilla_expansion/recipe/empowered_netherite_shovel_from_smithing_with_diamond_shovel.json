@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "vanilla_expansion:empowered_netherite_ingot",
+  "base": "minecraft:diamond_shovel",
+  "result": {
+    "id": "vanilla_expansion:empowered_netherite_shovel"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

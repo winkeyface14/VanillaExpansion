@@ -5,7 +5,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.winkeyface14.vanilla_expansion.TheVanillaExpansion;
+import net.winkeyface14.vanilla_expansion.VanillaExpansion;
 
 public class TagRegHandler {
     public static class Blocks{
@@ -17,15 +17,11 @@ public class TagRegHandler {
         public static final TagKey<Block> INCORRECT_FOR_REDSTONE_TOOL = createTag("incorrect_for_redstone_tool");
         public static final TagKey<Block> NEEDS_QUARTZ_TOOL = createTag("needs_quartz_tool");
         public static final TagKey<Block> INCORRECT_FOR_QUARTZ_TOOL = createTag("incorrect_for_quartz_tool");
-        public static final TagKey<Block> NEEDS_SMOKED_QUARTZ_TOOL = createTag("needs_smoked_quartz_tool");
-        public static final TagKey<Block> INCORRECT_FOR_SMOKED_QUARTZ_TOOL = createTag("incorrect_for_smoked_quartz_tool");
-        public static final TagKey<Block> NEEDS_BURNT_QUARTZ_TOOL = createTag("needs_burnt_quartz_tool");
-        public static final TagKey<Block> INCORRECT_FOR_BURNT_QUARTZ_TOOL = createTag("incorrect_for_burnt_quartz_tool");
         public static final TagKey<Block> NEEDS_EMPOWERED_NETHERITE_TOOL = createTag("needs_empowered_netherite_tool");
         public static final TagKey<Block> INCORRECT_FOR_EMPOWERED_NETHERITE_TOOL = createTag("incorrect_for_empowered_netherite_tool");
 
         public static TagKey<Block> createTag(String name){
-            return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, name));
+            return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, name));
         }
     }
 
@@ -40,7 +36,7 @@ public class TagRegHandler {
         public static final TagKey<Item> REINFORCED_LEATHER_REPAIR = createTag("reinforced_leather_repair");
 
         public static TagKey<Item> createTag(String name){
-            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, name));
+            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, name));
         }
     }
 }

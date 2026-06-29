@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "minecraft:stone_shovel",
+  "result": {
+    "id": "minecraft:golden_shovel"
+  },
+  "template": "vanilla_expansion:golden_shovel_head"
+}

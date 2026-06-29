@@ -7,12 +7,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.winkeyface14.vanilla_expansion.TheVanillaExpansion;
+import net.winkeyface14.vanilla_expansion.VanillaExpansion;
 import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
 import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
 
 public class CreativeTab {
-    public static final CreativeModeTab TVE_ITEMS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "tve_items"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.COAL_CHUNK))
+    public static final CreativeModeTab TVE_ITEMS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "tve_items"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.COAL_CHUNK))
             .title(Component.translatable("creativetab.vanilla_expansion.items"))
             .displayItems((parameters, output) -> {
                 output.accept(ItemRegHandler.COAL_CHUNK);
@@ -33,55 +33,64 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.FIRED_BRICK);
             }).build());
 
-    public static final CreativeModeTab TVE_TOOLSANDARMOR_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "tve_tools_and_armor"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.STONE_PICKAXE_HEAD))
+    public static final CreativeModeTab TVE_TOOLSANDARMOR_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "tve_tools_and_armor"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.EMERALD_SWORD))
             .title(Component.translatable("creativetab.vanilla_expansion.tools_and_armor"))
             .displayItems((parameters, output) -> {
                 output.accept(ItemRegHandler.QUARTZ_SWORD);
+                output.accept(ItemRegHandler.QUARTZ_SPEAR);
                 output.accept(ItemRegHandler.QUARTZ_SHOVEL);
                 output.accept(ItemRegHandler.QUARTZ_PICKAXE);
                 output.accept(ItemRegHandler.QUARTZ_AXE);
                 output.accept(ItemRegHandler.QUARTZ_HOE);
 
                 output.accept(ItemRegHandler.SMOKED_QUARTZ_SWORD);
+                output.accept(ItemRegHandler.SMOKED_QUARTZ_SPEAR);
                 output.accept(ItemRegHandler.SMOKED_QUARTZ_SHOVEL);
                 output.accept(ItemRegHandler.SMOKED_QUARTZ_PICKAXE);
                 output.accept(ItemRegHandler.SMOKED_QUARTZ_AXE);
                 output.accept(ItemRegHandler.SMOKED_QUARTZ_HOE);
 
                 output.accept(ItemRegHandler.BURNT_QUARTZ_SWORD);
+                output.accept(ItemRegHandler.BURNT_QUARTZ_SPEAR);
                 output.accept(ItemRegHandler.BURNT_QUARTZ_SHOVEL);
                 output.accept(ItemRegHandler.BURNT_QUARTZ_PICKAXE);
                 output.accept(ItemRegHandler.BURNT_QUARTZ_AXE);
                 output.accept(ItemRegHandler.BURNT_QUARTZ_HOE);
 
                 output.accept(ItemRegHandler.REDSTONE_SWORD);
+                output.accept(ItemRegHandler.REDSTONE_SPEAR);
                 output.accept(ItemRegHandler.REDSTONE_SHOVEL);
                 output.accept(ItemRegHandler.REDSTONE_PICKAXE);
                 output.accept(ItemRegHandler.REDSTONE_AXE);
                 output.accept(ItemRegHandler.REDSTONE_HOE);
 
                 output.accept(ItemRegHandler.LAPIS_LAZULI_SWORD);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_SPEAR);
                 output.accept(ItemRegHandler.LAPIS_LAZULI_SHOVEL);
                 output.accept(ItemRegHandler.LAPIS_LAZULI_PICKAXE);
                 output.accept(ItemRegHandler.LAPIS_LAZULI_AXE);
                 output.accept(ItemRegHandler.LAPIS_LAZULI_HOE);
 
                 output.accept(ItemRegHandler.EMERALD_SWORD);
+                output.accept(ItemRegHandler.EMERALD_SPEAR);
                 output.accept(ItemRegHandler.EMERALD_SHOVEL);
                 output.accept(ItemRegHandler.EMERALD_PICKAXE);
                 output.accept(ItemRegHandler.EMERALD_AXE);
                 output.accept(ItemRegHandler.EMERALD_HOE);
 
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SWORD);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SPEAR);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SHOVEL);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_AXE);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HOE);
 
+                /*
                 output.accept(ItemRegHandler.REINFORCED_LEATHER_HELMET);
                 output.accept(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE);
                 output.accept(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS);
                 output.accept(ItemRegHandler.REINFORCED_LEATHER_BOOTS);
+                 */
 
                 output.accept(ItemRegHandler.LAPIS_LAZULI_HELMET);
                 output.accept(ItemRegHandler.LAPIS_LAZULI_CHESTPLATE);
@@ -99,49 +108,65 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS);
             }).build());
 
-    public static final CreativeModeTab TVE_TEMPLATES_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "tve_templates"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.STONE_PICKAXE_HEAD))
+    public static final CreativeModeTab TVE_TEMPLATES_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "tve_templates"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.STONE_PICKAXE_HEAD))
             .title(Component.translatable("creativetab.vanilla_expansion.templates"))
             .displayItems((parameters, output) -> {
                 output.accept(ItemRegHandler.BASE_TEMPLATE);
 
                 output.accept(ItemRegHandler.STONE_SWORD_BLADE);
+                output.accept(ItemRegHandler.STONE_SPEAR_TIP);
                 output.accept(ItemRegHandler.STONE_PICKAXE_HEAD);
                 output.accept(ItemRegHandler.STONE_AXE_HEAD);
                 output.accept(ItemRegHandler.STONE_SHOVEL_HEAD);
                 output.accept(ItemRegHandler.STONE_HOE_HEAD);
 
+                output.accept(ItemRegHandler.COPPER_SWORD_BLADE);
+                output.accept(ItemRegHandler.COPPER_SPEAR_TIP);
+                output.accept(ItemRegHandler.COPPER_PICKAXE_HEAD);
+                output.accept(ItemRegHandler.COPPER_AXE_HEAD);
+                output.accept(ItemRegHandler.COPPER_SHOVEL_HEAD);
+                output.accept(ItemRegHandler.COPPER_HOE_HEAD);
+
                 output.accept(ItemRegHandler.IRON_SWORD_BLADE);
+                output.accept(ItemRegHandler.IRON_SPEAR_TIP);
                 output.accept(ItemRegHandler.IRON_PICKAXE_HEAD);
                 output.accept(ItemRegHandler.IRON_AXE_HEAD);
                 output.accept(ItemRegHandler.IRON_SHOVEL_HEAD);
                 output.accept(ItemRegHandler.IRON_HOE_HEAD);
 
                 output.accept(ItemRegHandler.GOLD_SWORD_BLADE);
+                output.accept(ItemRegHandler.GOLD_SPEAR_TIP);
                 output.accept(ItemRegHandler.GOLD_PICKAXE_HEAD);
                 output.accept(ItemRegHandler.GOLD_AXE_HEAD);
                 output.accept(ItemRegHandler.GOLD_SHOVEL_HEAD);
                 output.accept(ItemRegHandler.GOLD_HOE_HEAD);
 
                 output.accept(ItemRegHandler.DIAMOND_SWORD_BLADE);
+                output.accept(ItemRegHandler.DIAMOND_SPEAR_TIP);
                 output.accept(ItemRegHandler.DIAMOND_PICKAXE_HEAD);
                 output.accept(ItemRegHandler.DIAMOND_AXE_HEAD);
                 output.accept(ItemRegHandler.DIAMOND_SHOVEL_HEAD);
                 output.accept(ItemRegHandler.DIAMOND_HOE_HEAD);
 
+                /*
                 output.accept(ItemRegHandler.NETHERITE_SWORD_BLADE);
                 output.accept(ItemRegHandler.NETHERITE_PICKAXE_HEAD);
                 output.accept(ItemRegHandler.NETHERITE_AXE_HEAD);
                 output.accept(ItemRegHandler.NETHERITE_SHOVEL_HEAD);
                 output.accept(ItemRegHandler.NETHERITE_HOE_HEAD);
+                output.accept(ItemRegHandler.NETHERITE_SPEAR_TIP);
+                */
 
                 output.accept(ItemRegHandler.REDSTONE_SWORD_BLADE);
+                output.accept(ItemRegHandler.REDSTONE_SPEAR_TIP);
                 output.accept(ItemRegHandler.REDSTONE_PICKAXE_HEAD);
                 output.accept(ItemRegHandler.REDSTONE_AXE_HEAD);
                 output.accept(ItemRegHandler.REDSTONE_SHOVEL_HEAD);
                 output.accept(ItemRegHandler.REDSTONE_HOE_HEAD);
+
             }).build());
 
-    public static final CreativeModeTab TVE_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "tve_blocks"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(BlockRegHandler.CHARCOAL_BLOCK))
+    public static final CreativeModeTab TVE_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "tve_blocks"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(BlockRegHandler.CHARCOAL_BLOCK))
             .title(Component.translatable("creativetab.vanilla_expansion.blocks"))
             .displayItems((parameters, output) -> {
                 output.accept(BlockRegHandler.CHARCOAL_BLOCK);
@@ -186,6 +211,6 @@ public class CreativeTab {
 
 
     public static void registerModCreativeTabs(){
-        TheVanillaExpansion.LOGGER.info("Registering Creative Mode Tabs for " + TheVanillaExpansion.MOD_ID);
+        VanillaExpansion.LOGGER.info("Registering Creative Mode Tabs for " + VanillaExpansion.MOD_ID);
     }
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "minecraft:golden_hoe",
+  "result": {
+    "id": "minecraft:diamond_hoe"
+  },
+  "template": "vanilla_expansion:diamond_hoe_head"
+}

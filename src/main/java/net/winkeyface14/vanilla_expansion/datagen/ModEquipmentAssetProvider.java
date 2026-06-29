@@ -9,7 +9,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.equipment.EquipmentAsset;
-import net.winkeyface14.vanilla_expansion.TheVanillaExpansion;
+import net.winkeyface14.vanilla_expansion.VanillaExpansion;
 import net.winkeyface14.vanilla_expansion.item.ArmorMaterialBase;
 import org.jspecify.annotations.NonNull;
 
@@ -29,19 +29,19 @@ public class ModEquipmentAssetProvider implements DataProvider {
     private static void bootstrap(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentClientInfo> consumer){
         consumer.accept(ArmorMaterialBase.EMERALD_KEY,
                 EquipmentClientInfo.builder()
-                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "emerald"))
+                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "emerald"))
                         .build());
         consumer.accept(ArmorMaterialBase.LAPIS_LAZULI_KEY,
                 EquipmentClientInfo.builder()
-                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "lapis_lazuli"))
+                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "lapis_lazuli"))
                         .build());
         consumer.accept(ArmorMaterialBase.EMPOWERED_NETHERITE_KEY,
                 EquipmentClientInfo.builder()
-                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "empowered_netherite"))
+                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "empowered_netherite"))
                         .build());
         consumer.accept(ArmorMaterialBase.REINFORCED_LEATHER_KEY,
                 EquipmentClientInfo.builder()
-                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "reinforced_leather"))
+                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "reinforced_leather"))
                         .build());
     }
 

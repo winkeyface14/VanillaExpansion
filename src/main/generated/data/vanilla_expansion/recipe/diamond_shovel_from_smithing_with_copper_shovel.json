@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "minecraft:copper_shovel",
+  "result": {
+    "id": "minecraft:diamond_shovel"
+  },
+  "template": "vanilla_expansion:diamond_shovel_head"
+}

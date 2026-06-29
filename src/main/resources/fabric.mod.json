@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.winkeyface14.vanilla_expansion.TheVanillaExpansion"
+          "net.winkeyface14.vanilla_expansion.VanillaExpansion"
 		],
 		"fabric-datagen": [
-			"net.winkeyface14.vanilla_expansion.TheVanillaExpansionDataGenerator"
+			"net.winkeyface14.vanilla_expansion.VanillaExpansionDataGenerator"
 		]
 	},
 	"mixins": [

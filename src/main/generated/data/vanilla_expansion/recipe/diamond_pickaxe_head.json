@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "minecraft:diamond",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "xxx",
+    " y "
+  ],
+  "result": {
+    "id": "vanilla_expansion:diamond_pickaxe_head"
+  }
+}

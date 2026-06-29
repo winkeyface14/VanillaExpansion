@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "minecraft:stone_axe",
+  "result": {
+    "id": "minecraft:iron_axe"
+  },
+  "template": "vanilla_expansion:iron_axe_head"
+}

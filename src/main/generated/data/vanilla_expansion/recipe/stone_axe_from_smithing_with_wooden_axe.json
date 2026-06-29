@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "minecraft:wooden_axe",
+  "result": {
+    "id": "minecraft:stone_axe"
+  },
+  "template": "vanilla_expansion:stone_axe_head"
+}

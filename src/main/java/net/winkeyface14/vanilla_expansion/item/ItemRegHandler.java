@@ -10,7 +10,7 @@ import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.equipment.ArmorType;
-import net.winkeyface14.vanilla_expansion.TheVanillaExpansion;
+import net.winkeyface14.vanilla_expansion.VanillaExpansion;
 
 import java.util.function.Function;
 
@@ -35,40 +35,52 @@ public class ItemRegHandler {
 
     // Tool Heads and Sword Blades
     public static final Item STONE_SWORD_BLADE = registerItem("stone_sword_blade", Item::new);
-    public static final Item STONE_PICKAXE_HEAD = registerItem("stone_pickaxe_head", Item::new);
-    public static final Item STONE_AXE_HEAD = registerItem("stone_axe_head", Item::new);
-    public static final Item STONE_SHOVEL_HEAD = registerItem("stone_shovel_head", Item::new);
-    public static final Item STONE_HOE_HEAD = registerItem("stone_hoe_head", Item::new);
-
     public static final Item IRON_SWORD_BLADE = registerItem("iron_sword_blade", Item::new);
-    public static final Item IRON_PICKAXE_HEAD = registerItem("iron_pickaxe_head", Item::new);
-    public static final Item IRON_AXE_HEAD = registerItem("iron_axe_head", Item::new);
-    public static final Item IRON_SHOVEL_HEAD = registerItem("iron_shovel_head", Item::new);
-    public static final Item IRON_HOE_HEAD = registerItem("iron_hoe_head", Item::new);
-
+    public static final Item COPPER_SWORD_BLADE = registerItem("copper_sword_blade", Item::new);
     public static final Item GOLD_SWORD_BLADE = registerItem("golden_sword_blade", Item::new);
-    public static final Item GOLD_PICKAXE_HEAD = registerItem("golden_pickaxe_head", Item::new);
-    public static final Item GOLD_AXE_HEAD = registerItem("golden_axe_head", Item::new);
-    public static final Item GOLD_SHOVEL_HEAD = registerItem("golden_shovel_head", Item::new);
-    public static final Item GOLD_HOE_HEAD = registerItem("golden_hoe_head", Item::new);
-
     public static final Item DIAMOND_SWORD_BLADE = registerItem("diamond_sword_blade", Item::new);
-    public static final Item DIAMOND_PICKAXE_HEAD = registerItem("diamond_pickaxe_head", Item::new);
-    public static final Item DIAMOND_AXE_HEAD = registerItem("diamond_axe_head", Item::new);
-    public static final Item DIAMOND_SHOVEL_HEAD = registerItem("diamond_shovel_head", Item::new);
-    public static final Item DIAMOND_HOE_HEAD = registerItem("diamond_hoe_head", Item::new);
-
-    public static final Item NETHERITE_SWORD_BLADE = registerItem("netherite_sword_blade", Item::new);
-    public static final Item NETHERITE_PICKAXE_HEAD = registerItem("netherite_pickaxe_head", Item::new);
-    public static final Item NETHERITE_AXE_HEAD = registerItem("netherite_axe_head", Item::new);
-    public static final Item NETHERITE_SHOVEL_HEAD = registerItem("netherite_shovel_head", Item::new);
-    public static final Item NETHERITE_HOE_HEAD = registerItem("netherite_hoe_head", Item::new);
-
+    //public static final Item NETHERITE_SWORD_BLADE = registerItem("netherite_sword_blade", Item::new);
     public static final Item REDSTONE_SWORD_BLADE = registerItem("redstone_sword_blade", Item::new);
+
+    public static final Item STONE_PICKAXE_HEAD = registerItem("stone_pickaxe_head", Item::new);
+    public static final Item IRON_PICKAXE_HEAD = registerItem("iron_pickaxe_head", Item::new);
+    public static final Item COPPER_PICKAXE_HEAD = registerItem("copper_pickaxe_head", Item::new);
+    public static final Item GOLD_PICKAXE_HEAD = registerItem("golden_pickaxe_head", Item::new);
+    public static final Item DIAMOND_PICKAXE_HEAD = registerItem("diamond_pickaxe_head", Item::new);
+    //public static final Item NETHERITE_PICKAXE_HEAD = registerItem("netherite_pickaxe_head", Item::new);
     public static final Item REDSTONE_PICKAXE_HEAD = registerItem("redstone_pickaxe_head", Item::new);
+
+    public static final Item IRON_AXE_HEAD = registerItem("iron_axe_head", Item::new);
+    public static final Item STONE_AXE_HEAD = registerItem("stone_axe_head", Item::new);
+    public static final Item COPPER_AXE_HEAD = registerItem("copper_axe_head", Item::new);
+    public static final Item GOLD_AXE_HEAD = registerItem("golden_axe_head", Item::new);
+    public static final Item DIAMOND_AXE_HEAD = registerItem("diamond_axe_head", Item::new);
+    //public static final Item NETHERITE_AXE_HEAD = registerItem("netherite_axe_head", Item::new);
     public static final Item REDSTONE_AXE_HEAD = registerItem("redstone_axe_head", Item::new);
+
+    public static final Item STONE_SHOVEL_HEAD = registerItem("stone_shovel_head", Item::new);
+    public static final Item IRON_SHOVEL_HEAD = registerItem("iron_shovel_head", Item::new);
+    public static final Item COPPER_SHOVEL_HEAD = registerItem("copper_shovel_head", Item::new);
+    public static final Item GOLD_SHOVEL_HEAD = registerItem("golden_shovel_head", Item::new);
+    public static final Item DIAMOND_SHOVEL_HEAD = registerItem("diamond_shovel_head", Item::new);
+    //public static final Item NETHERITE_SHOVEL_HEAD = registerItem("netherite_shovel_head", Item::new);
     public static final Item REDSTONE_SHOVEL_HEAD = registerItem("redstone_shovel_head", Item::new);
+
+    public static final Item STONE_HOE_HEAD = registerItem("stone_hoe_head", Item::new);
+    public static final Item IRON_HOE_HEAD = registerItem("iron_hoe_head", Item::new);
+    public static final Item COPPER_HOE_HEAD = registerItem("copper_hoe_head", Item::new);
+    public static final Item GOLD_HOE_HEAD = registerItem("golden_hoe_head", Item::new);
+    public static final Item DIAMOND_HOE_HEAD = registerItem("diamond_hoe_head", Item::new);
+    //public static final Item NETHERITE_HOE_HEAD = registerItem("netherite_hoe_head", Item::new);
     public static final Item REDSTONE_HOE_HEAD = registerItem("redstone_hoe_head", Item::new);
+
+    public static final Item STONE_SPEAR_TIP = registerItem("stone_spear_tip", Item::new);
+    public static final Item IRON_SPEAR_TIP = registerItem("iron_spear_tip", Item::new);
+    public static final Item COPPER_SPEAR_TIP = registerItem("copper_spear_tip", Item::new);
+    public static final Item GOLD_SPEAR_TIP = registerItem("golden_spear_tip", Item::new);
+    public static final Item DIAMOND_SPEAR_TIP = registerItem("diamond_spear_tip", Item::new);
+    //public static final Item NETHERITE_SPEAR_TIP = registerItem("netherite_spear_tip", Item::new);
+    public static final Item REDSTONE_SPEAR_TIP = registerItem("redstone_spear_tip", Item::new);
 
     //Tool Upgrade Template
     public static final Item BASE_TEMPLATE = registerItem("base_template", Item::new);
@@ -81,8 +93,8 @@ public class ItemRegHandler {
             .pickaxe(ToolMaterialsBase.EMERALD,1, -2.8f)));
     public static final Item EMERALD_AXE = registerItem("emerald_axe", properties -> new AxeItem(ToolMaterialsBase.EMERALD,6, -3.1f, properties));
     public static final Item EMERALD_HOE = registerItem("emerald_hoe", properties -> new HoeItem(ToolMaterialsBase.EMERALD,-3, 0, properties));
-    /*public static final Item EMERALD_SPEAR = registerItem("emerald_sword", properties -> new Item(properties
-            .spear(ToolMaterialsBase.EMERALD,3, -2.4f,)));*/
+    public static final Item EMERALD_SPEAR = registerItem("emerald_spear", properties -> new Item(properties
+            .spear(ToolMaterialsBase.EMERALD,0.75f, 0.82f, 0.7f, 4.5f, 13, 9, 5.1f, 13.25f, 4.6f)));
 
     public static final Item EMERALD_HELMET = registerItem("emerald_helmet", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.EMERALD_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item EMERALD_CHESTPLATE = registerItem("emerald_chestplate", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.EMERALD_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
@@ -97,6 +109,8 @@ public class ItemRegHandler {
             .pickaxe(ToolMaterialsBase.LAPIS_LAZULI,1, -2.8f)));
     public static final Item LAPIS_LAZULI_AXE = registerItem("lapis_lazuli_axe", properties -> new AxeItem(ToolMaterialsBase.LAPIS_LAZULI,7, -3.2f,properties));
     public static final Item LAPIS_LAZULI_HOE = registerItem("lapis_lazuli_hoe", properties -> new HoeItem(ToolMaterialsBase.LAPIS_LAZULI,-1, -2,properties));
+    public static final Item LAPIS_LAZULI_SPEAR = registerItem("lapis_lazuli_spear", properties -> new Item(properties
+            .spear(ToolMaterialsBase.LAPIS_LAZULI,1, 0.985f, 0.55f, 2.75f, 11, 6.625f, 5.1f, 10.5f, 4.6f)));
 
     public static final Item LAPIS_LAZULI_HELMET = registerItem("lapis_lazuli_helmet", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.LAPIS_LAZULI_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item LAPIS_LAZULI_CHESTPLATE = registerItem("lapis_lazuli_chestplate", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.LAPIS_LAZULI_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
@@ -111,6 +125,8 @@ public class ItemRegHandler {
             .pickaxe(ToolMaterialsBase.REDSTONE,1, -2.8f)));
     public static final Item REDSTONE_AXE = registerItem("redstone_axe", properties -> new AxeItem(ToolMaterialsBase.REDSTONE,5, -3f, properties));
     public static final Item REDSTONE_HOE = registerItem("redstone_hoe", properties -> new HoeItem(ToolMaterialsBase.REDSTONE,-1, -2,properties));
+    public static final Item REDSTONE_SPEAR = registerItem("redstone_spear", properties -> new Item(properties
+            .spear(ToolMaterialsBase.REDSTONE,1.1f, 0.95f, 0.45f, 2,11, 6, 	5.1f, 9, 4.6f)));
 
     //Quartz Tools
     public static final Item QUARTZ_SWORD = registerItem("quartz_sword", properties -> new Item(properties
@@ -120,6 +136,8 @@ public class ItemRegHandler {
             .pickaxe(ToolMaterialsBase.QUARTZ,1, -2.8f)));
     public static final Item QUARTZ_AXE = registerItem("quartz_axe", properties -> new AxeItem(ToolMaterialsBase.QUARTZ,6, -3f,properties));
     public static final Item QUARTZ_HOE = registerItem("quartz_hoe", properties -> new HoeItem(ToolMaterialsBase.QUARTZ,-2, -1,properties));
+    public static final Item QUARTZ_SPEAR = registerItem("quartz_spear", properties -> new Item(properties
+            .spear(ToolMaterialsBase.QUARTZ,0.95f, 1.25f, 0.6f, 2.5f, 11, 6.75f, 5.1f, 8, 4.6f)));
 
     //Smoked Quartz Tools
     public static final Item SMOKED_QUARTZ_SWORD = registerItem("smoked_quartz_sword", properties -> new Item(properties
@@ -129,6 +147,8 @@ public class ItemRegHandler {
             .pickaxe(ToolMaterialsBase.SMOKED_QUARTZ,1, -2.8f)));
     public static final Item SMOKED_QUARTZ_AXE = registerItem("smoked_quartz_axe", properties -> new AxeItem(ToolMaterialsBase.SMOKED_QUARTZ,6, -3f,properties));
     public static final Item SMOKED_QUARTZ_HOE = registerItem("smoked_quartz_hoe", properties -> new HoeItem(ToolMaterialsBase.SMOKED_QUARTZ,-2, -1,properties));
+    public static final Item SMOKED_QUARTZ_SPEAR = registerItem("smoked_quartz_spear", properties -> new Item(properties
+            .spear(ToolMaterialsBase.SMOKED_QUARTZ,0.95f, 1.25f, 0.6f, 2.5f, 11, 6.75f, 5.1f, 8, 4.6f)));
 
     //Burnt Quartz Tools
     public static final Item BURNT_QUARTZ_SWORD = registerItem("burnt_quartz_sword", properties -> new Item(properties
@@ -138,6 +158,8 @@ public class ItemRegHandler {
             .pickaxe(ToolMaterialsBase.BURNT_QUARTZ,1, -2.8f)));
     public static final Item BURNT_QUARTZ_AXE = registerItem("burnt_quartz_axe", properties -> new AxeItem(ToolMaterialsBase.BURNT_QUARTZ,6, -3f,properties));
     public static final Item BURNT_QUARTZ_HOE = registerItem("burnt_quartz_hoe", properties -> new HoeItem(ToolMaterialsBase.BURNT_QUARTZ,-2, -1,properties));
+    public static final Item BURNT_QUARTZ_SPEAR = registerItem("burnt_quartz_spear", properties -> new Item(properties
+            .spear(ToolMaterialsBase.BURNT_QUARTZ,0.95f, 1.25f, 0.6f, 2.5f, 11, 6.75f, 5.1f, 8, 4.6f)));
 
     //Empowered Netherite Tools and Armor
     public static final Item EMPOWERED_NETHERITE_SWORD = registerItem("empowered_netherite_sword", properties -> new Item(properties
@@ -147,6 +169,8 @@ public class ItemRegHandler {
             .pickaxe(ToolMaterialsBase.EMPOWERED_NETHERITE,1, -2.8f).fireResistant()));
     public static final Item EMPOWERED_NETHERITE_AXE = registerItem("empowered_netherite_axe", properties -> new AxeItem(ToolMaterialsBase.EMPOWERED_NETHERITE,5, -3f,properties.fireResistant()));
     public static final Item EMPOWERED_NETHERITE_HOE = registerItem("empowered_netherite_hoe", properties -> new HoeItem(ToolMaterialsBase.EMPOWERED_NETHERITE,-3, 0, properties.fireResistant()));
+    public static final Item EMPOWERED_NETHERITE_SPEAR = registerItem("empowered_netherite_spear", properties -> new Item(properties
+            .spear(ToolMaterialsBase.EMPOWERED_NETHERITE,1.3f, 1.2f, 0.3f, 1.75f, 8,4, 5.1f, 7.5f, 4.6f)));
 
     public static final Item EMPOWERED_NETHERITE_HELMET = registerItem("empowered_netherite_helmet", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.EMPOWERED_NETHERITE_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item EMPOWERED_NETHERITE_CHESTPLATE = registerItem("empowered_netherite_chestplate", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.EMPOWERED_NETHERITE_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
@@ -154,17 +178,19 @@ public class ItemRegHandler {
     public static final Item EMPOWERED_NETHERITE_BOOTS = registerItem("empowered_netherite_boots", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.EMPOWERED_NETHERITE_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
     //Reinforced Leather Armors
+    /*
     public static final Item REINFORCED_LEATHER_HELMET = registerItem("reinforced_leather_helmet", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.REINFORCED_LEATHER_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item REINFORCED_LEATHER_CHESTPLATE = registerItem("reinforced_leather_chestplate", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.REINFORCED_LEATHER_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
     public static final Item REINFORCED_LEATHER_LEGGINGS = registerItem("reinforced_leather_leggings", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.REINFORCED_LEATHER_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
     public static final Item REINFORCED_LEATHER_BOOTS = registerItem("reinforced_leather_boots", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.REINFORCED_LEATHER_ARMOR_MATERIAL, ArmorType.BOOTS)));
+     */
 
     public static Item registerItem(String name, Function<Item.Properties, Item> function) {
-        return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, name), function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, name)))));
+        return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, name), function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, name)))));
     }
 
     public static void registerModItems() {
-        TheVanillaExpansion.LOGGER.info("Registering Item for " + TheVanillaExpansion.MOD_ID);
+        VanillaExpansion.LOGGER.info("Registering Item for " + VanillaExpansion.MOD_ID);
     }
 
     public static ResourceKey<Item> getRK(Item item) {

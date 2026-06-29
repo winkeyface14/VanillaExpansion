@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "minecraft:copper_axe",
+  "result": {
+    "id": "minecraft:diamond_axe"
+  },
+  "template": "vanilla_expansion:diamond_axe_head"
+}

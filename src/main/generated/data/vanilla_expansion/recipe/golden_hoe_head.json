@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "minecraft:gold_ingot",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "xx",
+    " y"
+  ],
+  "result": {
+    "id": "vanilla_expansion:golden_hoe_head"
+  }
+}

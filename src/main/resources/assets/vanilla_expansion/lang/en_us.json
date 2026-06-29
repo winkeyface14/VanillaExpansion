@@ -8,12 +8,14 @@
 
 
   "block.vanilla_expansion.charcoal_block": "Charcoal Block",
+
   "block.vanilla_expansion.block_of_bundled_sticks": "Block of Bundled Sticks",
   "block.vanilla_expansion.barrel_of_apples": "Barrel of Apples",
   "block.vanilla_expansion.barrel_of_potatoes": "Barrel of Potatoes",
   "block.vanilla_expansion.barrel_of_carrots": "Barrel of Carrots",
   "block.vanilla_expansion.barrel_of_chorus_fruits": "Barrel of Chorus Fruits",
   "block.vanilla_expansion.barrel_of_sweet_berries": "Barrel of Sweet Berries",
+
   "block.vanilla_expansion.smoked_quartz_block": "Smoked Quartz Block",
   "block.vanilla_expansion.smoked_quartz_slab": "Smoked Quartz Slab",
   "block.vanilla_expansion.smoked_quartz_stairs": "Smoked Quartz Stairs",
@@ -25,8 +27,10 @@
   "block.vanilla_expansion.smooth_smoked_quartz": "Smooth Smoked Quartz",
   "block.vanilla_expansion.smooth_smoked_quartz_stairs": "Smooth Smoked Quartz Stairs",
   "block.vanilla_expansion.smooth_smoked_quartz_slab": "Smooth Smoked Quartz Slab",
+
   "block.vanilla_expansion.quartz_wall": "Quartz Wall",
   "block.vanilla_expansion.quartz_bricks_wall": "Quartz Bricks Wall",
+
   "block.vanilla_expansion.smoked_quartz_bricks_slab": "Smoked Quartz Bricks Slab",
   "block.vanilla_expansion.quartz_bricks_slab": "Quartz Bricks Slab",
   "block.vanilla_expansion.burnt_quartz_block": "Burnt Quartz Block",
@@ -40,10 +44,12 @@
   "block.vanilla_expansion.smooth_burnt_quartz_stairs": "Smooth Burnt Quartz Stairs",
   "block.vanilla_expansion.smooth_burnt_quartz_slab": "Smooth Burnt Quartz Slab",
   "block.vanilla_expansion.burnt_quartz_bricks_slab": "Burnt Quartz Bricks Slab",
+
   "block.vanilla_expansion.fired_bricks": "Fired Bricks",
   "block.vanilla_expansion.fired_bricks_stairs": "Fired Bricks Stairs",
   "block.vanilla_expansion.fired_bricks_slab": "Fired Bricks Slab",
   "block.vanilla_expansion.fired_bricks_wall": "Fired Bricks Wall",
+
   "block.vanilla_expansion.empowered_netherite_block": "Block of Empowered Netherite",
 
   "item.vanilla_expansion.coal_chunk": "Coal Chunk",
@@ -53,6 +59,7 @@
   "item.vanilla_expansion.diamond_shard": "Diamond Shard",
 
   "item.vanilla_expansion.emerald_sword": "Emerald Sword",
+  "item.vanilla_expansion.emerald_spear": "Emerald Spear",
   "item.vanilla_expansion.emerald_pickaxe": "Emerald Pickaxe",
   "item.vanilla_expansion.emerald_axe": "Emerald Axe",
   "item.vanilla_expansion.emerald_shovel": "Emerald Shovel",
@@ -66,80 +73,120 @@
   "item.vanilla_expansion.base_template": "Base Template",
 
   "item.vanilla_expansion.stone_sword_blade": "Stone Sword Blade",
+  "item.vanilla_expansion.stone_spear_tip": "Stone Spear Tip",
   "item.vanilla_expansion.stone_pickaxe_head": "Stone Pickaxe Head",
   "item.vanilla_expansion.stone_axe_head": "Stone Axe Head",
   "item.vanilla_expansion.stone_shovel_head": "Stone Shovel Head",
   "item.vanilla_expansion.stone_hoe_head": "Stone Hoe Head",
 
   "item.vanilla_expansion.redstone_sword": "Redstone Sword",
+  "item.vanilla_expansion.redstone_spear": "Redstone Spear",
   "item.vanilla_expansion.redstone_pickaxe": "Redstone Pickaxe",
   "item.vanilla_expansion.redstone_axe": "Redstone Axe",
   "item.vanilla_expansion.redstone_shovel": "Redstone Shovel",
   "item.vanilla_expansion.redstone_hoe": "Redstone Hoe",
+
+  "item.vanilla_expansion.lapis_lazuli_sword": "Lapis Lazuli Sword",
+  "item.vanilla_expansion.lapis_lazuli_spear": "Lapis Lazuli Spear",
+  "item.vanilla_expansion.lapis_lazuli_pickaxe": "Lapis Lazuli Pickaxe",
+  "item.vanilla_expansion.lapis_lazuli_axe": "Lapis Lazuli Axe",
+  "item.vanilla_expansion.lapis_lazuli_shovel": "Lapis Lazuli Shovel",
+  "item.vanilla_expansion.lapis_lazuli_hoe": "Lapis Lazuli Hoe",
+
   "item.vanilla_expansion.smoked_quartz": "Smoked Nether Quartz",
   "item.vanilla_expansion.burnt_quartz": "Burnt Nether Quartz",
   "item.vanilla_expansion.quartz_shard": "Nether Quartz Shard",
   "item.vanilla_expansion.smoked_quartz_shard": "Smoked Nether Quartz Shard",
   "item.vanilla_expansion.burnt_quartz_shard": "Burnt Nether Quartz Shard",
+
+  "item.vanilla_expansion.copper_sword_blade": "Copper Sword Blade",
+  "item.vanilla_expansion.copper_spear_tip": "Copper Spear Tip",
+  "item.vanilla_expansion.copper_pickaxe_head": "Copper Pickaxe Head",
+  "item.vanilla_expansion.copper_axe_head": "Copper Axe Head",
+  "item.vanilla_expansion.copper_shovel_head": "Copper Shovel Head",
+  "item.vanilla_expansion.copper_hoe_head": "Copper Hoe Head",
+
   "item.vanilla_expansion.iron_sword_blade": "Iron Sword Blade",
+  "item.vanilla_expansion.iron_spear_tip": "Iron Spear Tip",
   "item.vanilla_expansion.iron_pickaxe_head": "Iron Pickaxe Head",
   "item.vanilla_expansion.iron_axe_head": "Iron Axe Head",
   "item.vanilla_expansion.iron_shovel_head": "Iron Shovel Head",
   "item.vanilla_expansion.iron_hoe_head": "Iron Hoe Head",
+
   "item.vanilla_expansion.lapis_lazuli_helmet": "Lapis Lazuli Helmet",
   "item.vanilla_expansion.lapis_lazuli_chestplate": "Lapis Lazuli Chestplate",
   "item.vanilla_expansion.lapis_lazuli_leggings": "Lapis Lazuli Leggings",
   "item.vanilla_expansion.lapis_lazuli_boots": "Lapis Lazuli Boots",
+
   "item.vanilla_expansion.quartz_sword": "Quartz Sword",
+  "item.vanilla_expansion.quartz_spear": "Quartz Spear",
   "item.vanilla_expansion.quartz_pickaxe": "Quartz Pickaxe",
   "item.vanilla_expansion.quartz_axe": "Quartz Axe",
   "item.vanilla_expansion.quartz_shovel": "Quartz Shovel",
   "item.vanilla_expansion.quartz_hoe": "Quartz Hoe",
+
   "item.vanilla_expansion.smoked_quartz_sword": "Smoked Quartz Sword",
+  "item.vanilla_expansion.smoked_quartz_spear": "Smoked Quartz Spear",
   "item.vanilla_expansion.smoked_quartz_pickaxe": "Smoked Quartz Pickaxe",
   "item.vanilla_expansion.smoked_quartz_axe": "Smoked Quartz Axe",
   "item.vanilla_expansion.smoked_quartz_shovel": "Smoked Quartz Shovel",
   "item.vanilla_expansion.smoked_quartz_hoe": "Smoked Quartz Hoe",
+
   "item.vanilla_expansion.burnt_quartz_sword": "Burnt Quartz Sword",
+  "item.vanilla_expansion.burnt_quartz_spear": "Burnt Quartz Spear",
   "item.vanilla_expansion.burnt_quartz_pickaxe": "Burnt Quartz Pickaxe",
   "item.vanilla_expansion.burnt_quartz_axe": "Burnt Quartz Axe",
   "item.vanilla_expansion.burnt_quartz_shovel": "Burnt Quartz Shovel",
   "item.vanilla_expansion.burnt_quartz_hoe": "Burnt Quartz Hoe",
+
   "item.vanilla_expansion.golden_sword_blade": "Golden Sword Blade",
+  "item.vanilla_expansion.golden_spear_tip": "Golden Spear Tip",
   "item.vanilla_expansion.golden_pickaxe_head": "Golden Pickaxe Head",
   "item.vanilla_expansion.golden_axe_head": "Golden Axe Head",
   "item.vanilla_expansion.golden_shovel_head": "Golden Shovel Head",
   "item.vanilla_expansion.golden_hoe_head": "Golden Hoe Head",
+
   "item.vanilla_expansion.diamond_sword_blade": "Diamond Sword Blade",
+  "item.vanilla_expansion.diamond_spear_tip": "Diamond Spear Tip",
   "item.vanilla_expansion.diamond_pickaxe_head": "Diamond Pickaxe Head",
   "item.vanilla_expansion.diamond_axe_head": "Diamond Axe Head",
   "item.vanilla_expansion.diamond_shovel_head": "Diamond Shovel Head",
   "item.vanilla_expansion.diamond_hoe_head": "Diamond Hoe Head",
+
   "item.vanilla_expansion.netherite_sword_blade": "Netherite Sword Blade",
+  "item.vanilla_expansion.netherite_spear_tip": "Netherite Spear Tip",
   "item.vanilla_expansion.netherite_pickaxe_head": "Netherite Pickaxe Head",
   "item.vanilla_expansion.netherite_axe_head": "Netherite Axe Head",
   "item.vanilla_expansion.netherite_shovel_head": "Netherite Shovel Head",
   "item.vanilla_expansion.netherite_hoe_head": "Netherite Hoe Head",
+
   "item.vanilla_expansion.redstone_sword_blade": "Redstone Sword Blade",
+  "item.vanilla_expansion.redstone_spear_tip": "Redstone Spear Tip",
   "item.vanilla_expansion.redstone_pickaxe_head": "Redstone Pickaxe Head",
   "item.vanilla_expansion.redstone_axe_head": "Redstone Axe Head",
   "item.vanilla_expansion.redstone_shovel_head": "Redstone Shovel Head",
   "item.vanilla_expansion.redstone_hoe_head": "Redstone Hoe Head",
+
   "item.vanilla_expansion.raw_reinforced_leather": "Raw Reinforced Leather",
   "item.vanilla_expansion.reinforced_leather": "Reinforced Leather",
   "item.vanilla_expansion.pile_of_paper": "Pile of Paper",
   "item.vanilla_expansion.fired_brick": "Fired Brick",
+
   "item.vanilla_expansion.empowered_netherite_ingot": "Empowered Netherite Ingot",
   "item.vanilla_expansion.empowered_netherite_scrap": "Empowered Netherite Scrap",
+
   "item.vanilla_expansion.empowered_netherite_sword": "Empowered Netherite Sword",
+  "item.vanilla_expansion.empowered_netherite_spear": "Empowered Netherite Spear",
   "item.vanilla_expansion.empowered_netherite_pickaxe": "Empowered Netherite Pickaxe",
   "item.vanilla_expansion.empowered_netherite_axe": "Empowered Netherite Axe",
   "item.vanilla_expansion.empowered_netherite_shovel": "Empowered Netherite Shovel",
   "item.vanilla_expansion.empowered_netherite_hoe": "Empowered Netherite Hoe",
+
   "item.vanilla_expansion.empowered_netherite_helmet": "Empowered Netherite Helmet",
   "item.vanilla_expansion.empowered_netherite_chestplate": "Empowered Netherite Chestplate",
   "item.vanilla_expansion.empowered_netherite_leggings": "Empowered Netherite Leggings",
   "item.vanilla_expansion.empowered_netherite_boots": "Empowered Netherite Boots",
+
   "item.vanilla_expansion.reinforced_leather_helmet": "Reinforced Leather Helmet",
   "item.vanilla_expansion.reinforced_leather_chestplate": "Reinforced Leather Chestplate",
   "item.vanilla_expansion.reinforced_leather_leggings": "Reinforced Leather Leggings",

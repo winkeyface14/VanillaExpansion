@@ -70,42 +70,30 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         tag(TagRegHandler.Blocks.INCORRECT_FOR_EMERALD_TOOL)
                 .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
-        tag(TagRegHandler.Blocks.INCORRECT_FOR_LAPIS_LAZULI_TOOL)
+        tag(TagRegHandler.Blocks.NEEDS_LAPIS_LAZULI_TOOL)
                 .addOptionalTag(BlockTags.NEEDS_STONE_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_LAPIS_LAZULI_TOOL)
                 .addOptionalTag(BlockTags.NEEDS_IRON_TOOL)
                 .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
-        tag(TagRegHandler.Blocks.INCORRECT_FOR_REDSTONE_TOOL)
+        tag(TagRegHandler.Blocks.NEEDS_REDSTONE_TOOL)
                 .addOptionalTag(BlockTags.NEEDS_IRON_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_REDSTONE_TOOL)
                 .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
-        tag(TagRegHandler.Blocks.INCORRECT_FOR_QUARTZ_TOOL)
-                .addOptionalTag(BlockTags.NEEDS_STONE_TOOL);
+        tag(TagRegHandler.Blocks.NEEDS_QUARTZ_TOOL)
+                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_QUARTZ_TOOL)
-                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL)
                 .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
-        tag(TagRegHandler.Blocks.INCORRECT_FOR_SMOKED_QUARTZ_TOOL)
-                .addOptionalTag(BlockTags.NEEDS_STONE_TOOL);
-
-        tag(TagRegHandler.Blocks.INCORRECT_FOR_SMOKED_QUARTZ_TOOL)
-                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL)
+        tag(TagRegHandler.Blocks.NEEDS_EMPOWERED_NETHERITE_TOOL)
                 .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
-        tag(TagRegHandler.Blocks.INCORRECT_FOR_BURNT_QUARTZ_TOOL)
-                .addOptionalTag(BlockTags.NEEDS_STONE_TOOL);
-
-        tag(TagRegHandler.Blocks.INCORRECT_FOR_BURNT_QUARTZ_TOOL)
-                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL)
-                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
-
-        tag(TagRegHandler.Blocks.INCORRECT_FOR_EMPOWERED_NETHERITE_TOOL)
-                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
+        tag(BlockTags.BEACON_BASE_BLOCKS)
+                .add(BlockRegHandler.getRK(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK));
 
         tag(BlockTags.WALLS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_WALL))

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "minecraft:wooden_hoe",
+  "result": {
+    "id": "minecraft:stone_hoe"
+  },
+  "template": "vanilla_expansion:stone_hoe_head"
+}

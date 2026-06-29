@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "empowered_netherite_ingot",
+  "group": "empowered_netherite",
   "ingredients": [
     "minecraft:gold_ingot",
     "minecraft:gold_ingot",

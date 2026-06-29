@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "minecraft:redstone_block",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "x",
+    "x",
+    "y"
+  ],
+  "result": {
+    "id": "vanilla_expansion:redstone_sword_blade"
+  }
+}

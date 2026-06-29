@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "minecraft:copper_ingot",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "x",
+    "x",
+    "y"
+  ],
+  "result": {
+    "id": "vanilla_expansion:copper_sword_blade"
+  }
+}

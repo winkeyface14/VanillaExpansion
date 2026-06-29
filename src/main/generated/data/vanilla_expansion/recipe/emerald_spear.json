@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "x": "minecraft:emerald",
+    "y": "minecraft:stick"
+  },
+  "pattern": [
+    "  x",
+    " y ",
+    "y  "
+  ],
+  "result": {
+    "id": "vanilla_expansion:emerald_spear"
+  }
+}

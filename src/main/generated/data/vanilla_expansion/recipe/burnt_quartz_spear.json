@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "x": "vanilla_expansion:burnt_quartz",
+    "y": "minecraft:stick"
+  },
+  "pattern": [
+    "  x",
+    " y ",
+    "y  "
+  ],
+  "result": {
+    "id": "vanilla_expansion:burnt_quartz_spear"
+  }
+}

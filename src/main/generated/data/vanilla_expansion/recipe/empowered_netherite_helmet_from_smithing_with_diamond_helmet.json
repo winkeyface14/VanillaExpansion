@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "vanilla_expansion:empowered_netherite_ingot",
+  "base": "minecraft:diamond_helmet",
+  "result": {
+    "id": "vanilla_expansion:empowered_netherite_helmet"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}
