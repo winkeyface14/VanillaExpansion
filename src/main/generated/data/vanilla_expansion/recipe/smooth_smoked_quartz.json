@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "smooth_smoked_quartz",
+  "ingredient": "vanilla_expansion:smoked_quartz_block",
+  "result": {
+    "id": "vanilla_expansion:smooth_smoked_quartz"
+  }
+}

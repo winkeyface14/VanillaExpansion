@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "smooth_burnt_quartz_stairs",
+  "key": {
+    "#": "vanilla_expansion:smooth_burnt_quartz"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "vanilla_expansion:smooth_burnt_quartz_stairs"
+  }
+}

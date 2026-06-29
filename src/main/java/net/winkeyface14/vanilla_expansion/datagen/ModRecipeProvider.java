@@ -126,6 +126,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 this.wall(RecipeCategory.BUILDING_BLOCKS, BlockRegHandler.SMOKED_QUARTZ_WALL, BlockRegHandler.SMOKED_QUARTZ_BLOCK);
                 this.wall(RecipeCategory.BUILDING_BLOCKS, BlockRegHandler.SMOKED_QUARTZ_BRICKS_WALL, BlockRegHandler.SMOKED_QUARTZ_BRICKS);
 
+                SimpleCookingRecipeBuilder.smelting(Ingredient.of(BlockRegHandler.SMOKED_QUARTZ_BLOCK), RecipeCategory.MISC,CookingBookCategory.BLOCKS, BlockRegHandler.SMOOTH_SMOKED_QUARTZ, 0.7f, 100)
+                        .unlockedBy(getHasName(BlockRegHandler.SMOKED_QUARTZ_BLOCK), has(BlockRegHandler.SMOKED_QUARTZ_BLOCK))
+                        .group("smooth_smoked_quartz")
+                        .save(output, "smooth_smoked_quartz");
+                this.stairBuilder(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_STAIRS, Ingredient.of(BlockRegHandler.SMOOTH_SMOKED_QUARTZ))
+                        .unlockedBy(getHasName(BlockRegHandler.SMOOTH_SMOKED_QUARTZ), has(BlockRegHandler.SMOOTH_SMOKED_QUARTZ))
+                        .group("smooth_smoked_quartz_stairs")
+                        .save(output);
+                this.slab(RecipeCategory.BUILDING_BLOCKS,BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB,BlockRegHandler.SMOOTH_SMOKED_QUARTZ);
+
                 //Burnt Quartz
                 this.twoByTwoPacker(RecipeCategory.MISC,ItemRegHandler.BURNT_QUARTZ,ItemRegHandler.BURNT_QUARTZ_SHARD);
                 this.shapeless(RecipeCategory.MISC, ItemRegHandler.BURNT_QUARTZ_SHARD, 4)
@@ -162,6 +172,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
                 this.wall(RecipeCategory.BUILDING_BLOCKS, BlockRegHandler.BURNT_QUARTZ_WALL, BlockRegHandler.BURNT_QUARTZ_BLOCK);
                 this.wall(RecipeCategory.BUILDING_BLOCKS, BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL, BlockRegHandler.BURNT_QUARTZ_BRICKS);
+
+                SimpleCookingRecipeBuilder.smelting(Ingredient.of(BlockRegHandler.BURNT_QUARTZ_BLOCK), RecipeCategory.MISC,CookingBookCategory.BLOCKS, BlockRegHandler.SMOOTH_BURNT_QUARTZ, 0.7f, 100)
+                        .unlockedBy(getHasName(BlockRegHandler.BURNT_QUARTZ_BLOCK), has(BlockRegHandler.BURNT_QUARTZ_BLOCK))
+                        .group("smooth_burnt_quartz")
+                        .save(output, "smooth_burnt_quartz");
+                this.stairBuilder(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS, Ingredient.of(BlockRegHandler.SMOOTH_BURNT_QUARTZ))
+                        .unlockedBy(getHasName(BlockRegHandler.SMOOTH_BURNT_QUARTZ), has(BlockRegHandler.SMOOTH_BURNT_QUARTZ))
+                        .group("smooth_burnt_quartz_stairs")
+                        .save(output);
+                this.slab(RecipeCategory.BUILDING_BLOCKS,BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB,BlockRegHandler.SMOOTH_BURNT_QUARTZ);
 
                 //Fired Bricks
                 this.oreSmelting(BRICK_SMELTABLE,RecipeCategory.MISC, CookingBookCategory.MISC, ItemRegHandler.FIRED_BRICK, 0.7f, 200,"fired_brick");
