@@ -1,9 +1,19 @@
 package net.winkeyface14.vanilla_expansion.util;
 
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.winkeyface14.vanilla_expansion.block.BlockItemBase;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.winkeyface14.vanilla_expansion.TheVanillaExpansion;
 
-public class BlockRegHandler extends BlockItemBase {
+import java.util.function.Function;
+
+public class BlockRegHandler {
     // Full Blocks
     public static final Block CHARCOAL_BLOCK = registerBlock("charcoal_block", properties -> new Block(properties
             .strength(5.0f, 6.0f)
@@ -43,10 +53,10 @@ public class BlockRegHandler extends BlockItemBase {
             .strength(2.0f, 6.0f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block FIRED_BRICKS_STAIRS = registerBlock("fired_bricks_stairs", properties -> new Block(properties
-            .strength(2.0f, 6.0f)
-            .sound(SoundType.STONE)
-            .requiresCorrectToolForDrops()));
+    public static final Block FIRED_BRICKS_STAIRS = registerBlock("fired_bricks_stairs", properties -> new StairBlock(BlockRegHandler.FIRED_BRICKS.defaultBlockState(),
+            properties.strength(2.0f, 6.0f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
     public static final Block FIRED_BRICKS_SLAB = registerBlock("fired_bricks_slab", properties -> new SlabBlock(properties.strength(2.0f, 6.0f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
@@ -71,7 +81,7 @@ public class BlockRegHandler extends BlockItemBase {
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block SMOKED_QUARTZ_PILLAR = registerBlock("chiseled_smoked_quartz_block", properties -> new Block(properties
+    public static final Block SMOKED_QUARTZ_PILLAR = registerBlock("chiseled_smoked_quartz_pillar", properties -> new Block(properties
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
@@ -122,7 +132,7 @@ public class BlockRegHandler extends BlockItemBase {
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block BURNT_QUARTZ_PILLAR = registerBlock("chiseled_burnt_quartz_block", properties -> new Block(properties
+    public static final Block BURNT_QUARTZ_PILLAR = registerBlock("chiseled_burnt_quartz_pillar", properties -> new Block(properties
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
@@ -167,4 +177,24 @@ public class BlockRegHandler extends BlockItemBase {
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
+
+    public static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function){
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, name))));
+        registerBlockItem(name, toRegister);
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, name), toRegister);
+    }
+
+    public static void registerBlockItem(String name, Block block){
+        Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, name),
+                new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
+                        .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, name)))));
+    }
+
+    public static void registerModBlocks(){
+        TheVanillaExpansion.LOGGER.info("Registering Blocks for " + TheVanillaExpansion.MOD_ID);
+    }
+
+    public static ResourceKey<Block> getRK(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
 }

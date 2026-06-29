@@ -37,6 +37,7 @@ public class TagRegHandler {
         public static final TagKey<Item> SMOKED_QUARTZ_REPAIR = createTag("smoked_quartz_repair");
         public static final TagKey<Item> BURNT_QUARTZ_REPAIR = createTag("burnt_quartz_repair");
         public static final TagKey<Item> EMPOWERED_NETHERITE_REPAIR = createTag("empowered_netherite_repair");
+        public static final TagKey<Item> REINFORCED_LEATHER_REPAIR = createTag("reinforced_leather_repair");
 
         public static TagKey<Item> createTag(String name){
             return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, name));

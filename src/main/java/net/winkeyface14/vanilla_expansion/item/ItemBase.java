@@ -1,7 +1,5 @@
 package net.winkeyface14.vanilla_expansion.item;
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.Block;
 import net.winkeyface14.vanilla_expansion.TheVanillaExpansion;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;

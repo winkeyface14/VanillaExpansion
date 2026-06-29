@@ -146,7 +146,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 //Diamond
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, ItemRegHandler.DIAMOND_SHARD, RecipeCategory.MISC, Items.DIAMOND);
 
-                //Emerald
+                //Emerald Tools
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, ItemRegHandler.EMERALD_SHARD, RecipeCategory.MISC, Items.EMERALD);
                 this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMERALD_SWORD)
                         .pattern("x")
@@ -187,6 +187,370 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', Items.EMERALD)
                         .define('y', Items.STICK)
                         .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                        .save(output);
+
+                //Lapis Lazuli Tools
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.LAPIS_LAZULI_SWORD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', Items.LAPIS_LAZULI)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.LAPIS_LAZULI_SHOVEL)
+                        .pattern("x")
+                        .pattern("y")
+                        .pattern("y")
+                        .define('x', Items.LAPIS_LAZULI)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.LAPIS_LAZULI_PICKAXE)
+                        .pattern("xxx")
+                        .pattern(" y ")
+                        .pattern(" y ")
+                        .define('x', Items.LAPIS_LAZULI)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.LAPIS_LAZULI_AXE)
+                        .pattern("xx")
+                        .pattern("xy")
+                        .pattern(" y")
+                        .define('x', Items.LAPIS_LAZULI)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.LAPIS_LAZULI_HOE)
+                        .pattern("xx")
+                        .pattern(" y")
+                        .pattern(" y")
+                        .define('x', Items.LAPIS_LAZULI)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                        .save(output);
+
+                //Redstone Tools
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.REDSTONE_SWORD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', Items.REDSTONE_BLOCK)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.REDSTONE_BLOCK), has(Items.REDSTONE_BLOCK))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.REDSTONE_SHOVEL)
+                        .pattern("x")
+                        .pattern("y")
+                        .pattern("y")
+                        .define('x', Items.REDSTONE_BLOCK)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.REDSTONE_BLOCK), has(Items.REDSTONE_BLOCK))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.REDSTONE_PICKAXE)
+                        .pattern("xxx")
+                        .pattern(" y ")
+                        .pattern(" y ")
+                        .define('x', Items.REDSTONE_BLOCK)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.REDSTONE_BLOCK), has(Items.REDSTONE_BLOCK))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.REDSTONE_AXE)
+                        .pattern("xx")
+                        .pattern("xy")
+                        .pattern(" y")
+                        .define('x', Items.REDSTONE_BLOCK)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.REDSTONE_BLOCK), has(Items.REDSTONE_BLOCK))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.REDSTONE_HOE)
+                        .pattern("xx")
+                        .pattern(" y")
+                        .pattern(" y")
+                        .define('x', Items.REDSTONE_BLOCK)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.REDSTONE_BLOCK), has(Items.REDSTONE_BLOCK))
+                        .save(output);
+
+                //Quartz Tools
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.QUARTZ_SWORD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', Items.QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.QUARTZ_SHOVEL)
+                        .pattern("x")
+                        .pattern("y")
+                        .pattern("y")
+                        .define('x', Items.QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.QUARTZ_PICKAXE)
+                        .pattern("xxx")
+                        .pattern(" y ")
+                        .pattern(" y ")
+                        .define('x', Items.QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.QUARTZ_AXE)
+                        .pattern("xx")
+                        .pattern("xy")
+                        .pattern(" y")
+                        .define('x', Items.QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.QUARTZ_HOE)
+                        .pattern("xx")
+                        .pattern(" y")
+                        .pattern(" y")
+                        .define('x', Items.QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
+                        .save(output);
+
+                //Smoekd Quartz Tools
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.SMOKED_QUARTZ_SWORD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', ItemRegHandler.SMOKED_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.SMOKED_QUARTZ), has(ItemRegHandler.SMOKED_QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.SMOKED_QUARTZ_SHOVEL)
+                        .pattern("x")
+                        .pattern("y")
+                        .pattern("y")
+                        .define('x', ItemRegHandler.SMOKED_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.SMOKED_QUARTZ), has(ItemRegHandler.SMOKED_QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.SMOKED_QUARTZ_PICKAXE)
+                        .pattern("xxx")
+                        .pattern(" y ")
+                        .pattern(" y ")
+                        .define('x', ItemRegHandler.SMOKED_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.SMOKED_QUARTZ), has(ItemRegHandler.SMOKED_QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.SMOKED_QUARTZ_AXE)
+                        .pattern("xx")
+                        .pattern("xy")
+                        .pattern(" y")
+                        .define('x', ItemRegHandler.SMOKED_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.SMOKED_QUARTZ), has(ItemRegHandler.SMOKED_QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.SMOKED_QUARTZ_HOE)
+                        .pattern("xx")
+                        .pattern(" y")
+                        .pattern(" y")
+                        .define('x', ItemRegHandler.SMOKED_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.SMOKED_QUARTZ), has(ItemRegHandler.SMOKED_QUARTZ))
+                        .save(output);
+
+                //Burnt Quartz Tools
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.BURNT_QUARTZ_SWORD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', ItemRegHandler.BURNT_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.BURNT_QUARTZ), has(ItemRegHandler.BURNT_QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.BURNT_QUARTZ_SHOVEL)
+                        .pattern("x")
+                        .pattern("y")
+                        .pattern("y")
+                        .define('x', ItemRegHandler.BURNT_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.BURNT_QUARTZ), has(ItemRegHandler.BURNT_QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.BURNT_QUARTZ_PICKAXE)
+                        .pattern("xxx")
+                        .pattern(" y ")
+                        .pattern(" y ")
+                        .define('x', ItemRegHandler.BURNT_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.BURNT_QUARTZ), has(ItemRegHandler.BURNT_QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.BURNT_QUARTZ_AXE)
+                        .pattern("xx")
+                        .pattern("xy")
+                        .pattern(" y")
+                        .define('x', ItemRegHandler.BURNT_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.BURNT_QUARTZ), has(ItemRegHandler.BURNT_QUARTZ))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.BURNT_QUARTZ_HOE)
+                        .pattern("xx")
+                        .pattern(" y")
+                        .pattern(" y")
+                        .define('x', ItemRegHandler.BURNT_QUARTZ)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.BURNT_QUARTZ), has(ItemRegHandler.BURNT_QUARTZ))
+                        .save(output);
+
+                //Empowered Netherite
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMPOWERED_NETHERITE_SWORD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', ItemRegHandler.EMPOWERED_NETHERITE)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE), has(ItemRegHandler.EMPOWERED_NETHERITE))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.EMPOWERED_NETHERITE_SHOVEL)
+                        .pattern("x")
+                        .pattern("y")
+                        .pattern("y")
+                        .define('x', ItemRegHandler.EMPOWERED_NETHERITE)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE), has(ItemRegHandler.EMPOWERED_NETHERITE))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE)
+                        .pattern("xxx")
+                        .pattern(" y ")
+                        .pattern(" y ")
+                        .define('x', ItemRegHandler.EMPOWERED_NETHERITE)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE), has(ItemRegHandler.EMPOWERED_NETHERITE))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.EMPOWERED_NETHERITE_AXE)
+                        .pattern("xx")
+                        .pattern("xy")
+                        .pattern(" y")
+                        .define('x', ItemRegHandler.EMPOWERED_NETHERITE)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE), has(ItemRegHandler.EMPOWERED_NETHERITE))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,ItemRegHandler.EMPOWERED_NETHERITE_HOE)
+                        .pattern("xx")
+                        .pattern(" y")
+                        .pattern(" y")
+                        .define('x', ItemRegHandler.EMPOWERED_NETHERITE)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE), has(ItemRegHandler.EMPOWERED_NETHERITE))
+                        .save(output);
+
+                //Emerald Armor
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMERALD_HELMET)
+                        .pattern("xxx")
+                        .pattern("x x")
+                        .define('x', Items.EMERALD)
+                        .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMERALD_CHESTPLATE)
+                        .pattern("x x")
+                        .pattern("xxx")
+                        .pattern("xxx")
+                        .define('x', Items.EMERALD)
+                        .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMERALD_LEGGINGS)
+                        .pattern("xxx")
+                        .pattern("x x")
+                        .pattern("x x")
+                        .define('x', Items.EMERALD)
+                        .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMERALD_BOOTS)
+                        .pattern("x x")
+                        .pattern("x x")
+                        .define('x', Items.EMERALD)
+                        .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                        .save(output);
+
+                //Lapis Lazuli Armor
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.LAPIS_LAZULI_HELMET)
+                        .pattern("xxx")
+                        .pattern("x x")
+                        .define('x', Items.LAPIS_LAZULI)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.LAPIS_LAZULI_CHESTPLATE)
+                        .pattern("x x")
+                        .pattern("xxx")
+                        .pattern("xxx")
+                        .define('x', Items.LAPIS_LAZULI)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.LAPIS_LAZULI_LEGGINGS)
+                        .pattern("xxx")
+                        .pattern("x x")
+                        .pattern("x x")
+                        .define('x', Items.LAPIS_LAZULI)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.LAPIS_LAZULI_BOOTS)
+                        .pattern("x x")
+                        .pattern("x x")
+                        .define('x', Items.LAPIS_LAZULI)
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                        .save(output);
+
+                //Empowered Netherite Armor
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMPOWERED_NETHERITE_HELMET)
+                        .pattern("xxx")
+                        .pattern("x x")
+                        .define('x', ItemRegHandler.EMPOWERED_NETHERITE)
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE), has(ItemRegHandler.EMPOWERED_NETHERITE))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMPOWERED_NETHERITE_CHESTPLATE)
+                        .pattern("x x")
+                        .pattern("xxx")
+                        .pattern("xxx")
+                        .define('x', ItemRegHandler.EMPOWERED_NETHERITE)
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE), has(ItemRegHandler.EMPOWERED_NETHERITE))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMPOWERED_NETHERITE_LEGGINGS)
+                        .pattern("xxx")
+                        .pattern("x x")
+                        .pattern("x x")
+                        .define('x', ItemRegHandler.EMPOWERED_NETHERITE)
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE), has(ItemRegHandler.EMPOWERED_NETHERITE))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMPOWERED_NETHERITE_BOOTS)
+                        .pattern("x x")
+                        .pattern("x x")
+                        .define('x', ItemRegHandler.EMPOWERED_NETHERITE)
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE), has(ItemRegHandler.EMPOWERED_NETHERITE))
+                        .save(output);
+
+                //Reinforced Leather
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.REINFORCED_LEATHER_HELMET)
+                        .pattern("xxx")
+                        .pattern("x x")
+                        .define('x', ItemRegHandler.REINFORCED_LEATHER)
+                        .unlockedBy(getHasName(ItemRegHandler.REINFORCED_LEATHER), has(ItemRegHandler.REINFORCED_LEATHER))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE)
+                        .pattern("x x")
+                        .pattern("xxx")
+                        .pattern("xxx")
+                        .define('x', ItemRegHandler.REINFORCED_LEATHER)
+                        .unlockedBy(getHasName(ItemRegHandler.REINFORCED_LEATHER), has(ItemRegHandler.REINFORCED_LEATHER))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.REINFORCED_LEATHER_LEGGINGS)
+                        .pattern("xxx")
+                        .pattern("x x")
+                        .pattern("x x")
+                        .define('x', ItemRegHandler.REINFORCED_LEATHER)
+                        .unlockedBy(getHasName(ItemRegHandler.REINFORCED_LEATHER), has(ItemRegHandler.REINFORCED_LEATHER))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.REINFORCED_LEATHER_BOOTS)
+                        .pattern("x x")
+                        .pattern("x x")
+                        .define('x', ItemRegHandler.REINFORCED_LEATHER)
+                        .unlockedBy(getHasName(ItemRegHandler.REINFORCED_LEATHER), has(ItemRegHandler.REINFORCED_LEATHER))
                         .save(output);
             }
         };

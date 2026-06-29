@@ -7,6 +7,8 @@ import net.minecraft.resources.Identifier;
 import net.winkeyface14.vanilla_expansion.block.BlockItemBase;
 import net.winkeyface14.vanilla_expansion.creativetab.CreativeTab;
 import net.winkeyface14.vanilla_expansion.item.ItemBase;
+import net.winkeyface14.vanilla_expansion.util.BlockRegHandler;
+import net.winkeyface14.vanilla_expansion.util.ItemRegHandler;
 import net.winkeyface14.vanilla_expansion.util.ModFuels;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,8 +21,8 @@ public class TheVanillaExpansion implements ModInitializer {
 	public void onInitialize() {
 		CreativeTab.registerModCreativeTabs();
 
-		ItemBase.registerModItems();
-		BlockItemBase.registerModBlocks();
+		ItemRegHandler.registerModItems();
+		BlockRegHandler.registerModBlocks();
 
 		ModFuels.registerFuels();
 	}

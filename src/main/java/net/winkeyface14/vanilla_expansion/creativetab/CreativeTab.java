@@ -97,6 +97,22 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_AXE);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HOE);
+                output.accept(ItemRegHandler.REINFORCED_LEATHER_HELMET);
+                output.accept(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE);
+                output.accept(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS);
+                output.accept(ItemRegHandler.REINFORCED_LEATHER_BOOTS);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_HELMET);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_CHESTPLATE);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_LEGGINGS);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_BOOTS);
+                output.accept(ItemRegHandler.EMERALD_HELMET);
+                output.accept(ItemRegHandler.EMERALD_CHESTPLATE);
+                output.accept(ItemRegHandler.EMERALD_LEGGINGS);
+                output.accept(ItemRegHandler.EMERALD_BOOTS);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HELMET);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_CHESTPLATE);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_LEGGINGS);
+                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS);
             }).build());
 
     public static final CreativeModeTab TVE_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(TheVanillaExpansion.MOD_ID, "tve_blocks"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(BlockRegHandler.CHARCOAL_BLOCK))
