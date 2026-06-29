@@ -3,7 +3,7 @@ package net.winkeyface14.vanilla_expansion.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.core.HolderLookup;
-import net.winkeyface14.vanilla_expansion.util.BlockRegHandler;
+import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
 
 import java.util.concurrent.CompletableFuture;
 

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fired_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "vanilla_expansion:fired_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "vanilla_expansion:fired_bricks_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fired_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vanilla_expansion:fired_bricks_wall"
+    ]
+  }
+}

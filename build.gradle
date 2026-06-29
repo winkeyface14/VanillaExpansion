@@ -33,6 +33,8 @@ processResources {
 	def version = project.version
 	inputs.property "version", version
 
+	duplicatesStrategy = DuplicatesStrategy.INCLUDE
+
 	filesMatching("fabric.mod.json") {
 		expand "version": version
 	}

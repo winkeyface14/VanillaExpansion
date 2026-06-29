@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_charcoal_chunk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "vanilla_expansion:charcoal_chunk"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "vanilla_expansion:charcoal_from_chunk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_charcoal_chunk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vanilla_expansion:charcoal_from_chunk"
+    ]
+  }
+}

@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.winkeyface14.vanilla_expansion.tags.TagRegHandler;
-import net.winkeyface14.vanilla_expansion.util.BlockRegHandler;
+import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -65,47 +65,47 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.BARREL_OF_CHORUS_BLOCK));
 
         tag(TagRegHandler.Blocks.NEEDS_EMERALD_TOOL)
-                .addTag(BlockTags.NEEDS_IRON_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_EMERALD_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_LAPIS_LAZULI_TOOL)
-                .addTag(BlockTags.NEEDS_STONE_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_STONE_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_LAPIS_LAZULI_TOOL)
-                .addTag(BlockTags.NEEDS_IRON_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL)
+                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_REDSTONE_TOOL)
-                .addTag(BlockTags.NEEDS_IRON_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_REDSTONE_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_QUARTZ_TOOL)
-                .addTag(BlockTags.NEEDS_STONE_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_STONE_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_QUARTZ_TOOL)
-                .addTag(BlockTags.NEEDS_IRON_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL)
+                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_SMOKED_QUARTZ_TOOL)
-                .addTag(BlockTags.NEEDS_STONE_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_STONE_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_SMOKED_QUARTZ_TOOL)
-                .addTag(BlockTags.NEEDS_IRON_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL)
+                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_BURNT_QUARTZ_TOOL)
-                .addTag(BlockTags.NEEDS_STONE_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_STONE_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_BURNT_QUARTZ_TOOL)
-                .addTag(BlockTags.NEEDS_IRON_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_IRON_TOOL)
+                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(TagRegHandler.Blocks.INCORRECT_FOR_EMPOWERED_NETHERITE_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         tag(BlockTags.WALLS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_WALL))

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "#minecraft:planks",
+    "y": "minecraft:flint"
+  },
+  "pattern": [
+    "xy"
+  ],
+  "result": {
+    "count": 8,
+    "id": "vanilla_expansion:base_template"
+  }
+}

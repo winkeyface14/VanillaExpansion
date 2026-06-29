@@ -3,16 +3,16 @@ package net.winkeyface14.vanilla_expansion.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.levelgen.feature.BlueIceFeature;
-import net.winkeyface14.vanilla_expansion.util.BlockRegHandler;
-import net.winkeyface14.vanilla_expansion.util.ItemRegHandler;
+import net.minecraft.world.level.block.Blocks;
+import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
+import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -33,13 +33,36 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List<ItemLike> BRICK_SMELTABLE = List.of(Items.BRICK);
                 List<ItemLike> BRICK_BLOCK_SMELTABLE = List.of(Items.BRICKS);
 
+                //Coal and Charcoal
+                this.nineBlockStorageRecipes(RecipeCategory.MISC, Items.CHARCOAL,RecipeCategory.BUILDING_BLOCKS,BlockRegHandler.CHARCOAL_BLOCK);
+                this.shapeless(RecipeCategory.MISC, ItemRegHandler.COAL_CHUNK, 8)
+                        .requires(Items.COAL)
+                        .unlockedBy(getHasName(Items.COAL), has(Items.COAL))
+                        .group("coal_chunk")
+                        .save(output);
+                this.shapeless(RecipeCategory.MISC, ItemRegHandler.CHARCOAL_CHUNK, 8)
+                        .requires(Items.CHARCOAL)
+                        .unlockedBy(getHasName(Items.CHARCOAL), has(Items.CHARCOAL))
+                        .group("charcoal_chunk")
+                        .save(output);
+                this.shapeless(RecipeCategory.MISC, Items.COAL)
+                        .requires(ItemRegHandler.COAL_CHUNK, 8)
+                        .unlockedBy(getHasName(ItemRegHandler.COAL_CHUNK), has(ItemRegHandler.COAL_CHUNK))
+                        .group("coal")
+                        .save(output);
+                this.shapeless(RecipeCategory.MISC, Items.CHARCOAL)
+                        .requires(ItemRegHandler.CHARCOAL_CHUNK, 8)
+                        .unlockedBy(getHasName(ItemRegHandler.CHARCOAL_CHUNK), has(ItemRegHandler.CHARCOAL_CHUNK))
+                        .group("charcoal")
+                        .save(output,"charcoal_from_chunk");
+
                 //Reinforced Leather
                 this.oreBlasting(REINFORCED_LEATHER_BLASTABLE, RecipeCategory.MISC, CookingBookCategory.MISC, ItemRegHandler.REINFORCED_LEATHER, 0.7f, 100, "reinforced_leather");
                 this.oreSmelting(REINFORCED_LEATHER_BLASTABLE, RecipeCategory.MISC, CookingBookCategory.MISC, ItemRegHandler.REINFORCED_LEATHER, 0.7f, 200, "reinforced_leather");
 
                 //Stick Compacting
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, Items.STICK, RecipeCategory.MISC, ItemRegHandler.BUNDLED_STICKS);
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, ItemRegHandler.BUNDLED_STICKS, RecipeCategory.DECORATIONS, BlockRegHandler.BUNDLED_STICKS_BLOCK);
+                this.nineBlockStorageRecipesRecipesWithCustomUnpacking(RecipeCategory.MISC, ItemRegHandler.BUNDLED_STICKS, RecipeCategory.DECORATIONS, BlockRegHandler.BUNDLED_STICKS_BLOCK,"bundled_sticks_from_unpacking", "bundled_sticks");
 
                 //Paper Compacting
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, Items.PAPER, RecipeCategory.MISC, ItemRegHandler.PAPER_PILE);
@@ -61,6 +84,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 this.wall(RecipeCategory.BUILDING_BLOCKS,BlockRegHandler.QUARTZ_WALL, Items.QUARTZ_BLOCK);
                 this.wall(RecipeCategory.BUILDING_BLOCKS,BlockRegHandler.QUARTZ_BRICKS_WALL, Items.QUARTZ_BRICKS);
 
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS,BlockRegHandler.QUARTZ_WALL, Blocks.QUARTZ_BLOCK);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS,BlockRegHandler.QUARTZ_BRICKS_WALL, Blocks.QUARTZ_BRICKS);
+
 
                 //Smoked Quartz
                 this.twoByTwoPacker(RecipeCategory.MISC,ItemRegHandler.SMOKED_QUARTZ,ItemRegHandler.SMOKED_QUARTZ_SHARD);
@@ -69,9 +95,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ItemRegHandler.SMOKED_QUARTZ), has(ItemRegHandler.SMOKED_QUARTZ))
                         .group("smoked_quartz_shard")
                         .save(output);
-                this.oreSmelting(QUARTZ_SMELTABLE, RecipeCategory.MISC, CookingBookCategory.MISC, ItemRegHandler.SMOKED_QUARTZ, 0.7f, 100, "smoked_quartz");
+
+                SimpleCookingRecipeBuilder.smoking(Ingredient.of(Items.QUARTZ), RecipeCategory.MISC,ItemRegHandler.SMOKED_QUARTZ, 0.7f, 100)
+                        .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
+                        .group("smoked_quartz")
+                        .save(output, "smoked_quartz_smoker");
+                SimpleCookingRecipeBuilder.smoking(Ingredient.of(Blocks.QUARTZ_BLOCK), RecipeCategory.MISC,BlockRegHandler.SMOKED_QUARTZ_BLOCK, 0.7f, 100)
+                        .unlockedBy(getHasName(Blocks.QUARTZ_BLOCK), has(Blocks.QUARTZ_BLOCK))
+                        .group("smoked_quartz_block")
+                        .save(output, "smoked_quartz_block_smoker");
+
                 this.twoByTwoPacker(RecipeCategory.MISC,BlockRegHandler.SMOKED_QUARTZ_BLOCK, ItemRegHandler.SMOKED_QUARTZ);
-                this.oreSmelting(QUARTZ_BLOCK_SMELTABLE, RecipeCategory.MISC, CookingBookCategory.MISC, BlockRegHandler.SMOKED_QUARTZ_BLOCK, 0.7f, 100, "smoked_quartz_block");
+
                 this.pillarBuilder(RecipeCategory.BUILDING_BLOCKS,BlockRegHandler.SMOKED_QUARTZ_PILLAR, Ingredient.of(BlockRegHandler.SMOKED_QUARTZ_BLOCK))
                         .unlockedBy(getHasName(BlockRegHandler.SMOKED_QUARTZ_BLOCK), has(BlockRegHandler.SMOKED_QUARTZ_BLOCK))
                         .group("smoked_quartz_pillar")
@@ -96,9 +131,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .requires(ItemRegHandler.BURNT_QUARTZ)
                         .unlockedBy(getHasName(ItemRegHandler.BURNT_QUARTZ), has(ItemRegHandler.BURNT_QUARTZ))
                         .group("burnt_quartz_shard");
-                this.oreSmelting(QUARTZ_SMELTABLE, RecipeCategory.MISC, CookingBookCategory.MISC, ItemRegHandler.BURNT_QUARTZ, 0.7f, 100, "burnt_quartz");
+
+                SimpleCookingRecipeBuilder.blasting(Ingredient.of(Items.QUARTZ), RecipeCategory.MISC,CookingBookCategory.MISC, ItemRegHandler.BURNT_QUARTZ, 0.7f, 100)
+                        .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
+                        .group("burnt_quartz")
+                        .save(output, "burnt_quartz_blasting");
+                SimpleCookingRecipeBuilder.blasting(Ingredient.of(Blocks.QUARTZ_BLOCK), RecipeCategory.MISC,CookingBookCategory.MISC, BlockRegHandler.BURNT_QUARTZ_BLOCK, 0.7f, 100)
+                        .unlockedBy(getHasName(Blocks.QUARTZ_BLOCK), has(Blocks.QUARTZ_BLOCK))
+                        .group("burnt_quartz_block")
+                        .save(output, "burnt_quartz_block_blasting");
+
                 this.twoByTwoPacker(RecipeCategory.MISC,BlockRegHandler.BURNT_QUARTZ_BLOCK, ItemRegHandler.BURNT_QUARTZ);
-                this.oreSmelting(QUARTZ_BLOCK_SMELTABLE, RecipeCategory.MISC, CookingBookCategory.MISC, BlockRegHandler.BURNT_QUARTZ_BLOCK, 0.7f, 100, "burnt_quartz_block");
+
                 this.pillarBuilder(RecipeCategory.BUILDING_BLOCKS,BlockRegHandler.BURNT_QUARTZ_PILLAR, Ingredient.of(BlockRegHandler.BURNT_QUARTZ_BLOCK))
                         .unlockedBy(getHasName(BlockRegHandler.BURNT_QUARTZ_BLOCK), has(BlockRegHandler.BURNT_QUARTZ_BLOCK))
                         .group("burnt_quartz_pillar")
@@ -120,6 +164,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 //Fired Bricks
                 this.oreSmelting(BRICK_SMELTABLE,RecipeCategory.MISC, CookingBookCategory.MISC, ItemRegHandler.FIRED_BRICK, 0.7f, 200,"fired_brick");
                 this.oreSmelting(BRICK_BLOCK_SMELTABLE,RecipeCategory.BUILDING_BLOCKS, CookingBookCategory.BLOCKS, BlockRegHandler.FIRED_BRICKS, 0.7f, 200,"fired_brick");
+
+                this.twoByTwoPacker(RecipeCategory.BUILDING_BLOCKS, BlockRegHandler.FIRED_BRICKS, ItemRegHandler.FIRED_BRICK);
+
                 this.slab(RecipeCategory.BUILDING_BLOCKS, BlockRegHandler.FIRED_BRICKS_SLAB, BlockRegHandler.FIRED_BRICKS);
                 this.wall(RecipeCategory.BUILDING_BLOCKS, BlockRegHandler.FIRED_BRICKS_WALL, BlockRegHandler.FIRED_BRICKS);
                 this.stairBuilder(BlockRegHandler.FIRED_BRICKS_STAIRS, Ingredient.of(BlockRegHandler.FIRED_BRICKS))
@@ -132,7 +179,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .requires(Items.GOLD_INGOT, 4)
                         .requires(ItemRegHandler.EMPOWERED_NETHERITE_SCRAP, 4)
                         .group("empowered_netherite_ingot")
-                        .save(output);
+                        .unlockedBy(getHasName(ItemRegHandler.EMPOWERED_NETHERITE_SCRAP), has(ItemRegHandler.EMPOWERED_NETHERITE_SCRAP))
+                        .save(output, "empowered_netherite_ingot_from_scrap");
                 this.shaped(RecipeCategory.MISC,ItemRegHandler.EMPOWERED_NETHERITE_SCRAP,4)
                         .pattern("xyx")
                         .pattern("yxy")
@@ -148,7 +196,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Emerald Tools
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, ItemRegHandler.EMERALD_SHARD, RecipeCategory.MISC, Items.EMERALD);
-                this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMERALD_SWORD)
+                registerCustomToolSetRecipes(Items.EMERALD, ItemRegHandler.EMERALD_SWORD, ItemRegHandler.EMERALD_SHOVEL, ItemRegHandler.EMERALD_PICKAXE, ItemRegHandler.EMERALD_AXE, ItemRegHandler.EMERALD_HOE, ItemRegHandler.EMERALD_SPEAR);
+
+                /*this.shaped(RecipeCategory.COMBAT,ItemRegHandler.EMERALD_SWORD)
                         .pattern("x")
                         .pattern("x")
                         .pattern("y")
@@ -187,7 +237,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', Items.EMERALD)
                         .define('y', Items.STICK)
                         .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
-                        .save(output);
+                        .save(output);*/
 
                 //Lapis Lazuli Tools
                 this.shaped(RecipeCategory.COMBAT,ItemRegHandler.LAPIS_LAZULI_SWORD)
@@ -551,6 +601,306 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .define('x', ItemRegHandler.REINFORCED_LEATHER)
                         .unlockedBy(getHasName(ItemRegHandler.REINFORCED_LEATHER), has(ItemRegHandler.REINFORCED_LEATHER))
+                        .save(output);
+
+                //Template Recipes
+                this.shaped(RecipeCategory.MISC,ItemRegHandler.BASE_TEMPLATE, 8)
+                        .pattern("xy")
+                        .define('x', ItemTags.PLANKS)
+                        .define('y', Items.FLINT)
+                        .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
+                        .save(output);
+
+                //Blade Recipes
+                Item base_template = ItemRegHandler.BASE_TEMPLATE;
+                this.shaped(RecipeCategory.MISC,ItemRegHandler.STONE_SWORD_BLADE)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', ItemTags.STONE_TOOL_MATERIALS)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+                registerCustomSwordBladeRecipe(Items.IRON_INGOT, ItemRegHandler.IRON_SWORD_BLADE);
+                //registerCustomSwordBladeRecipe(Items.COPPER_INGOT, ItemRegHandler.COPPER_SWORD_BLADE);
+                registerCustomSwordBladeRecipe(Items.GOLD_INGOT, ItemRegHandler.GOLD_SWORD_BLADE);
+                registerCustomSwordBladeRecipe(Items.REDSTONE_BLOCK, ItemRegHandler.REDSTONE_SWORD_BLADE);
+                registerCustomSwordBladeRecipe(Items.DIAMOND, ItemRegHandler.DIAMOND_SWORD_BLADE);
+                //registerCustomSwordBladeRecipe(Items.EMERALD, ItemRegHandler.EMERALD_SWORD_BLADE);
+
+                //Pickaxe Head Recipes
+                this.shaped(RecipeCategory.MISC,ItemRegHandler.STONE_PICKAXE_HEAD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', ItemTags.STONE_TOOL_MATERIALS)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+                registerCustomPickaxeHeadRecipe(Items.IRON_INGOT, ItemRegHandler.IRON_PICKAXE_HEAD);
+                //registerCustomPickaxeHeadRecipe(Items.COPPER_INGOT, ItemRegHandler.COPPER_PICKAXE_HEAD);
+                registerCustomPickaxeHeadRecipe(Items.GOLD_INGOT, ItemRegHandler.GOLD_PICKAXE_HEAD);
+                registerCustomPickaxeHeadRecipe(Items.REDSTONE_BLOCK, ItemRegHandler.REDSTONE_PICKAXE_HEAD);
+                registerCustomPickaxeHeadRecipe(Items.DIAMOND, ItemRegHandler.DIAMOND_PICKAXE_HEAD);
+                //registerCustomPickaxeHeadRecipe(Items.EMERALD, ItemRegHandler.EMERALD_PICKAXE_HEAD);
+
+                //Axe Head Recipes
+                this.shaped(RecipeCategory.MISC,ItemRegHandler.STONE_AXE_HEAD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', ItemTags.STONE_TOOL_MATERIALS)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+                registerCustomAxeHeadRecipe(Items.IRON_INGOT, ItemRegHandler.IRON_AXE_HEAD);
+                //registerCustomAxeHeadRecipe(Items.COPPER_INGOT, ItemRegHandler.COPPER_AXE_HEAD);
+                registerCustomAxeHeadRecipe(Items.GOLD_INGOT, ItemRegHandler.GOLD_AXE_HEAD);
+                registerCustomAxeHeadRecipe(Items.REDSTONE_BLOCK, ItemRegHandler.REDSTONE_AXE_HEAD);
+                registerCustomAxeHeadRecipe(Items.DIAMOND, ItemRegHandler.DIAMOND_AXE_HEAD);
+                //registerCustomAxeHeadRecipe(Items.EMERALD, ItemRegHandler.EMERALD_AXE_HEAD);
+
+                //Shovel Head Recipes
+                this.shaped(RecipeCategory.MISC,ItemRegHandler.STONE_SHOVEL_HEAD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', ItemTags.STONE_TOOL_MATERIALS)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+                registerCustomShovelHeadRecipe(Items.IRON_INGOT, ItemRegHandler.IRON_SHOVEL_HEAD);
+                //registerCustomShovelHeadRecipe(Items.COPPER_INGOT, ItemRegHandler.COPPER_SHOVEL_HEAD);
+                registerCustomShovelHeadRecipe(Items.GOLD_INGOT, ItemRegHandler.GOLD_SHOVEL_HEAD);
+                registerCustomShovelHeadRecipe(Items.REDSTONE_BLOCK, ItemRegHandler.REDSTONE_SHOVEL_HEAD);
+                registerCustomShovelHeadRecipe(Items.DIAMOND, ItemRegHandler.DIAMOND_SHOVEL_HEAD);
+                //registerCustomShovelHeadRecipe(Items.EMERALD, ItemRegHandler.EMERALD_SHOVEL_HEAD);
+
+                //Hoe Head Recipes
+                this.shaped(RecipeCategory.MISC,ItemRegHandler.STONE_HOE_HEAD)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', ItemTags.STONE_TOOL_MATERIALS)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+                registerCustomHoeHeadRecipe(Items.IRON_INGOT, ItemRegHandler.IRON_HOE_HEAD);
+                //registerCustomHoeHeadRecipe(Items.COPPER_INGOT, ItemRegHandler.COPPER_HOE_HEAD);
+                registerCustomHoeHeadRecipe(Items.GOLD_INGOT, ItemRegHandler.GOLD_HOE_HEAD);
+                registerCustomHoeHeadRecipe(Items.REDSTONE_BLOCK, ItemRegHandler.REDSTONE_HOE_HEAD);
+                registerCustomHoeHeadRecipe(Items.DIAMOND, ItemRegHandler.DIAMOND_HOE_HEAD);
+                //registerCustomHoeHeadRecipe(Items.EMERALD, ItemRegHandler.EMERALD_HOE_HEAD);
+
+                //Spear Tip Recipes
+                /*
+                this.shaped(RecipeCategory.MISC,ItemRegHandler.STONE_SPEAR_TIP)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', ItemTags.STONE_TOOL_MATERIALS)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+                registerCustomSpearTipRecipe(Items.IRON_INGOT, ItemRegHandler.IRON_SPEAR_TIP);
+                //registerCustomSpearTipRecipe(Items.COPPER_INGOT, ItemRegHandler.COPPER_SPEAR_TIP);
+                registerCustomSpearTipRecipe(Items.GOLD_INGOT, ItemRegHandler.GOLD_SPEAR_TIP);
+                registerCustomSpearTipRecipe(Items.REDSTONE_BLOCK, ItemRegHandler.REDSTONE_SPEAR_TIP);
+                registerCustomSpearTipRecipe(Items.DIAMOND, ItemRegHandler.DIAMOND_SPEAR_TIP);
+                //registerCustomSpearTipRecipe(Items.EMERALD, ItemRegHandler.EMERALD_SPEAR_TIP);
+                */
+
+                //Smithing Recipes
+                //Swords
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.STONE_SWORD_BLADE, Items.WOODEN_SWORD, Items.STONE_SWORD, RecipeCategory.COMBAT);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.COPPER_SWORD_BLADE, Items.STONE_SWORD, Items.COPPER_SWORD, RecipeCategory.COMBAT);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.IRON_SWORD_BLADE, Items.STONE_SWORD, Items.IRON_SWORD, RecipeCategory.COMBAT);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.REDSTONE_SWORD_BLADE, Items.STONE_SWORD, ItemRegHandler.REDSTONE_SWORD, RecipeCategory.COMBAT);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SWORD_BLADE, Items.STONE_SWORD, ItemRegHandler.EMERALD_SWORD, RecipeCategory.COMBAT);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.GOLD_SWORD_BLADE, Items.STONE_SWORD, Items.GOLDEN_SWORD, RecipeCategory.COMBAT);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_SWORD_BLADE, Items.IRON_SWORD, Items.DIAMOND_SWORD, RecipeCategory.COMBAT);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_SWORD_BLADE, Items.GOLDEN_SWORD, Items.DIAMOND_SWORD, RecipeCategory.COMBAT);
+
+                //Pickaxes
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.STONE_PICKAXE_HEAD, Items.WOODEN_PICKAXE, Items.STONE_PICKAXE, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.COPPER_PICKAXE_HEAD, Items.STONE_PICKAXE, Items.COPPER_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.IRON_PICKAXE_HEAD, Items.STONE_PICKAXE, Items.IRON_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.REDSTONE_PICKAXE_HEAD, Items.STONE_PICKAXE, ItemRegHandler.REDSTONE_PICKAXE, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_PICKAXE_HEAD, Items.STONE_PICKAXE, ItemRegHandler.EMERALD_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.GOLD_PICKAXE_HEAD, Items.STONE_PICKAXE, Items.GOLDEN_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_PICKAXE_HEAD, Items.IRON_PICKAXE, Items.DIAMOND_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_PICKAXE_HEAD, Items.GOLDEN_PICKAXE, Items.DIAMOND_PICKAXE, RecipeCategory.TOOLS);
+
+                //Axes
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.STONE_AXE_HEAD, Items.WOODEN_AXE, Items.STONE_AXE, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.COPPER_AXE_HEAD, Items.STONE_AXE, Items.COPPER_AXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.IRON_AXE_HEAD, Items.STONE_AXE, Items.IRON_AXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.REDSTONE_AXE_HEAD, Items.STONE_AXE, ItemRegHandler.REDSTONE_AXE, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_AXE_HEAD, Items.STONE_AXE, ItemRegHandler.EMERALD_AXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.GOLD_AXE_HEAD, Items.STONE_AXE, Items.GOLDEN_AXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_AXE_HEAD, Items.IRON_AXE, Items.DIAMOND_AXE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_AXE_HEAD, Items.GOLDEN_AXE, Items.DIAMOND_AXE, RecipeCategory.TOOLS);
+
+                //Shovels
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.STONE_SHOVEL_HEAD, Items.WOODEN_SHOVEL, Items.STONE_SHOVEL, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.COPPER_SHOVEL_HEAD, Items.STONE_SHOVEL, Items.COPPER_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.IRON_SHOVEL_HEAD, Items.STONE_SHOVEL, Items.IRON_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.REDSTONE_SHOVEL_HEAD, Items.STONE_SHOVEL, ItemRegHandler.REDSTONE_SHOVEL, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SHOVEL_HEAD, Items.STONE_SHOVEL, ItemRegHandler.EMERALD_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.GOLD_SHOVEL_HEAD, Items.STONE_SHOVEL, Items.GOLDEN_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_SHOVEL_HEAD, Items.IRON_SHOVEL, Items.DIAMOND_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_SHOVEL_HEAD, Items.GOLDEN_SHOVEL, Items.DIAMOND_SHOVEL, RecipeCategory.TOOLS);
+
+                //Hoes
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.STONE_HOE_HEAD, Items.WOODEN_HOE, Items.STONE_HOE, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.COPPER_HOE_HEAD, Items.STONE_HOE, Items.COPPER_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.IRON_HOE_HEAD, Items.STONE_HOE, Items.IRON_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.REDSTONE_HOE_HEAD, Items.STONE_HOE, ItemRegHandler.REDSTONE_HOE, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_HOE_HEAD, Items.STONE_HOE, ItemRegHandler.EMERALD_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.GOLD_HOE_HEAD, Items.STONE_HOE, Items.GOLDEN_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_HOE_HEAD, Items.IRON_HOE, Items.DIAMOND_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_HOE_HEAD, Items.GOLDEN_HOE, Items.DIAMOND_HOE, RecipeCategory.TOOLS);
+
+                //Spears
+                /*
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.STONE_SPEAR_TIP, Items.WOODEN_HOE, Items.STONE_HOE, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.COPPER_SPEAR_TIP, Items.STONE_HOE, Items.COPPER_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.IRON_SPEAR_TIP, Items.STONE_HOE, Items.IRON_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.REDSTONE_SPEAR_TIP, Items.STONE_HOE, ItemRegHandler.REDSTONE_HOE, RecipeCategory.TOOLS);
+                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SPEAR_TIP, Items.STONE_HOE, ItemRegHandler.EMERALD_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.GOLD_SPEAR_TIP, Items.STONE_HOE, Items.GOLDEN_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_SPEAR_TIP, Items.IRON_HOE, Items.DIAMOND_HOE, RecipeCategory.TOOLS);
+                registerCustomUpgrade(Items.FLINT, ItemRegHandler.DIAMOND_SPEAR_TIP, Items.GOLDEN_HOE, Items.DIAMOND_HOE, RecipeCategory.TOOLS);
+                */
+            }
+
+            private void registerCustomUpgrade(Item material, Item template, Item baseItem, Item upgradedResult, RecipeCategory category) {
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(template),
+                                Ingredient.of(baseItem),
+                                Ingredient.of(material),
+                                category,
+                                upgradedResult
+                        )
+                        .unlocks("has_" + getItemName(template), has(template))
+                        .save(output, getItemName(upgradedResult) + "_from_smithing_with_" + getItemName(baseItem));
+            }
+
+            private void registerCustomToolSetRecipes(Item materialItem, Item resultSword, Item resultShovel, Item resultPickaxe, Item resultAxe, Item resultHoe,Item resultSpear) {
+                this.shaped(RecipeCategory.COMBAT,resultSword)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', materialItem)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(materialItem), has(materialItem))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,resultShovel)
+                        .pattern("x")
+                        .pattern("y")
+                        .pattern("y")
+                        .define('x', materialItem)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(materialItem), has(materialItem))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,resultPickaxe)
+                        .pattern("xxx")
+                        .pattern(" y ")
+                        .pattern(" y ")
+                        .define('x', materialItem)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(materialItem), has(materialItem))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,resultAxe)
+                        .pattern("xx")
+                        .pattern("xy")
+                        .pattern(" y")
+                        .define('x', materialItem)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(materialItem), has(materialItem))
+                        .save(output);
+                this.shaped(RecipeCategory.TOOLS,resultHoe)
+                        .pattern("xx")
+                        .pattern(" y")
+                        .pattern(" y")
+                        .define('x', materialItem)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(materialItem), has(materialItem))
+                        .save(output);
+                this.shaped(RecipeCategory.COMBAT,resultSpear)
+                        .pattern("  x")
+                        .pattern(" y ")
+                        .pattern("y  ")
+                        .define('x', materialItem)
+                        .define('y', Items.STICK)
+                        .unlockedBy(getHasName(materialItem), has(materialItem))
+                        .save(output);
+            }
+
+            private void registerCustomSwordBladeRecipe(Item materialItem, Item resultItem) {
+                Item base_template = ItemRegHandler.BASE_TEMPLATE;
+                this.shaped(RecipeCategory.MISC,resultItem)
+                        .pattern("x")
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', materialItem)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+            }
+
+            private void registerCustomPickaxeHeadRecipe(Item materialItem, Item resultItem) {
+                Item base_template = ItemRegHandler.BASE_TEMPLATE;
+                this.shaped(RecipeCategory.MISC,resultItem)
+                        .pattern("xxx")
+                        .pattern(" y ")
+                        .define('x', materialItem)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+            }
+
+            private void registerCustomAxeHeadRecipe(Item materialItem, Item resultItem) {
+                Item base_template = ItemRegHandler.BASE_TEMPLATE;
+                this.shaped(RecipeCategory.MISC,resultItem)
+                        .pattern("xx")
+                        .pattern("xy")
+                        .define('x', materialItem)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+            }
+
+            private void registerCustomShovelHeadRecipe(Item materialItem, Item resultItem) {
+                Item base_template = ItemRegHandler.BASE_TEMPLATE;
+                this.shaped(RecipeCategory.MISC,resultItem)
+                        .pattern("x")
+                        .pattern("y")
+                        .define('x', materialItem)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+            }
+
+            private void registerCustomHoeHeadRecipe(Item materialItem, Item resultItem) {
+                Item base_template = ItemRegHandler.BASE_TEMPLATE;
+                this.shaped(RecipeCategory.MISC,resultItem)
+                        .pattern("xx")
+                        .pattern(" y")
+                        .define('x', materialItem)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
+                        .save(output);
+            }
+
+            private void registerCustomSpearTipRecipe(Item materialItem, Item resultItem) {
+                Item base_template = ItemRegHandler.BASE_TEMPLATE;
+                this.shaped(RecipeCategory.MISC,resultItem)
+                        .pattern(" x")
+                        .pattern("y ")
+                        .define('x', materialItem)
+                        .define('y', base_template)
+                        .unlockedBy(getHasName(base_template), has(base_template))
                         .save(output);
             }
         };

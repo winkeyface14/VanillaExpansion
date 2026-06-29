@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 0.7,
+  "group": "fired_brick",
+  "ingredient": "minecraft:bricks",
+  "result": {
+    "id": "vanilla_expansion:fired_bricks"
+  }
+}

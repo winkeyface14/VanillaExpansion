@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "vanilla_expansion:lapis_lazuli"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "vanilla_expansion:lapis_lazuli"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "vanilla_expansion:lapis_lazuli"
+      }
+    ]
+  }
+}

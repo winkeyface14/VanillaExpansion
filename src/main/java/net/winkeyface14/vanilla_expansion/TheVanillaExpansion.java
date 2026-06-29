@@ -4,12 +4,10 @@ import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
 
-import net.winkeyface14.vanilla_expansion.block.BlockItemBase;
 import net.winkeyface14.vanilla_expansion.creativetab.CreativeTab;
-import net.winkeyface14.vanilla_expansion.item.ItemBase;
-import net.winkeyface14.vanilla_expansion.util.BlockRegHandler;
-import net.winkeyface14.vanilla_expansion.util.ItemRegHandler;
-import net.winkeyface14.vanilla_expansion.util.ModFuels;
+import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
+import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
+import net.winkeyface14.vanilla_expansion.item.FuelsRegHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +22,7 @@ public class TheVanillaExpansion implements ModInitializer {
 		ItemRegHandler.registerModItems();
 		BlockRegHandler.registerModBlocks();
 
-		ModFuels.registerFuels();
+		FuelsRegHandler.registerFuels();
 	}
 
 	public static Identifier id(String path) {

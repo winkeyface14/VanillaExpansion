@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "x": "minecraft:redstone_block",
+    "y": "minecraft:stick"
+  },
+  "pattern": [
+    "xx",
+    "xy",
+    " y"
+  ],
+  "result": {
+    "id": "vanilla_expansion:redstone_axe"
+  }
+}

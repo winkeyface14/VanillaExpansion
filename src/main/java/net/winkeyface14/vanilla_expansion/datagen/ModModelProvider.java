@@ -4,11 +4,18 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TextureSlot;
+import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.winkeyface14.vanilla_expansion.item.ArmorMaterialBase;
-import net.winkeyface14.vanilla_expansion.util.BlockRegHandler;
-import net.winkeyface14.vanilla_expansion.util.ItemRegHandler;
+import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
+import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricPackOutput output) {
@@ -17,22 +24,58 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-        blockModelGenerators.createTrivialCube(BlockRegHandler.CHARCOAL_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BUNDLED_STICKS_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BARREL_OF_APPLES_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BARREL_OF_POTATOES_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BARREL_OF_CARROTS_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BARREL_OF_SWEETBERRY_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BARREL_OF_CHORUS_BLOCK);
+
         blockModelGenerators.createTrivialCube(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
+        blockModelGenerators.createTrivialCube(BlockRegHandler.CHARCOAL_BLOCK);
+
+        blockModelGenerators.createAxisAlignedPillarBlock(BlockRegHandler.BUNDLED_STICKS_BLOCK, TexturedModel.COLUMN);
+        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_APPLES_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
+        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_POTATOES_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
+        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_CARROTS_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
+        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_SWEETBERRY_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
+        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_CHORUS_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
 
         blockModelGenerators.family(BlockRegHandler.FIRED_BRICKS)
                 .stairs(BlockRegHandler.FIRED_BRICKS_STAIRS)
                 .slab(BlockRegHandler.FIRED_BRICKS_SLAB)
                 .wall(BlockRegHandler.FIRED_BRICKS_WALL);
 
-        blockModelGenerators.family(Blocks.QUARTZ_BLOCK).wall(BlockRegHandler.QUARTZ_WALL);
-        blockModelGenerators.family(Blocks.QUARTZ_BRICKS).wall(BlockRegHandler.QUARTZ_BRICKS_WALL);
+        //blockModelGenerators.family(Blocks.QUARTZ_BLOCK).wall(BlockRegHandler.QUARTZ_WALL);
+        //blockModelGenerators.family(Blocks.QUARTZ_BRICKS).wall(BlockRegHandler.QUARTZ_BRICKS_WALL);
+
+        /*TextureMapping regularQuartzMap = TextureMapping.cube(Blocks.QUARTZ_BLOCK)
+                .put(TextureSlot.WALL, TextureMapping.getBlockTexture(Blocks.QUARTZ_BLOCK));
+
+        Identifier regularPostId = ModelTemplates.WALL_POST.create(BlockRegHandler.QUARTZ_WALL, regularQuartzMap, blockModelGenerators.modelOutput);
+        Identifier regularLowSideId = ModelTemplates.WALL_LOW_SIDE.create(BlockRegHandler.QUARTZ_WALL, regularQuartzMap, blockModelGenerators.modelOutput);
+        Identifier regularTallSideId = ModelTemplates.WALL_TALL_SIDE.create(BlockRegHandler.QUARTZ_WALL, regularQuartzMap, blockModelGenerators.modelOutput);
+
+        ModelTemplates.WALL_INVENTORY.create(BlockRegHandler.QUARTZ_WALL, regularQuartzMap, blockModelGenerators.modelOutput);
+
+        MultiVariant regularPost = BlockModelGenerators.plainVariant(regularPostId);
+        MultiVariant regularLowSide = BlockModelGenerators.plainVariant(regularLowSideId);
+        MultiVariant regularTallSide = BlockModelGenerators.plainVariant(regularTallSideId);
+
+        blockModelGenerators.blockStateOutput.accept(
+                blockModelGenerators.createWall(BlockRegHandler.QUARTZ_WALL, regularPost, regularLowSide, regularTallSide)
+        );
+
+        TextureMapping quartzBricksMap = TextureMapping.cube(Blocks.QUARTZ_BRICKS)
+                .put(TextureSlot.WALL, TextureMapping.getBlockTexture(Blocks.QUARTZ_BRICKS));
+
+        Identifier bricksPostId = ModelTemplates.WALL_POST.create(BlockRegHandler.QUARTZ_BRICKS_WALL, quartzBricksMap, blockModelGenerators.modelOutput);
+        Identifier bricksLowSideId = ModelTemplates.WALL_LOW_SIDE.create(BlockRegHandler.QUARTZ_BRICKS_WALL, quartzBricksMap, blockModelGenerators.modelOutput);
+        Identifier bricksTallSideId = ModelTemplates.WALL_TALL_SIDE.create(BlockRegHandler.QUARTZ_BRICKS_WALL, quartzBricksMap, blockModelGenerators.modelOutput);
+
+        ModelTemplates.WALL_INVENTORY.create(BlockRegHandler.QUARTZ_BRICKS_WALL, quartzBricksMap, blockModelGenerators.modelOutput);
+
+        MultiVariant bricksPost = BlockModelGenerators.plainVariant(bricksPostId);
+        MultiVariant bricksLowSide = BlockModelGenerators.plainVariant(bricksLowSideId);
+        MultiVariant bricksTallSide = BlockModelGenerators.plainVariant(bricksTallSideId);
+
+        blockModelGenerators.blockStateOutput.accept(
+                blockModelGenerators.createWall(BlockRegHandler.QUARTZ_BRICKS_WALL, bricksPost, bricksLowSide, bricksTallSide)
+        );*/
 
         blockModelGenerators.family(BlockRegHandler.SMOKED_QUARTZ_BLOCK)
                 .stairs(BlockRegHandler.SMOKED_QUARTZ_STAIRS)
@@ -45,8 +88,8 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(BlockRegHandler.SMOKED_QUARTZ_BRICKS_STAIRS)
                 .slab(BlockRegHandler.SMOKED_QUARTZ_BRICKS_SLAB)
                 .wall(BlockRegHandler.SMOKED_QUARTZ_BRICKS_WALL);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.CHISELED_SMOKED_QUARTZ_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.SMOKED_QUARTZ_PILLAR);
+        blockModelGenerators.createTrivialBlock(BlockRegHandler.CHISELED_SMOKED_QUARTZ_BLOCK,TexturedModel.COLUMN);
+        blockModelGenerators.createAxisAlignedPillarBlock(BlockRegHandler.SMOKED_QUARTZ_PILLAR, TexturedModel.COLUMN);
 
         blockModelGenerators.family(BlockRegHandler.BURNT_QUARTZ_BLOCK)
                 .stairs(BlockRegHandler.BURNT_QUARTZ_STAIRS)
@@ -59,8 +102,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(BlockRegHandler.BURNT_QUARTZ_BRICKS_STAIRS)
                 .slab(BlockRegHandler.BURNT_QUARTZ_BRICKS_SLAB)
                 .wall(BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.CHISELED_BURNT_QUARTZ_BLOCK);
-        blockModelGenerators.createTrivialCube(BlockRegHandler.BURNT_QUARTZ_PILLAR);
+        blockModelGenerators.createTrivialBlock(BlockRegHandler.CHISELED_BURNT_QUARTZ_BLOCK,
+                TexturedModel.COLUMN
+        );
+        blockModelGenerators.createAxisAlignedPillarBlock(BlockRegHandler.BURNT_QUARTZ_PILLAR, TexturedModel.COLUMN);
     }
 
     @Override
@@ -113,6 +158,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
+        //Tool Upgrade Tempalte
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BASE_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
         //Sword
         itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);

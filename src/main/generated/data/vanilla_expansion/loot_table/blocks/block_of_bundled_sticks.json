@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "vanilla_expansion:block_of_bundled_sticks"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

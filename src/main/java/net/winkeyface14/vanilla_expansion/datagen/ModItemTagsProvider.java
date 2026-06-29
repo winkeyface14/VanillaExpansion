@@ -6,9 +6,8 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.references.BlockItemIds;
 import net.minecraft.references.ItemIds;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
 import net.winkeyface14.vanilla_expansion.tags.TagRegHandler;
-import net.winkeyface14.vanilla_expansion.util.ItemRegHandler;
+import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
 
 import java.util.concurrent.CompletableFuture;
 

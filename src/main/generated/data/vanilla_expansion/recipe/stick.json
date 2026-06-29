@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "vanilla_expansion:bundled_sticks"
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:stick"
+  }
+}

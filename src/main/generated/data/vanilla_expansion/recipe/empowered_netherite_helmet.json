@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "x": "vanilla_expansion:empowered_netherite_ingot"
+  },
+  "pattern": [
+    "xxx",
+    "x x"
+  ],
+  "result": {
+    "id": "vanilla_expansion:empowered_netherite_helmet"
+  }
+}

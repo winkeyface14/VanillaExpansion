@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_coal_chunk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "vanilla_expansion:coal_chunk"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "vanilla_expansion:coal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_coal_chunk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vanilla_expansion:coal"
+    ]
+  }
+}

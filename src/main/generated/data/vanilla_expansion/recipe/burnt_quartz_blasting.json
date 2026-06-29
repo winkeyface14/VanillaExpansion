@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "experience": 0.7,
+  "group": "burnt_quartz",
+  "ingredient": "minecraft:quartz",
+  "result": {
+    "id": "vanilla_expansion:burnt_quartz"
+  }
+}

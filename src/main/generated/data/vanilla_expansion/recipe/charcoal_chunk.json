@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "charcoal_chunk",
+  "ingredients": [
+    "minecraft:charcoal"
+  ],
+  "result": {
+    "count": 8,
+    "id": "vanilla_expansion:charcoal_chunk"
+  }
+}

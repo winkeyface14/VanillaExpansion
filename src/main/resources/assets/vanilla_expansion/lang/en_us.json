@@ -1,8 +1,12 @@
 {
   "item.minecraft.shears": "Iron Shears",
-  "creativetab.vanilla_expansion.items": "The Vanilla Expansion: Items",
-  "creativetab.vanilla_expansion.tools_and_armor": "The Vanilla Expansion: Tools and Armor",
-  "creativetab.vanilla_expansion.blocks": "The Vanilla Expansion: Blocks",
+
+  "creativetab.vanilla_expansion.items": "TVE: Items",
+  "creativetab.vanilla_expansion.tools_and_armor": "TVE: Tools and Armor",
+  "creativetab.vanilla_expansion.templates": "TVE: Templates and Tool Parts",
+  "creativetab.vanilla_expansion.blocks": "TVE: Blocks",
+
+
   "block.vanilla_expansion.charcoal_block": "Charcoal Block",
   "block.vanilla_expansion.block_of_bundled_sticks": "Block of Bundled Sticks",
   "block.vanilla_expansion.barrel_of_apples": "Barrel of Apples",
@@ -41,10 +45,13 @@
   "block.vanilla_expansion.fired_bricks_slab": "Fired Bricks Slab",
   "block.vanilla_expansion.fired_bricks_wall": "Fired Bricks Wall",
   "block.vanilla_expansion.empowered_netherite_block": "Block of Empowered Netherite",
+
   "item.vanilla_expansion.coal_chunk": "Coal Chunk",
   "item.vanilla_expansion.charcoal_chunk": "Charcoal Chunk",
+
   "item.vanilla_expansion.emerald_shard": "Emerald Shard",
   "item.vanilla_expansion.diamond_shard": "Diamond Shard",
+
   "item.vanilla_expansion.emerald_sword": "Emerald Sword",
   "item.vanilla_expansion.emerald_pickaxe": "Emerald Pickaxe",
   "item.vanilla_expansion.emerald_axe": "Emerald Axe",
@@ -54,12 +61,16 @@
   "item.vanilla_expansion.emerald_chestplate": "Emerald Chestplate",
   "item.vanilla_expansion.emerald_leggings": "Emerald Leggings",
   "item.vanilla_expansion.emerald_boots": "Emerald Boots",
-  "item.vanilla_expansion.bundle_of_sticks": "Bundle of Sticks",
+
+  "item.vanilla_expansion.bundled_sticks": "Bundle of Sticks",
+  "item.vanilla_expansion.base_template": "Base Template",
+
   "item.vanilla_expansion.stone_sword_blade": "Stone Sword Blade",
   "item.vanilla_expansion.stone_pickaxe_head": "Stone Pickaxe Head",
   "item.vanilla_expansion.stone_axe_head": "Stone Axe Head",
   "item.vanilla_expansion.stone_shovel_head": "Stone Shovel Head",
   "item.vanilla_expansion.stone_hoe_head": "Stone Hoe Head",
+
   "item.vanilla_expansion.redstone_sword": "Redstone Sword",
   "item.vanilla_expansion.redstone_pickaxe": "Redstone Pickaxe",
   "item.vanilla_expansion.redstone_axe": "Redstone Axe",

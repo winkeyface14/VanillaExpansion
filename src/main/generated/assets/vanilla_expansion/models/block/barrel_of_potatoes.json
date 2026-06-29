@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "vanilla_expansion:block/barrel_of_potatoes_bottom",
+    "side": "vanilla_expansion:block/barrel_of_potatoes_side",
+    "top": "vanilla_expansion:block/barrel_of_potatoes_top"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "empowered_netherite_ingot",
+  "ingredients": [
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "vanilla_expansion:empowered_netherite_scrap",
+    "vanilla_expansion:empowered_netherite_scrap",
+    "vanilla_expansion:empowered_netherite_scrap",
+    "vanilla_expansion:empowered_netherite_scrap"
+  ],
+  "result": {
+    "id": "vanilla_expansion:empowered_netherite_ingot"
+  }
+}
