@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:shovels",
+  "result": {
+    "id": "minecraft:copper_hoe"
+  },
+  "template": "vanilla_expansion:copper_hoe_head"
+}

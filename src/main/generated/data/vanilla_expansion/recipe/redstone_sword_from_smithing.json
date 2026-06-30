@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:swords",
+  "result": {
+    "id": "vanilla_expansion:redstone_sword"
+  },
+  "template": "vanilla_expansion:redstone_sword_blade"
+}

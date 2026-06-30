@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:pickaxes",
+  "result": {
+    "id": "minecraft:copper_pickaxe"
+  },
+  "template": "vanilla_expansion:copper_pickaxe_head"
+}

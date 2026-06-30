@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": "minecraft:flint",
-  "base": "minecraft:stone_sword",
-  "result": {
-    "id": "minecraft:golden_sword"
-  },
-  "template": "vanilla_expansion:golden_sword_blade"
-}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": "minecraft:flint",
-  "base": "minecraft:wooden_shovel",
-  "result": {
-    "id": "minecraft:stone_shovel"
-  },
-  "template": "vanilla_expansion:stone_shovel_head"
-}

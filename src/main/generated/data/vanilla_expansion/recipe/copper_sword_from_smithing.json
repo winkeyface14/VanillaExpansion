@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:swords",
+  "result": {
+    "id": "minecraft:copper_sword"
+  },
+  "template": "vanilla_expansion:copper_sword_blade"
+}
