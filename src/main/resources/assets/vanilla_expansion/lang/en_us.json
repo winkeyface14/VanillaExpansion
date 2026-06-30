@@ -20,30 +20,40 @@
   "block.vanilla_expansion.smoked_quartz_slab": "Smoked Quartz Slab",
   "block.vanilla_expansion.smoked_quartz_stairs": "Smoked Quartz Stairs",
   "block.vanilla_expansion.smoked_quartz_wall": "Smoked Quartz Wall",
-  "block.vanilla_expansion.smoked_quartz_pillar": "Smoked Quartz Pillar",
-  "block.vanilla_expansion.chiseled_smoked_quartz_block": "Chiseled Smoked Quartz Block",
+
   "block.vanilla_expansion.smoked_quartz_bricks": "Smoked Quartz Bricks",
-  "block.vanilla_expansion.smoked_quartz_bricks_stairs": "Smoked Quartz Bricks",
+  "block.vanilla_expansion.smoked_quartz_bricks_slab": "Smoked Quartz Bricks Slab",
+  "block.vanilla_expansion.smoked_quartz_bricks_stairs": "Smoked Quartz Bricks Stairs",
+  "block.vanilla_expansion.smoked_quartz_bricks_wall": "Smoked Quartz Bricks Wall",
+
   "block.vanilla_expansion.smooth_smoked_quartz": "Smooth Smoked Quartz",
   "block.vanilla_expansion.smooth_smoked_quartz_stairs": "Smooth Smoked Quartz Stairs",
+  "block.vanilla_expansion.smooth_smoked_quartz_wall": "Smooth Smoked Quartz Wall",
   "block.vanilla_expansion.smooth_smoked_quartz_slab": "Smooth Smoked Quartz Slab",
+
+  "block.vanilla_expansion.smoked_quartz_pillar": "Smoked Quartz Pillar",
+  "block.vanilla_expansion.chiseled_smoked_quartz_block": "Chiseled Smoked Quartz Block",
 
   "block.vanilla_expansion.quartz_wall": "Quartz Wall",
   "block.vanilla_expansion.quartz_bricks_wall": "Quartz Bricks Wall",
 
-  "block.vanilla_expansion.smoked_quartz_bricks_slab": "Smoked Quartz Bricks Slab",
-  "block.vanilla_expansion.quartz_bricks_slab": "Quartz Bricks Slab",
   "block.vanilla_expansion.burnt_quartz_block": "Burnt Quartz Block",
   "block.vanilla_expansion.burnt_quartz_slab": "Burnt Quartz Slab",
   "block.vanilla_expansion.burnt_quartz_stairs": "Burnt Quartz Stairs",
   "block.vanilla_expansion.burnt_quartz_wall": "Burnt Quartz Wall",
-  "block.vanilla_expansion.burnt_quartz_pillar": "Burnt Quartz Pillar",
-  "block.vanilla_expansion.chiseled_burnt_quartz_block": "Chiseled Burnt Quartz Block",
+
   "block.vanilla_expansion.burnt_quartz_bricks": "Burnt Quartz Bricks",
+  "block.vanilla_expansion.burnt_quartz_bricks_slab": "Burnt Quartz Bricks Slab",
+  "block.vanilla_expansion.burnt_quartz_bricks_stairs": "Burnt Quartz Bricks Stairs",
+  "block.vanilla_expansion.burnt_quartz_bricks_wall": "Burnt Quartz Bricks Wall",
+
   "block.vanilla_expansion.smooth_burnt_quartz": "Smooth Burnt Quartz",
   "block.vanilla_expansion.smooth_burnt_quartz_stairs": "Smooth Burnt Quartz Stairs",
+  "block.vanilla_expansion.smooth_burnt_quartz_wall": "Smooth Burnt Quartz Wall",
   "block.vanilla_expansion.smooth_burnt_quartz_slab": "Smooth Burnt Quartz Slab",
-  "block.vanilla_expansion.burnt_quartz_bricks_slab": "Burnt Quartz Bricks Slab",
+
+  "block.vanilla_expansion.burnt_quartz_pillar": "Burnt Quartz Pillar",
+  "block.vanilla_expansion.chiseled_burnt_quartz_block": "Chiseled Burnt Quartz Block",
 
   "block.vanilla_expansion.fired_bricks": "Fired Bricks",
   "block.vanilla_expansion.fired_bricks_stairs": "Fired Bricks Stairs",

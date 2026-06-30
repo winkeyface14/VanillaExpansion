@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "group": "burnt_quartz_shard",
   "ingredients": [
     "vanilla_expansion:burnt_quartz"

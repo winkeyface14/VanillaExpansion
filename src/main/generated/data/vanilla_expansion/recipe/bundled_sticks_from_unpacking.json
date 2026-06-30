@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "group": "bundled_sticks",
   "ingredients": [
     "vanilla_expansion:block_of_bundled_sticks"

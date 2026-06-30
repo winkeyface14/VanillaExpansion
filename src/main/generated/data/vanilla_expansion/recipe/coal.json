@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "group": "coal",
   "ingredients": [
     "vanilla_expansion:coal_chunk",

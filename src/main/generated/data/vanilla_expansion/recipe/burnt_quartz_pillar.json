@@ -1,13 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "group": "burnt_quartz_pillar",
+  "category": "misc",
   "key": {
-    "#": "vanilla_expansion:burnt_quartz_block"
+    "x": "vanilla_expansion:burnt_quartz_block"
   },
   "pattern": [
-    "#",
-    "#"
+    "x",
+    "x"
   ],
   "result": {
     "count": 2,

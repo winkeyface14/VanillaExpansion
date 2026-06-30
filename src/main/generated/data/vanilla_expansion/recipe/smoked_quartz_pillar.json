@@ -1,13 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "group": "smoked_quartz_pillar",
+  "category": "misc",
   "key": {
-    "#": "vanilla_expansion:smoked_quartz_block"
+    "x": "vanilla_expansion:smoked_quartz_block"
   },
   "pattern": [
-    "#",
-    "#"
+    "x",
+    "x"
   ],
   "result": {
     "count": 2,

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "x": "minecraft:gold_ingot",
     "y": "vanilla_expansion:base_template"

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "group": "empowered_netherite_block",
   "key": {
     "#": "vanilla_expansion:empowered_netherite_ingot"

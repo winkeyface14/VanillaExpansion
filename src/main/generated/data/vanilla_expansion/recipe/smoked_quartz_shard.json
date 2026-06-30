@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "group": "smoked_quartz_shard",
   "ingredients": [
     "vanilla_expansion:smoked_quartz"
