@@ -666,9 +666,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 //Pillar
                 if(resultPillar != null){
                     this.stonecutterResultFromBase(categoryBuilding, resultPillar, baseItem);
-                    this.pillarBuilder(categoryBuilding, resultPillar, Ingredient.of(baseItem))
+                    this.shaped(RecipeCategory.MISC,resultPillar,2)
+                            .pattern("x")
+                            .pattern("x")
+                            .define('x', baseItem)
                             .unlockedBy(getHasName(baseItem), has(baseItem))
-                            .group(getItemName(resultPillar))
                             .save(output);
                 }
 
