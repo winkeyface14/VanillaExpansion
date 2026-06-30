@@ -21,38 +21,51 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(BlockRegHandler.getRK(BlockRegHandler.CHARCOAL_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_STAIRS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_WALL))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_WALL))
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_BRICKS_WALL))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SMOKED_QUARTZ))
                 .add(BlockRegHandler.getRK(BlockRegHandler.CHISELED_SMOKED_QUARTZ_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_PILLAR))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_STAIRS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_STAIRS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_STAIRS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_STAIRS))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_SLAB))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_WALL))
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_WALL))
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_WALL))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ))
                 .add(BlockRegHandler.getRK(BlockRegHandler.CHISELED_BURNT_QUARTZ_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_PILLAR))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_STAIRS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_STAIRS))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_SLAB))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_WALL))
-                .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL));
+                .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL))
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL));
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(BlockRegHandler.getRK(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK));
@@ -99,24 +112,36 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         tag(BlockTags.WALLS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_WALL))
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_BRICKS_WALL))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_WALL))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_WALL))
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_WALL))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_WALL))
-                .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_WALL))
+                .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL))
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_WALL));
 
         tag(BlockTags.STAIRS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_STAIRS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_STAIRS))
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_STAIRS))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_STAIRS))
-                .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_STAIRS))
+                .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_STAIRS))
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_STAIRS));
 
         tag(BlockTags.SLABS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_SLAB))
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_SLAB))
-                .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_BRICKS_SLAB))
+                .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_SLAB))
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_SLAB));
     }
 }

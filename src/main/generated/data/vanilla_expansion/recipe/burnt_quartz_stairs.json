@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "burnt_quartz_block",
+  "group": "burnt_quartz_stairs",
   "key": {
     "#": "vanilla_expansion:burnt_quartz_block"
   },

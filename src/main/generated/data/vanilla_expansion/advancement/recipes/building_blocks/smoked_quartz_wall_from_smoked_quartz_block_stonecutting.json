@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "vanilla_expansion:smooth_smoked_quartz"
+        "recipe": "vanilla_expansion:smoked_quartz_wall_from_smoked_quartz_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "vanilla_expansion:smooth_smoked_quartz"
+      "vanilla_expansion:smoked_quartz_wall_from_smoked_quartz_block_stonecutting"
     ]
   }
 }

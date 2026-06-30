@@ -2,8 +2,10 @@
   "values": [
     "vanilla_expansion:smoked_quartz_stairs",
     "vanilla_expansion:smoked_quartz_bricks_stairs",
+    "vanilla_expansion:smooth_smoked_quartz_stairs",
     "vanilla_expansion:burnt_quartz_stairs",
-    "vanilla_expansion:smoked_quartz_bricks_stairs",
+    "vanilla_expansion:burnt_quartz_bricks_stairs",
+    "vanilla_expansion:smooth_burnt_quartz_stairs",
     "vanilla_expansion:fired_bricks_stairs"
   ]
 }

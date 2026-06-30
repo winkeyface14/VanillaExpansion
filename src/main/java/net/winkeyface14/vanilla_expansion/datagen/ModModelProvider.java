@@ -33,50 +33,14 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(BlockRegHandler.FIRED_BRICKS_SLAB)
                 .wall(BlockRegHandler.FIRED_BRICKS_WALL);
 
-        //blockModelGenerators.family(Blocks.QUARTZ_BLOCK).wall(BlockRegHandler.QUARTZ_WALL);
-        //blockModelGenerators.family(Blocks.QUARTZ_BRICKS).wall(BlockRegHandler.QUARTZ_BRICKS_WALL);
-
-        /*TextureMapping regularQuartzMap = TextureMapping.cube(Blocks.QUARTZ_BLOCK)
-                .put(TextureSlot.WALL, TextureMapping.getBlockTexture(Blocks.QUARTZ_BLOCK));
-
-        Identifier regularPostId = ModelTemplates.WALL_POST.create(BlockRegHandler.QUARTZ_WALL, regularQuartzMap, blockModelGenerators.modelOutput);
-        Identifier regularLowSideId = ModelTemplates.WALL_LOW_SIDE.create(BlockRegHandler.QUARTZ_WALL, regularQuartzMap, blockModelGenerators.modelOutput);
-        Identifier regularTallSideId = ModelTemplates.WALL_TALL_SIDE.create(BlockRegHandler.QUARTZ_WALL, regularQuartzMap, blockModelGenerators.modelOutput);
-
-        ModelTemplates.WALL_INVENTORY.create(BlockRegHandler.QUARTZ_WALL, regularQuartzMap, blockModelGenerators.modelOutput);
-
-        MultiVariant regularPost = BlockModelGenerators.plainVariant(regularPostId);
-        MultiVariant regularLowSide = BlockModelGenerators.plainVariant(regularLowSideId);
-        MultiVariant regularTallSide = BlockModelGenerators.plainVariant(regularTallSideId);
-
-        blockModelGenerators.blockStateOutput.accept(
-                blockModelGenerators.createWall(BlockRegHandler.QUARTZ_WALL, regularPost, regularLowSide, regularTallSide)
-        );
-
-        TextureMapping quartzBricksMap = TextureMapping.cube(Blocks.QUARTZ_BRICKS)
-                .put(TextureSlot.WALL, TextureMapping.getBlockTexture(Blocks.QUARTZ_BRICKS));
-
-        Identifier bricksPostId = ModelTemplates.WALL_POST.create(BlockRegHandler.QUARTZ_BRICKS_WALL, quartzBricksMap, blockModelGenerators.modelOutput);
-        Identifier bricksLowSideId = ModelTemplates.WALL_LOW_SIDE.create(BlockRegHandler.QUARTZ_BRICKS_WALL, quartzBricksMap, blockModelGenerators.modelOutput);
-        Identifier bricksTallSideId = ModelTemplates.WALL_TALL_SIDE.create(BlockRegHandler.QUARTZ_BRICKS_WALL, quartzBricksMap, blockModelGenerators.modelOutput);
-
-        ModelTemplates.WALL_INVENTORY.create(BlockRegHandler.QUARTZ_BRICKS_WALL, quartzBricksMap, blockModelGenerators.modelOutput);
-
-        MultiVariant bricksPost = BlockModelGenerators.plainVariant(bricksPostId);
-        MultiVariant bricksLowSide = BlockModelGenerators.plainVariant(bricksLowSideId);
-        MultiVariant bricksTallSide = BlockModelGenerators.plainVariant(bricksTallSideId);
-
-        blockModelGenerators.blockStateOutput.accept(
-                blockModelGenerators.createWall(BlockRegHandler.QUARTZ_BRICKS_WALL, bricksPost, bricksLowSide, bricksTallSide)
-        );*/
-
         blockModelGenerators.family(BlockRegHandler.SMOKED_QUARTZ_BLOCK)
                 .stairs(BlockRegHandler.SMOKED_QUARTZ_STAIRS)
                 .slab(BlockRegHandler.SMOKED_QUARTZ_SLAB)
                 .wall(BlockRegHandler.SMOKED_QUARTZ_WALL);
         blockModelGenerators.family(BlockRegHandler.SMOOTH_SMOKED_QUARTZ)
                 .stairs(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_STAIRS)
-                .slab(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB);
+                .slab(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB)
+                .wall(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_WALL);
         blockModelGenerators.family(BlockRegHandler.SMOKED_QUARTZ_BRICKS)
                 .stairs(BlockRegHandler.SMOKED_QUARTZ_BRICKS_STAIRS)
                 .slab(BlockRegHandler.SMOKED_QUARTZ_BRICKS_SLAB)
@@ -90,7 +54,8 @@ public class ModModelProvider extends FabricModelProvider {
                 .wall(BlockRegHandler.BURNT_QUARTZ_WALL);
         blockModelGenerators.family(BlockRegHandler.SMOOTH_BURNT_QUARTZ)
                 .stairs(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS)
-                .slab(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB);
+                .slab(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB)
+                .wall(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL);
         blockModelGenerators.family(BlockRegHandler.BURNT_QUARTZ_BRICKS)
                 .stairs(BlockRegHandler.BURNT_QUARTZ_BRICKS_STAIRS)
                 .slab(BlockRegHandler.BURNT_QUARTZ_BRICKS_SLAB)

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_smoked_quartz_slab": {
+    "has_smoked_quartz_block": {
       "conditions": {
         "items": [
           {
-            "items": "vanilla_expansion:smoked_quartz_slab"
+            "items": "vanilla_expansion:smoked_quartz_block"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_smoked_quartz_slab"
+      "has_smoked_quartz_block"
     ]
   ],
   "rewards": {

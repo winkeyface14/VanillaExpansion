@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "smoked_quartz_bricks",
+  "key": {
+    "#": "vanilla_expansion:smoked_quartz_block"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "vanilla_expansion:smoked_quartz_bricks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "vanilla_expansion:fired_bricks",
+  "result": {
+    "id": "vanilla_expansion:fired_bricks_wall"
+  }
+}

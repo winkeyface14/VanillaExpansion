@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "fired_brick",
+  "group": "fired_bricks_stairs",
   "key": {
     "#": "vanilla_expansion:fired_bricks"
   },

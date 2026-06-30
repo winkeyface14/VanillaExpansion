@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "vanilla_expansion:smooth_burnt_quartz",
+  "result": {
+    "id": "vanilla_expansion:smooth_burnt_quartz_slab"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "vanilla_expansion:smooth_smoked_quartz",
+  "result": {
+    "id": "vanilla_expansion:smooth_smoked_quartz_stairs"
+  }
+}
