@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:axes",
+  "result": {
+    "id": "vanilla_expansion:redstone_axe"
+  },
+  "template": "vanilla_expansion:redstone_axe_head"
+}

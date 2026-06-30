@@ -85,6 +85,13 @@ public class CreativeTab {
     public static final CreativeModeTab TVE_TOOLSANDARMOR_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "tve_tools_and_armor"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.EMERALD_SWORD))
             .title(Component.translatable("creativetab.vanilla_expansion.tools_and_armor"))
             .displayItems((parameters, output) -> {
+                output.accept(ItemRegHandler.LAPIS_LAZULI_SWORD);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_SPEAR);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_SHOVEL);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_PICKAXE);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_AXE);
+                output.accept(ItemRegHandler.LAPIS_LAZULI_HOE);
+
                 output.accept(ItemRegHandler.QUARTZ_SWORD);
                 output.accept(ItemRegHandler.QUARTZ_SPEAR);
                 output.accept(ItemRegHandler.QUARTZ_SHOVEL);
@@ -112,13 +119,6 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.REDSTONE_PICKAXE);
                 output.accept(ItemRegHandler.REDSTONE_AXE);
                 output.accept(ItemRegHandler.REDSTONE_HOE);
-
-                output.accept(ItemRegHandler.LAPIS_LAZULI_SWORD);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_SPEAR);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_SHOVEL);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_PICKAXE);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_AXE);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_HOE);
 
                 output.accept(ItemRegHandler.EMERALD_SWORD);
                 output.accept(ItemRegHandler.EMERALD_SPEAR);

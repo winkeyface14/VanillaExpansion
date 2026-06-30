@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
@@ -378,87 +379,86 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Smithing Recipes
                 //Empowered Netherite Tool and Armor Set
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SWORD, EMPOWERED_NETHERITE_SWORD, RecipeCategory.COMBAT);
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SPEAR, EMPOWERED_NETHERITE_SPEAR, RecipeCategory.COMBAT);
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_PICKAXE, EMPOWERED_NETHERITE_PICKAXE, RecipeCategory.COMBAT);
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_AXE, EMPOWERED_NETHERITE_AXE, RecipeCategory.COMBAT);
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SHOVEL, EMPOWERED_NETHERITE_SHOVEL, RecipeCategory.COMBAT);
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, EMPOWERED_NETHERITE_HOE, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SWORD, EMPOWERED_NETHERITE_SWORD, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SPEAR, EMPOWERED_NETHERITE_SPEAR, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_PICKAXE, EMPOWERED_NETHERITE_PICKAXE, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_AXE, EMPOWERED_NETHERITE_AXE, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SHOVEL, EMPOWERED_NETHERITE_SHOVEL, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, EMPOWERED_NETHERITE_HOE, RecipeCategory.COMBAT);
 
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HELMET, EMPOWERED_NETHERITE_HELMET, RecipeCategory.COMBAT);
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_CHESTPLATE, EMPOWERED_NETHERITE_CHESTPLATE, RecipeCategory.COMBAT);
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_LEGGINGS, EMPOWERED_NETHERITE_LEGGINGS, RecipeCategory.COMBAT);
-                registerCustomUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_BOOTS, EMPOWERED_NETHERITE_BOOTS, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HELMET, EMPOWERED_NETHERITE_HELMET, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_CHESTPLATE, EMPOWERED_NETHERITE_CHESTPLATE, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_LEGGINGS, EMPOWERED_NETHERITE_LEGGINGS, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_BOOTS, EMPOWERED_NETHERITE_BOOTS, RecipeCategory.COMBAT);
 
                 //Swords
-                registerCustomUpgrade(Items.FLINT, STONE_SWORD_BLADE, Items.WOODEN_SWORD, Items.STONE_SWORD, RecipeCategory.COMBAT);
-                registerCustomUpgrade(Items.FLINT, COPPER_SWORD_BLADE, Items.STONE_SWORD, Items.COPPER_SWORD, RecipeCategory.COMBAT);
-                registerCustomUpgrade(Items.FLINT, IRON_SWORD_BLADE, Items.STONE_SWORD, Items.IRON_SWORD, RecipeCategory.COMBAT);
-                registerCustomUpgrade(Items.FLINT, REDSTONE_SWORD_BLADE, Items.STONE_SWORD, REDSTONE_SWORD, RecipeCategory.COMBAT);
-                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SWORD_BLADE, Items.STONE_SWORD, ItemRegHandler.EMERALD_SWORD, RecipeCategory.COMBAT);
-                registerCustomUpgrade(Items.FLINT, GOLD_SWORD_BLADE, Items.STONE_SWORD, Items.GOLDEN_SWORD, RecipeCategory.COMBAT);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_SWORD_BLADE, Items.IRON_SWORD, Items.DIAMOND_SWORD, RecipeCategory.COMBAT);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_SWORD_BLADE, Items.COPPER_SWORD, Items.DIAMOND_SWORD, RecipeCategory.COMBAT);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_SWORD_BLADE, Items.GOLDEN_SWORD, Items.DIAMOND_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(STONE_SWORD_BLADE, ItemTags.SWORDS, Items.STONE_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(COPPER_SWORD_BLADE, ItemTags.SWORDS, Items.COPPER_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(IRON_SWORD_BLADE, ItemTags.SWORDS, Items.IRON_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(REDSTONE_SWORD_BLADE, ItemTags.SWORDS, REDSTONE_SWORD, RecipeCategory.COMBAT);
+                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SWORD_BLADE, ItemTags.SWORDS, ItemRegHandler.EMERALD_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(GOLD_SWORD_BLADE, ItemTags.SWORDS, Items.GOLDEN_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(DIAMOND_SWORD_BLADE, ItemTags.SWORDS, Items.DIAMOND_SWORD, RecipeCategory.COMBAT);
 
                 //Pickaxes
-                registerCustomUpgrade(Items.FLINT, STONE_PICKAXE_HEAD, Items.WOODEN_PICKAXE, Items.STONE_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, COPPER_PICKAXE_HEAD, Items.STONE_PICKAXE, Items.COPPER_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, IRON_PICKAXE_HEAD, Items.STONE_PICKAXE, Items.IRON_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, REDSTONE_PICKAXE_HEAD, Items.STONE_PICKAXE, REDSTONE_PICKAXE, RecipeCategory.TOOLS);
-                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_PICKAXE_HEAD, Items.STONE_PICKAXE, ItemRegHandler.EMERALD_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, GOLD_PICKAXE_HEAD, Items.STONE_PICKAXE, Items.GOLDEN_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_PICKAXE_HEAD, Items.IRON_PICKAXE, Items.DIAMOND_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_PICKAXE_HEAD, Items.COPPER_PICKAXE, Items.DIAMOND_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_PICKAXE_HEAD, Items.GOLDEN_PICKAXE, Items.DIAMOND_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(STONE_PICKAXE_HEAD, ItemTags.PICKAXES, Items.STONE_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(COPPER_PICKAXE_HEAD, ItemTags.PICKAXES, Items.COPPER_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(IRON_PICKAXE_HEAD, ItemTags.PICKAXES, Items.IRON_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(REDSTONE_PICKAXE_HEAD, ItemTags.PICKAXES, REDSTONE_PICKAXE, RecipeCategory.TOOLS);
+                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_PICKAXE_HEAD, Items.STONE_PICKAXE, ItemRegHandler.EMERALD_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(GOLD_PICKAXE_HEAD, ItemTags.PICKAXES, Items.GOLDEN_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(DIAMOND_PICKAXE_HEAD, ItemTags.PICKAXES, Items.DIAMOND_PICKAXE, RecipeCategory.TOOLS);
 
                 //Axes
-                registerCustomUpgrade(Items.FLINT, STONE_AXE_HEAD, Items.WOODEN_AXE, Items.STONE_AXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, COPPER_AXE_HEAD, Items.STONE_AXE, Items.COPPER_AXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, IRON_AXE_HEAD, Items.STONE_AXE, Items.IRON_AXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, REDSTONE_AXE_HEAD, Items.STONE_AXE, REDSTONE_AXE, RecipeCategory.TOOLS);
-                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_AXE_HEAD, Items.STONE_AXE, ItemRegHandler.EMERALD_AXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, GOLD_AXE_HEAD, Items.STONE_AXE, Items.GOLDEN_AXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_AXE_HEAD, Items.IRON_AXE, Items.DIAMOND_AXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_AXE_HEAD, Items.COPPER_AXE, Items.DIAMOND_AXE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_AXE_HEAD, Items.GOLDEN_AXE, Items.DIAMOND_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(STONE_AXE_HEAD, ItemTags.AXES, Items.STONE_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(COPPER_AXE_HEAD, ItemTags.AXES, Items.COPPER_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(IRON_AXE_HEAD, ItemTags.AXES, Items.IRON_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(REDSTONE_AXE_HEAD, ItemTags.AXES, REDSTONE_AXE, RecipeCategory.TOOLS);
+                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_AXE_HEAD, ItemTags.AXES, ItemRegHandler.EMERALD_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(GOLD_AXE_HEAD, ItemTags.AXES, Items.GOLDEN_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(DIAMOND_AXE_HEAD, ItemTags.AXES, Items.DIAMOND_AXE, RecipeCategory.TOOLS);
 
                 //Shovels
-                registerCustomUpgrade(Items.FLINT, STONE_SHOVEL_HEAD, Items.WOODEN_SHOVEL, Items.STONE_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, COPPER_SHOVEL_HEAD, Items.STONE_SHOVEL, Items.COPPER_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, IRON_SHOVEL_HEAD, Items.STONE_SHOVEL, Items.IRON_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, REDSTONE_SHOVEL_HEAD, Items.STONE_SHOVEL, REDSTONE_SHOVEL, RecipeCategory.TOOLS);
-                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SHOVEL_HEAD, Items.STONE_SHOVEL, ItemRegHandler.EMERALD_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, GOLD_SHOVEL_HEAD, Items.STONE_SHOVEL, Items.GOLDEN_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_SHOVEL_HEAD, Items.IRON_SHOVEL, Items.DIAMOND_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_SHOVEL_HEAD, Items.COPPER_SHOVEL, Items.DIAMOND_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_SHOVEL_HEAD, Items.GOLDEN_SHOVEL, Items.DIAMOND_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(STONE_SHOVEL_HEAD, ItemTags.SHOVELS, Items.STONE_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(COPPER_SHOVEL_HEAD, ItemTags.SHOVELS, Items.COPPER_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(IRON_SHOVEL_HEAD, ItemTags.SHOVELS, Items.IRON_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(REDSTONE_SHOVEL_HEAD, ItemTags.SHOVELS, REDSTONE_SHOVEL, RecipeCategory.TOOLS);
+                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SHOVEL_HEAD, ItemTags.SHOVELS, ItemRegHandler.EMERALD_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(GOLD_SHOVEL_HEAD, ItemTags.SHOVELS, Items.GOLDEN_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(DIAMOND_SHOVEL_HEAD, ItemTags.SHOVELS, Items.DIAMOND_SHOVEL, RecipeCategory.TOOLS);
 
                 //Hoes
-                registerCustomUpgrade(Items.FLINT, STONE_HOE_HEAD, Items.WOODEN_HOE, Items.STONE_HOE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, COPPER_HOE_HEAD, Items.STONE_HOE, Items.COPPER_HOE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, IRON_HOE_HEAD, Items.STONE_HOE, Items.IRON_HOE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, REDSTONE_HOE_HEAD, Items.STONE_HOE, REDSTONE_HOE, RecipeCategory.TOOLS);
-                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_HOE_HEAD, Items.STONE_HOE, ItemRegHandler.EMERALD_HOE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, GOLD_HOE_HEAD, Items.STONE_HOE, Items.GOLDEN_HOE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_HOE_HEAD, Items.IRON_HOE, Items.DIAMOND_HOE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_HOE_HEAD, Items.COPPER_HOE, Items.DIAMOND_HOE, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_HOE_HEAD, Items.GOLDEN_HOE, Items.DIAMOND_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(STONE_HOE_HEAD, ItemTags.SHOVELS, Items.STONE_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(COPPER_HOE_HEAD, ItemTags.SHOVELS, Items.COPPER_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(IRON_HOE_HEAD, ItemTags.SHOVELS, Items.IRON_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(REDSTONE_HOE_HEAD, ItemTags.SHOVELS, REDSTONE_HOE, RecipeCategory.TOOLS);
+                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_HOE_HEAD, ItemTags.SHOVELS, ItemRegHandler.EMERALD_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(GOLD_HOE_HEAD, ItemTags.SHOVELS, Items.GOLDEN_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(DIAMOND_HOE_HEAD, ItemTags.SHOVELS, Items.DIAMOND_HOE, RecipeCategory.TOOLS);
 
                 //Spears
-                registerCustomUpgrade(Items.FLINT, STONE_SPEAR_TIP, Items.WOODEN_SPEAR, Items.STONE_SPEAR, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, COPPER_SPEAR_TIP, Items.STONE_SPEAR, Items.COPPER_SPEAR, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, IRON_SPEAR_TIP, Items.STONE_SPEAR, Items.IRON_SPEAR, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, REDSTONE_SPEAR_TIP, Items.STONE_SPEAR, REDSTONE_SPEAR, RecipeCategory.TOOLS);
-                //registerCustomUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SPEAR_TIP, Items.STONE_SPEAR, ItemRegHandler.EMERALD_SPEAR, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, GOLD_SPEAR_TIP, Items.STONE_SPEAR, Items.GOLDEN_SPEAR, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_SPEAR_TIP, Items.IRON_SPEAR, Items.DIAMOND_SPEAR, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_SPEAR_TIP, Items.COPPER_SPEAR, Items.DIAMOND_SPEAR, RecipeCategory.TOOLS);
-                registerCustomUpgrade(Items.FLINT, DIAMOND_SPEAR_TIP, Items.GOLDEN_SPEAR, Items.DIAMOND_SPEAR, RecipeCategory.TOOLS);
-
+                registerCustomToolUpgrade(STONE_SPEAR_TIP, ItemTags.SPEARS, Items.STONE_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(COPPER_SPEAR_TIP, ItemTags.SPEARS, Items.COPPER_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(IRON_SPEAR_TIP, ItemTags.SPEARS, Items.IRON_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(REDSTONE_SPEAR_TIP, ItemTags.SPEARS, REDSTONE_SPEAR, RecipeCategory.TOOLS);
+                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SPEAR_TIP, ItemTags.SPEARS, ItemRegHandler.EMERALD_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(GOLD_SPEAR_TIP, ItemTags.SPEARS, Items.GOLDEN_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(DIAMOND_SPEAR_TIP, ItemTags.SPEARS, Items.DIAMOND_SPEAR, RecipeCategory.TOOLS);
             }
 
-            private void registerCustomUpgrade(Item material, Item template, Item baseItem, Item upgradedResult, RecipeCategory category) {
+            private void registerCustomToolUpgrade(Item template, TagKey<Item> baseItem, Item upgradedResult, RecipeCategory category) {
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(template),
+                                this.tag(baseItem),
+                                Ingredient.of(Items.FLINT),
+                                category,
+                                upgradedResult
+                        )
+                        .unlocks("has_" + getItemName(template), has(template))
+                        .save(output, getItemName(upgradedResult) + "_from_smithing");
+            }
+
+            private void registerCustomNetheriteUpgrade(Item material, Item template, Item baseItem, Item upgradedResult, RecipeCategory category) {
                 SmithingTransformRecipeBuilder.smithing(
                                 Ingredient.of(template),
                                 Ingredient.of(baseItem),

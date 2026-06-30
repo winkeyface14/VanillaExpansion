@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": "minecraft:flint",
-  "base": "minecraft:copper_sword",
-  "result": {
-    "id": "minecraft:diamond_sword"
-  },
-  "template": "vanilla_expansion:diamond_sword_blade"
-}

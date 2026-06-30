@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:spears",
+  "result": {
+    "id": "minecraft:diamond_spear"
+  },
+  "template": "vanilla_expansion:diamond_spear_tip"
+}

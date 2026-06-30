@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": "minecraft:flint",
-  "base": "minecraft:stone_pickaxe",
-  "result": {
-    "id": "minecraft:golden_pickaxe"
-  },
-  "template": "vanilla_expansion:golden_pickaxe_head"
-}

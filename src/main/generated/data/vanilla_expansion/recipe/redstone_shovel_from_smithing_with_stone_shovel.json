@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": "minecraft:flint",
-  "base": "minecraft:stone_shovel",
-  "result": {
-    "id": "vanilla_expansion:redstone_shovel"
-  },
-  "template": "vanilla_expansion:redstone_shovel_head"
-}

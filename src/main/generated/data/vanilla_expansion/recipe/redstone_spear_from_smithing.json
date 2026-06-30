@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:spears",
+  "result": {
+    "id": "vanilla_expansion:redstone_spear"
+  },
+  "template": "vanilla_expansion:redstone_spear_tip"
+}

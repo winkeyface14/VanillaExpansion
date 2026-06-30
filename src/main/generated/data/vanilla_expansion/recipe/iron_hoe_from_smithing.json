@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:shovels",
+  "result": {
+    "id": "minecraft:iron_hoe"
+  },
+  "template": "vanilla_expansion:iron_hoe_head"
+}
