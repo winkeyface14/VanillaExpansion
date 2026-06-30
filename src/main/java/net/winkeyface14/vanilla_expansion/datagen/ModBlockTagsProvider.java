@@ -23,9 +23,9 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK))
 
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS))
-                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_STAIRS))
-                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_SLAB))
-                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_WALL))
+                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_STAIRS))
+                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_SLAB))
+                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_WALL))
 
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_WALL))
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_BRICKS_WALL))
@@ -121,7 +121,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL))
 
-                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_WALL));
+                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_WALL));
 
         tag(BlockTags.STAIRS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_STAIRS))
@@ -132,7 +132,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_STAIRS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS))
 
-                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_STAIRS));
+                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_STAIRS));
 
         tag(BlockTags.SLABS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_SLAB))
@@ -142,6 +142,6 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICKS_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB))
-                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICKS_SLAB));
+                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_SLAB));
     }
 }

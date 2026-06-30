@@ -53,14 +53,14 @@ public class BlockRegHandler {
             .strength(2.0f, 6.0f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block FIRED_BRICKS_STAIRS = registerBlock("fired_bricks_stairs", properties -> new StairBlock(BlockRegHandler.FIRED_BRICKS.defaultBlockState(),
+    public static final Block FIRED_BRICK_STAIRS = registerBlock("fired_brick_stairs", properties -> new StairBlock(BlockRegHandler.FIRED_BRICKS.defaultBlockState(),
             properties.strength(2.0f, 6.0f)
                     .sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
-    public static final Block FIRED_BRICKS_SLAB = registerBlock("fired_bricks_slab", properties -> new SlabBlock(properties.strength(2.0f, 6.0f)
+    public static final Block FIRED_BRICK_SLAB = registerBlock("fired_brick_slab", properties -> new SlabBlock(properties.strength(2.0f, 6.0f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block FIRED_BRICKS_WALL = registerBlock("fired_bricks_wall", properties -> new WallBlock(properties
+    public static final Block FIRED_BRICK_WALL = registerBlock("fired_brick_wall", properties -> new WallBlock(properties
             .strength(2.0f, 6.0f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));

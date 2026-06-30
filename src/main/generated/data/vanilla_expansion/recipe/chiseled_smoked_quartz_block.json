@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "vanilla_expansion:smoked_quartz_block"
+    "#": "vanilla_expansion:smoked_quartz_slab"
   },
   "pattern": [
     "#",

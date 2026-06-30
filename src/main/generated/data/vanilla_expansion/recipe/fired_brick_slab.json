@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "vanilla_expansion:burnt_quartz_slab"
+    "#": "vanilla_expansion:fired_bricks"
   },
   "pattern": [
-    "#",
-    "#"
+    "###"
   ],
   "result": {
-    "id": "vanilla_expansion:chiseled_burnt_quartz_block"
+    "count": 6,
+    "id": "vanilla_expansion:fired_brick_slab"
   }
 }

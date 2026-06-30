@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:pickaxes",
+  "result": {
+    "id": "vanilla_expansion:emerald_pickaxe"
+  },
+  "template": "vanilla_expansion:emerald_pickaxe_head"
+}

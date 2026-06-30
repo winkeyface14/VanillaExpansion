@@ -80,6 +80,13 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.REDSTONE_AXE_HEAD);
                 output.accept(ItemRegHandler.REDSTONE_SHOVEL_HEAD);
                 output.accept(ItemRegHandler.REDSTONE_HOE_HEAD);
+
+                output.accept(ItemRegHandler.EMERALD_SWORD_BLADE);
+                output.accept(ItemRegHandler.EMERALD_SPEAR_TIP);
+                output.accept(ItemRegHandler.EMERALD_PICKAXE_HEAD);
+                output.accept(ItemRegHandler.EMERALD_AXE_HEAD);
+                output.accept(ItemRegHandler.EMERALD_SHOVEL_HEAD);
+                output.accept(ItemRegHandler.EMERALD_HOE_HEAD);
             }).build());
 
     public static final CreativeModeTab TVE_TOOLSANDARMOR_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "tve_tools_and_armor"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.EMERALD_SWORD))
@@ -172,9 +179,9 @@ public class CreativeTab {
                 output.accept(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
 
                 output.accept(BlockRegHandler.FIRED_BRICKS);
-                output.accept(BlockRegHandler.FIRED_BRICKS_STAIRS);
-                output.accept(BlockRegHandler.FIRED_BRICKS_SLAB);
-                output.accept(BlockRegHandler.FIRED_BRICKS_WALL);
+                output.accept(BlockRegHandler.FIRED_BRICK_STAIRS);
+                output.accept(BlockRegHandler.FIRED_BRICK_SLAB);
+                output.accept(BlockRegHandler.FIRED_BRICK_WALL);
 
                 output.accept(BlockRegHandler.QUARTZ_WALL);
                 output.accept(BlockRegHandler.QUARTZ_BRICKS_WALL);

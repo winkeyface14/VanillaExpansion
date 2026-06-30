@@ -29,9 +29,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_CHORUS_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
 
         blockModelGenerators.family(BlockRegHandler.FIRED_BRICKS)
-                .stairs(BlockRegHandler.FIRED_BRICKS_STAIRS)
-                .slab(BlockRegHandler.FIRED_BRICKS_SLAB)
-                .wall(BlockRegHandler.FIRED_BRICKS_WALL);
+                .stairs(BlockRegHandler.FIRED_BRICK_STAIRS)
+                .slab(BlockRegHandler.FIRED_BRICK_SLAB)
+                .wall(BlockRegHandler.FIRED_BRICK_WALL);
 
         blockModelGenerators.family(BlockRegHandler.SMOKED_QUARTZ_BLOCK)
                 .stairs(BlockRegHandler.SMOKED_QUARTZ_STAIRS)
@@ -136,6 +136,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_AXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_HOE_HEAD, ModelTemplates.FLAT_ITEM);
 
 
         //Tool Upgrade Tempalte

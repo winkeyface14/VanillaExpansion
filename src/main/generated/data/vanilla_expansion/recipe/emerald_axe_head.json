@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "minecraft:emerald",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "xx",
+    "xy"
+  ],
+  "result": {
+    "id": "vanilla_expansion:emerald_axe_head"
+  }
+}

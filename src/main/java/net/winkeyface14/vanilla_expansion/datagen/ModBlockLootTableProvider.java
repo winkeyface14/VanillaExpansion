@@ -26,9 +26,9 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
 
         dropSelf(BlockRegHandler.FIRED_BRICKS);
-        dropSelf(BlockRegHandler.FIRED_BRICKS_STAIRS);
-        dropSelf(BlockRegHandler.FIRED_BRICKS_SLAB);
-        dropSelf(BlockRegHandler.FIRED_BRICKS_WALL);
+        dropSelf(BlockRegHandler.FIRED_BRICK_STAIRS);
+        dropSelf(BlockRegHandler.FIRED_BRICK_SLAB);
+        dropSelf(BlockRegHandler.FIRED_BRICK_WALL);
 
         dropSelf(BlockRegHandler.QUARTZ_WALL);
         dropSelf(BlockRegHandler.QUARTZ_BRICKS_WALL);

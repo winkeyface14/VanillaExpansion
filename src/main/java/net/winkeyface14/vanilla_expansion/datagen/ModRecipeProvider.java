@@ -51,7 +51,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 this.shapeless(RecipeCategory.MISC, Items.COAL)
                         .requires(COAL_CHUNK, 8)
                         .unlockedBy(getHasName(COAL_CHUNK), has(COAL_CHUNK))
-                        .group("coal")
+                        .group("coal_from_chunk")
                         .save(output);
                 this.shapeless(RecipeCategory.MISC, Items.CHARCOAL)
                         .requires(CHARCOAL_CHUNK, 8)
@@ -145,6 +145,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 registerBlockVariantRecipes(
                         SMOKED_QUARTZ_BLOCK.asItem(),
+                        SMOKED_QUARTZ_SLAB.asItem(),
                         SMOKED_QUARTZ_BRICKS.asItem(),
                         SMOKED_QUARTZ_PILLAR.asItem(),
                         CHISELED_SMOKED_QUARTZ_BLOCK.asItem(),
@@ -195,6 +196,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 registerBlockVariantRecipes(
                         BURNT_QUARTZ_BLOCK.asItem(),
+                        BURNT_QUARTZ_SLAB.asItem(),
                         BURNT_QUARTZ_BRICKS.asItem(),
                         BURNT_QUARTZ_PILLAR.asItem(),
                         CHISELED_BURNT_QUARTZ_BLOCK.asItem(),
@@ -208,19 +210,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 registerBlockSetRecipes(
                         FIRED_BRICKS.asItem(),
-                        FIRED_BRICKS_SLAB.asItem(),
-                        FIRED_BRICKS_STAIRS.asItem(),
-                        FIRED_BRICKS_WALL.asItem(),
+                        FIRED_BRICK_SLAB.asItem(),
+                        FIRED_BRICK_STAIRS.asItem(),
+                        FIRED_BRICK_WALL.asItem(),
                         null);
-
-                /*
-                this.slab(RecipeCategory.BUILDING_BLOCKS, BlockRegHandler.FIRED_BRICKS_SLAB, BlockRegHandler.FIRED_BRICKS);
-                this.wall(RecipeCategory.BUILDING_BLOCKS, BlockRegHandler.FIRED_BRICKS_WALL, BlockRegHandler.FIRED_BRICKS);
-                this.stairBuilder(BlockRegHandler.FIRED_BRICKS_STAIRS, Ingredient.of(BlockRegHandler.FIRED_BRICKS))
-                        .unlockedBy(getHasName(BlockRegHandler.FIRED_BRICKS), has(BlockRegHandler.FIRED_BRICKS))
-                        .group("fired_brick")
-                        .save(output);
-                 */
 
                 //Empowered Netherite
                 this.shapeless(RecipeCategory.MISC, EMPOWERED_NETHERITE)
@@ -293,7 +286,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomSwordBladeRecipe(Items.GOLD_INGOT, GOLD_SWORD_BLADE);
                 registerCustomSwordBladeRecipe(Items.REDSTONE_BLOCK, REDSTONE_SWORD_BLADE);
                 registerCustomSwordBladeRecipe(Items.DIAMOND, DIAMOND_SWORD_BLADE);
-                //registerCustomSwordBladeRecipe(Items.EMERALD, ItemRegHandler.EMERALD_SWORD_BLADE);
+                registerCustomSwordBladeRecipe(Items.EMERALD, EMERALD_SWORD_BLADE);
 
                 //Pickaxe Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_PICKAXE_HEAD)
@@ -309,7 +302,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomPickaxeHeadRecipe(Items.GOLD_INGOT, GOLD_PICKAXE_HEAD);
                 registerCustomPickaxeHeadRecipe(Items.REDSTONE_BLOCK, REDSTONE_PICKAXE_HEAD);
                 registerCustomPickaxeHeadRecipe(Items.DIAMOND, DIAMOND_PICKAXE_HEAD);
-                //registerCustomPickaxeHeadRecipe(Items.EMERALD, ItemRegHandler.EMERALD_PICKAXE_HEAD);
+                registerCustomPickaxeHeadRecipe(Items.EMERALD, EMERALD_PICKAXE_HEAD);
 
                 //Axe Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_AXE_HEAD)
@@ -325,7 +318,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomAxeHeadRecipe(Items.GOLD_INGOT, GOLD_AXE_HEAD);
                 registerCustomAxeHeadRecipe(Items.REDSTONE_BLOCK, REDSTONE_AXE_HEAD);
                 registerCustomAxeHeadRecipe(Items.DIAMOND, DIAMOND_AXE_HEAD);
-                //registerCustomAxeHeadRecipe(Items.EMERALD, ItemRegHandler.EMERALD_AXE_HEAD);
+                registerCustomAxeHeadRecipe(Items.EMERALD, EMERALD_AXE_HEAD);
 
                 //Shovel Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_SHOVEL_HEAD)
@@ -341,7 +334,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomShovelHeadRecipe(Items.GOLD_INGOT, GOLD_SHOVEL_HEAD);
                 registerCustomShovelHeadRecipe(Items.REDSTONE_BLOCK, REDSTONE_SHOVEL_HEAD);
                 registerCustomShovelHeadRecipe(Items.DIAMOND, DIAMOND_SHOVEL_HEAD);
-                //registerCustomShovelHeadRecipe(Items.EMERALD, ItemRegHandler.EMERALD_SHOVEL_HEAD);
+                registerCustomShovelHeadRecipe(Items.EMERALD, EMERALD_SHOVEL_HEAD);
 
                 //Hoe Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_HOE_HEAD)
@@ -357,10 +350,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomHoeHeadRecipe(Items.GOLD_INGOT, GOLD_HOE_HEAD);
                 registerCustomHoeHeadRecipe(Items.REDSTONE_BLOCK, REDSTONE_HOE_HEAD);
                 registerCustomHoeHeadRecipe(Items.DIAMOND, DIAMOND_HOE_HEAD);
-                //registerCustomHoeHeadRecipe(Items.EMERALD, ItemRegHandler.EMERALD_HOE_HEAD);
+                registerCustomHoeHeadRecipe(Items.EMERALD, EMERALD_HOE_HEAD);
 
                 //Spear Tip Recipes
-
                 this.shaped(RecipeCategory.MISC, STONE_SPEAR_TIP)
                         .pattern("x")
                         .pattern("x")
@@ -374,29 +366,29 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomSpearTipRecipe(Items.GOLD_INGOT, GOLD_SPEAR_TIP);
                 registerCustomSpearTipRecipe(Items.REDSTONE_BLOCK, REDSTONE_SPEAR_TIP);
                 registerCustomSpearTipRecipe(Items.DIAMOND, DIAMOND_SPEAR_TIP);
-                //registerCustomSpearTipRecipe(Items.EMERALD, ItemRegHandler.EMERALD_SPEAR_TIP);
+                registerCustomSpearTipRecipe(Items.EMERALD, EMERALD_SPEAR_TIP);
 
 
                 //Smithing Recipes
                 //Empowered Netherite Tool and Armor Set
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SWORD, EMPOWERED_NETHERITE_SWORD, RecipeCategory.COMBAT);
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SPEAR, EMPOWERED_NETHERITE_SPEAR, RecipeCategory.COMBAT);
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_PICKAXE, EMPOWERED_NETHERITE_PICKAXE, RecipeCategory.COMBAT);
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_AXE, EMPOWERED_NETHERITE_AXE, RecipeCategory.COMBAT);
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SHOVEL, EMPOWERED_NETHERITE_SHOVEL, RecipeCategory.COMBAT);
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, EMPOWERED_NETHERITE_HOE, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_SWORD, EMPOWERED_NETHERITE_SWORD, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_SPEAR, EMPOWERED_NETHERITE_SPEAR, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_PICKAXE, EMPOWERED_NETHERITE_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_AXE, EMPOWERED_NETHERITE_AXE, RecipeCategory.TOOLS);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_SHOVEL, EMPOWERED_NETHERITE_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_HOE, EMPOWERED_NETHERITE_HOE, RecipeCategory.TOOLS);
 
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HELMET, EMPOWERED_NETHERITE_HELMET, RecipeCategory.COMBAT);
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_CHESTPLATE, EMPOWERED_NETHERITE_CHESTPLATE, RecipeCategory.COMBAT);
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_LEGGINGS, EMPOWERED_NETHERITE_LEGGINGS, RecipeCategory.COMBAT);
-                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_BOOTS, EMPOWERED_NETHERITE_BOOTS, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_HELMET, EMPOWERED_NETHERITE_HELMET, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_CHESTPLATE, EMPOWERED_NETHERITE_CHESTPLATE, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_LEGGINGS, EMPOWERED_NETHERITE_LEGGINGS, RecipeCategory.COMBAT);
+                registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, Items.DIAMOND_BOOTS, EMPOWERED_NETHERITE_BOOTS, RecipeCategory.COMBAT);
 
                 //Swords
                 registerCustomToolUpgrade(STONE_SWORD_BLADE, ItemTags.SWORDS, Items.STONE_SWORD, RecipeCategory.COMBAT);
                 registerCustomToolUpgrade(COPPER_SWORD_BLADE, ItemTags.SWORDS, Items.COPPER_SWORD, RecipeCategory.COMBAT);
                 registerCustomToolUpgrade(IRON_SWORD_BLADE, ItemTags.SWORDS, Items.IRON_SWORD, RecipeCategory.COMBAT);
                 registerCustomToolUpgrade(REDSTONE_SWORD_BLADE, ItemTags.SWORDS, REDSTONE_SWORD, RecipeCategory.COMBAT);
-                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SWORD_BLADE, ItemTags.SWORDS, ItemRegHandler.EMERALD_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(EMERALD_SWORD_BLADE, ItemTags.SWORDS, EMERALD_SWORD, RecipeCategory.COMBAT);
                 registerCustomToolUpgrade(GOLD_SWORD_BLADE, ItemTags.SWORDS, Items.GOLDEN_SWORD, RecipeCategory.COMBAT);
                 registerCustomToolUpgrade(DIAMOND_SWORD_BLADE, ItemTags.SWORDS, Items.DIAMOND_SWORD, RecipeCategory.COMBAT);
 
@@ -405,7 +397,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(COPPER_PICKAXE_HEAD, ItemTags.PICKAXES, Items.COPPER_PICKAXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(IRON_PICKAXE_HEAD, ItemTags.PICKAXES, Items.IRON_PICKAXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(REDSTONE_PICKAXE_HEAD, ItemTags.PICKAXES, REDSTONE_PICKAXE, RecipeCategory.TOOLS);
-                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_PICKAXE_HEAD, Items.STONE_PICKAXE, ItemRegHandler.EMERALD_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(EMERALD_PICKAXE_HEAD, ItemTags.PICKAXES, EMERALD_PICKAXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(GOLD_PICKAXE_HEAD, ItemTags.PICKAXES, Items.GOLDEN_PICKAXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(DIAMOND_PICKAXE_HEAD, ItemTags.PICKAXES, Items.DIAMOND_PICKAXE, RecipeCategory.TOOLS);
 
@@ -414,7 +406,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(COPPER_AXE_HEAD, ItemTags.AXES, Items.COPPER_AXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(IRON_AXE_HEAD, ItemTags.AXES, Items.IRON_AXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(REDSTONE_AXE_HEAD, ItemTags.AXES, REDSTONE_AXE, RecipeCategory.TOOLS);
-                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_AXE_HEAD, ItemTags.AXES, ItemRegHandler.EMERALD_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(EMERALD_AXE_HEAD, ItemTags.AXES, EMERALD_AXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(GOLD_AXE_HEAD, ItemTags.AXES, Items.GOLDEN_AXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(DIAMOND_AXE_HEAD, ItemTags.AXES, Items.DIAMOND_AXE, RecipeCategory.TOOLS);
 
@@ -423,7 +415,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(COPPER_SHOVEL_HEAD, ItemTags.SHOVELS, Items.COPPER_SHOVEL, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(IRON_SHOVEL_HEAD, ItemTags.SHOVELS, Items.IRON_SHOVEL, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(REDSTONE_SHOVEL_HEAD, ItemTags.SHOVELS, REDSTONE_SHOVEL, RecipeCategory.TOOLS);
-                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SHOVEL_HEAD, ItemTags.SHOVELS, ItemRegHandler.EMERALD_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(EMERALD_SHOVEL_HEAD, ItemTags.SHOVELS, EMERALD_SHOVEL, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(GOLD_SHOVEL_HEAD, ItemTags.SHOVELS, Items.GOLDEN_SHOVEL, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(DIAMOND_SHOVEL_HEAD, ItemTags.SHOVELS, Items.DIAMOND_SHOVEL, RecipeCategory.TOOLS);
 
@@ -432,7 +424,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(COPPER_HOE_HEAD, ItemTags.SHOVELS, Items.COPPER_HOE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(IRON_HOE_HEAD, ItemTags.SHOVELS, Items.IRON_HOE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(REDSTONE_HOE_HEAD, ItemTags.SHOVELS, REDSTONE_HOE, RecipeCategory.TOOLS);
-                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_HOE_HEAD, ItemTags.SHOVELS, ItemRegHandler.EMERALD_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(EMERALD_HOE_HEAD, ItemTags.SHOVELS, EMERALD_HOE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(GOLD_HOE_HEAD, ItemTags.SHOVELS, Items.GOLDEN_HOE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(DIAMOND_HOE_HEAD, ItemTags.SHOVELS, Items.DIAMOND_HOE, RecipeCategory.TOOLS);
 
@@ -441,11 +433,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(COPPER_SPEAR_TIP, ItemTags.SPEARS, Items.COPPER_SPEAR, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(IRON_SPEAR_TIP, ItemTags.SPEARS, Items.IRON_SPEAR, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(REDSTONE_SPEAR_TIP, ItemTags.SPEARS, REDSTONE_SPEAR, RecipeCategory.TOOLS);
-                //registerCustomToolUpgrade(Items.FLINT, ItemRegHandler.EMERALD_SPEAR_TIP, ItemTags.SPEARS, ItemRegHandler.EMERALD_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(EMERALD_SPEAR_TIP, ItemTags.SPEARS, EMERALD_SPEAR, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(GOLD_SPEAR_TIP, ItemTags.SPEARS, Items.GOLDEN_SPEAR, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(DIAMOND_SPEAR_TIP, ItemTags.SPEARS, Items.DIAMOND_SPEAR, RecipeCategory.TOOLS);
             }
 
+
+
+            //Custom Methods
             private void registerCustomToolUpgrade(Item template, TagKey<Item> baseItem, Item upgradedResult, RecipeCategory category) {
                 SmithingTransformRecipeBuilder.smithing(
                                 Ingredient.of(template),
@@ -458,15 +453,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output, getItemName(upgradedResult) + "_from_smithing");
             }
 
-            private void registerCustomNetheriteUpgrade(Item material, Item template, Item baseItem, Item upgradedResult, RecipeCategory category) {
+            private void registerCustomNetheriteUpgrade(Item material, Item baseItem, Item upgradedResult, RecipeCategory category) {
                 SmithingTransformRecipeBuilder.smithing(
-                                Ingredient.of(template),
+                                Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                                 Ingredient.of(baseItem),
                                 Ingredient.of(material),
                                 category,
                                 upgradedResult
                         )
-                        .unlocks("has_" + getItemName(template), has(template))
+                        .unlocks("has_" + getItemName(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), has(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
                         .save(output, getItemName(upgradedResult) + "_from_smithing_with_" + getItemName(baseItem));
             }
 
@@ -548,6 +543,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
                         .save(output);
+            }
+
+            private void registerToolHeadsRecipe(Item materialItem, Item resultSword, Item resultSpear, Item resultPickaxe, Item resultAxe, Item resultShovel, Item resultHoe) {
+                registerCustomSwordBladeRecipe(materialItem, resultSword);
+                registerCustomSpearTipRecipe(materialItem, resultSpear);
+                registerCustomPickaxeHeadRecipe(materialItem, resultPickaxe);
+                registerCustomAxeHeadRecipe(materialItem, resultAxe);
+                registerCustomShovelHeadRecipe(materialItem, resultShovel);
+                registerCustomHoeHeadRecipe(materialItem, resultHoe);
             }
 
             private void registerCustomSwordBladeRecipe(Item materialItem, Item resultItem) {
@@ -651,7 +655,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 }
             }
 
-            private void registerBlockVariantRecipes(Item baseItem, Item resultBricks, Item resultPillar, Item resultChiseled, Item resultPolished){
+            private void registerBlockVariantRecipes(Item baseItem, Item baseSlab, Item resultBricks, Item resultPillar, Item resultChiseled, Item resultPolished){
                 RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
 
                 //Bricks
@@ -675,7 +679,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 //Chiseled
                 if(resultChiseled != null){
                     this.stonecutterResultFromBase(categoryBuilding,resultChiseled, baseItem);
-                    this.chiseled(categoryBuilding, resultChiseled, baseItem);
+                    this.chiseled(categoryBuilding, resultChiseled, baseSlab);
                 }
 
                 //Polished

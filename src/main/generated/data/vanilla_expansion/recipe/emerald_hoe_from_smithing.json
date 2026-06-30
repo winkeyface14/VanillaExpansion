@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:shovels",
+  "result": {
+    "id": "vanilla_expansion:emerald_hoe"
+  },
+  "template": "vanilla_expansion:emerald_hoe_head"
+}
