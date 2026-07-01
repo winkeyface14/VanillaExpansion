@@ -42,9 +42,9 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB)
                 .wall(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_WALL);
         blockModelGenerators.family(BlockRegHandler.SMOKED_QUARTZ_BRICKS)
-                .stairs(BlockRegHandler.SMOKED_QUARTZ_BRICKS_STAIRS)
-                .slab(BlockRegHandler.SMOKED_QUARTZ_BRICKS_SLAB)
-                .wall(BlockRegHandler.SMOKED_QUARTZ_BRICKS_WALL);
+                .stairs(BlockRegHandler.SMOKED_QUARTZ_BRICK_STAIRS)
+                .slab(BlockRegHandler.SMOKED_QUARTZ_BRICK_SLAB)
+                .wall(BlockRegHandler.SMOKED_QUARTZ_BRICK_WALL);
         blockModelGenerators.createTrivialBlock(BlockRegHandler.CHISELED_SMOKED_QUARTZ_BLOCK,TexturedModel.COLUMN);
         blockModelGenerators.createAxisAlignedPillarBlock(BlockRegHandler.SMOKED_QUARTZ_PILLAR, TexturedModel.COLUMN);
 
@@ -57,9 +57,9 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB)
                 .wall(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL);
         blockModelGenerators.family(BlockRegHandler.BURNT_QUARTZ_BRICKS)
-                .stairs(BlockRegHandler.BURNT_QUARTZ_BRICKS_STAIRS)
-                .slab(BlockRegHandler.BURNT_QUARTZ_BRICKS_SLAB)
-                .wall(BlockRegHandler.BURNT_QUARTZ_BRICKS_WALL);
+                .stairs(BlockRegHandler.BURNT_QUARTZ_BRICK_STAIRS)
+                .slab(BlockRegHandler.BURNT_QUARTZ_BRICK_SLAB)
+                .wall(BlockRegHandler.BURNT_QUARTZ_BRICK_WALL);
         blockModelGenerators.createTrivialBlock(BlockRegHandler.CHISELED_BURNT_QUARTZ_BLOCK,
                 TexturedModel.COLUMN
         );

@@ -66,11 +66,24 @@ public class BlockRegHandler {
             .requiresCorrectToolForDrops()));
 
     //Regular Quartz
+    public static final Block QUARTZ_BRICK_STAIRS = registerBlock("quartz_brick_stairs", properties -> new StairBlock(Blocks.QUARTZ_BRICKS.defaultBlockState(),
+            properties.strength(0.8f,0.8f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final Block QUARTZ_BRICK_SLAB = registerBlock("quartz_brick_slab", properties -> new SlabBlock(properties.strength(0.8f,0.8f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+
     public static final Block QUARTZ_WALL = registerBlock("quartz_wall", properties -> new WallBlock(properties
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block QUARTZ_BRICKS_WALL = registerBlock("quartz_bricks_wall", properties -> new WallBlock(properties
+    public static final Block SMOOTH_QUARTZ_WALL = registerBlock("smooth_quartz_wall", properties -> new WallBlock(properties
+            .strength(0.8f,0.8f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+    public static final Block QUARTZ_BRICK_WALL = registerBlock("quartz_brick_wall", properties -> new WallBlock(properties
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
@@ -106,7 +119,7 @@ public class BlockRegHandler {
             properties.strength(0.8f,0.8f)
                     .sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
-    public static final Block SMOKED_QUARTZ_BRICKS_STAIRS = registerBlock("smoked_quartz_bricks_stairs", properties -> new StairBlock(BlockRegHandler.SMOKED_QUARTZ_BRICKS.defaultBlockState(),
+    public static final Block SMOKED_QUARTZ_BRICK_STAIRS = registerBlock("smoked_quartz_brick_stairs", properties -> new StairBlock(BlockRegHandler.SMOKED_QUARTZ_BRICKS.defaultBlockState(),
             properties.strength(0.8f,0.8f)
                     .sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
@@ -117,7 +130,7 @@ public class BlockRegHandler {
     public static final Block SMOOTH_SMOKED_QUARTZ_SLAB = registerBlock("smooth_smoked_quartz_slab", properties -> new SlabBlock(properties.strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block SMOKED_QUARTZ_BRICKS_SLAB = registerBlock("smoked_quartz_bricks_slab", properties -> new SlabBlock(properties.strength(0.8f,0.8f)
+    public static final Block SMOKED_QUARTZ_BRICK_SLAB = registerBlock("smoked_quartz_brick_slab", properties -> new SlabBlock(properties.strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
 
@@ -125,7 +138,7 @@ public class BlockRegHandler {
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block SMOKED_QUARTZ_BRICKS_WALL = registerBlock("smoked_quartz_bricks_wall", properties -> new WallBlock(properties
+    public static final Block SMOKED_QUARTZ_BRICK_WALL = registerBlock("smoked_quartz_brick_wall", properties -> new WallBlock(properties
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
@@ -163,7 +176,7 @@ public class BlockRegHandler {
             properties.strength(0.8f,0.8f)
                     .sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
-    public static final Block BURNT_QUARTZ_BRICKS_STAIRS = registerBlock("burnt_quartz_bricks_stairs", properties -> new StairBlock(BlockRegHandler.BURNT_QUARTZ_BRICKS.defaultBlockState(),
+    public static final Block BURNT_QUARTZ_BRICK_STAIRS = registerBlock("burnt_quartz_brick_stairs", properties -> new StairBlock(BlockRegHandler.BURNT_QUARTZ_BRICKS.defaultBlockState(),
             properties.strength(0.8f,0.8f)
                     .sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
@@ -173,14 +186,14 @@ public class BlockRegHandler {
     public static final Block SMOOTH_BURNT_QUARTZ_SLAB = registerBlock("smooth_burnt_quartz_slab", properties -> new SlabBlock(properties.strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block BURNT_QUARTZ_BRICKS_SLAB = registerBlock("burnt_quartz_bricks_slab", properties -> new SlabBlock(properties.strength(0.8f,0.8f)
+    public static final Block BURNT_QUARTZ_BRICK_SLAB = registerBlock("burnt_quartz_brick_slab", properties -> new SlabBlock(properties.strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
     public static final Block BURNT_QUARTZ_WALL = registerBlock("burnt_quartz_wall", properties -> new WallBlock(properties
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-    public static final Block BURNT_QUARTZ_BRICKS_WALL = registerBlock("burnt_quartz_bricks_wall", properties -> new WallBlock(properties
+    public static final Block BURNT_QUARTZ_BRICK_WALL = registerBlock("burnt_quartz_brick_wall", properties -> new WallBlock(properties
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));

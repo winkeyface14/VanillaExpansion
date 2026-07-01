@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "burnt_quartz_brick_stairs",
+  "key": {
+    "#": "vanilla_expansion:burnt_quartz_bricks"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "vanilla_expansion:burnt_quartz_brick_stairs"
+  }
+}

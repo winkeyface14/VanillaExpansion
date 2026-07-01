@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "vanilla_expansion:burnt_quartz_bricks",
-  "result": {
-    "id": "vanilla_expansion:burnt_quartz_bricks_wall"
-  }
-}
