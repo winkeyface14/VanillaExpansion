@@ -17,16 +17,22 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
+        boolean barrelModelGen = false;
 
         blockModelGenerators.createTrivialCube(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
         blockModelGenerators.createTrivialCube(BlockRegHandler.CHARCOAL_BLOCK);
 
         blockModelGenerators.createAxisAlignedPillarBlock(BlockRegHandler.BUNDLED_STICKS_BLOCK, TexturedModel.COLUMN);
-        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_APPLES_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
-        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_POTATOES_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
-        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_CARROTS_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
-        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_SWEETBERRY_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
-        blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_CHORUS_BLOCK,TexturedModel.CUBE_TOP_BOTTOM);
+
+        if (barrelModelGen) {
+            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_APPLES_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
+            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_POTATOES_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
+            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_CARROTS_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
+            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_SWEETBERRIES_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
+            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_BEETROOTS_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
+            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_CHORUS_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
+        }
+
 
         blockModelGenerators.family(BlockRegHandler.FIRED_BRICKS)
                 .stairs(BlockRegHandler.FIRED_BRICK_STAIRS)

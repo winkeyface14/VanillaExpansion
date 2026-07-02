@@ -7,7 +7,6 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -84,8 +83,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, APPLE, RecipeCategory.DECORATIONS, BARREL_OF_APPLES_BLOCK);
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, CARROT, RecipeCategory.DECORATIONS, BARREL_OF_CARROTS_BLOCK);
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, POTATO, RecipeCategory.DECORATIONS, BARREL_OF_POTATOES_BLOCK);
+                this.nineBlockStorageRecipes(RecipeCategory.MISC, BEETROOT, RecipeCategory.DECORATIONS, BARREL_OF_BEETROOTS_BLOCK);
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, CHORUS_FRUIT, RecipeCategory.DECORATIONS, BARREL_OF_CHORUS_BLOCK);
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, SWEET_BERRIES, RecipeCategory.DECORATIONS, BARREL_OF_SWEETBERRY_BLOCK);
+                this.nineBlockStorageRecipes(RecipeCategory.MISC, SWEET_BERRIES, RecipeCategory.DECORATIONS, BARREL_OF_SWEETBERRIES_BLOCK);
 
                 //Quartz
                 this.twoByTwoPacker(RecipeCategory.MISC, QUARTZ, QUARTZ_SHARD);

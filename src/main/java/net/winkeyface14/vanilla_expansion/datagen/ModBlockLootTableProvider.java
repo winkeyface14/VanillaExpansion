@@ -20,7 +20,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(BlockRegHandler.BARREL_OF_APPLES_BLOCK);
         dropSelf(BlockRegHandler.BARREL_OF_POTATOES_BLOCK);
         dropSelf(BlockRegHandler.BARREL_OF_CARROTS_BLOCK);
-        dropSelf(BlockRegHandler.BARREL_OF_SWEETBERRY_BLOCK);
+        dropSelf(BlockRegHandler.BARREL_OF_SWEETBERRIES_BLOCK);
         dropSelf(BlockRegHandler.BARREL_OF_CHORUS_BLOCK);
 
         dropSelf(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);

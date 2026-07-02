@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_barrel_of_beetroots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "vanilla_expansion:barrel_of_beetroots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "vanilla_expansion:beetroot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_barrel_of_beetroots"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vanilla_expansion:beetroot"
+    ]
+  }
+}

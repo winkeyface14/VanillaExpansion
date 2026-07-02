@@ -17,16 +17,18 @@ public class CreativeTab {
             .displayItems((parameters, output) -> {
                 output.accept(ItemRegHandler.COAL_CHUNK);
                 output.accept(ItemRegHandler.CHARCOAL_CHUNK);
-                output.accept(ItemRegHandler.BUNDLED_STICKS);
 
                 output.accept(ItemRegHandler.DIAMOND_SHARD);
                 output.accept(ItemRegHandler.EMERALD_SHARD);
+                output.accept(ItemRegHandler.QUARTZ_SHARD);
 
                 output.accept(ItemRegHandler.SMOKED_QUARTZ);
-                output.accept(ItemRegHandler.BURNT_QUARTZ);
-                output.accept(ItemRegHandler.QUARTZ_SHARD);
                 output.accept(ItemRegHandler.SMOKED_QUARTZ_SHARD);
+
+                output.accept(ItemRegHandler.BURNT_QUARTZ);
                 output.accept(ItemRegHandler.BURNT_QUARTZ_SHARD);
+
+                output.accept(ItemRegHandler.FIRED_BRICK);
 
                 output.accept(ItemRegHandler.RAW_REINFORCED_LEATHER);
                 output.accept(ItemRegHandler.REINFORCED_LEATHER);
@@ -34,8 +36,8 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SCRAP);
 
+                output.accept(ItemRegHandler.BUNDLED_STICKS);
                 output.accept(ItemRegHandler.PAPER_PILE);
-                output.accept(ItemRegHandler.FIRED_BRICK);
 
                 output.accept(ItemRegHandler.BASE_TEMPLATE);
 
@@ -173,7 +175,8 @@ public class CreativeTab {
                 output.accept(BlockRegHandler.BARREL_OF_APPLES_BLOCK);
                 output.accept(BlockRegHandler.BARREL_OF_POTATOES_BLOCK);
                 output.accept(BlockRegHandler.BARREL_OF_CARROTS_BLOCK);
-                output.accept(BlockRegHandler.BARREL_OF_SWEETBERRY_BLOCK);
+                output.accept(BlockRegHandler.BARREL_OF_BEETROOTS_BLOCK);
+                output.accept(BlockRegHandler.BARREL_OF_SWEETBERRIES_BLOCK);
                 output.accept(BlockRegHandler.BARREL_OF_CHORUS_BLOCK);
 
                 output.accept(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
@@ -190,40 +193,40 @@ public class CreativeTab {
                 output.accept(BlockRegHandler.QUARTZ_BRICK_WALL);
 
                 output.accept(BlockRegHandler.SMOKED_QUARTZ_BLOCK);
-                output.accept(BlockRegHandler.SMOOTH_SMOKED_QUARTZ);
+                output.accept(BlockRegHandler.SMOKED_QUARTZ_STAIRS);
+                output.accept(BlockRegHandler.SMOKED_QUARTZ_SLAB);
+                output.accept(BlockRegHandler.SMOKED_QUARTZ_WALL);
+
                 output.accept(BlockRegHandler.CHISELED_SMOKED_QUARTZ_BLOCK);
                 output.accept(BlockRegHandler.SMOKED_QUARTZ_BRICKS);
-                output.accept(BlockRegHandler.SMOKED_QUARTZ_PILLAR);
-
-                output.accept(BlockRegHandler.SMOKED_QUARTZ_STAIRS);
-                output.accept(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_STAIRS);
                 output.accept(BlockRegHandler.SMOKED_QUARTZ_BRICK_STAIRS);
-
-                output.accept(BlockRegHandler.SMOKED_QUARTZ_SLAB);
-                output.accept(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB);
                 output.accept(BlockRegHandler.SMOKED_QUARTZ_BRICK_SLAB);
-
-                output.accept(BlockRegHandler.SMOKED_QUARTZ_WALL);
-                output.accept(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_WALL);
                 output.accept(BlockRegHandler.SMOKED_QUARTZ_BRICK_WALL);
 
+                output.accept(BlockRegHandler.SMOKED_QUARTZ_PILLAR);
+
+                output.accept(BlockRegHandler.SMOOTH_SMOKED_QUARTZ);
+                output.accept(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_STAIRS);
+                output.accept(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_SLAB);
+                output.accept(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_WALL);
+
                 output.accept(BlockRegHandler.BURNT_QUARTZ_BLOCK);
-                output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ);
+                output.accept(BlockRegHandler.BURNT_QUARTZ_STAIRS);
+                output.accept(BlockRegHandler.BURNT_QUARTZ_SLAB);
+                output.accept(BlockRegHandler.BURNT_QUARTZ_WALL);
+
                 output.accept(BlockRegHandler.CHISELED_BURNT_QUARTZ_BLOCK);
                 output.accept(BlockRegHandler.BURNT_QUARTZ_BRICKS);
+                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_STAIRS);
+                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_SLAB);
+                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_WALL);
+
                 output.accept(BlockRegHandler.BURNT_QUARTZ_PILLAR);
 
-                output.accept(BlockRegHandler.BURNT_QUARTZ_STAIRS);
+                output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ);
                 output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_STAIRS);
-
-                output.accept(BlockRegHandler.BURNT_QUARTZ_SLAB);
                 output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_SLAB);
-
-                output.accept(BlockRegHandler.BURNT_QUARTZ_WALL);
                 output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_WALL);
             }).build());
 
 

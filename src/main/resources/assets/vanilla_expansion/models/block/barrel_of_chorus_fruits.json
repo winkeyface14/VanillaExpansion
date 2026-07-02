@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "bottom": "vanilla_expansion:block/barrel_of_chorus_fruits_bottom",
+    "bottom": "minecraft:block/barrel_bottom",
     "side": "vanilla_expansion:block/barrel_of_chorus_fruits_side",
     "top": "vanilla_expansion:block/barrel_of_chorus_fruits_top"
   }

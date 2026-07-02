@@ -23,7 +23,7 @@ public class BlockRegHandler {
             .strength(50.0f,1200.0f)
             .sound(SoundType.NETHERITE_BLOCK)
             .requiresCorrectToolForDrops()));
-    public static final Block BARREL_OF_APPLES_BLOCK = registerBlock("barrel_of_apples", properties -> new Block(properties
+    public static final Block BARREL_OF_APPLES_BLOCK = registerBlock("barrel_of_apples", properties -> new RotatedPillarBlock(properties
             .strength(2.0f, 4.0f)
             .sound(SoundType.WOOD)
             .requiresCorrectToolForDrops()));
@@ -39,7 +39,11 @@ public class BlockRegHandler {
             .strength(2.0f, 4.0f)
             .sound(SoundType.WOOD)
             .requiresCorrectToolForDrops()));
-    public static final Block BARREL_OF_SWEETBERRY_BLOCK = registerBlock("barrel_of_sweet_berries", properties -> new RotatedPillarBlock(properties
+    public static final Block BARREL_OF_SWEETBERRIES_BLOCK = registerBlock("barrel_of_sweet_berries", properties -> new RotatedPillarBlock(properties
+            .strength(2.0f, 4.0f)
+            .sound(SoundType.WOOD)
+            .requiresCorrectToolForDrops()));
+    public static final Block BARREL_OF_BEETROOTS_BLOCK = registerBlock("barrel_of_beetroots", properties -> new RotatedPillarBlock(properties
             .strength(2.0f, 4.0f)
             .sound(SoundType.WOOD)
             .requiresCorrectToolForDrops()));
