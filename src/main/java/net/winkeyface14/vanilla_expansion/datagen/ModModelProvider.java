@@ -4,8 +4,11 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.data.models.model.*;
+import net.minecraft.client.resources.model.sprite.Material;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.winkeyface14.vanilla_expansion.item.ArmorMaterialBase;
 import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
 import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
@@ -17,7 +20,13 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-        boolean barrelModelGen = false;
+        boolean barrelModelGen = true;
+        boolean quartzSetModelGen = true;
+
+        TexturedModel.Provider wallCubeProvider = TexturedModel.createDefault(
+                block -> TextureMapping.cube(block).put(TextureSlot.WALL, TextureMapping.getBlockTexture(block)),
+                ModelTemplates.CUBE_ALL
+        );
 
         blockModelGenerators.createTrivialCube(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
         blockModelGenerators.createTrivialCube(BlockRegHandler.CHARCOAL_BLOCK);
@@ -25,12 +34,22 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createAxisAlignedPillarBlock(BlockRegHandler.BUNDLED_STICKS_BLOCK, TexturedModel.COLUMN);
 
         if (barrelModelGen) {
-            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_APPLES_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
-            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_POTATOES_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
-            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_CARROTS_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
-            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_SWEETBERRIES_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
-            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_BEETROOTS_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
-            blockModelGenerators.createTrivialBlock(BlockRegHandler.BARREL_OF_CHORUS_BLOCK, TexturedModel.CUBE_TOP_BOTTOM);
+            cropBarrelDataGen(BlockRegHandler.BARREL_OF_APPLES_BLOCK,  blockModelGenerators);
+            cropBarrelDataGen(BlockRegHandler.BARREL_OF_POTATOES_BLOCK,  blockModelGenerators);
+            cropBarrelDataGen(BlockRegHandler.BARREL_OF_CARROTS_BLOCK,  blockModelGenerators);
+            cropBarrelDataGen(BlockRegHandler.BARREL_OF_SWEETBERRIES_BLOCK,  blockModelGenerators);
+            cropBarrelDataGen(BlockRegHandler.BARREL_OF_BEETROOTS_BLOCK,  blockModelGenerators);
+            cropBarrelDataGen(BlockRegHandler.BARREL_OF_CHORUS_BLOCK,  blockModelGenerators);
+        }
+
+        if (quartzSetModelGen){
+            customWallModelGen(Blocks.QUARTZ_BLOCK, BlockRegHandler.QUARTZ_WALL, "_side", blockModelGenerators);
+            customWallModelGen(Blocks.QUARTZ_BLOCK, BlockRegHandler.SMOOTH_QUARTZ_WALL, "_bottom", blockModelGenerators);
+            customWallModelGen(Blocks.QUARTZ_BRICKS, BlockRegHandler.QUARTZ_BRICK_WALL, "", blockModelGenerators);
+
+            customStairsModelGen(Blocks.QUARTZ_BRICKS, BlockRegHandler.QUARTZ_BRICK_STAIRS, "", blockModelGenerators);
+
+            customSlabModelGen(Blocks.QUARTZ_BRICKS, BlockRegHandler.QUARTZ_BRICK_SLAB, "", blockModelGenerators);
         }
 
 
@@ -126,15 +145,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_HOE_HEAD, ModelTemplates.FLAT_ITEM);
-
-        /*
-        itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.NETHERITE_HOE_HEAD, ModelTemplates.FLAT_ITEM);
-         */
 
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
@@ -232,4 +242,93 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
         //itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_BOOTS, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
     }
+
+    public void customWallModelGen (Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators){
+
+        Material blockTexture = TextureMapping.getBlockTexture(blockBase, textureSuffix);
+
+        TextureMapping wallTextures = new TextureMapping()
+                .put(TextureSlot.WALL, blockTexture)
+                .put(TextureSlot.PARTICLE, blockTexture);
+
+
+        Identifier post = ModelTemplates.WALL_POST.create(blockResult, wallTextures, blockModelGenerators.modelOutput);
+        Identifier low  = ModelTemplates.WALL_LOW_SIDE.create(blockResult, wallTextures, blockModelGenerators.modelOutput);
+        Identifier tall = ModelTemplates.WALL_TALL_SIDE.create(blockResult, wallTextures, blockModelGenerators.modelOutput);
+
+        blockModelGenerators.blockStateOutput.accept(
+                BlockModelGenerators.createWall(
+                        blockResult,
+                        BlockModelGenerators.plainVariant(post),
+                        BlockModelGenerators.plainVariant(low),
+                        BlockModelGenerators.plainVariant(tall)
+                )
+        );
+
+        ModelTemplates.WALL_INVENTORY.create(
+                ModelLocationUtils.getModelLocation(blockResult),
+                wallTextures,
+                blockModelGenerators.modelOutput
+        );
+    }
+
+    public void customStairsModelGen(Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators) {
+        // 1. Extract the texture map from the vanilla block
+        // Note: If using a column block like Quartz, use TextureMapping.cube(TextureMapping.getBlockTexture(vanillaBase, "_side")) instead
+        Material blockTexture = TextureMapping.getBlockTexture(blockBase, textureSuffix);
+
+        TextureMapping stairTextures = new TextureMapping()
+                .put(TextureSlot.BOTTOM, blockTexture)
+                .put(TextureSlot.TOP, blockTexture)
+                .put(TextureSlot.SIDE, blockTexture)
+                .put(TextureSlot.PARTICLE, blockTexture);
+
+        Identifier straight = ModelTemplates.STAIRS_STRAIGHT.create(blockResult, stairTextures, blockModelGenerators.modelOutput);
+        Identifier inner    = ModelTemplates.STAIRS_INNER.create(blockResult, stairTextures, blockModelGenerators.modelOutput);
+        Identifier outer    = ModelTemplates.STAIRS_OUTER.create(blockResult, stairTextures, blockModelGenerators.modelOutput);
+
+        blockModelGenerators.blockStateOutput.accept(
+                BlockModelGenerators.createStairs(
+                        blockResult,
+                        BlockModelGenerators.plainVariant(inner),
+                        BlockModelGenerators.plainVariant(straight),
+                        BlockModelGenerators.plainVariant(outer))
+        );
+    }
+
+    public void customSlabModelGen(Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators) {
+        Material blockTexture = TextureMapping.getBlockTexture(blockBase, textureSuffix);
+
+        TextureMapping slabTextures = new TextureMapping()
+                .put(TextureSlot.BOTTOM, blockTexture)
+                .put(TextureSlot.TOP, blockTexture)
+                .put(TextureSlot.SIDE, blockTexture)
+                .put(TextureSlot.PARTICLE, blockTexture);
+
+        Identifier bottom = ModelTemplates.SLAB_BOTTOM.create(blockResult, slabTextures, blockModelGenerators.modelOutput);
+        Identifier top    = ModelTemplates.SLAB_TOP.create(blockResult, slabTextures, blockModelGenerators.modelOutput);
+
+        Identifier doubleSlab = ModelLocationUtils.getModelLocation(blockBase);
+
+        blockModelGenerators.blockStateOutput.accept(
+                BlockModelGenerators.createSlab(
+                        blockResult,
+                        BlockModelGenerators.plainVariant(bottom),
+                        BlockModelGenerators.plainVariant(top),
+                        BlockModelGenerators.plainVariant(doubleSlab)
+                )
+        );
+    }
+
+    public void cropBarrelDataGen(Block blockResult, BlockModelGenerators blockModelGenerators){
+        blockModelGenerators.createTrivialBlock(blockResult, TexturedModel.createDefault(
+                block -> new TextureMapping()
+                        .put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top"))
+                        .put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(Blocks.BARREL, "_bottom"))
+                        .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(block, "_side")),
+                ModelTemplates.CUBE_BOTTOM_TOP
+        ));
+    }
+
+
 }
