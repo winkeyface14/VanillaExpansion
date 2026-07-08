@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
 import org.jspecify.annotations.NonNull;
 
 import java.util.List;
@@ -31,8 +32,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             @Override
             public void buildRecipes() {
                 List<ItemLike> REINFORCED_LEATHER_BLASTABLE = List.of(RAW_REINFORCED_LEATHER);
-                //List<ItemLike> QUARTZ_SMELTABLE = List.of(Items.QUARTZ);
-                //List<ItemLike> QUARTZ_BLOCK_SMELTABLE = List.of(Items.QUARTZ_BLOCK);
                 List<ItemLike> BRICK_SMELTABLE = List.of(BRICK);
                 List<ItemLike> BRICK_BLOCK_SMELTABLE = List.of(BRICKS);
 
@@ -282,8 +281,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 //Lapis Lazuli Armor
                 registerCustomArmorSetRecipes(LAPIS_LAZULI, LAPIS_LAZULI_HELMET, LAPIS_LAZULI_CHESTPLATE, LAPIS_LAZULI_LEGGINGS, LAPIS_LAZULI_BOOTS);
 
-                //Reinforced Leather
-                //registerCustomArmorSetRecipes(ItemRegHandler.REINFORCED_LEATHER, ItemRegHandler.REINFORCED_LEATHER_HELMET, ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE, ItemRegHandler.REINFORCED_LEATHER_LEGGINGS, ItemRegHandler.REINFORCED_LEATHER_BOOTS);
+                //Reinforced Leather Armor
+                registerCustomArmorSetRecipes(REINFORCED_LEATHER, REINFORCED_LEATHER_HELMET, REINFORCED_LEATHER_CHESTPLATE, REINFORCED_LEATHER_LEGGINGS, REINFORCED_LEATHER_BOOTS);
+
+                //Armadillo Scute Armor
+                registerCustomArmorSetRecipes(ARMADILLO_SCUTE, ARMADILLO_SCUTE_HELMET, ARMADILLO_SCUTE_CHESTPLATE, ARMADILLO_SCUTE_LEGGINGS, ARMADILLO_SCUTE_BOOTS);
 
                 //Template Recipes
                 this.shaped(RecipeCategory.MISC, BASE_TEMPLATE, 8)

@@ -204,5 +204,10 @@
   "item.vanilla_expansion.reinforced_leather_helmet": "Reinforced Leather Helmet",
   "item.vanilla_expansion.reinforced_leather_chestplate": "Reinforced Leather Chestplate",
   "item.vanilla_expansion.reinforced_leather_leggings": "Reinforced Leather Leggings",
-  "item.vanilla_expansion.reinforced_leather_boots": "Reinforced Leather Boots"
+  "item.vanilla_expansion.reinforced_leather_boots": "Reinforced Leather Boots",
+
+  "item.vanilla_expansion.armadillo_scute_helmet": "Armadillo Scute Helmet",
+  "item.vanilla_expansion.armadillo_scute_chestplate": "Armadillo Scute Chestplate",
+  "item.vanilla_expansion.armadillo_scute_leggings": "Armadillo Scute Leggings",
+  "item.vanilla_expansion.armadillo_scute_boots": "Armadillo Scute Boots"
 }

@@ -35,6 +35,10 @@ public class ModEquipmentAssetProvider implements DataProvider {
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "lapis_lazuli"))
                         .build());
+        consumer.accept(ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_KEY,
+                EquipmentClientInfo.builder()
+                        .addHumanoidLayers(Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "armadillo_scute"))
+                        .build());
         consumer.accept(ArmorMaterialBase.EMPOWERED_NETHERITE_KEY,
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "empowered_netherite"))

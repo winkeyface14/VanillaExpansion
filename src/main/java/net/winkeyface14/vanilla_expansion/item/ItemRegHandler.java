@@ -183,13 +183,17 @@ public class ItemRegHandler {
     public static final Item EMPOWERED_NETHERITE_LEGGINGS = registerItem("empowered_netherite_leggings", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.EMPOWERED_NETHERITE_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
     public static final Item EMPOWERED_NETHERITE_BOOTS = registerItem("empowered_netherite_boots", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.EMPOWERED_NETHERITE_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
-    //Reinforced Leather Armors
-    /*
+    //Reinforced Leather Armor
     public static final Item REINFORCED_LEATHER_HELMET = registerItem("reinforced_leather_helmet", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.REINFORCED_LEATHER_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item REINFORCED_LEATHER_CHESTPLATE = registerItem("reinforced_leather_chestplate", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.REINFORCED_LEATHER_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
     public static final Item REINFORCED_LEATHER_LEGGINGS = registerItem("reinforced_leather_leggings", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.REINFORCED_LEATHER_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
     public static final Item REINFORCED_LEATHER_BOOTS = registerItem("reinforced_leather_boots", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.REINFORCED_LEATHER_ARMOR_MATERIAL, ArmorType.BOOTS)));
-     */
+
+    //Armadillo Scute Armor
+    public static final Item ARMADILLO_SCUTE_HELMET = registerItem("armadillo_scute_helmet", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final Item ARMADILLO_SCUTE_CHESTPLATE = registerItem("armadillo_scute_chestplate", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final Item ARMADILLO_SCUTE_LEGGINGS = registerItem("armadillo_scute_leggings", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final Item ARMADILLO_SCUTE_BOOTS = registerItem("armadillo_scute_boots", properties -> new Item(properties.humanoidArmor(ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
     public static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, name), function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, name)))));

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_armadillo_scute": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:armadillo_scute"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "vanilla_expansion:armadillo_scute_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_armadillo_scute"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vanilla_expansion:armadillo_scute_helmet"
+    ]
+  }
+}

@@ -143,12 +143,15 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_AXE);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HOE);
 
-                /*
                 output.accept(ItemRegHandler.REINFORCED_LEATHER_HELMET);
                 output.accept(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE);
                 output.accept(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS);
                 output.accept(ItemRegHandler.REINFORCED_LEATHER_BOOTS);
-                 */
+
+                output.accept(ItemRegHandler.ARMADILLO_SCUTE_HELMET);
+                output.accept(ItemRegHandler.ARMADILLO_SCUTE_CHESTPLATE);
+                output.accept(ItemRegHandler.ARMADILLO_SCUTE_LEGGINGS);
+                output.accept(ItemRegHandler.ARMADILLO_SCUTE_BOOTS);
 
                 output.accept(ItemRegHandler.LAPIS_LAZULI_HELMET);
                 output.accept(ItemRegHandler.LAPIS_LAZULI_CHESTPLATE);

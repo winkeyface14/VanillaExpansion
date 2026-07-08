@@ -30,6 +30,7 @@ public class TagRegHandler {
         public static final TagKey<Item> LAPIS_LAZULI_REPAIR = createTag("lapis_lazuli_repair");
         public static final TagKey<Item> REDSTONE_REPAIR = createTag("redstone_repair");
         public static final TagKey<Item> QUARTZ_REPAIR = createTag("quartz_repair");
+        public static final TagKey<Item> ARMADILLO_SCUTE_REPAIR = createTag("armadillo_scute_repair");
         public static final TagKey<Item> SMOKED_QUARTZ_REPAIR = createTag("smoked_quartz_repair");
         public static final TagKey<Item> BURNT_QUARTZ_REPAIR = createTag("burnt_quartz_repair");
         public static final TagKey<Item> EMPOWERED_NETHERITE_REPAIR = createTag("empowered_netherite_repair");
