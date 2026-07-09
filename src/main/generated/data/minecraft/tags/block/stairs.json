@@ -1,5 +1,8 @@
 {
   "values": [
+    "vanilla_expansion:smooth_stone_stairs",
+    "vanilla_expansion:cut_sandstone_stairs",
+    "vanilla_expansion:cut_red_sandstone_stairs",
     "vanilla_expansion:quartz_brick_stairs",
     "vanilla_expansion:smoked_quartz_stairs",
     "vanilla_expansion:smoked_quartz_brick_stairs",

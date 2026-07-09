@@ -35,6 +35,18 @@
   "block.vanilla_expansion.smoked_quartz_pillar": "Smoked Quartz Pillar",
   "block.vanilla_expansion.chiseled_smoked_quartz_block": "Chiseled Smoked Quartz Block",
 
+  "block.vanilla_expansion.smooth_stone_wall": "Smooth Stone Wall",
+  "block.vanilla_expansion.smooth_stone_stairs": "Smooth Stone Stairs",
+
+  "block.vanilla_expansion.smooth_sandstone_wall": "Smooth Sandstone Wall",
+  "block.vanilla_expansion.smooth_red_sandstone_wall": "Smooth Red Sandstone Wall",
+
+  "block.vanilla_expansion.cut_sandstone_stairs": "Cut Sandstone Stairs",
+  "block.vanilla_expansion.cut_sandstone_wall": "Cut Sandstone Wall",
+
+  "block.vanilla_expansion.cut_red_sandstone_stairs": "Cut Red Sandstone Stairs",
+  "block.vanilla_expansion.cut_red_sandstone_wall": "Cut Red Sandstone Wall",
+
   "block.vanilla_expansion.quartz_wall": "Quartz Wall",
   "block.vanilla_expansion.smooth_quartz_wall": "Smooth Quartz Wall",
   "block.vanilla_expansion.quartz_brick_slab": "Quartz Brick Slab",

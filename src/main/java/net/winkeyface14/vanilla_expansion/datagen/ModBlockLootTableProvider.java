@@ -30,6 +30,19 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(BlockRegHandler.FIRED_BRICK_SLAB);
         dropSelf(BlockRegHandler.FIRED_BRICK_WALL);
 
+        dropSelf(BlockRegHandler.SMOOTH_STONE_STAIRS);
+        dropSelf(BlockRegHandler.SMOOTH_STONE_WALL);
+
+        dropSelf(BlockRegHandler.SMOOTH_SANDSTONE_WALL);
+
+        dropSelf(BlockRegHandler.CUT_SANDSTONE_STAIRS);
+        dropSelf(BlockRegHandler.CUT_SANDSTONE_WALL);
+
+        dropSelf(BlockRegHandler.SMOOTH_RED_SANDSTONE_WALL);
+
+        dropSelf(BlockRegHandler.CUT_RED_SANDSTONE_STAIRS);
+        dropSelf(BlockRegHandler.CUT_RED_SANDSTONE_WALL);
+
         dropSelf(BlockRegHandler.QUARTZ_WALL);
         dropSelf(BlockRegHandler.SMOOTH_QUARTZ_WALL);
         dropSelf(BlockRegHandler.QUARTZ_BRICK_STAIRS);

@@ -69,6 +69,46 @@ public class BlockRegHandler {
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
 
+    //Smooth Stone
+    public static final Block SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs", properties -> new StairBlock(Blocks.QUARTZ_BRICKS.defaultBlockState(),
+            properties.strength(0.8f,0.8f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+    public static final Block SMOOTH_STONE_WALL = registerBlock("smooth_stone_wall", properties -> new WallBlock(properties
+            .strength(0.8f,0.8f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+
+    //Smooth Sandstone
+    public static final Block SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall", properties -> new WallBlock(properties
+            .strength(0.8f,0.8f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+    public static final Block SMOOTH_RED_SANDSTONE_WALL = registerBlock("smooth_red_sandstone_wall", properties -> new WallBlock(properties
+            .strength(0.8f,0.8f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+
+    //Cut Sandstone
+    public static final Block CUT_SANDSTONE_STAIRS = registerBlock("cut_sandstone_stairs", properties -> new StairBlock(Blocks.QUARTZ_BRICKS.defaultBlockState(),
+            properties.strength(0.8f,0.8f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+    public static final Block CUT_SANDSTONE_WALL = registerBlock("cut_sandstone_wall", properties -> new WallBlock(properties
+            .strength(0.8f,0.8f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+
+    //Cut Red Sandstone
+    public static final Block CUT_RED_SANDSTONE_STAIRS = registerBlock("cut_red_sandstone_stairs", properties -> new StairBlock(Blocks.QUARTZ_BRICKS.defaultBlockState(),
+            properties.strength(0.8f,0.8f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+    public static final Block CUT_RED_SANDSTONE_WALL = registerBlock("cut_red_sandstone_wall", properties -> new WallBlock(properties
+            .strength(0.8f,0.8f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+
     //Regular Quartz
     public static final Block QUARTZ_BRICK_STAIRS = registerBlock("quartz_brick_stairs", properties -> new StairBlock(Blocks.QUARTZ_BRICKS.defaultBlockState(),
             properties.strength(0.8f,0.8f)
@@ -91,7 +131,6 @@ public class BlockRegHandler {
             .strength(0.8f,0.8f)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
-
 
     //Smoked Quartz
     public static final Block SMOKED_QUARTZ_BLOCK = registerBlock("smoked_quartz_block", properties -> new Block(properties

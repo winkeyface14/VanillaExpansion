@@ -236,6 +236,49 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         FIRED_BRICK_WALL.asItem(),
                         null);
 
+                //Smooth Stone
+                registerBlockSetRecipes(
+                        SMOOTH_STONE.asItem(),
+                        null,
+                        SMOOTH_STONE_STAIRS.asItem(),
+                        SMOOTH_STONE_WALL.asItem(),
+                        null
+                );
+
+                //Smooth Sandstone
+                registerBlockSetRecipes(
+                        SMOOTH_SANDSTONE,
+                        null,
+                        null,
+                        SMOOTH_SANDSTONE_WALL.asItem(),
+                        null
+                );
+
+                //Smooth Red Sandstone
+                registerBlockSetRecipes(
+                        SMOOTH_QUARTZ,
+                        null,
+                        null,
+                        SMOOTH_RED_SANDSTONE_WALL.asItem(),
+                        null
+                );
+
+                //Cut Sandstone
+                registerBlockSetRecipes(
+                        CUT_SANDSTONE,
+                        null,
+                        CUT_SANDSTONE_STAIRS.asItem(),
+                        CUT_SANDSTONE_WALL.asItem(),
+                        null);
+
+                //Cut Red Sandstone
+                registerBlockSetRecipes(
+                        CUT_RED_SANDSTONE,
+                        null,
+                        CUT_RED_SANDSTONE_STAIRS.asItem(),
+                        CUT_RED_SANDSTONE_WALL.asItem(),
+                        null);
+
                 //Empowered Netherite
                 this.shapeless(RecipeCategory.MISC, EMPOWERED_NETHERITE)
                         .requires(GOLD_INGOT, 4)

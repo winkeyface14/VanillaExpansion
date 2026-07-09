@@ -1,5 +1,10 @@
 {
   "values": [
+    "vanilla_expansion:smooth_stone_wall",
+    "vanilla_expansion:smooth_sandstone_wall",
+    "vanilla_expansion:cut_sandstone_wall",
+    "vanilla_expansion:smooth_red_sandstone_wall",
+    "vanilla_expansion:cut_red_sandstone_wall",
     "vanilla_expansion:quartz_wall",
     "vanilla_expansion:quartz_brick_wall",
     "vanilla_expansion:smooth_quartz_wall",

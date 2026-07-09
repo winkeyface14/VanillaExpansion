@@ -189,6 +189,18 @@ public class CreativeTab {
                 output.accept(BlockRegHandler.FIRED_BRICK_SLAB);
                 output.accept(BlockRegHandler.FIRED_BRICK_WALL);
 
+                output.accept(BlockRegHandler.SMOOTH_STONE_STAIRS);
+                output.accept(BlockRegHandler.SMOOTH_STONE_WALL);
+
+                output.accept(BlockRegHandler.SMOOTH_SANDSTONE_WALL);
+                output.accept(BlockRegHandler.SMOOTH_RED_SANDSTONE_WALL);
+
+                output.accept(BlockRegHandler.CUT_SANDSTONE_STAIRS);
+                output.accept(BlockRegHandler.CUT_SANDSTONE_WALL);
+
+                output.accept(BlockRegHandler.CUT_RED_SANDSTONE_STAIRS);
+                output.accept(BlockRegHandler.CUT_RED_SANDSTONE_WALL);
+
                 output.accept(BlockRegHandler.QUARTZ_WALL);
                 output.accept(BlockRegHandler.SMOOTH_QUARTZ_WALL);
                 output.accept(BlockRegHandler.QUARTZ_BRICK_STAIRS);

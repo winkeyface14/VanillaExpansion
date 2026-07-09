@@ -27,6 +27,18 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_WALL))
 
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_STONE_STAIRS))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SANDSTONE_WALL))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.CUT_SANDSTONE_STAIRS))
+                .add(BlockRegHandler.getRK(BlockRegHandler.CUT_SANDSTONE_WALL))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_RED_SANDSTONE_WALL))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.CUT_RED_SANDSTONE_STAIRS))
+                .add(BlockRegHandler.getRK(BlockRegHandler.CUT_RED_SANDSTONE_WALL))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_BRICK_STAIRS))
 
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_BRICK_SLAB))
@@ -114,6 +126,16 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK));
 
         tag(BlockTags.WALLS)
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_STONE_WALL))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SANDSTONE_WALL))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.CUT_SANDSTONE_WALL))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_RED_SANDSTONE_WALL))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.CUT_RED_SANDSTONE_WALL))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_WALL))
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_BRICK_WALL))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_QUARTZ_WALL))
@@ -129,6 +151,12 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_WALL));
 
         tag(BlockTags.STAIRS)
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_STONE_STAIRS))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.CUT_SANDSTONE_STAIRS))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.CUT_RED_SANDSTONE_STAIRS))
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_BRICK_STAIRS))
 
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_STAIRS))

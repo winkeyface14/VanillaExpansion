@@ -42,16 +42,32 @@ public class ModModelProvider extends FabricModelProvider {
             cropBarrelDataGen(BlockRegHandler.BARREL_OF_CHORUS_BLOCK,  blockModelGenerators);
         }
 
-        if (quartzSetModelGen){
-            customWallModelGen(Blocks.QUARTZ_BLOCK, BlockRegHandler.QUARTZ_WALL, "_side", blockModelGenerators);
-            customWallModelGen(Blocks.QUARTZ_BLOCK, BlockRegHandler.SMOOTH_QUARTZ_WALL, "_bottom", blockModelGenerators);
-            customWallModelGen(Blocks.QUARTZ_BRICKS, BlockRegHandler.QUARTZ_BRICK_WALL, "", blockModelGenerators);
+        //Quartz
+        customWallModelGen(Blocks.QUARTZ_BLOCK, BlockRegHandler.QUARTZ_WALL, "_side", blockModelGenerators);
+        customWallModelGen(Blocks.QUARTZ_BLOCK, BlockRegHandler.SMOOTH_QUARTZ_WALL, "_bottom", blockModelGenerators);
+        customWallModelGen(Blocks.QUARTZ_BRICKS, BlockRegHandler.QUARTZ_BRICK_WALL, "", blockModelGenerators);
 
-            customStairsModelGen(Blocks.QUARTZ_BRICKS, BlockRegHandler.QUARTZ_BRICK_STAIRS, "", blockModelGenerators);
+        customStairsModelGen(Blocks.QUARTZ_BRICKS, BlockRegHandler.QUARTZ_BRICK_STAIRS, "", blockModelGenerators);
 
-            customSlabModelGen(Blocks.QUARTZ_BRICKS, BlockRegHandler.QUARTZ_BRICK_SLAB, "", blockModelGenerators);
-        }
+        customSlabModelGen(Blocks.QUARTZ_BRICKS, BlockRegHandler.QUARTZ_BRICK_SLAB, "", blockModelGenerators);
 
+        //Smooth Stone
+        customStairsModelGen(Blocks.SMOOTH_STONE, BlockRegHandler.SMOOTH_STONE_STAIRS, "", blockModelGenerators);
+        customWallModelGen(Blocks.SMOOTH_STONE, BlockRegHandler.SMOOTH_STONE_WALL, "", blockModelGenerators);
+
+        //Smooth Sandstone
+        customWallModelGen(Blocks.SANDSTONE,BlockRegHandler.SMOOTH_SANDSTONE_WALL, "_top", blockModelGenerators);
+
+        //Smooth Red Sandstone
+        customWallModelGen(Blocks.RED_SANDSTONE,BlockRegHandler.SMOOTH_RED_SANDSTONE_WALL, "_top", blockModelGenerators);
+
+        //Cut Sandstone
+        customCutSandstoneStairsModelGen(Blocks.CUT_SANDSTONE,Blocks.SANDSTONE, Blocks.SANDSTONE, BlockRegHandler.CUT_SANDSTONE_STAIRS, "_top", "_bottom", blockModelGenerators);
+        customWallModelGen(Blocks.CUT_SANDSTONE, BlockRegHandler.CUT_SANDSTONE_WALL, "", blockModelGenerators);
+
+        //Cut Red Sandstone
+        customCutSandstoneStairsModelGen(Blocks.CUT_RED_SANDSTONE,Blocks.RED_SANDSTONE, Blocks.RED_SANDSTONE, BlockRegHandler.CUT_RED_SANDSTONE_STAIRS, "_top", "_bottom", blockModelGenerators);
+        customWallModelGen(Blocks.CUT_RED_SANDSTONE, BlockRegHandler.CUT_RED_SANDSTONE_WALL, "", blockModelGenerators);
 
         blockModelGenerators.family(BlockRegHandler.FIRED_BRICKS)
                 .stairs(BlockRegHandler.FIRED_BRICK_STAIRS)
@@ -277,8 +293,6 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     public void customStairsModelGen(Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators) {
-        // 1. Extract the texture map from the vanilla block
-        // Note: If using a column block like Quartz, use TextureMapping.cube(TextureMapping.getBlockTexture(vanillaBase, "_side")) instead
         Material blockTexture = TextureMapping.getBlockTexture(blockBase, textureSuffix);
 
         TextureMapping stairTextures = new TextureMapping()
@@ -334,5 +348,28 @@ public class ModModelProvider extends FabricModelProvider {
         ));
     }
 
+    public void customCutSandstoneStairsModelGen(Block blockSide, Block blockTop, Block blockBottom, Block blockResult, String topSuffix, String bottomSuffix, BlockModelGenerators blockModelGenerators) {
+        Material blockTexture = TextureMapping.getBlockTexture(blockSide);
+        Material topTexture = TextureMapping.getBlockTexture(blockTop, topSuffix);
+        Material bottomTexture = TextureMapping.getBlockTexture(blockBottom, bottomSuffix);
+
+        TextureMapping stairTextures = new TextureMapping()
+                .put(TextureSlot.BOTTOM, bottomTexture)
+                .put(TextureSlot.TOP, topTexture)
+                .put(TextureSlot.SIDE, blockTexture)
+                .put(TextureSlot.PARTICLE, blockTexture);
+
+        Identifier straight = ModelTemplates.STAIRS_STRAIGHT.create(blockResult, stairTextures, blockModelGenerators.modelOutput);
+        Identifier inner    = ModelTemplates.STAIRS_INNER.create(blockResult, stairTextures, blockModelGenerators.modelOutput);
+        Identifier outer    = ModelTemplates.STAIRS_OUTER.create(blockResult, stairTextures, blockModelGenerators.modelOutput);
+
+        blockModelGenerators.blockStateOutput.accept(
+                BlockModelGenerators.createStairs(
+                        blockResult,
+                        BlockModelGenerators.plainVariant(inner),
+                        BlockModelGenerators.plainVariant(straight),
+                        BlockModelGenerators.plainVariant(outer))
+        );
+    }
 
 }
