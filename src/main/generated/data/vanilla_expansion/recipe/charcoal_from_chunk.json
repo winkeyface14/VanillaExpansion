@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "charcoal_chunk"
+    }
+  ],
   "type": "minecraft:crafting_shapeless",
   "group": "charcoal",
   "ingredients": [

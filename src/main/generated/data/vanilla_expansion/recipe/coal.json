@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "coal_chunk"
+    }
+  ],
   "type": "minecraft:crafting_shapeless",
   "group": "coal_from_chunk",
   "ingredients": [

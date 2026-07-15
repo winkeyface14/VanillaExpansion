@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "pile_of_paper"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "crop_from_blocks",
+  "ingredients": [
+    "vanilla_expansion:pile_of_paper"
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:paper"
+  }
+}

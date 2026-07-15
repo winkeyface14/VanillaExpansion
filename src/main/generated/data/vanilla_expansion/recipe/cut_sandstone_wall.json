@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "cut_sandstone_wall",
   "key": {
     "#": "minecraft:cut_sandstone"
   },

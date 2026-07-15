@@ -1,7 +1,14 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "smoked_quartz_block_set"
+    }
+  ],
   "type": "minecraft:stonecutting",
   "ingredient": "vanilla_expansion:smoked_quartz_bricks",
   "result": {
+    "count": 2,
     "id": "vanilla_expansion:smoked_quartz_brick_slab"
   }
 }

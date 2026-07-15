@@ -200,6 +200,20 @@
   "item.vanilla_expansion.redstone_shovel_head": "Redstone Shovel Head",
   "item.vanilla_expansion.redstone_hoe_head": "Redstone Hoe Head",
 
+  "item.vanilla_expansion.quartz_sword_blade": "Quartz Sword Blade",
+  "item.vanilla_expansion.quartz_spear_tip": "Quartz Spear Tip",
+  "item.vanilla_expansion.quartz_pickaxe_head": "Quartz Pickaxe Head",
+  "item.vanilla_expansion.quartz_axe_head": "Quartz Axe Head",
+  "item.vanilla_expansion.quartz_shovel_head": "Quartz Shovel Head",
+  "item.vanilla_expansion.quartz_hoe_head": "Quartz Hoe Head",
+
+  "item.vanilla_expansion.smoked_quartz_sword_blade": "Smoked Quartz Sword Blade",
+  "item.vanilla_expansion.smoked_quartz_spear_tip": "Smoked Quartz Spear Tip",
+  "item.vanilla_expansion.smoked_quartz_pickaxe_head": "Smoked Quartz Pickaxe Head",
+  "item.vanilla_expansion.smoked_quartz_axe_head": "Smoked Quartz Axe Head",
+  "item.vanilla_expansion.smoked_quartz_shovel_head": "Smoked Quartz Shovel Head",
+  "item.vanilla_expansion.smoked_quartz_hoe_head": "Smoked Quartz Hoe Head",
+
   "item.vanilla_expansion.raw_reinforced_leather": "Raw Reinforced Leather",
   "item.vanilla_expansion.reinforced_leather": "Reinforced Leather",
   "item.vanilla_expansion.pile_of_paper": "Pile of Paper",
@@ -242,6 +256,12 @@
 
   "vanilla_expansion.midnightconfig.enableRedstoneTools":"Redstone Tools",
   "vanilla_expansion.midnightconfig.enableRedstoneTools.tooltip":"Also enables or disables Redstone Tool and Weapon Heads",
+
+  "vanilla_expansion.midnightconfig.enableQuartzTools":"Quartz Tools",
+  "vanilla_expansion.midnightconfig.enableQuartzTools.tooltip":"Also enables or disables Quartz Tool and Weapon Heads",
+
+  "vanilla_expansion.midnightconfig.enableSmokedQuartzTools":"Smoked Quartz Tools",
+  "vanilla_expansion.midnightconfig.enableSmokedQuartzTools.tooltip":"Also enables or disables Smoked Quartz Tool and Weapon Heads",
 
   "vanilla_expansion.midnightconfig.category.blocks": "Blocks"
 }

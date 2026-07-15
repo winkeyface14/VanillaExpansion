@@ -1,0 +1,24 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "emerald_shard"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "crop_blocks",
+  "ingredients": [
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald"
+  ],
+  "result": {
+    "id": "vanilla_expansion:emerald_shard"
+  }
+}

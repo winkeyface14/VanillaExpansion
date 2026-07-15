@@ -43,9 +43,10 @@ Quartz Tools has almost the same durability as Stone, a bit faster mining speed 
 ## Lapis Lazuli Tools and Armor
 Lapis Lazuli armor has higher total armor compared to Chainmail, and the same durability as Iron.
 
-## Reinforced Leather
-By first crafting Raw Reinforced Leather and cooking it, you can get Reinforced Leather.
+## Reinforced Leather and Armor (as of 0.2.0-beta)
+By first crafting Raw Reinforced Leather and cooking it, you can get Reinforced Leather. This can be used to make Reinforced Leather Armor, a bit better compared to Leather Armor
 
-## License
+## Config File (as of 0.2.0-beta)
+Feel free to toggle certain feature on or off and customize your experience of this mod! (Server configs should work, please report any issues you may encounter)
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+### License: MIT 2026 winkeyface14

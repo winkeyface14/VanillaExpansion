@@ -42,6 +42,8 @@ public class ItemRegHandler {
     //public static final Item NETHERITE_SWORD_BLADE = registerItem("netherite_sword_blade", Item::new);
     public static final Item REDSTONE_SWORD_BLADE = registerItem("redstone_sword_blade", Item::new);
     public static final Item EMERALD_SWORD_BLADE = registerItem("emerald_sword_blade", Item::new);
+    public static final Item QUARTZ_SWORD_BLADE = registerItem("quartz_sword_blade", Item::new);
+    public static final Item SMOKED_QUARTZ_SWORD_BLADE = registerItem("smoked_quartz_sword_blade", Item::new);
 
     public static final Item STONE_PICKAXE_HEAD = registerItem("stone_pickaxe_head", Item::new);
     public static final Item IRON_PICKAXE_HEAD = registerItem("iron_pickaxe_head", Item::new);
@@ -51,6 +53,8 @@ public class ItemRegHandler {
     //public static final Item NETHERITE_PICKAXE_HEAD = registerItem("netherite_pickaxe_head", Item::new);
     public static final Item REDSTONE_PICKAXE_HEAD = registerItem("redstone_pickaxe_head", Item::new);
     public static final Item EMERALD_PICKAXE_HEAD = registerItem("emerald_pickaxe_head", Item::new);
+    public static final Item QUARTZ_PICKAXE_HEAD = registerItem("quartz_pickaxe_head", Item::new);
+    public static final Item SMOKED_QUARTZ_PICKAXE_HEAD = registerItem("smoked_quartz_pickaxe_head", Item::new);
 
     public static final Item IRON_AXE_HEAD = registerItem("iron_axe_head", Item::new);
     public static final Item STONE_AXE_HEAD = registerItem("stone_axe_head", Item::new);
@@ -60,6 +64,8 @@ public class ItemRegHandler {
     //public static final Item NETHERITE_AXE_HEAD = registerItem("netherite_axe_head", Item::new);
     public static final Item REDSTONE_AXE_HEAD = registerItem("redstone_axe_head", Item::new);
     public static final Item EMERALD_AXE_HEAD = registerItem("emerald_axe_head", Item::new);
+    public static final Item QUARTZ_AXE_HEAD = registerItem("quartz_axe_head", Item::new);
+    public static final Item SMOKED_QUARTZ_AXE_HEAD = registerItem("smoked_quartz_axe_head", Item::new);
 
     public static final Item STONE_SHOVEL_HEAD = registerItem("stone_shovel_head", Item::new);
     public static final Item IRON_SHOVEL_HEAD = registerItem("iron_shovel_head", Item::new);
@@ -69,6 +75,8 @@ public class ItemRegHandler {
     //public static final Item NETHERITE_SHOVEL_HEAD = registerItem("netherite_shovel_head", Item::new);
     public static final Item REDSTONE_SHOVEL_HEAD = registerItem("redstone_shovel_head", Item::new);
     public static final Item EMERALD_SHOVEL_HEAD = registerItem("emerald_shovel_head", Item::new);
+    public static final Item QUARTZ_SHOVEL_HEAD = registerItem("quartz_shovel_head", Item::new);
+    public static final Item SMOKED_QUARTZ_SHOVEL_HEAD = registerItem("smoked_quartz_shovel_head", Item::new);
 
     public static final Item STONE_HOE_HEAD = registerItem("stone_hoe_head", Item::new);
     public static final Item IRON_HOE_HEAD = registerItem("iron_hoe_head", Item::new);
@@ -78,6 +86,8 @@ public class ItemRegHandler {
     //public static final Item NETHERITE_HOE_HEAD = registerItem("netherite_hoe_head", Item::new);
     public static final Item REDSTONE_HOE_HEAD = registerItem("redstone_hoe_head", Item::new);
     public static final Item EMERALD_HOE_HEAD = registerItem("emerald_hoe_head", Item::new);
+    public static final Item QUARTZ_HOE_HEAD = registerItem("quartz_hoe_head", Item::new);
+    public static final Item SMOKED_QUARTZ_HOE_HEAD = registerItem("smoked_quartz_hoe_head", Item::new);
 
     public static final Item STONE_SPEAR_TIP = registerItem("stone_spear_tip", Item::new);
     public static final Item IRON_SPEAR_TIP = registerItem("iron_spear_tip", Item::new);
@@ -87,6 +97,8 @@ public class ItemRegHandler {
     //public static final Item NETHERITE_SPEAR_TIP = registerItem("netherite_spear_tip", Item::new);
     public static final Item REDSTONE_SPEAR_TIP = registerItem("redstone_spear_tip", Item::new);
     public static final Item EMERALD_SPEAR_TIP = registerItem("emerald_spear_tip", Item::new);
+    public static final Item QUARTZ_SPEAR_TIP = registerItem("quartz_spear_tip", Item::new);
+    public static final Item SMOKED_QUARTZ_SPEAR_TIP = registerItem("smoked_quartz_spear_tip", Item::new);
 
     //Tool Upgrade Template
     public static final Item BASE_TEMPLATE = registerItem("base_template", Item::new);

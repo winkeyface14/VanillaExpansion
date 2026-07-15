@@ -5,11 +5,12 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.RegistryOps;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
+
+import static net.winkeyface14.vanilla_expansion.util.ConfigHandler.*;
 
 public record FeatureEnabledCondition(String featureName) implements ResourceCondition {
     public static final MapCodec<FeatureEnabledCondition> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
@@ -30,25 +31,46 @@ public record FeatureEnabledCondition(String featureName) implements ResourceCon
     @Override
     public boolean test(RegistryOps.@Nullable RegistryInfoLookup registryInfo) {
         return switch (featureName) {
-            case "base_template" -> ConfigHandler.enableBaseTemplate;
-            case "stone_heads" -> ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableStoneHeads, true);
-            case "copper_heads" -> ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableCopperHeads, true);
-            case "iron_heads" -> ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableIronHeads, true);
-            case "golden_heads" -> ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableGoldenHeads, true);
-            case "diamond_heads" -> ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableDiamondHeads, true);
+            case "bundled_sticks" -> enableBundledSticks;
+            case "pile_of_paper" -> enablePileOfPaper;
 
-            case "emerald_tools" -> ConfigHandler.enableEmeraldTools;
-            case "emerald_heads" -> ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableEmeraldHeads, ConfigHandler.enableEmeraldTools);
-            case "emerald_armor" -> ConfigHandler.enableEmeraldArmor;
+            case "coal_chunk" -> enableCoalChunk;
+            case "charcoal_chunk" -> enableCharcoalChunk;
+            case "emerald_shard" -> enableEmeraldShard;
+            case "diamond_shard" -> enableDiamondShard;
+            case "quartz_shard" -> enableQuartzShard;
 
-            case "lapis_lazuli_tools" -> ConfigHandler.enableLapisLazuliTools;
-            //case "lapis_lazuli_heads" -> ConfigHandler.isLapisHeadsEnabled();
-            case "lapis_lazuli_armor" -> ConfigHandler.enableLapisLazuliArmor;
+            case "quartz_tools" -> enableQuartzTools;
+            case "quartz_heads" -> isVanillaHeadsEnabled(enableQuartzHeads, enableQuartzTools);
 
-            case "redstone_tools" -> ConfigHandler.enableRedstoneTools;
-            case "redstone_heads" -> ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableRedstoneHeads, ConfigHandler.enableRedstoneTools);
+            case "smoked_quartz" -> enableSmokedQuartz;
+            case "smoked_quartz_shard" -> isModdedShardEnabled(enableSmokedQuartz, enableSmokedQuartzShard);
+            case "smoked_quartz_tools" -> isModdedToolsEnabled(enableSmokedQuartz, enableSmokedQuartzTools);
+            case "smoked_quartz_heads" -> isModdedHeadsEnabled(enableSmokedQuartz, enableSmokedQuartzHeads,  enableSmokedQuartzTools);
 
-            case "compact_crop_blocks" -> ConfigHandler.enableCompactCropBlocks;
+            case "base_template" -> enableBaseTemplate;
+            case "stone_heads" -> isVanillaHeadsEnabled(enableStoneHeads, true);
+            case "copper_heads" -> isVanillaHeadsEnabled(enableCopperHeads, true);
+            case "iron_heads" -> isVanillaHeadsEnabled(enableIronHeads, true);
+            case "golden_heads" -> isVanillaHeadsEnabled(enableGoldenHeads, true);
+            case "diamond_heads" -> isVanillaHeadsEnabled(enableDiamondHeads, true);
+
+            case "emerald_tools" -> enableEmeraldTools;
+            case "emerald_heads" -> isVanillaHeadsEnabled(enableEmeraldHeads, enableEmeraldTools);
+            case "emerald_armor" -> enableEmeraldArmor;
+
+            case "lapis_lazuli_tools" -> enableLapisLazuliTools;
+            //case "lapis_lazuli_heads" -> isLapisHeadsEnabled();
+            case "lapis_lazuli_armor" -> enableLapisLazuliArmor;
+
+            case "redstone_tools" -> enableRedstoneTools;
+            case "redstone_heads" -> isVanillaHeadsEnabled(enableRedstoneHeads, enableRedstoneTools);
+
+            case "compact_crop_blocks" -> enableCompactCropBlocks;
+            case "charcoal_block" -> enableCharcoalBlock;
+            case "block_of_bundled_sticks" -> isBlockSetEnabled(enableBundledSticks, enableBlockOfBundledSticks);
+            case "add_quartz_block_set" -> enableAddQuartzBlockSet;
+            case "smoked_quartz_block_set" -> isBlockSetEnabled(enableSmokedQuartz, enableSmokedQuartzBlockSet);
             default -> true;
         };
     }

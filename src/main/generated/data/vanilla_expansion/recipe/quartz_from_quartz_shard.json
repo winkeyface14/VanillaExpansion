@@ -1,0 +1,19 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "quartz_shard"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "crop_blocks",
+  "ingredients": [
+    "vanilla_expansion:quartz_shard",
+    "vanilla_expansion:quartz_shard",
+    "vanilla_expansion:quartz_shard",
+    "vanilla_expansion:quartz_shard"
+  ],
+  "result": {
+    "id": "minecraft:quartz"
+  }
+}

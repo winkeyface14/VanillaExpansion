@@ -3,10 +3,10 @@ package net.winkeyface14.vanilla_expansion.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.data.BlockFamily;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -32,47 +32,73 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeProvider(registries, output) {
             @Override
             public void buildRecipes() {
+                RecipeOutput bundledSticksOutput = withConditions(output, new FeatureEnabledCondition("bundled_sticks"));
+                RecipeOutput paperPileOutput = withConditions(output, new FeatureEnabledCondition("pile_of_paper"));
+                RecipeOutput coalChunkOutput = withConditions(output, new FeatureEnabledCondition("coal_chunk"));
+                RecipeOutput charcoalChunkOutput = withConditions(output, new FeatureEnabledCondition("charcoal_chunk"));
+                RecipeOutput emeraldShardOutput = withConditions(output, new FeatureEnabledCondition("emerald_shard"));
+                RecipeOutput diamondShardOutput = withConditions(output, new FeatureEnabledCondition("diamond_shard"));
+                RecipeOutput quartzShardOutput = withConditions(output, new FeatureEnabledCondition("quartz_shard"));
+
+                RecipeOutput smokedQuartzOutput = withConditions(output, new FeatureEnabledCondition("smoked_quartz"));
+                RecipeOutput smokedQuartzShardOutput = withConditions(output, new FeatureEnabledCondition("smoked_quartz_shard"));
+
                 RecipeOutput baseTemplateOutput = withConditions(output, new FeatureEnabledCondition("base_template"));
                 RecipeOutput stoneHeadsOutput = withConditions(output, new FeatureEnabledCondition("stone_heads"));
                 RecipeOutput copperHeadsOutput = withConditions(output, new FeatureEnabledCondition("copper_heads"));
                 RecipeOutput ironHeadsOutput = withConditions(output, new FeatureEnabledCondition("iron_heads"));
                 RecipeOutput goldenHeadsOutput = withConditions(output, new FeatureEnabledCondition("golden_heads"));
                 RecipeOutput diamondHeadsOutput = withConditions(output, new FeatureEnabledCondition("diamond_heads"));
+                RecipeOutput quartzHeadsOutput = withConditions(output, new FeatureEnabledCondition("quartz_heads"));
+                RecipeOutput smokedQuartzHeadsOutput = withConditions(output, new FeatureEnabledCondition("smoked_quartz_heads"));
+
                 RecipeOutput emeraldToolsOutput = withConditions(output, new FeatureEnabledCondition("emerald_tools"));
                 RecipeOutput emeraldHeadsOutput = withConditions(output, new FeatureEnabledCondition("emerald_heads"));
                 RecipeOutput emeraldArmorOutput = withConditions(output, new FeatureEnabledCondition("emerald_armor"));
+
                 RecipeOutput lapisToolsOutput = withConditions(output, new FeatureEnabledCondition("lapis_lazuli_tools"));
                 RecipeOutput lapisArmorOutput = withConditions(output, new FeatureEnabledCondition("lapis_lazuli_armor"));
+
                 RecipeOutput redstoneToolsOutput = withConditions(output, new FeatureEnabledCondition("redstone_tools"));
                 RecipeOutput redstoneHeadsOutput = withConditions(output, new FeatureEnabledCondition("redstone_heads"));
+
+                RecipeOutput quartzToolsOutput = withConditions(output, new FeatureEnabledCondition("quartz_tools"));
+
+                RecipeOutput smokedQuartzToolsOutput = withConditions(output, new FeatureEnabledCondition("smoked_quartz_tools"));
+
                 RecipeOutput compactCropBlocksOutput = withConditions(output, new FeatureEnabledCondition("compact_crop_blocks"));
+                RecipeOutput blockBundledSticksOutput = withConditions(output, new FeatureEnabledCondition("block_of_bundled_sticks"));
+                RecipeOutput charcoalBlockOutput = withConditions(output, new FeatureEnabledCondition("charcoal_block"));
+                RecipeOutput addQuartzBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_quartz_block_set"));
+                RecipeOutput smokedQuartzBlockSetOutput = withConditions(output, new FeatureEnabledCondition("smoked_quartz_block_set"));
 
                 List<ItemLike> REINFORCED_LEATHER_BLASTABLE = List.of(RAW_REINFORCED_LEATHER);
                 List<ItemLike> BRICK_SMELTABLE = List.of(BRICK);
                 List<ItemLike> BRICK_BLOCK_SMELTABLE = List.of(BRICKS);
 
                 //Coal and Charcoal
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, CHARCOAL,RecipeCategory.BUILDING_BLOCKS, CHARCOAL_BLOCK);
+                CustomNineBlockStorageRecipes(CHARCOAL, CHARCOAL_BLOCK.asItem(), charcoalBlockOutput, RecipeCategory.BUILDING_BLOCKS, RecipeCategory.MISC);
+
                 this.shapeless(RecipeCategory.MISC, COAL_CHUNK, 8)
                         .requires(COAL)
                         .unlockedBy(getHasName(COAL), has(COAL))
                         .group("coal_chunk")
-                        .save(output);
+                        .save(coalChunkOutput);
                 this.shapeless(RecipeCategory.MISC, CHARCOAL_CHUNK, 8)
                         .requires(CHARCOAL)
                         .unlockedBy(getHasName(CHARCOAL), has(CHARCOAL))
                         .group("charcoal_chunk")
-                        .save(output);
+                        .save(charcoalChunkOutput);
                 this.shapeless(RecipeCategory.MISC, COAL)
                         .requires(COAL_CHUNK, 8)
                         .unlockedBy(getHasName(COAL_CHUNK), has(COAL_CHUNK))
                         .group("coal_from_chunk")
-                        .save(output);
+                        .save(coalChunkOutput);
                 this.shapeless(RecipeCategory.MISC, CHARCOAL)
                         .requires(CHARCOAL_CHUNK, 8)
                         .unlockedBy(getHasName(CHARCOAL_CHUNK), has(CHARCOAL_CHUNK))
                         .group("charcoal")
-                        .save(output,"charcoal_from_chunk");
+                        .save(charcoalChunkOutput,"charcoal_from_chunk");
 
                 //Reinforced Leather
                 this.shaped(RecipeCategory.MISC, RAW_REINFORCED_LEATHER,4)
@@ -88,81 +114,68 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 this.oreSmelting(REINFORCED_LEATHER_BLASTABLE, RecipeCategory.MISC, CookingBookCategory.MISC, REINFORCED_LEATHER, 0.7f, 200, "reinforced_leather");
 
                 //Stick Compacting
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, STICK, RecipeCategory.MISC, BUNDLED_STICKS);
-                this.nineBlockStorageRecipesRecipesWithCustomUnpacking(RecipeCategory.MISC, BUNDLED_STICKS, RecipeCategory.DECORATIONS, BUNDLED_STICKS_BLOCK,"bundled_sticks_from_unpacking", "bundled_sticks");
+                CustomNineBlockStorageRecipes(STICK, BUNDLED_STICKS, bundledSticksOutput, RecipeCategory.MISC, RecipeCategory.MISC);
+                CustomNineBlockStorageRecipes(BUNDLED_STICKS, BUNDLED_STICKS_BLOCK.asItem(), blockBundledSticksOutput, RecipeCategory.BUILDING_BLOCKS, RecipeCategory.MISC);
 
                 //Paper Compacting
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, PAPER, RecipeCategory.MISC, PAPER_PILE);
+                CustomNineBlockStorageRecipes(PAPER, PAPER_PILE, paperPileOutput, RecipeCategory.MISC, RecipeCategory.MISC);
+                //this.nineBlockStorageRecipes(RecipeCategory.MISC, PAPER, RecipeCategory.MISC, PAPER_PILE);
 
                 //Crops Block
-                CustomNineBlockStorageRecipes(APPLE, BARREL_OF_APPLES_BLOCK.asItem(), compactCropBlocksOutput);
-                CustomNineBlockStorageRecipes(CARROT, BARREL_OF_CARROTS_BLOCK.asItem(), compactCropBlocksOutput);
-                CustomNineBlockStorageRecipes(POTATO, BARREL_OF_POTATOES_BLOCK.asItem(), compactCropBlocksOutput);
-                CustomNineBlockStorageRecipes(BEETROOT, BARREL_OF_BEETROOTS_BLOCK.asItem(), compactCropBlocksOutput);
-                CustomNineBlockStorageRecipes(SWEET_BERRIES, BARREL_OF_SWEETBERRIES_BLOCK.asItem(), compactCropBlocksOutput);
-                CustomNineBlockStorageRecipes(CHORUS_FRUIT, BARREL_OF_CHORUS_BLOCK.asItem(), compactCropBlocksOutput);
-                /*
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, APPLE, RecipeCategory.DECORATIONS, BARREL_OF_APPLES_BLOCK);
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, CARROT, RecipeCategory.DECORATIONS, BARREL_OF_CARROTS_BLOCK);
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, POTATO, RecipeCategory.DECORATIONS, BARREL_OF_POTATOES_BLOCK);
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, BEETROOT, RecipeCategory.DECORATIONS, BARREL_OF_BEETROOTS_BLOCK);
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, CHORUS_FRUIT, RecipeCategory.DECORATIONS, BARREL_OF_CHORUS_BLOCK);
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, SWEET_BERRIES, RecipeCategory.DECORATIONS, BARREL_OF_SWEETBERRIES_BLOCK);
-                 */
+                CustomNineBlockStorageRecipes(APPLE, BARREL_OF_APPLES_BLOCK.asItem(), compactCropBlocksOutput, RecipeCategory.BUILDING_BLOCKS, RecipeCategory.FOOD);
+                CustomNineBlockStorageRecipes(CARROT, BARREL_OF_CARROTS_BLOCK.asItem(), compactCropBlocksOutput, RecipeCategory.BUILDING_BLOCKS, RecipeCategory.FOOD);
+                CustomNineBlockStorageRecipes(POTATO, BARREL_OF_POTATOES_BLOCK.asItem(), compactCropBlocksOutput, RecipeCategory.BUILDING_BLOCKS, RecipeCategory.FOOD);
+                CustomNineBlockStorageRecipes(BEETROOT, BARREL_OF_BEETROOTS_BLOCK.asItem(), compactCropBlocksOutput, RecipeCategory.BUILDING_BLOCKS, RecipeCategory.FOOD);
+                CustomNineBlockStorageRecipes(SWEET_BERRIES, BARREL_OF_SWEETBERRIES_BLOCK.asItem(), compactCropBlocksOutput, RecipeCategory.BUILDING_BLOCKS, RecipeCategory.FOOD);
+                CustomNineBlockStorageRecipes(CHORUS_FRUIT, BARREL_OF_CHORUS_BLOCK.asItem(), compactCropBlocksOutput, RecipeCategory.BUILDING_BLOCKS, RecipeCategory.FOOD);
 
                 //Quartz
-                this.twoByTwoPacker(RecipeCategory.MISC, QUARTZ, QUARTZ_SHARD);
+                Custom2x2StorageRecipes(QUARTZ_SHARD,QUARTZ, quartzShardOutput, RecipeCategory.MISC, RecipeCategory.MISC);
+                /*this.twoByTwoPacker(RecipeCategory.MISC, QUARTZ, QUARTZ_SHARD);
                 this.shapeless(RecipeCategory.MISC, QUARTZ_SHARD, 4)
                         .requires(QUARTZ)
                         .unlockedBy(getHasName(QUARTZ), has(QUARTZ))
                         .group("quartz_shard")
-                        .save(output);
-                //this.wall(RecipeCategory.BUILDING_BLOCKS, QUARTZ_WALL, Items.QUARTZ_BLOCK);
-                //this.wall(RecipeCategory.BUILDING_BLOCKS, QUARTZ_BRICK_WALL, Items.QUARTZ_BRICKS);
-
-                //this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, QUARTZ_WALL, Blocks.QUARTZ_BLOCK);
-                //this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS);
+                        .save(quartzShardOutput);*/
 
                 registerBlockSetRecipes(
                         Blocks.QUARTZ_BLOCK.asItem(),
                         null,
                         null,
                         QUARTZ_WALL.asItem(),
-                        null);
+                        null,
+                        addQuartzBlockSetOutput);
 
                 registerBlockSetRecipes(
                         Blocks.QUARTZ_BRICKS.asItem(),
                         QUARTZ_BRICK_SLAB.asItem(),
                         QUARTZ_BRICK_STAIRS.asItem(),
                         QUARTZ_BRICK_WALL.asItem(),
-                        null);
+                        null,
+                        addQuartzBlockSetOutput);
 
                 registerBlockSetRecipes(
                         Blocks.SMOOTH_QUARTZ.asItem(),
                         null,
                         null,
                         SMOOTH_QUARTZ_WALL.asItem(),
-                        null);
+                        null,
+                        addQuartzBlockSetOutput);
 
 
                 //Smoked Quartz
-                this.twoByTwoPacker(RecipeCategory.MISC, SMOKED_QUARTZ, SMOKED_QUARTZ_SHARD);
-                this.shapeless(RecipeCategory.MISC, SMOKED_QUARTZ_SHARD, 4)
-                        .requires(SMOKED_QUARTZ)
-                        .unlockedBy(getHasName(SMOKED_QUARTZ), has(SMOKED_QUARTZ))
-                        .group("smoked_quartz_shard")
-                        .save(output);
+                Custom2x2StorageRecipes(SMOKED_QUARTZ_SHARD, SMOKED_QUARTZ, smokedQuartzShardOutput, RecipeCategory.MISC, RecipeCategory.MISC);
 
                 SimpleCookingRecipeBuilder.smoking(Ingredient.of(QUARTZ), RecipeCategory.MISC, SMOKED_QUARTZ, 0.7f, 100)
                         .unlockedBy(getHasName(QUARTZ), has(QUARTZ))
                         .group("smoked_quartz")
-                        .save(output, "smoked_quartz_smoker");
+                        .save(smokedQuartzOutput, "smoked_quartz_smoker");
                 SimpleCookingRecipeBuilder.smoking(Ingredient.of(Blocks.QUARTZ_BLOCK), RecipeCategory.MISC, SMOKED_QUARTZ_BLOCK, 0.7f, 100)
                         .unlockedBy(getHasName(Blocks.QUARTZ_BLOCK), has(Blocks.QUARTZ_BLOCK))
                         .group("smoked_quartz_block")
-                        .save(output, "smoked_quartz_block_smoker");
+                        .save(smokedQuartzBlockSetOutput, "smoked_quartz_block_smoker");
 
-                this.twoByTwoPacker(RecipeCategory.MISC, SMOKED_QUARTZ_BLOCK, SMOKED_QUARTZ);
+                Custom2x2PackingRecipes(SMOKED_QUARTZ, SMOKED_QUARTZ_BLOCK.asItem(), smokedQuartzBlockSetOutput, RecipeCategory.BUILDING_BLOCKS);
 
                 //Base
                 registerBlockSetRecipes(
@@ -170,7 +183,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         SMOKED_QUARTZ_SLAB.asItem(),
                         SMOKED_QUARTZ_STAIRS.asItem(),
                         SMOKED_QUARTZ_WALL.asItem(),
-                        null);
+                        null,
+                        smokedQuartzBlockSetOutput);
 
                 //Smooth
                 registerBlockSetRecipes(
@@ -178,7 +192,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         SMOOTH_SMOKED_QUARTZ_SLAB.asItem(),
                         SMOOTH_SMOKED_QUARTZ_STAIRS.asItem(),
                         SMOOTH_SMOKED_QUARTZ_WALL.asItem(),
-                        null);
+                        null,
+                        smokedQuartzBlockSetOutput);
 
                 //Bricks
                 registerBlockSetRecipes(
@@ -186,7 +201,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         SMOKED_QUARTZ_BRICK_SLAB.asItem(),
                         SMOKED_QUARTZ_BRICK_STAIRS.asItem(),
                         SMOKED_QUARTZ_BRICK_WALL.asItem(),
-                        null);
+                        null,
+                        smokedQuartzBlockSetOutput);
 
                 registerBlockVariantRecipes(
                         SMOKED_QUARTZ_BLOCK.asItem(),
@@ -194,7 +210,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         SMOKED_QUARTZ_BRICKS.asItem(),
                         SMOKED_QUARTZ_PILLAR.asItem(),
                         CHISELED_SMOKED_QUARTZ_BLOCK.asItem(),
-                        null);
+                        null,
+                        smokedQuartzBlockSetOutput);
 
                 //Burnt Quartz
                 this.twoByTwoPacker(RecipeCategory.MISC, BURNT_QUARTZ, BURNT_QUARTZ_SHARD);
@@ -221,7 +238,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         BURNT_QUARTZ_SLAB.asItem(),
                         BURNT_QUARTZ_STAIRS.asItem(),
                         BURNT_QUARTZ_WALL.asItem(),
-                        null);
+                        null,
+                        output);
 
                 //Smooth
                 registerBlockSetRecipes(
@@ -229,7 +247,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         SMOOTH_BURNT_QUARTZ_SLAB.asItem(),
                         SMOOTH_BURNT_QUARTZ_STAIRS.asItem(),
                         SMOOTH_BURNT_QUARTZ_WALL.asItem(),
-                        null);
+                        null,
+                        output);
 
                 //Bricks
                 registerBlockSetRecipes(
@@ -237,7 +256,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         BURNT_QUARTZ_BRICK_SLAB.asItem(),
                         BURNT_QUARTZ_BRICK_STAIRS.asItem(),
                         BURNT_QUARTZ_BRICK_WALL.asItem(),
-                        null);
+                        null,
+                        output);
 
                 registerBlockVariantRecipes(
                         BURNT_QUARTZ_BLOCK.asItem(),
@@ -245,7 +265,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         BURNT_QUARTZ_BRICKS.asItem(),
                         BURNT_QUARTZ_PILLAR.asItem(),
                         CHISELED_BURNT_QUARTZ_BLOCK.asItem(),
-                        null);
+                        null,
+                        output);
 
                 //Fired Bricks
                 this.oreSmelting(BRICK_SMELTABLE,RecipeCategory.MISC, CookingBookCategory.MISC, FIRED_BRICK, 0.7f, 200,"fired_brick");
@@ -258,7 +279,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         FIRED_BRICK_SLAB.asItem(),
                         FIRED_BRICK_STAIRS.asItem(),
                         FIRED_BRICK_WALL.asItem(),
-                        null);
+                        null,
+                        output);
 
                 //Smooth Stone
                 registerBlockSetRecipes(
@@ -266,8 +288,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         null,
                         SMOOTH_STONE_STAIRS.asItem(),
                         SMOOTH_STONE_WALL.asItem(),
-                        null
-                );
+                        null,
+                        output);
 
                 //Smooth Sandstone
                 registerBlockSetRecipes(
@@ -275,8 +297,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         null,
                         null,
                         SMOOTH_SANDSTONE_WALL.asItem(),
-                        null
-                );
+                        null,
+                        output);
 
                 //Smooth Red Sandstone
                 registerBlockSetRecipes(
@@ -284,8 +306,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         null,
                         null,
                         SMOOTH_RED_SANDSTONE_WALL.asItem(),
-                        null
-                );
+                        null,
+                        output);
 
                 //Cut Sandstone
                 registerBlockSetRecipes(
@@ -293,7 +315,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         null,
                         CUT_SANDSTONE_STAIRS.asItem(),
                         CUT_SANDSTONE_WALL.asItem(),
-                        null);
+                        null,
+                        output);
 
                 //Cut Red Sandstone
                 registerBlockSetRecipes(
@@ -301,7 +324,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         null,
                         CUT_RED_SANDSTONE_STAIRS.asItem(),
                         CUT_RED_SANDSTONE_WALL.asItem(),
-                        null);
+                        null,
+                        output);
 
                 //Empowered Netherite
                 this.shapeless(RecipeCategory.MISC, EMPOWERED_NETHERITE)
@@ -321,10 +345,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, EMPOWERED_NETHERITE, RecipeCategory.DECORATIONS, EMPOWERED_NETHERITE_BLOCK,"empowered_netherite_block","empowered_netherite_block","empowered_netherite_ingot","empowered_netherite_ingot");
 
                 //Diamond
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, DIAMOND_SHARD, RecipeCategory.MISC, DIAMOND);
+                CustomNineBlockStorageRecipes(DIAMOND, DIAMOND_SHARD, diamondShardOutput, RecipeCategory.MISC, RecipeCategory.MISC);
+                //this.nineBlockStorageRecipes(RecipeCategory.MISC, DIAMOND_SHARD, RecipeCategory.MISC, DIAMOND);
 
                 //Emerald Tools
-                this.nineBlockStorageRecipes(RecipeCategory.MISC, EMERALD_SHARD, RecipeCategory.MISC, EMERALD);
+                CustomNineBlockStorageRecipes(EMERALD, EMERALD_SHARD, emeraldShardOutput, RecipeCategory.MISC, RecipeCategory.MISC);
+                //this.nineBlockStorageRecipes(RecipeCategory.MISC, EMERALD_SHARD, RecipeCategory.MISC, EMERALD);
                 registerCustomToolSetRecipes(emeraldToolsOutput, EMERALD, EMERALD_SWORD, EMERALD_SHOVEL, EMERALD_PICKAXE, EMERALD_AXE, EMERALD_HOE, EMERALD_SPEAR);
 
                 //Lapis Lazuli Tools
@@ -334,10 +360,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolSetRecipes(redstoneToolsOutput, REDSTONE_BLOCK, REDSTONE_SWORD, REDSTONE_SHOVEL, REDSTONE_PICKAXE, REDSTONE_AXE, REDSTONE_HOE, REDSTONE_SPEAR);
 
                 //Quartz Tools
-                registerCustomToolSetRecipes(output, QUARTZ, QUARTZ_SWORD, QUARTZ_SHOVEL, QUARTZ_PICKAXE, QUARTZ_AXE, QUARTZ_HOE, QUARTZ_SPEAR);
+                registerCustomToolSetRecipes(quartzToolsOutput, QUARTZ, QUARTZ_SWORD, QUARTZ_SHOVEL, QUARTZ_PICKAXE, QUARTZ_AXE, QUARTZ_HOE, QUARTZ_SPEAR);
 
                 //Smoked Quartz Tools
-                registerCustomToolSetRecipes(output, SMOKED_QUARTZ, SMOKED_QUARTZ_SWORD, SMOKED_QUARTZ_SHOVEL, SMOKED_QUARTZ_PICKAXE, SMOKED_QUARTZ_AXE, SMOKED_QUARTZ_HOE, SMOKED_QUARTZ_SPEAR);
+                registerCustomToolSetRecipes(smokedQuartzToolsOutput, SMOKED_QUARTZ, SMOKED_QUARTZ_SWORD, SMOKED_QUARTZ_SHOVEL, SMOKED_QUARTZ_PICKAXE, SMOKED_QUARTZ_AXE, SMOKED_QUARTZ_HOE, SMOKED_QUARTZ_SPEAR);
 
                 //Burnt Quartz Tools
                 registerCustomToolSetRecipes(output, BURNT_QUARTZ, BURNT_QUARTZ_SWORD, BURNT_QUARTZ_SHOVEL, BURNT_QUARTZ_PICKAXE, BURNT_QUARTZ_AXE, BURNT_QUARTZ_HOE, BURNT_QUARTZ_SPEAR);
@@ -371,6 +397,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerToolHeadsRecipe(emeraldHeadsOutput, EMERALD, EMERALD_SWORD_BLADE,EMERALD_SPEAR_TIP, EMERALD_PICKAXE_HEAD, EMERALD_AXE_HEAD, EMERALD_SHOVEL_HEAD, EMERALD_HOE_HEAD);
                 registerToolHeadsRecipe(redstoneHeadsOutput, REDSTONE_BLOCK, REDSTONE_SWORD_BLADE,REDSTONE_SPEAR_TIP, REDSTONE_PICKAXE_HEAD, REDSTONE_AXE_HEAD, REDSTONE_SHOVEL_HEAD, REDSTONE_HOE_HEAD);
                 //registerToolHeadsRecipe(LAPIS_LAZULI, LAPIS_LAZULI_SWORD_BLADE,LAPIS_LAZULI_SPEAR_TIP, LAPIS_LAZULI_PICKAXE_HEAD, LAPIS_LAZULI_AXE_HEAD, LAPIS_LAZULI_SHOVEL_HEAD, LAPIS_LAZULI_HOE_HEAD);
+                registerToolHeadsRecipe(quartzHeadsOutput, QUARTZ, QUARTZ_SWORD_BLADE, QUARTZ_SPEAR_TIP, QUARTZ_PICKAXE_HEAD, QUARTZ_AXE_HEAD, QUARTZ_SHOVEL_HEAD, QUARTZ_HOE_HEAD);
+                registerToolHeadsRecipe(smokedQuartzHeadsOutput, SMOKED_QUARTZ, SMOKED_QUARTZ_SWORD_BLADE, SMOKED_QUARTZ_SPEAR_TIP, SMOKED_QUARTZ_PICKAXE_HEAD, SMOKED_QUARTZ_AXE_HEAD, SMOKED_QUARTZ_SHOVEL_HEAD, SMOKED_QUARTZ_HOE_HEAD);
 
 
                 //Blade Recipes
@@ -457,6 +485,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_SWORD_BLADE, ItemTags.SWORDS, EMERALD_SWORD, RecipeCategory.COMBAT);
                 registerCustomToolUpgrade(goldenHeadsOutput, GOLD_SWORD_BLADE, ItemTags.SWORDS, GOLDEN_SWORD, RecipeCategory.COMBAT);
                 registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_SWORD_BLADE, ItemTags.SWORDS, DIAMOND_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(quartzHeadsOutput, QUARTZ_SWORD_BLADE, ItemTags.SWORDS, QUARTZ_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(smokedQuartzHeadsOutput, SMOKED_QUARTZ_SWORD_BLADE, ItemTags.SWORDS, SMOKED_QUARTZ_SWORD, RecipeCategory.COMBAT);
 
                 //Pickaxes
                 registerCustomToolUpgrade(stoneHeadsOutput, STONE_PICKAXE_HEAD, ItemTags.PICKAXES, STONE_PICKAXE, RecipeCategory.TOOLS);
@@ -466,6 +496,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_PICKAXE_HEAD, ItemTags.PICKAXES, EMERALD_PICKAXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(goldenHeadsOutput, GOLD_PICKAXE_HEAD, ItemTags.PICKAXES, GOLDEN_PICKAXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_PICKAXE_HEAD, ItemTags.PICKAXES, DIAMOND_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(quartzHeadsOutput, QUARTZ_PICKAXE_HEAD, ItemTags.PICKAXES, QUARTZ_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(smokedQuartzHeadsOutput, SMOKED_QUARTZ_PICKAXE_HEAD, ItemTags.PICKAXES, SMOKED_QUARTZ_PICKAXE, RecipeCategory.TOOLS);
 
                 //Axes
                 registerCustomToolUpgrade(stoneHeadsOutput, STONE_AXE_HEAD, ItemTags.AXES, STONE_AXE, RecipeCategory.TOOLS);
@@ -475,6 +507,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_AXE_HEAD, ItemTags.AXES, EMERALD_AXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(goldenHeadsOutput, GOLD_AXE_HEAD, ItemTags.AXES, GOLDEN_AXE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_AXE_HEAD, ItemTags.AXES, DIAMOND_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(quartzHeadsOutput, QUARTZ_AXE_HEAD, ItemTags.AXES, QUARTZ_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(smokedQuartzHeadsOutput, SMOKED_QUARTZ_AXE_HEAD, ItemTags.AXES, SMOKED_QUARTZ_AXE, RecipeCategory.TOOLS);
 
                 //Shovels
                 registerCustomToolUpgrade(stoneHeadsOutput, STONE_SHOVEL_HEAD, ItemTags.SHOVELS, STONE_SHOVEL, RecipeCategory.TOOLS);
@@ -484,6 +518,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_SHOVEL_HEAD, ItemTags.SHOVELS, EMERALD_SHOVEL, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(goldenHeadsOutput, GOLD_SHOVEL_HEAD, ItemTags.SHOVELS, GOLDEN_SHOVEL, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_SHOVEL_HEAD, ItemTags.SHOVELS, DIAMOND_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(quartzHeadsOutput, QUARTZ_SHOVEL_HEAD, ItemTags.SHOVELS, QUARTZ_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(smokedQuartzHeadsOutput, SMOKED_QUARTZ_SHOVEL_HEAD, ItemTags.SHOVELS, SMOKED_QUARTZ_SHOVEL, RecipeCategory.TOOLS);
 
                 //Hoes
                 registerCustomToolUpgrade(stoneHeadsOutput, STONE_HOE_HEAD, ItemTags.SHOVELS, STONE_HOE, RecipeCategory.TOOLS);
@@ -493,15 +529,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_HOE_HEAD, ItemTags.SHOVELS, EMERALD_HOE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(goldenHeadsOutput, GOLD_HOE_HEAD, ItemTags.SHOVELS, GOLDEN_HOE, RecipeCategory.TOOLS);
                 registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_HOE_HEAD, ItemTags.SHOVELS, DIAMOND_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(quartzHeadsOutput, QUARTZ_HOE_HEAD, ItemTags.SHOVELS, QUARTZ_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(smokedQuartzHeadsOutput, SMOKED_QUARTZ_HOE_HEAD, ItemTags.SHOVELS, SMOKED_QUARTZ_HOE, RecipeCategory.TOOLS);
 
                 //Spears
-                registerCustomToolUpgrade(stoneHeadsOutput, STONE_SPEAR_TIP, ItemTags.SPEARS, STONE_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(copperHeadsOutput, COPPER_SPEAR_TIP, ItemTags.SPEARS, COPPER_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(ironHeadsOutput, IRON_SPEAR_TIP, ItemTags.SPEARS, IRON_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(redstoneHeadsOutput, REDSTONE_SPEAR_TIP, ItemTags.SPEARS, REDSTONE_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_SPEAR_TIP, ItemTags.SPEARS, EMERALD_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(goldenHeadsOutput, GOLD_SPEAR_TIP, ItemTags.SPEARS, GOLDEN_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_SPEAR_TIP, ItemTags.SPEARS, DIAMOND_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(stoneHeadsOutput, STONE_SPEAR_TIP, ItemTags.SPEARS, STONE_SPEAR, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(copperHeadsOutput, COPPER_SPEAR_TIP, ItemTags.SPEARS, COPPER_SPEAR, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(ironHeadsOutput, IRON_SPEAR_TIP, ItemTags.SPEARS, IRON_SPEAR, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(redstoneHeadsOutput, REDSTONE_SPEAR_TIP, ItemTags.SPEARS, REDSTONE_SPEAR, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_SPEAR_TIP, ItemTags.SPEARS, EMERALD_SPEAR, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(goldenHeadsOutput, GOLD_SPEAR_TIP, ItemTags.SPEARS, GOLDEN_SPEAR, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_SPEAR_TIP, ItemTags.SPEARS, DIAMOND_SPEAR, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(quartzHeadsOutput, QUARTZ_SPEAR_TIP, ItemTags.SPEARS, QUARTZ_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(smokedQuartzHeadsOutput, SMOKED_QUARTZ_SPEAR_TIP, ItemTags.SPEARS, SMOKED_QUARTZ_SPEAR, RecipeCategory.TOOLS);
             }
 
 
@@ -687,85 +727,125 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(outputType);
             }
 
-            private void registerBlockSetRecipes(Item baseItem, Item resultSlab, Item resultStairs, Item resultWall, Item resultFence){
+            private void registerBlockSetRecipes(Item baseItem, Item resultSlab, Item resultStairs, Item resultWall, Item resultFence, RecipeOutput outputType) {
                 RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
+
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
 
                 //Slab
                 if(resultSlab != null){
-                    this.stonecutterResultFromBase(categoryBuilding,resultSlab, baseItem);
-                    this.slab(categoryBuilding,resultSlab, baseItem);
+                    helper.stonecutterResultFromBase(categoryBuilding,resultSlab, baseItem, 2);
+                    this.slabBuilder(categoryBuilding, resultSlab, Ingredient.of(baseItem))
+                            .unlockedBy(getHasName(baseItem), has(baseItem))
+                            .group(getItemName(resultSlab))
+                            .save(outputType);
                 }
 
                 //Stairs
                 if(resultStairs != null){
-                    this.stonecutterResultFromBase(categoryBuilding,resultStairs, baseItem);
+                    helper.stonecutterResultFromBase(categoryBuilding,resultStairs, baseItem, 1);
                     this.stairBuilder(resultStairs, Ingredient.of(baseItem))
                             .unlockedBy(getHasName(baseItem), has(baseItem))
                             .group(getItemName(resultStairs))
-                            .save(output);
+                            .save(outputType);
                 }
 
                 //Wall
                 if(resultWall != null){
-                    this.stonecutterResultFromBase(categoryBuilding,resultWall, baseItem);
-                    this.wall(categoryBuilding, resultWall, baseItem);
+                    helper.stonecutterResultFromBase(categoryBuilding,resultWall, baseItem, 1);
+                    this.wallBuilder(categoryBuilding, resultWall, Ingredient.of(baseItem))
+                            .unlockedBy(getHasName(baseItem), has(baseItem))
+                            .group(getItemName(resultWall))
+                            .save(outputType);
                 }
 
                 //Fence
                 if(resultFence != null){
-                    this.stonecutterResultFromBase(categoryBuilding,resultFence, baseItem);
+                    helper.stonecutterResultFromBase(categoryBuilding,resultFence, baseItem, 1);
                     this.fenceBuilder(resultFence, Ingredient.of(baseItem))
                             .unlockedBy(getHasName(baseItem), has(baseItem))
                             .group(getItemName(resultFence))
-                            .save(output);
+                            .save(outputType);
                 }
             }
 
-            private void registerBlockVariantRecipes(Item baseItem, Item baseSlab, Item resultBricks, Item resultPillar, Item resultChiseled, Item resultPolished){
+            private void registerBlockVariantRecipes(Item baseItem, Item baseSlab, Item resultBricks, Item resultPillar, Item resultChiseled, Item resultPolished, RecipeOutput outputType) {
                 RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
+
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
 
                 //Bricks
                 if(resultBricks != null){
-                    this.stonecutterResultFromBase(categoryBuilding,resultBricks, baseItem);
+                    helper.stonecutterResultFromBase(categoryBuilding,resultBricks, baseItem);
                     this.bricksBuilder(categoryBuilding, resultBricks, Ingredient.of(baseItem))
                             .unlockedBy(getHasName(baseItem), has(baseItem))
                             .group(getItemName(resultBricks))
-                            .save(output);
+                            .save(outputType);
                 }
 
                 //Pillar
                 if(resultPillar != null){
-                    this.stonecutterResultFromBase(categoryBuilding, resultPillar, baseItem);
+                    helper.stonecutterResultFromBase(categoryBuilding, resultPillar, baseItem);
                     this.pillarBuilder(categoryBuilding, resultPillar, Ingredient.of(baseItem))
                             .unlockedBy(getHasName(baseItem), has(baseItem))
                             .group(getItemName(resultPillar))
-                            .save(output);
+                            .save(outputType);
                 }
 
                 //Chiseled
                 if(resultChiseled != null){
-                    this.stonecutterResultFromBase(categoryBuilding,resultChiseled, baseItem);
-                    this.chiseled(categoryBuilding, resultChiseled, baseSlab);
+                    helper.stonecutterResultFromBase(categoryBuilding,resultChiseled, baseItem);
+                    this.chiseledBuilder(categoryBuilding, resultChiseled, Ingredient.of(baseItem))
+                            .unlockedBy(getHasName(baseItem), has(baseItem))
+                            .group(getItemName(resultChiseled))
+                            .save(outputType);
                 }
 
                 //Polished
                 if(resultPolished != null){
-                    this.stonecutterResultFromBase(categoryBuilding,resultPolished, baseItem);
-                    this.polished(categoryBuilding, resultPolished, baseItem);
+                    helper.stonecutterResultFromBase(categoryBuilding,resultPolished, baseItem);
+                    this.polishedBuilder(categoryBuilding, resultPolished, Ingredient.of(baseItem))
+                            .unlockedBy(getHasName(baseItem), has(baseItem))
+                            .group(getItemName(resultPolished))
+                            .save(outputType);
                 }
             }
 
-            private void CustomNineBlockStorageRecipes(Item cropItem, Item cropBlock, RecipeOutput outputType){
-                this.shapeless(RecipeCategory.BUILDING_BLOCKS, cropBlock)
-                        .requires(cropItem, 9)
-                        .unlockedBy(getHasName(cropItem), has(cropItem))
+            private void CustomNineBlockStorageRecipes(Item baseItem, Item compactedItem, RecipeOutput outputType, RecipeCategory compressCategory, RecipeCategory decompressCategory){
+                this.shapeless(compressCategory, compactedItem)
+                        .requires(baseItem, 9)
+                        .unlockedBy(getHasName(baseItem), has(baseItem))
                         .group("crop_blocks")
-                        .save(outputType);
-                this.shapeless(RecipeCategory.FOOD, cropItem, 9)
-                        .requires(cropBlock, 1)
-                        .unlockedBy(getHasName(cropBlock), has(cropBlock))
+                        .save(outputType, getItemName(compactedItem) + "_from_" + getItemName(baseItem));
+                this.shapeless(decompressCategory, baseItem, 9)
+                        .requires(compactedItem, 1)
+                        .unlockedBy(getHasName(compactedItem), has(compactedItem))
                         .group("crop_from_blocks")
-                        .save(outputType);
+                        .save(outputType, getItemName(baseItem) + "_from_" + getItemName(compactedItem));
+            }
+
+            private void Custom2x2StorageRecipes(Item baseItem, Item compactedItem, RecipeOutput outputType, RecipeCategory compressCategory, RecipeCategory decompressCategory){
+                this.shapeless(compressCategory, compactedItem)
+                        .requires(baseItem, 4)
+                        .unlockedBy(getHasName(baseItem), has(baseItem))
+                        .group("crop_blocks")
+                        .save(outputType, getItemName(compactedItem) + "_from_" + getItemName(baseItem));
+                this.shapeless(decompressCategory, baseItem, 4)
+                        .requires(compactedItem, 1)
+                        .unlockedBy(getHasName(compactedItem), has(compactedItem))
+                        .group("crop_from_blocks")
+                        .save(outputType, getItemName(baseItem) + "_from_" + getItemName(baseItem));
+            }
+
+            private void Custom2x2PackingRecipes(Item baseItem, Item packedItem, RecipeOutput outputType, RecipeCategory compressCategory){
+                this.shaped(compressCategory, packedItem)
+                        .pattern("xx")
+                        .pattern("xx")
+                        .define('x', baseItem)
+                        .unlockedBy(getHasName(baseItem), has(baseItem))
+                        .group("crop_blocks")
+                        .save(outputType, getItemName(packedItem) + "_from_" + getItemName(baseItem));
+
             }
         };
     }
@@ -773,5 +853,38 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public @NonNull String getName() {
         return "The Vanilla Expansion Recipes";
+    }
+
+    private static class ConditionalRecipeHelper extends RecipeProvider {
+        public ConditionalRecipeHelper(HolderLookup.Provider registries, RecipeOutput output) {
+            super(registries, output);
+        }
+
+        @Override
+        public void buildRecipes() {}
+
+        public void stonecutter(RecipeCategory category, ItemLike result, ItemLike ingredient) {
+            this.stonecutterResultFromBase(category, result, ingredient);
+        }
+
+        public void stonecutter(RecipeCategory category, ItemLike result, ItemLike ingredient, int count) {
+            this.stonecutterResultFromBase(category, result, ingredient, count);
+        }
+
+        public void slab(RecipeCategory category, ItemLike slab, ItemLike material) {
+            this.slab(category, slab, material);
+        }
+
+        public void wall(RecipeCategory category, ItemLike wall, ItemLike material) {
+            this.wall(category, wall, material);
+        }
+
+        public void chiseled(RecipeCategory category, ItemLike chiseled, ItemLike material) {
+            this.chiseled(category, chiseled, material);
+        }
+
+        public void polished(RecipeCategory category, ItemLike polished, ItemLike material) {
+            this.polished(category, polished, material);
+        }
     }
 }

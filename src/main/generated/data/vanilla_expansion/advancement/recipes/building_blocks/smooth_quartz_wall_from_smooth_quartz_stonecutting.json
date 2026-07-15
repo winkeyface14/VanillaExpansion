@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_quartz_block_set"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_smooth_quartz": {

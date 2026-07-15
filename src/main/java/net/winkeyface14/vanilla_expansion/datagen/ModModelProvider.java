@@ -176,8 +176,21 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_HOE_HEAD, ModelTemplates.FLAT_ITEM);
 
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_AXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_HOE_HEAD, ModelTemplates.FLAT_ITEM);
 
-        //Tool Upgrade Tempalte
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_AXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
+        //Tool Upgrade Template
         itemModelGenerators.generateFlatItem(ItemRegHandler.BASE_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
         //Sword

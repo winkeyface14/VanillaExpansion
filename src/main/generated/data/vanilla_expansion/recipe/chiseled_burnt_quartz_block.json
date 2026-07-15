@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "chiseled_burnt_quartz_block",
   "key": {
-    "#": "vanilla_expansion:burnt_quartz_slab"
+    "#": "vanilla_expansion:burnt_quartz_block"
   },
   "pattern": [
     "#",

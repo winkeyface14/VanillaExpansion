@@ -1,8 +1,15 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "smoked_quartz_block_set"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "chiseled_smoked_quartz_block",
   "key": {
-    "#": "vanilla_expansion:smoked_quartz_slab"
+    "#": "vanilla_expansion:smoked_quartz_block"
   },
   "pattern": [
     "#",

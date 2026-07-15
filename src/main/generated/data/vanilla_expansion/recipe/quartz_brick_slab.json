@@ -1,6 +1,13 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_quartz_block_set"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "quartz_brick_slab",
   "key": {
     "#": "minecraft:quartz_bricks"
   },

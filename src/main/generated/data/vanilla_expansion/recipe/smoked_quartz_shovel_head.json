@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "smoked_quartz_heads"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "vanilla_expansion:smoked_quartz",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "x",
+    "y"
+  ],
+  "result": {
+    "id": "vanilla_expansion:smoked_quartz_shovel_head"
+  }
+}

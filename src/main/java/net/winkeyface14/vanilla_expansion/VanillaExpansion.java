@@ -23,7 +23,6 @@ public class VanillaExpansion implements ModInitializer {
 	public void onInitialize() {
 		MidnightConfig.init(MOD_ID, ConfigHandler.class);
 
-		// Register the condition TYPE
 		ResourceConditions.register(FeatureEnabledCondition.TYPE);
 
 		CreativeTab.registerModCreativeTabs();

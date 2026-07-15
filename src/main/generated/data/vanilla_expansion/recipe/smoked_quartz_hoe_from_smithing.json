@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "smoked_quartz_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:shovels",
+  "result": {
+    "id": "vanilla_expansion:smoked_quartz_hoe"
+  },
+  "template": "vanilla_expansion:smoked_quartz_hoe_head"
+}

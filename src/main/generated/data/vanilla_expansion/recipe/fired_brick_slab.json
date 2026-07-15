@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "fired_brick_slab",
   "key": {
     "#": "vanilla_expansion:fired_bricks"
   },

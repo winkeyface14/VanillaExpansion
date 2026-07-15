@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "coal_chunk"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_coal_chunk": {

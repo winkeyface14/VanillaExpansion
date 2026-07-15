@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "smooth_sandstone_wall",
   "key": {
     "#": "minecraft:smooth_sandstone"
   },

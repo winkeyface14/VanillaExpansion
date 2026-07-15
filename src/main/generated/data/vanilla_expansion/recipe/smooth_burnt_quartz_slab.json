@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "smooth_burnt_quartz_slab",
   "key": {
     "#": "vanilla_expansion:smooth_burnt_quartz"
   },
