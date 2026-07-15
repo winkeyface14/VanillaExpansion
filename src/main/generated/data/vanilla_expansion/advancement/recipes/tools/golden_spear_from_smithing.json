@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "golden_heads"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_golden_spear_tip": {

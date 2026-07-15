@@ -1,11 +1,17 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "compact_crop_blocks"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_barrel_of_apples": {
+    "has_barrel_of_carrots": {
       "conditions": {
         "items": [
           {
-            "items": "vanilla_expansion:barrel_of_apples"
+            "items": "vanilla_expansion:barrel_of_carrots"
           }
         ]
       },
@@ -13,7 +19,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "vanilla_expansion:apple"
+        "recipe": "vanilla_expansion:carrot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +27,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_barrel_of_apples"
+      "has_barrel_of_carrots"
     ]
   ],
   "rewards": {
     "recipes": [
-      "vanilla_expansion:apple"
+      "vanilla_expansion:carrot"
     ]
   }
 }

@@ -6,12 +6,13 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
-import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
+import net.winkeyface14.vanilla_expansion.util.FeatureEnabledCondition;
 import org.jspecify.annotations.NonNull;
 
 import java.util.List;
@@ -31,6 +32,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeProvider(registries, output) {
             @Override
             public void buildRecipes() {
+                RecipeOutput baseTemplateOutput = withConditions(output, new FeatureEnabledCondition("base_template"));
+                RecipeOutput stoneHeadsOutput = withConditions(output, new FeatureEnabledCondition("stone_heads"));
+                RecipeOutput copperHeadsOutput = withConditions(output, new FeatureEnabledCondition("copper_heads"));
+                RecipeOutput ironHeadsOutput = withConditions(output, new FeatureEnabledCondition("iron_heads"));
+                RecipeOutput goldenHeadsOutput = withConditions(output, new FeatureEnabledCondition("golden_heads"));
+                RecipeOutput diamondHeadsOutput = withConditions(output, new FeatureEnabledCondition("diamond_heads"));
+                RecipeOutput emeraldToolsOutput = withConditions(output, new FeatureEnabledCondition("emerald_tools"));
+                RecipeOutput emeraldHeadsOutput = withConditions(output, new FeatureEnabledCondition("emerald_heads"));
+                RecipeOutput emeraldArmorOutput = withConditions(output, new FeatureEnabledCondition("emerald_armor"));
+                RecipeOutput lapisToolsOutput = withConditions(output, new FeatureEnabledCondition("lapis_lazuli_tools"));
+                RecipeOutput lapisArmorOutput = withConditions(output, new FeatureEnabledCondition("lapis_lazuli_armor"));
+                RecipeOutput redstoneToolsOutput = withConditions(output, new FeatureEnabledCondition("redstone_tools"));
+                RecipeOutput redstoneHeadsOutput = withConditions(output, new FeatureEnabledCondition("redstone_heads"));
+                RecipeOutput compactCropBlocksOutput = withConditions(output, new FeatureEnabledCondition("compact_crop_blocks"));
+
                 List<ItemLike> REINFORCED_LEATHER_BLASTABLE = List.of(RAW_REINFORCED_LEATHER);
                 List<ItemLike> BRICK_SMELTABLE = List.of(BRICK);
                 List<ItemLike> BRICK_BLOCK_SMELTABLE = List.of(BRICKS);
@@ -79,12 +95,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, PAPER, RecipeCategory.MISC, PAPER_PILE);
 
                 //Crops Block
+                CustomNineBlockStorageRecipes(APPLE, BARREL_OF_APPLES_BLOCK.asItem(), compactCropBlocksOutput);
+                CustomNineBlockStorageRecipes(CARROT, BARREL_OF_CARROTS_BLOCK.asItem(), compactCropBlocksOutput);
+                CustomNineBlockStorageRecipes(POTATO, BARREL_OF_POTATOES_BLOCK.asItem(), compactCropBlocksOutput);
+                CustomNineBlockStorageRecipes(BEETROOT, BARREL_OF_BEETROOTS_BLOCK.asItem(), compactCropBlocksOutput);
+                CustomNineBlockStorageRecipes(SWEET_BERRIES, BARREL_OF_SWEETBERRIES_BLOCK.asItem(), compactCropBlocksOutput);
+                CustomNineBlockStorageRecipes(CHORUS_FRUIT, BARREL_OF_CHORUS_BLOCK.asItem(), compactCropBlocksOutput);
+                /*
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, APPLE, RecipeCategory.DECORATIONS, BARREL_OF_APPLES_BLOCK);
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, CARROT, RecipeCategory.DECORATIONS, BARREL_OF_CARROTS_BLOCK);
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, POTATO, RecipeCategory.DECORATIONS, BARREL_OF_POTATOES_BLOCK);
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, BEETROOT, RecipeCategory.DECORATIONS, BARREL_OF_BEETROOTS_BLOCK);
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, CHORUS_FRUIT, RecipeCategory.DECORATIONS, BARREL_OF_CHORUS_BLOCK);
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, SWEET_BERRIES, RecipeCategory.DECORATIONS, BARREL_OF_SWEETBERRIES_BLOCK);
+                 */
 
                 //Quartz
                 this.twoByTwoPacker(RecipeCategory.MISC, QUARTZ, QUARTZ_SHARD);
@@ -301,50 +325,51 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Emerald Tools
                 this.nineBlockStorageRecipes(RecipeCategory.MISC, EMERALD_SHARD, RecipeCategory.MISC, EMERALD);
-                registerCustomToolSetRecipes(EMERALD, EMERALD_SWORD, EMERALD_SHOVEL, EMERALD_PICKAXE, EMERALD_AXE, EMERALD_HOE, EMERALD_SPEAR);
+                registerCustomToolSetRecipes(emeraldToolsOutput, EMERALD, EMERALD_SWORD, EMERALD_SHOVEL, EMERALD_PICKAXE, EMERALD_AXE, EMERALD_HOE, EMERALD_SPEAR);
 
                 //Lapis Lazuli Tools
-                registerCustomToolSetRecipes(LAPIS_LAZULI, LAPIS_LAZULI_SWORD, LAPIS_LAZULI_SHOVEL, LAPIS_LAZULI_PICKAXE, LAPIS_LAZULI_AXE, LAPIS_LAZULI_HOE, LAPIS_LAZULI_SPEAR);
+                registerCustomToolSetRecipes(lapisToolsOutput, LAPIS_LAZULI, LAPIS_LAZULI_SWORD, LAPIS_LAZULI_SHOVEL, LAPIS_LAZULI_PICKAXE, LAPIS_LAZULI_AXE, LAPIS_LAZULI_HOE, LAPIS_LAZULI_SPEAR);
 
                 //Redstone Tools
-                registerCustomToolSetRecipes(REDSTONE_BLOCK, REDSTONE_SWORD, REDSTONE_SHOVEL, REDSTONE_PICKAXE, REDSTONE_AXE, REDSTONE_HOE, REDSTONE_SPEAR);
+                registerCustomToolSetRecipes(redstoneToolsOutput, REDSTONE_BLOCK, REDSTONE_SWORD, REDSTONE_SHOVEL, REDSTONE_PICKAXE, REDSTONE_AXE, REDSTONE_HOE, REDSTONE_SPEAR);
 
                 //Quartz Tools
-                registerCustomToolSetRecipes(QUARTZ, QUARTZ_SWORD, QUARTZ_SHOVEL, QUARTZ_PICKAXE, QUARTZ_AXE, QUARTZ_HOE, QUARTZ_SPEAR);
+                registerCustomToolSetRecipes(output, QUARTZ, QUARTZ_SWORD, QUARTZ_SHOVEL, QUARTZ_PICKAXE, QUARTZ_AXE, QUARTZ_HOE, QUARTZ_SPEAR);
 
                 //Smoked Quartz Tools
-                registerCustomToolSetRecipes(SMOKED_QUARTZ, SMOKED_QUARTZ_SWORD, SMOKED_QUARTZ_SHOVEL, SMOKED_QUARTZ_PICKAXE, SMOKED_QUARTZ_AXE, SMOKED_QUARTZ_HOE, SMOKED_QUARTZ_SPEAR);
+                registerCustomToolSetRecipes(output, SMOKED_QUARTZ, SMOKED_QUARTZ_SWORD, SMOKED_QUARTZ_SHOVEL, SMOKED_QUARTZ_PICKAXE, SMOKED_QUARTZ_AXE, SMOKED_QUARTZ_HOE, SMOKED_QUARTZ_SPEAR);
 
                 //Burnt Quartz Tools
-                registerCustomToolSetRecipes(BURNT_QUARTZ, BURNT_QUARTZ_SWORD, BURNT_QUARTZ_SHOVEL, BURNT_QUARTZ_PICKAXE, BURNT_QUARTZ_AXE, BURNT_QUARTZ_HOE, BURNT_QUARTZ_SPEAR);
+                registerCustomToolSetRecipes(output, BURNT_QUARTZ, BURNT_QUARTZ_SWORD, BURNT_QUARTZ_SHOVEL, BURNT_QUARTZ_PICKAXE, BURNT_QUARTZ_AXE, BURNT_QUARTZ_HOE, BURNT_QUARTZ_SPEAR);
 
                 //Emerald Armor
-                registerCustomArmorSetRecipes(EMERALD, EMERALD_HELMET, EMERALD_CHESTPLATE, EMERALD_LEGGINGS, EMERALD_BOOTS);
+                registerCustomArmorSetRecipes(emeraldArmorOutput, EMERALD, EMERALD_HELMET, EMERALD_CHESTPLATE, EMERALD_LEGGINGS, EMERALD_BOOTS);
 
                 //Lapis Lazuli Armor
-                registerCustomArmorSetRecipes(LAPIS_LAZULI, LAPIS_LAZULI_HELMET, LAPIS_LAZULI_CHESTPLATE, LAPIS_LAZULI_LEGGINGS, LAPIS_LAZULI_BOOTS);
+                registerCustomArmorSetRecipes(lapisArmorOutput, LAPIS_LAZULI, LAPIS_LAZULI_HELMET, LAPIS_LAZULI_CHESTPLATE, LAPIS_LAZULI_LEGGINGS, LAPIS_LAZULI_BOOTS);
 
                 //Reinforced Leather Armor
-                registerCustomArmorSetRecipes(REINFORCED_LEATHER, REINFORCED_LEATHER_HELMET, REINFORCED_LEATHER_CHESTPLATE, REINFORCED_LEATHER_LEGGINGS, REINFORCED_LEATHER_BOOTS);
+                registerCustomArmorSetRecipes(output, REINFORCED_LEATHER, REINFORCED_LEATHER_HELMET, REINFORCED_LEATHER_CHESTPLATE, REINFORCED_LEATHER_LEGGINGS, REINFORCED_LEATHER_BOOTS);
 
                 //Armadillo Scute Armor
-                registerCustomArmorSetRecipes(ARMADILLO_SCUTE, ARMADILLO_SCUTE_HELMET, ARMADILLO_SCUTE_CHESTPLATE, ARMADILLO_SCUTE_LEGGINGS, ARMADILLO_SCUTE_BOOTS);
+                registerCustomArmorSetRecipes(output, ARMADILLO_SCUTE, ARMADILLO_SCUTE_HELMET, ARMADILLO_SCUTE_CHESTPLATE, ARMADILLO_SCUTE_LEGGINGS, ARMADILLO_SCUTE_BOOTS);
 
                 //Template Recipes
                 this.shaped(RecipeCategory.MISC, BASE_TEMPLATE, 8)
                         .pattern("xy")
+                        .pattern("yx")
                         .define('x', ItemTags.PLANKS)
                         .define('y', FLINT)
                         .unlockedBy(getHasName(FLINT), has(FLINT))
-                        .save(output);
+                        .save(baseTemplateOutput);
 
                 //Tool and Weapon Heads
-                registerToolHeadsRecipe(IRON_INGOT, IRON_SWORD_BLADE,IRON_SPEAR_TIP, IRON_PICKAXE_HEAD, IRON_AXE_HEAD, IRON_SHOVEL_HEAD, IRON_HOE_HEAD);
-                registerToolHeadsRecipe(COPPER_INGOT, COPPER_SWORD_BLADE,COPPER_SPEAR_TIP, COPPER_PICKAXE_HEAD, COPPER_AXE_HEAD, COPPER_SHOVEL_HEAD, COPPER_HOE_HEAD);
-                registerToolHeadsRecipe(GOLD_INGOT, GOLD_SWORD_BLADE,GOLD_SPEAR_TIP, GOLD_PICKAXE_HEAD, GOLD_AXE_HEAD, GOLD_SHOVEL_HEAD, GOLD_HOE_HEAD);
-                registerToolHeadsRecipe(DIAMOND, DIAMOND_SWORD_BLADE,DIAMOND_SPEAR_TIP, DIAMOND_PICKAXE_HEAD, DIAMOND_AXE_HEAD, DIAMOND_SHOVEL_HEAD, DIAMOND_HOE_HEAD);
-                registerToolHeadsRecipe(EMERALD, EMERALD_SWORD_BLADE,EMERALD_SPEAR_TIP, EMERALD_PICKAXE_HEAD, EMERALD_AXE_HEAD, EMERALD_SHOVEL_HEAD, EMERALD_HOE_HEAD);
-                registerToolHeadsRecipe(REDSTONE_BLOCK, REDSTONE_SWORD_BLADE,REDSTONE_SPEAR_TIP, REDSTONE_PICKAXE_HEAD, REDSTONE_AXE_HEAD, REDSTONE_SHOVEL_HEAD, REDSTONE_HOE_HEAD);
+                registerToolHeadsRecipe(ironHeadsOutput, IRON_INGOT, IRON_SWORD_BLADE,IRON_SPEAR_TIP, IRON_PICKAXE_HEAD, IRON_AXE_HEAD, IRON_SHOVEL_HEAD, IRON_HOE_HEAD);
+                registerToolHeadsRecipe(copperHeadsOutput, COPPER_INGOT, COPPER_SWORD_BLADE,COPPER_SPEAR_TIP, COPPER_PICKAXE_HEAD, COPPER_AXE_HEAD, COPPER_SHOVEL_HEAD, COPPER_HOE_HEAD);
+                registerToolHeadsRecipe(goldenHeadsOutput, GOLD_INGOT, GOLD_SWORD_BLADE,GOLD_SPEAR_TIP, GOLD_PICKAXE_HEAD, GOLD_AXE_HEAD, GOLD_SHOVEL_HEAD, GOLD_HOE_HEAD);
+                registerToolHeadsRecipe(diamondHeadsOutput, DIAMOND, DIAMOND_SWORD_BLADE,DIAMOND_SPEAR_TIP, DIAMOND_PICKAXE_HEAD, DIAMOND_AXE_HEAD, DIAMOND_SHOVEL_HEAD, DIAMOND_HOE_HEAD);
+                registerToolHeadsRecipe(emeraldHeadsOutput, EMERALD, EMERALD_SWORD_BLADE,EMERALD_SPEAR_TIP, EMERALD_PICKAXE_HEAD, EMERALD_AXE_HEAD, EMERALD_SHOVEL_HEAD, EMERALD_HOE_HEAD);
+                registerToolHeadsRecipe(redstoneHeadsOutput, REDSTONE_BLOCK, REDSTONE_SWORD_BLADE,REDSTONE_SPEAR_TIP, REDSTONE_PICKAXE_HEAD, REDSTONE_AXE_HEAD, REDSTONE_SHOVEL_HEAD, REDSTONE_HOE_HEAD);
                 //registerToolHeadsRecipe(LAPIS_LAZULI, LAPIS_LAZULI_SWORD_BLADE,LAPIS_LAZULI_SPEAR_TIP, LAPIS_LAZULI_PICKAXE_HEAD, LAPIS_LAZULI_AXE_HEAD, LAPIS_LAZULI_SHOVEL_HEAD, LAPIS_LAZULI_HOE_HEAD);
 
 
@@ -357,7 +382,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(stoneHeadsOutput);
 
                 //Pickaxe Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_PICKAXE_HEAD)
@@ -367,7 +392,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(stoneHeadsOutput);
 
                 //Axe Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_AXE_HEAD)
@@ -377,7 +402,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(stoneHeadsOutput);
 
                 //Shovel Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_SHOVEL_HEAD)
@@ -387,7 +412,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(stoneHeadsOutput);
 
                 //Hoe Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_HOE_HEAD)
@@ -397,7 +422,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(stoneHeadsOutput);
 
                 //Spear Tip Recipes
                 this.shaped(RecipeCategory.MISC, STONE_SPEAR_TIP)
@@ -407,7 +432,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(stoneHeadsOutput);
 
 
                 //Smithing Recipes
@@ -425,64 +450,64 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomNetheriteUpgrade(EMPOWERED_NETHERITE, DIAMOND_BOOTS, EMPOWERED_NETHERITE_BOOTS, RecipeCategory.COMBAT);
 
                 //Swords
-                registerCustomToolUpgrade(STONE_SWORD_BLADE, ItemTags.SWORDS, STONE_SWORD, RecipeCategory.COMBAT);
-                registerCustomToolUpgrade(COPPER_SWORD_BLADE, ItemTags.SWORDS, COPPER_SWORD, RecipeCategory.COMBAT);
-                registerCustomToolUpgrade(IRON_SWORD_BLADE, ItemTags.SWORDS, IRON_SWORD, RecipeCategory.COMBAT);
-                registerCustomToolUpgrade(REDSTONE_SWORD_BLADE, ItemTags.SWORDS, REDSTONE_SWORD, RecipeCategory.COMBAT);
-                registerCustomToolUpgrade(EMERALD_SWORD_BLADE, ItemTags.SWORDS, EMERALD_SWORD, RecipeCategory.COMBAT);
-                registerCustomToolUpgrade(GOLD_SWORD_BLADE, ItemTags.SWORDS, GOLDEN_SWORD, RecipeCategory.COMBAT);
-                registerCustomToolUpgrade(DIAMOND_SWORD_BLADE, ItemTags.SWORDS, DIAMOND_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(stoneHeadsOutput, STONE_SWORD_BLADE, ItemTags.SWORDS, STONE_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(copperHeadsOutput, COPPER_SWORD_BLADE, ItemTags.SWORDS, COPPER_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(ironHeadsOutput, IRON_SWORD_BLADE, ItemTags.SWORDS, IRON_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(redstoneHeadsOutput, REDSTONE_SWORD_BLADE, ItemTags.SWORDS, REDSTONE_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_SWORD_BLADE, ItemTags.SWORDS, EMERALD_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(goldenHeadsOutput, GOLD_SWORD_BLADE, ItemTags.SWORDS, GOLDEN_SWORD, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_SWORD_BLADE, ItemTags.SWORDS, DIAMOND_SWORD, RecipeCategory.COMBAT);
 
                 //Pickaxes
-                registerCustomToolUpgrade(STONE_PICKAXE_HEAD, ItemTags.PICKAXES, STONE_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(COPPER_PICKAXE_HEAD, ItemTags.PICKAXES, COPPER_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(IRON_PICKAXE_HEAD, ItemTags.PICKAXES, IRON_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(REDSTONE_PICKAXE_HEAD, ItemTags.PICKAXES, REDSTONE_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(EMERALD_PICKAXE_HEAD, ItemTags.PICKAXES, EMERALD_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(GOLD_PICKAXE_HEAD, ItemTags.PICKAXES, GOLDEN_PICKAXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(DIAMOND_PICKAXE_HEAD, ItemTags.PICKAXES, DIAMOND_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(stoneHeadsOutput, STONE_PICKAXE_HEAD, ItemTags.PICKAXES, STONE_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(copperHeadsOutput, COPPER_PICKAXE_HEAD, ItemTags.PICKAXES, COPPER_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(ironHeadsOutput, IRON_PICKAXE_HEAD, ItemTags.PICKAXES, IRON_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(redstoneHeadsOutput, REDSTONE_PICKAXE_HEAD, ItemTags.PICKAXES, REDSTONE_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_PICKAXE_HEAD, ItemTags.PICKAXES, EMERALD_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(goldenHeadsOutput, GOLD_PICKAXE_HEAD, ItemTags.PICKAXES, GOLDEN_PICKAXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_PICKAXE_HEAD, ItemTags.PICKAXES, DIAMOND_PICKAXE, RecipeCategory.TOOLS);
 
                 //Axes
-                registerCustomToolUpgrade(STONE_AXE_HEAD, ItemTags.AXES, STONE_AXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(COPPER_AXE_HEAD, ItemTags.AXES, COPPER_AXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(IRON_AXE_HEAD, ItemTags.AXES, IRON_AXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(REDSTONE_AXE_HEAD, ItemTags.AXES, REDSTONE_AXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(EMERALD_AXE_HEAD, ItemTags.AXES, EMERALD_AXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(GOLD_AXE_HEAD, ItemTags.AXES, GOLDEN_AXE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(DIAMOND_AXE_HEAD, ItemTags.AXES, DIAMOND_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(stoneHeadsOutput, STONE_AXE_HEAD, ItemTags.AXES, STONE_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(copperHeadsOutput, COPPER_AXE_HEAD, ItemTags.AXES, COPPER_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(ironHeadsOutput, IRON_AXE_HEAD, ItemTags.AXES, IRON_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(redstoneHeadsOutput, REDSTONE_AXE_HEAD, ItemTags.AXES, REDSTONE_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_AXE_HEAD, ItemTags.AXES, EMERALD_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(goldenHeadsOutput, GOLD_AXE_HEAD, ItemTags.AXES, GOLDEN_AXE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_AXE_HEAD, ItemTags.AXES, DIAMOND_AXE, RecipeCategory.TOOLS);
 
                 //Shovels
-                registerCustomToolUpgrade(STONE_SHOVEL_HEAD, ItemTags.SHOVELS, STONE_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(COPPER_SHOVEL_HEAD, ItemTags.SHOVELS, COPPER_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(IRON_SHOVEL_HEAD, ItemTags.SHOVELS, IRON_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(REDSTONE_SHOVEL_HEAD, ItemTags.SHOVELS, REDSTONE_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(EMERALD_SHOVEL_HEAD, ItemTags.SHOVELS, EMERALD_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(GOLD_SHOVEL_HEAD, ItemTags.SHOVELS, GOLDEN_SHOVEL, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(DIAMOND_SHOVEL_HEAD, ItemTags.SHOVELS, DIAMOND_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(stoneHeadsOutput, STONE_SHOVEL_HEAD, ItemTags.SHOVELS, STONE_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(copperHeadsOutput, COPPER_SHOVEL_HEAD, ItemTags.SHOVELS, COPPER_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(ironHeadsOutput, IRON_SHOVEL_HEAD, ItemTags.SHOVELS, IRON_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(redstoneHeadsOutput, REDSTONE_SHOVEL_HEAD, ItemTags.SHOVELS, REDSTONE_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_SHOVEL_HEAD, ItemTags.SHOVELS, EMERALD_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(goldenHeadsOutput, GOLD_SHOVEL_HEAD, ItemTags.SHOVELS, GOLDEN_SHOVEL, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_SHOVEL_HEAD, ItemTags.SHOVELS, DIAMOND_SHOVEL, RecipeCategory.TOOLS);
 
                 //Hoes
-                registerCustomToolUpgrade(STONE_HOE_HEAD, ItemTags.SHOVELS, STONE_HOE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(COPPER_HOE_HEAD, ItemTags.SHOVELS, COPPER_HOE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(IRON_HOE_HEAD, ItemTags.SHOVELS, IRON_HOE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(REDSTONE_HOE_HEAD, ItemTags.SHOVELS, REDSTONE_HOE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(EMERALD_HOE_HEAD, ItemTags.SHOVELS, EMERALD_HOE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(GOLD_HOE_HEAD, ItemTags.SHOVELS, GOLDEN_HOE, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(DIAMOND_HOE_HEAD, ItemTags.SHOVELS, DIAMOND_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(stoneHeadsOutput, STONE_HOE_HEAD, ItemTags.SHOVELS, STONE_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(copperHeadsOutput, COPPER_HOE_HEAD, ItemTags.SHOVELS, COPPER_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(ironHeadsOutput, IRON_HOE_HEAD, ItemTags.SHOVELS, IRON_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(redstoneHeadsOutput, REDSTONE_HOE_HEAD, ItemTags.SHOVELS, REDSTONE_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_HOE_HEAD, ItemTags.SHOVELS, EMERALD_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(goldenHeadsOutput, GOLD_HOE_HEAD, ItemTags.SHOVELS, GOLDEN_HOE, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_HOE_HEAD, ItemTags.SHOVELS, DIAMOND_HOE, RecipeCategory.TOOLS);
 
                 //Spears
-                registerCustomToolUpgrade(STONE_SPEAR_TIP, ItemTags.SPEARS, STONE_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(COPPER_SPEAR_TIP, ItemTags.SPEARS, COPPER_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(IRON_SPEAR_TIP, ItemTags.SPEARS, IRON_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(REDSTONE_SPEAR_TIP, ItemTags.SPEARS, REDSTONE_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(EMERALD_SPEAR_TIP, ItemTags.SPEARS, EMERALD_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(GOLD_SPEAR_TIP, ItemTags.SPEARS, GOLDEN_SPEAR, RecipeCategory.TOOLS);
-                registerCustomToolUpgrade(DIAMOND_SPEAR_TIP, ItemTags.SPEARS, DIAMOND_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(stoneHeadsOutput, STONE_SPEAR_TIP, ItemTags.SPEARS, STONE_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(copperHeadsOutput, COPPER_SPEAR_TIP, ItemTags.SPEARS, COPPER_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(ironHeadsOutput, IRON_SPEAR_TIP, ItemTags.SPEARS, IRON_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(redstoneHeadsOutput, REDSTONE_SPEAR_TIP, ItemTags.SPEARS, REDSTONE_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(emeraldHeadsOutput, EMERALD_SPEAR_TIP, ItemTags.SPEARS, EMERALD_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(goldenHeadsOutput, GOLD_SPEAR_TIP, ItemTags.SPEARS, GOLDEN_SPEAR, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(diamondHeadsOutput, DIAMOND_SPEAR_TIP, ItemTags.SPEARS, DIAMOND_SPEAR, RecipeCategory.TOOLS);
             }
 
 
 
             //Custom Methods
-            private void registerCustomToolUpgrade(Item template, TagKey<Item> baseItem, Item upgradedResult, RecipeCategory category) {
+            private void registerCustomToolUpgrade(RecipeOutput outputType, Item template, TagKey<Item> baseItem, Item upgradedResult, RecipeCategory category) {
                 SmithingTransformRecipeBuilder.smithing(
                                 Ingredient.of(template),
                                 this.tag(baseItem),
@@ -491,7 +516,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 upgradedResult
                         )
                         .unlocks("has_" + getItemName(template), has(template))
-                        .save(output, getItemName(upgradedResult) + "_from_smithing");
+                        .save(outputType, getItemName(upgradedResult) + "_from_smithing");
             }
 
             private void registerCustomNetheriteUpgrade(Item material, Item baseItem, Item upgradedResult, RecipeCategory category) {
@@ -506,7 +531,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output, getItemName(upgradedResult) + "_from_smithing_with_" + getItemName(baseItem));
             }
 
-            private void registerCustomToolSetRecipes(Item materialItem, Item resultSword, Item resultShovel, Item resultPickaxe, Item resultAxe, Item resultHoe,Item resultSpear) {
+            private void registerCustomToolSetRecipes(RecipeOutput outputType, Item materialItem, Item resultSword, Item resultShovel, Item resultPickaxe, Item resultAxe, Item resultHoe, Item resultSpear) {
                 this.shaped(RecipeCategory.COMBAT,resultSword)
                         .pattern("x")
                         .pattern("x")
@@ -514,7 +539,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', STICK)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
                 this.shaped(RecipeCategory.TOOLS,resultShovel)
                         .pattern("x")
                         .pattern("y")
@@ -522,7 +547,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', STICK)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
                 this.shaped(RecipeCategory.TOOLS,resultPickaxe)
                         .pattern("xxx")
                         .pattern(" y ")
@@ -530,7 +555,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', STICK)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
                 this.shaped(RecipeCategory.TOOLS,resultAxe)
                         .pattern("xx")
                         .pattern("xy")
@@ -538,7 +563,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', STICK)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
                 this.shaped(RecipeCategory.TOOLS,resultHoe)
                         .pattern("xx")
                         .pattern(" y")
@@ -546,7 +571,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', STICK)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
                 this.shaped(RecipeCategory.COMBAT,resultSpear)
                         .pattern("  x")
                         .pattern(" y ")
@@ -554,48 +579,48 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', STICK)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
             }
 
-            private void registerCustomArmorSetRecipes(Item materialItem, Item resultHelmet, Item resultChestplate, Item resultLeggings, Item resultBoots) {
+            private void registerCustomArmorSetRecipes(RecipeOutput outputType, Item materialItem, Item resultHelmet, Item resultChestplate, Item resultLeggings, Item resultBoots) {
                 this.shaped(RecipeCategory.COMBAT,resultHelmet)
                         .pattern("xxx")
                         .pattern("x x")
                         .define('x', materialItem)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
                 this.shaped(RecipeCategory.COMBAT,resultChestplate)
                         .pattern("x x")
                         .pattern("xxx")
                         .pattern("xxx")
                         .define('x', materialItem)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
                 this.shaped(RecipeCategory.COMBAT,resultLeggings)
                         .pattern("xxx")
                         .pattern("x x")
                         .pattern("x x")
                         .define('x', materialItem)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
                 this.shaped(RecipeCategory.COMBAT,resultBoots)
                         .pattern("x x")
                         .pattern("x x")
                         .define('x', materialItem)
                         .unlockedBy(getHasName(materialItem), has(materialItem))
-                        .save(output);
+                        .save(outputType);
             }
 
-            private void registerToolHeadsRecipe(Item materialItem, Item resultSword, Item resultSpear, Item resultPickaxe, Item resultAxe, Item resultShovel, Item resultHoe) {
-                registerCustomSwordBladeRecipe(materialItem, resultSword);
-                registerCustomSpearTipRecipe(materialItem, resultSpear);
-                registerCustomPickaxeHeadRecipe(materialItem, resultPickaxe);
-                registerCustomAxeHeadRecipe(materialItem, resultAxe);
-                registerCustomShovelHeadRecipe(materialItem, resultShovel);
-                registerCustomHoeHeadRecipe(materialItem, resultHoe);
+            private void registerToolHeadsRecipe(RecipeOutput outputType,Item materialItem, Item resultSword, Item resultSpear, Item resultPickaxe, Item resultAxe, Item resultShovel, Item resultHoe) {
+                registerCustomSwordBladeRecipe(materialItem, resultSword, outputType);
+                registerCustomSpearTipRecipe(materialItem, resultSpear, outputType);
+                registerCustomPickaxeHeadRecipe(materialItem, resultPickaxe, outputType);
+                registerCustomAxeHeadRecipe(materialItem, resultAxe, outputType);
+                registerCustomShovelHeadRecipe(materialItem, resultShovel, outputType);
+                registerCustomHoeHeadRecipe(materialItem, resultHoe, outputType);
             }
 
-            private void registerCustomSwordBladeRecipe(Item materialItem, Item resultItem) {
+            private void registerCustomSwordBladeRecipe(Item materialItem, Item resultItem, RecipeOutput outputType) {
                 Item base_template = BASE_TEMPLATE;
                 this.shaped(RecipeCategory.MISC,resultItem)
                         .pattern("x")
@@ -604,10 +629,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(outputType);
             }
 
-            private void registerCustomPickaxeHeadRecipe(Item materialItem, Item resultItem) {
+            private void registerCustomPickaxeHeadRecipe(Item materialItem, Item resultItem, RecipeOutput outputType) {
                 Item base_template = BASE_TEMPLATE;
                 this.shaped(RecipeCategory.MISC,resultItem)
                         .pattern("xxx")
@@ -615,10 +640,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(outputType);
             }
 
-            private void registerCustomAxeHeadRecipe(Item materialItem, Item resultItem) {
+            private void registerCustomAxeHeadRecipe(Item materialItem, Item resultItem, RecipeOutput outputType) {
                 Item base_template = BASE_TEMPLATE;
                 this.shaped(RecipeCategory.MISC,resultItem)
                         .pattern("xx")
@@ -626,10 +651,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(outputType);
             }
 
-            private void registerCustomShovelHeadRecipe(Item materialItem, Item resultItem) {
+            private void registerCustomShovelHeadRecipe(Item materialItem, Item resultItem, RecipeOutput outputType) {
                 Item base_template = BASE_TEMPLATE;
                 this.shaped(RecipeCategory.MISC,resultItem)
                         .pattern("x")
@@ -637,10 +662,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(outputType);
             }
 
-            private void registerCustomHoeHeadRecipe(Item materialItem, Item resultItem) {
+            private void registerCustomHoeHeadRecipe(Item materialItem, Item resultItem, RecipeOutput outputType) {
                 Item base_template = BASE_TEMPLATE;
                 this.shaped(RecipeCategory.MISC,resultItem)
                         .pattern("xx")
@@ -648,10 +673,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(outputType);
             }
 
-            private void registerCustomSpearTipRecipe(Item materialItem, Item resultItem) {
+            private void registerCustomSpearTipRecipe(Item materialItem, Item resultItem, RecipeOutput outputType) {
                 Item base_template = BASE_TEMPLATE;
                 this.shaped(RecipeCategory.MISC,resultItem)
                         .pattern(" x")
@@ -659,7 +684,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('x', materialItem)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
-                        .save(output);
+                        .save(outputType);
             }
 
             private void registerBlockSetRecipes(Item baseItem, Item resultSlab, Item resultStairs, Item resultWall, Item resultFence){
@@ -728,6 +753,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     this.stonecutterResultFromBase(categoryBuilding,resultPolished, baseItem);
                     this.polished(categoryBuilding, resultPolished, baseItem);
                 }
+            }
+
+            private void CustomNineBlockStorageRecipes(Item cropItem, Item cropBlock, RecipeOutput outputType){
+                this.shapeless(RecipeCategory.BUILDING_BLOCKS, cropBlock)
+                        .requires(cropItem, 9)
+                        .unlockedBy(getHasName(cropItem), has(cropItem))
+                        .group("crop_blocks")
+                        .save(outputType);
+                this.shapeless(RecipeCategory.FOOD, cropItem, 9)
+                        .requires(cropBlock, 1)
+                        .unlockedBy(getHasName(cropBlock), has(cropBlock))
+                        .group("crop_from_blocks")
+                        .save(outputType);
             }
         };
     }

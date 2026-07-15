@@ -1,11 +1,18 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "base_template"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "x": "#minecraft:planks",
     "y": "minecraft:flint"
   },
   "pattern": [
-    "xy"
+    "xy",
+    "yx"
   ],
   "result": {
     "count": 8,

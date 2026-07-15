@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "redstone_heads"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "x": "minecraft:redstone_block",

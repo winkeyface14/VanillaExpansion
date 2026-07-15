@@ -1,12 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": "minecraft:chorus_fruit"
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "compact_crop_blocks"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "crop_blocks",
+  "ingredients": [
+    "minecraft:chorus_fruit",
+    "minecraft:chorus_fruit",
+    "minecraft:chorus_fruit",
+    "minecraft:chorus_fruit",
+    "minecraft:chorus_fruit",
+    "minecraft:chorus_fruit",
+    "minecraft:chorus_fruit",
+    "minecraft:chorus_fruit",
+    "minecraft:chorus_fruit"
   ],
   "result": {
     "id": "vanilla_expansion:barrel_of_chorus_fruits"

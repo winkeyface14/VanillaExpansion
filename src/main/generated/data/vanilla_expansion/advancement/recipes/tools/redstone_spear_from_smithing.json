@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "redstone_heads"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_redstone_spear_tip": {

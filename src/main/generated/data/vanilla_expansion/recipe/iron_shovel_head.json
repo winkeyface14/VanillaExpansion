@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "iron_heads"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "x": "minecraft:iron_ingot",

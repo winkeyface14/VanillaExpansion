@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "golden_heads"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "x": "minecraft:gold_ingot",

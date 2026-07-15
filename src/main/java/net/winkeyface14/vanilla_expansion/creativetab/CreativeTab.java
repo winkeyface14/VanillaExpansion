@@ -10,6 +10,7 @@ import net.minecraft.world.item.ItemStack;
 import net.winkeyface14.vanilla_expansion.VanillaExpansion;
 import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
 import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
+import net.winkeyface14.vanilla_expansion.util.ConfigHandler;
 
 public class CreativeTab {
     public static final CreativeModeTab TVE_ITEMS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "tve_items"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.COAL_CHUNK))
@@ -39,67 +40,85 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.BUNDLED_STICKS);
                 output.accept(ItemRegHandler.PAPER_PILE);
 
-                output.accept(ItemRegHandler.BASE_TEMPLATE);
+                if (ConfigHandler.enableBaseTemplate){
+                    output.accept(ItemRegHandler.BASE_TEMPLATE);
+                }
 
-                output.accept(ItemRegHandler.STONE_SWORD_BLADE);
-                output.accept(ItemRegHandler.STONE_SPEAR_TIP);
-                output.accept(ItemRegHandler.STONE_PICKAXE_HEAD);
-                output.accept(ItemRegHandler.STONE_AXE_HEAD);
-                output.accept(ItemRegHandler.STONE_SHOVEL_HEAD);
-                output.accept(ItemRegHandler.STONE_HOE_HEAD);
+                if (ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableStoneHeads, true)){
+                    output.accept(ItemRegHandler.STONE_SWORD_BLADE);
+                    output.accept(ItemRegHandler.STONE_SPEAR_TIP);
+                    output.accept(ItemRegHandler.STONE_PICKAXE_HEAD);
+                    output.accept(ItemRegHandler.STONE_AXE_HEAD);
+                    output.accept(ItemRegHandler.STONE_SHOVEL_HEAD);
+                    output.accept(ItemRegHandler.STONE_HOE_HEAD);
+                }
 
-                output.accept(ItemRegHandler.COPPER_SWORD_BLADE);
-                output.accept(ItemRegHandler.COPPER_SPEAR_TIP);
-                output.accept(ItemRegHandler.COPPER_PICKAXE_HEAD);
-                output.accept(ItemRegHandler.COPPER_AXE_HEAD);
-                output.accept(ItemRegHandler.COPPER_SHOVEL_HEAD);
-                output.accept(ItemRegHandler.COPPER_HOE_HEAD);
+                if (ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableCopperHeads, true)){
+                    output.accept(ItemRegHandler.COPPER_SWORD_BLADE);
+                    output.accept(ItemRegHandler.COPPER_SPEAR_TIP);
+                    output.accept(ItemRegHandler.COPPER_PICKAXE_HEAD);
+                    output.accept(ItemRegHandler.COPPER_AXE_HEAD);
+                    output.accept(ItemRegHandler.COPPER_SHOVEL_HEAD);
+                    output.accept(ItemRegHandler.COPPER_HOE_HEAD);
+                }
 
-                output.accept(ItemRegHandler.IRON_SWORD_BLADE);
-                output.accept(ItemRegHandler.IRON_SPEAR_TIP);
-                output.accept(ItemRegHandler.IRON_PICKAXE_HEAD);
-                output.accept(ItemRegHandler.IRON_AXE_HEAD);
-                output.accept(ItemRegHandler.IRON_SHOVEL_HEAD);
-                output.accept(ItemRegHandler.IRON_HOE_HEAD);
+                if (ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableIronHeads, true)){
+                    output.accept(ItemRegHandler.IRON_SWORD_BLADE);
+                    output.accept(ItemRegHandler.IRON_SPEAR_TIP);
+                    output.accept(ItemRegHandler.IRON_PICKAXE_HEAD);
+                    output.accept(ItemRegHandler.IRON_AXE_HEAD);
+                    output.accept(ItemRegHandler.IRON_SHOVEL_HEAD);
+                    output.accept(ItemRegHandler.IRON_HOE_HEAD);
+                }
 
-                output.accept(ItemRegHandler.GOLD_SWORD_BLADE);
-                output.accept(ItemRegHandler.GOLD_SPEAR_TIP);
-                output.accept(ItemRegHandler.GOLD_PICKAXE_HEAD);
-                output.accept(ItemRegHandler.GOLD_AXE_HEAD);
-                output.accept(ItemRegHandler.GOLD_SHOVEL_HEAD);
-                output.accept(ItemRegHandler.GOLD_HOE_HEAD);
+                if (ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableGoldenHeads, true)){
+                    output.accept(ItemRegHandler.GOLD_SWORD_BLADE);
+                    output.accept(ItemRegHandler.GOLD_SPEAR_TIP);
+                    output.accept(ItemRegHandler.GOLD_PICKAXE_HEAD);
+                    output.accept(ItemRegHandler.GOLD_AXE_HEAD);
+                    output.accept(ItemRegHandler.GOLD_SHOVEL_HEAD);
+                    output.accept(ItemRegHandler.GOLD_HOE_HEAD);
+                }
 
-                output.accept(ItemRegHandler.DIAMOND_SWORD_BLADE);
-                output.accept(ItemRegHandler.DIAMOND_SPEAR_TIP);
-                output.accept(ItemRegHandler.DIAMOND_PICKAXE_HEAD);
-                output.accept(ItemRegHandler.DIAMOND_AXE_HEAD);
-                output.accept(ItemRegHandler.DIAMOND_SHOVEL_HEAD);
-                output.accept(ItemRegHandler.DIAMOND_HOE_HEAD);
+                if (ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableDiamondHeads, true)){
+                    output.accept(ItemRegHandler.DIAMOND_SWORD_BLADE);
+                    output.accept(ItemRegHandler.DIAMOND_SPEAR_TIP);
+                    output.accept(ItemRegHandler.DIAMOND_PICKAXE_HEAD);
+                    output.accept(ItemRegHandler.DIAMOND_AXE_HEAD);
+                    output.accept(ItemRegHandler.DIAMOND_SHOVEL_HEAD);
+                    output.accept(ItemRegHandler.DIAMOND_HOE_HEAD);
+                }
 
-                output.accept(ItemRegHandler.REDSTONE_SWORD_BLADE);
-                output.accept(ItemRegHandler.REDSTONE_SPEAR_TIP);
-                output.accept(ItemRegHandler.REDSTONE_PICKAXE_HEAD);
-                output.accept(ItemRegHandler.REDSTONE_AXE_HEAD);
-                output.accept(ItemRegHandler.REDSTONE_SHOVEL_HEAD);
-                output.accept(ItemRegHandler.REDSTONE_HOE_HEAD);
+                if (ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableRedstoneHeads, ConfigHandler.enableRedstoneTools)){
+                    output.accept(ItemRegHandler.REDSTONE_SWORD_BLADE);
+                    output.accept(ItemRegHandler.REDSTONE_SPEAR_TIP);
+                    output.accept(ItemRegHandler.REDSTONE_PICKAXE_HEAD);
+                    output.accept(ItemRegHandler.REDSTONE_AXE_HEAD);
+                    output.accept(ItemRegHandler.REDSTONE_SHOVEL_HEAD);
+                    output.accept(ItemRegHandler.REDSTONE_HOE_HEAD);
+                }
 
-                output.accept(ItemRegHandler.EMERALD_SWORD_BLADE);
-                output.accept(ItemRegHandler.EMERALD_SPEAR_TIP);
-                output.accept(ItemRegHandler.EMERALD_PICKAXE_HEAD);
-                output.accept(ItemRegHandler.EMERALD_AXE_HEAD);
-                output.accept(ItemRegHandler.EMERALD_SHOVEL_HEAD);
-                output.accept(ItemRegHandler.EMERALD_HOE_HEAD);
+                if (ConfigHandler.isVanillaHeadsEnabled(ConfigHandler.enableEmeraldHeads, ConfigHandler.enableEmeraldTools)){
+                    output.accept(ItemRegHandler.EMERALD_SWORD_BLADE);
+                    output.accept(ItemRegHandler.EMERALD_SPEAR_TIP);
+                    output.accept(ItemRegHandler.EMERALD_PICKAXE_HEAD);
+                    output.accept(ItemRegHandler.EMERALD_AXE_HEAD);
+                    output.accept(ItemRegHandler.EMERALD_SHOVEL_HEAD);
+                    output.accept(ItemRegHandler.EMERALD_HOE_HEAD);
+                }
             }).build());
 
     public static final CreativeModeTab TVE_TOOLSANDARMOR_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "tve_tools_and_armor"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(ItemRegHandler.EMERALD_SWORD))
             .title(Component.translatable("creativetab.vanilla_expansion.tools_and_armor"))
             .displayItems((parameters, output) -> {
-                output.accept(ItemRegHandler.LAPIS_LAZULI_SWORD);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_SPEAR);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_SHOVEL);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_PICKAXE);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_AXE);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_HOE);
+                if(ConfigHandler.enableLapisLazuliTools){
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_SWORD);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_SPEAR);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_SHOVEL);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_PICKAXE);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_AXE);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_HOE);
+                }
 
                 output.accept(ItemRegHandler.QUARTZ_SWORD);
                 output.accept(ItemRegHandler.QUARTZ_SPEAR);
@@ -122,19 +141,23 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.BURNT_QUARTZ_AXE);
                 output.accept(ItemRegHandler.BURNT_QUARTZ_HOE);
 
-                output.accept(ItemRegHandler.REDSTONE_SWORD);
-                output.accept(ItemRegHandler.REDSTONE_SPEAR);
-                output.accept(ItemRegHandler.REDSTONE_SHOVEL);
-                output.accept(ItemRegHandler.REDSTONE_PICKAXE);
-                output.accept(ItemRegHandler.REDSTONE_AXE);
-                output.accept(ItemRegHandler.REDSTONE_HOE);
+                if (ConfigHandler.enableRedstoneTools){
+                    output.accept(ItemRegHandler.REDSTONE_SWORD);
+                    output.accept(ItemRegHandler.REDSTONE_SPEAR);
+                    output.accept(ItemRegHandler.REDSTONE_SHOVEL);
+                    output.accept(ItemRegHandler.REDSTONE_PICKAXE);
+                    output.accept(ItemRegHandler.REDSTONE_AXE);
+                    output.accept(ItemRegHandler.REDSTONE_HOE);
+                }
 
-                output.accept(ItemRegHandler.EMERALD_SWORD);
-                output.accept(ItemRegHandler.EMERALD_SPEAR);
-                output.accept(ItemRegHandler.EMERALD_SHOVEL);
-                output.accept(ItemRegHandler.EMERALD_PICKAXE);
-                output.accept(ItemRegHandler.EMERALD_AXE);
-                output.accept(ItemRegHandler.EMERALD_HOE);
+                if (ConfigHandler.enableEmeraldTools){
+                    output.accept(ItemRegHandler.EMERALD_SWORD);
+                    output.accept(ItemRegHandler.EMERALD_SPEAR);
+                    output.accept(ItemRegHandler.EMERALD_SHOVEL);
+                    output.accept(ItemRegHandler.EMERALD_PICKAXE);
+                    output.accept(ItemRegHandler.EMERALD_AXE);
+                    output.accept(ItemRegHandler.EMERALD_HOE);
+                }
 
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SWORD);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SPEAR);
@@ -153,15 +176,19 @@ public class CreativeTab {
                 output.accept(ItemRegHandler.ARMADILLO_SCUTE_LEGGINGS);
                 output.accept(ItemRegHandler.ARMADILLO_SCUTE_BOOTS);
 
-                output.accept(ItemRegHandler.LAPIS_LAZULI_HELMET);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_CHESTPLATE);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_LEGGINGS);
-                output.accept(ItemRegHandler.LAPIS_LAZULI_BOOTS);
+                if (ConfigHandler.enableLapisLazuliArmor){
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_HELMET);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_CHESTPLATE);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_LEGGINGS);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_BOOTS);
+                }
 
-                output.accept(ItemRegHandler.EMERALD_HELMET);
-                output.accept(ItemRegHandler.EMERALD_CHESTPLATE);
-                output.accept(ItemRegHandler.EMERALD_LEGGINGS);
-                output.accept(ItemRegHandler.EMERALD_BOOTS);
+                if (ConfigHandler.enableEmeraldArmor){
+                    output.accept(ItemRegHandler.EMERALD_HELMET);
+                    output.accept(ItemRegHandler.EMERALD_CHESTPLATE);
+                    output.accept(ItemRegHandler.EMERALD_LEGGINGS);
+                    output.accept(ItemRegHandler.EMERALD_BOOTS);
+                }
 
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HELMET);
                 output.accept(ItemRegHandler.EMPOWERED_NETHERITE_CHESTPLATE);
@@ -175,12 +202,14 @@ public class CreativeTab {
                 output.accept(BlockRegHandler.CHARCOAL_BLOCK);
                 output.accept(BlockRegHandler.BUNDLED_STICKS_BLOCK);
 
-                output.accept(BlockRegHandler.BARREL_OF_APPLES_BLOCK);
-                output.accept(BlockRegHandler.BARREL_OF_POTATOES_BLOCK);
-                output.accept(BlockRegHandler.BARREL_OF_CARROTS_BLOCK);
-                output.accept(BlockRegHandler.BARREL_OF_BEETROOTS_BLOCK);
-                output.accept(BlockRegHandler.BARREL_OF_SWEETBERRIES_BLOCK);
-                output.accept(BlockRegHandler.BARREL_OF_CHORUS_BLOCK);
+                if (ConfigHandler.enableCompactCropBlocks){
+                    output.accept(BlockRegHandler.BARREL_OF_APPLES_BLOCK);
+                    output.accept(BlockRegHandler.BARREL_OF_POTATOES_BLOCK);
+                    output.accept(BlockRegHandler.BARREL_OF_CARROTS_BLOCK);
+                    output.accept(BlockRegHandler.BARREL_OF_BEETROOTS_BLOCK);
+                    output.accept(BlockRegHandler.BARREL_OF_SWEETBERRIES_BLOCK);
+                    output.accept(BlockRegHandler.BARREL_OF_CHORUS_BLOCK);
+                }
 
                 output.accept(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
 

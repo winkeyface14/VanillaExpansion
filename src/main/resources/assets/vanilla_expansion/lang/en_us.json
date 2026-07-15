@@ -172,6 +172,13 @@
   "item.vanilla_expansion.golden_shovel_head": "Golden Shovel Head",
   "item.vanilla_expansion.golden_hoe_head": "Golden Hoe Head",
 
+  "item.vanilla_expansion.emerald_sword_blade": "Emerald Sword Blade",
+  "item.vanilla_expansion.emerald_spear_tip": "Emerald Spear Tip",
+  "item.vanilla_expansion.emerald_pickaxe_head": "Emerald Pickaxe Head",
+  "item.vanilla_expansion.emerald_axe_head": "Emerald Axe Head",
+  "item.vanilla_expansion.emerald_shovel_head": "Emerald Shovel Head",
+  "item.vanilla_expansion.emerald_hoe_head": "Emerald Hoe Head",
+
   "item.vanilla_expansion.diamond_sword_blade": "Diamond Sword Blade",
   "item.vanilla_expansion.diamond_spear_tip": "Diamond Spear Tip",
   "item.vanilla_expansion.diamond_pickaxe_head": "Diamond Pickaxe Head",
@@ -221,5 +228,20 @@
   "item.vanilla_expansion.armadillo_scute_helmet": "Armadillo Scute Helmet",
   "item.vanilla_expansion.armadillo_scute_chestplate": "Armadillo Scute Chestplate",
   "item.vanilla_expansion.armadillo_scute_leggings": "Armadillo Scute Leggings",
-  "item.vanilla_expansion.armadillo_scute_boots": "Armadillo Scute Boots"
+  "item.vanilla_expansion.armadillo_scute_boots": "Armadillo Scute Boots",
+
+  "vanilla_expansion.midnightconfig.title":"Vanilla Expansion",
+
+  "vanilla_expansion.midnightconfig.category.items": "Items",
+  "vanilla_expansion.midnightconfig.enableBaseTemplate":"Base Template",
+  "vanilla_expansion.midnightconfig.enableBaseTemplate.tooltip":"Also enables or disables all Tool and Weapon Heads",
+
+  "vanilla_expansion.midnightconfig.category.gear": "Tools and Armor",
+  "vanilla_expansion.midnightconfig.enableEmeraldTools":"Emerald Tools",
+  "vanilla_expansion.midnightconfig.enableEmeraldTools.tooltip":"Also enables or disables Emerald Tool and Weapon Heads",
+
+  "vanilla_expansion.midnightconfig.enableRedstoneTools":"Redstone Tools",
+  "vanilla_expansion.midnightconfig.enableRedstoneTools.tooltip":"Also enables or disables Redstone Tool and Weapon Heads",
+
+  "vanilla_expansion.midnightconfig.category.blocks": "Blocks"
 }

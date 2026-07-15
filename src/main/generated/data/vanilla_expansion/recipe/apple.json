@@ -1,5 +1,12 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "compact_crop_blocks"
+    }
+  ],
   "type": "minecraft:crafting_shapeless",
+  "group": "crop_from_blocks",
   "ingredients": [
     "vanilla_expansion:barrel_of_apples"
   ],

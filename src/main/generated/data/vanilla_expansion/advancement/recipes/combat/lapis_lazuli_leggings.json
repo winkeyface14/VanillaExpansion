@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "lapis_lazuli_armor"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_lapis_lazuli": {

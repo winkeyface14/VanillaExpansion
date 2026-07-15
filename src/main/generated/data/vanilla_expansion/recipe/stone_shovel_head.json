@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "stone_heads"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "x": "#minecraft:stone_tool_materials",

@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "emerald_heads"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_base_template": {

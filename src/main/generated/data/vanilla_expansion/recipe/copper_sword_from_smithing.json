@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "copper_heads"
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:flint",
   "base": "#minecraft:swords",
