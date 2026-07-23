@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "quartz_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:spears",
+  "result": {
+    "id": "vanilla_expansion:quartz_hoe_head"
+  },
+  "template": "minecraft:quartz"
+}

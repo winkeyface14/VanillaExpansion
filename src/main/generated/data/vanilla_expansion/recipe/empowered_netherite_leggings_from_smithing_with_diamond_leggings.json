@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "empowered_netherite_armor"
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "vanilla_expansion:empowered_netherite_ingot",
   "base": "minecraft:diamond_leggings",

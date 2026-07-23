@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "reinforced_leather_armor"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_reinforced_leather": {

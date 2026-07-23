@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "burnt_quartz_block_set"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "group": "burnt_quartz_pillar",

@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "diamond_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:spears",
+  "result": {
+    "id": "vanilla_expansion:diamond_hoe_head"
+  },
+  "template": "minecraft:diamond"
+}

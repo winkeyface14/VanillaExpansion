@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "redstone_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:hoes",
+  "result": {
+    "id": "vanilla_expansion:redstone_shovel_head"
+  },
+  "template": "minecraft:redstone_block"
+}

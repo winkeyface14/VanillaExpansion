@@ -1,11 +1,17 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_smooth_red_sandstone_block_set"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_smooth_quartz": {
+    "has_smooth_red_sandstone": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:smooth_quartz"
+            "items": "minecraft:smooth_red_sandstone"
           }
         ]
       },
@@ -21,7 +27,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_smooth_quartz"
+      "has_smooth_red_sandstone"
     ]
   ],
   "rewards": {

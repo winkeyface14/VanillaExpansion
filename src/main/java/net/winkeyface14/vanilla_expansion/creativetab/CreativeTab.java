@@ -29,16 +29,20 @@ public class CreativeTab {
                     output.accept(ItemRegHandler.SMOKED_QUARTZ_SHARD);
                 }
 
-                output.accept(ItemRegHandler.BURNT_QUARTZ);
-                output.accept(ItemRegHandler.BURNT_QUARTZ_SHARD);
+                if(isModdedShardEnabled(enableBurntQuartz, enableBurntQuartzShard)) {
+                    output.accept(ItemRegHandler.BURNT_QUARTZ);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_SHARD);
+                }
 
-                output.accept(ItemRegHandler.FIRED_BRICK);
+                if(enableFiredBricks)output.accept(ItemRegHandler.FIRED_BRICK);
 
-                output.accept(ItemRegHandler.RAW_REINFORCED_LEATHER);
-                output.accept(ItemRegHandler.REINFORCED_LEATHER);
+                if(enableReinforcedLeather){
+                    output.accept(ItemRegHandler.RAW_REINFORCED_LEATHER);
+                    output.accept(ItemRegHandler.REINFORCED_LEATHER);
+                }
 
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE);
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SCRAP);
+                if (enableEmpoweredNetherite)output.accept(ItemRegHandler.EMPOWERED_NETHERITE);
+                if (enableEmpoweredNetherite)output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SCRAP);
 
                 if (enableBundledSticks)output.accept(ItemRegHandler.BUNDLED_STICKS);
                 if (enablePileOfPaper)output.accept(ItemRegHandler.PAPER_PILE);
@@ -92,6 +96,15 @@ public class CreativeTab {
                     output.accept(ItemRegHandler.DIAMOND_HOE_HEAD);
                 }
 
+                if (isVanillaHeadsEnabled(enableLapisLazuliHeads, enableLapisLazuliTools)){
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_SWORD_BLADE);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_SPEAR_TIP);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_PICKAXE_HEAD);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_AXE_HEAD);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_SHOVEL_HEAD);
+                    output.accept(ItemRegHandler.LAPIS_LAZULI_HOE_HEAD);
+                }
+
                 if (isVanillaHeadsEnabled(enableQuartzHeads, enableQuartzTools)){
                     output.accept(ItemRegHandler.QUARTZ_SWORD_BLADE);
                     output.accept(ItemRegHandler.QUARTZ_SPEAR_TIP);
@@ -108,6 +121,15 @@ public class CreativeTab {
                     output.accept(ItemRegHandler.SMOKED_QUARTZ_AXE_HEAD);
                     output.accept(ItemRegHandler.SMOKED_QUARTZ_SHOVEL_HEAD);
                     output.accept(ItemRegHandler.SMOKED_QUARTZ_HOE_HEAD);
+                }
+
+                if (isModdedHeadsEnabled(enableBurntQuartz, enableBurntQuartzHeads, enableBurntQuartzTools)){
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_SWORD_BLADE);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_SPEAR_TIP);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_PICKAXE_HEAD);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_AXE_HEAD);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_SHOVEL_HEAD);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_HOE_HEAD);
                 }
 
                 if (isVanillaHeadsEnabled(enableRedstoneHeads, enableRedstoneTools)){
@@ -159,12 +181,14 @@ public class CreativeTab {
                     output.accept(ItemRegHandler.SMOKED_QUARTZ_HOE);
                 }
 
-                output.accept(ItemRegHandler.BURNT_QUARTZ_SWORD);
-                output.accept(ItemRegHandler.BURNT_QUARTZ_SPEAR);
-                output.accept(ItemRegHandler.BURNT_QUARTZ_SHOVEL);
-                output.accept(ItemRegHandler.BURNT_QUARTZ_PICKAXE);
-                output.accept(ItemRegHandler.BURNT_QUARTZ_AXE);
-                output.accept(ItemRegHandler.BURNT_QUARTZ_HOE);
+                if (isModdedToolsEnabled(enableBurntQuartz, enableBurntQuartzTools)){
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_SWORD);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_SPEAR);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_SHOVEL);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_PICKAXE);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_AXE);
+                    output.accept(ItemRegHandler.BURNT_QUARTZ_HOE);
+                }
 
                 if (enableRedstoneTools){
                     output.accept(ItemRegHandler.REDSTONE_SWORD);
@@ -184,22 +208,28 @@ public class CreativeTab {
                     output.accept(ItemRegHandler.EMERALD_HOE);
                 }
 
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SWORD);
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SPEAR);
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SHOVEL);
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE);
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_AXE);
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HOE);
+                if (isModdedToolsEnabled(enableEmpoweredNetherite, enableEmpoweredNetheriteTools)){
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SWORD);
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SPEAR);
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_SHOVEL);
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE);
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_AXE);
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HOE);
+                }
 
-                output.accept(ItemRegHandler.REINFORCED_LEATHER_HELMET);
-                output.accept(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE);
-                output.accept(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS);
-                output.accept(ItemRegHandler.REINFORCED_LEATHER_BOOTS);
+                if (isModdedArmorEnabled(enableReinforcedLeather, enableReinforcedLeatherArmor)){
+                    output.accept(ItemRegHandler.REINFORCED_LEATHER_HELMET);
+                    output.accept(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE);
+                    output.accept(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS);
+                    output.accept(ItemRegHandler.REINFORCED_LEATHER_BOOTS);
+                }
 
-                output.accept(ItemRegHandler.ARMADILLO_SCUTE_HELMET);
-                output.accept(ItemRegHandler.ARMADILLO_SCUTE_CHESTPLATE);
-                output.accept(ItemRegHandler.ARMADILLO_SCUTE_LEGGINGS);
-                output.accept(ItemRegHandler.ARMADILLO_SCUTE_BOOTS);
+                if (enableArmadilloScuteArmor){
+                    output.accept(ItemRegHandler.ARMADILLO_SCUTE_HELMET);
+                    output.accept(ItemRegHandler.ARMADILLO_SCUTE_CHESTPLATE);
+                    output.accept(ItemRegHandler.ARMADILLO_SCUTE_LEGGINGS);
+                    output.accept(ItemRegHandler.ARMADILLO_SCUTE_BOOTS);
+                }
 
                 if (enableLapisLazuliArmor){
                     output.accept(ItemRegHandler.LAPIS_LAZULI_HELMET);
@@ -215,10 +245,12 @@ public class CreativeTab {
                     output.accept(ItemRegHandler.EMERALD_BOOTS);
                 }
 
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HELMET);
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_CHESTPLATE);
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_LEGGINGS);
-                output.accept(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS);
+                if (isModdedArmorEnabled(enableEmpoweredNetherite, enableEmpoweredNetheriteArmor)){
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_HELMET);
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_CHESTPLATE);
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_LEGGINGS);
+                    output.accept(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS);
+                }
             }).build());
 
     public static final CreativeModeTab TVE_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, "tve_blocks"), FabricCreativeModeTab.builder().icon(() -> new ItemStack(BlockRegHandler.CHARCOAL_BLOCK))
@@ -240,24 +272,32 @@ public class CreativeTab {
                     output.accept(BlockRegHandler.BARREL_OF_CHORUS_BLOCK);
                 }
 
-                output.accept(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
+                if (enableEmpoweredNetherite)output.accept(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK);
 
-                output.accept(BlockRegHandler.FIRED_BRICKS);
-                output.accept(BlockRegHandler.FIRED_BRICK_STAIRS);
-                output.accept(BlockRegHandler.FIRED_BRICK_SLAB);
-                output.accept(BlockRegHandler.FIRED_BRICK_WALL);
+                if (isBlockSetEnabled(enableFiredBricks, enableFiredBricksBlockSet)){
+                    output.accept(BlockRegHandler.FIRED_BRICKS);
+                    output.accept(BlockRegHandler.FIRED_BRICK_STAIRS);
+                    output.accept(BlockRegHandler.FIRED_BRICK_SLAB);
+                    output.accept(BlockRegHandler.FIRED_BRICK_WALL);
+                }
 
-                output.accept(BlockRegHandler.SMOOTH_STONE_STAIRS);
-                output.accept(BlockRegHandler.SMOOTH_STONE_WALL);
+                if(enableAddSmoothStoneBlockSet){
+                    output.accept(BlockRegHandler.SMOOTH_STONE_STAIRS);
+                    output.accept(BlockRegHandler.SMOOTH_STONE_WALL);
+                }
 
-                output.accept(BlockRegHandler.SMOOTH_SANDSTONE_WALL);
-                output.accept(BlockRegHandler.SMOOTH_RED_SANDSTONE_WALL);
+                if(enableAddSmoothSandstoneBlockSet)output.accept(BlockRegHandler.SMOOTH_SANDSTONE_WALL);
+                if(enableAddSmoothRedSandstoneBlockSet)output.accept(BlockRegHandler.SMOOTH_RED_SANDSTONE_WALL);
 
-                output.accept(BlockRegHandler.CUT_SANDSTONE_STAIRS);
-                output.accept(BlockRegHandler.CUT_SANDSTONE_WALL);
+                if(enableAddCutSandstoneBlockSet){
+                    output.accept(BlockRegHandler.CUT_SANDSTONE_STAIRS);
+                    output.accept(BlockRegHandler.CUT_SANDSTONE_WALL);
+                }
 
-                output.accept(BlockRegHandler.CUT_RED_SANDSTONE_STAIRS);
-                output.accept(BlockRegHandler.CUT_RED_SANDSTONE_WALL);
+                if(enableAddCutRedSandstoneBlockSet){
+                    output.accept(BlockRegHandler.CUT_RED_SANDSTONE_STAIRS);
+                    output.accept(BlockRegHandler.CUT_RED_SANDSTONE_WALL);
+                }
 
                 if(enableAddQuartzBlockSet){
                     output.accept(BlockRegHandler.QUARTZ_WALL);
@@ -287,23 +327,25 @@ public class CreativeTab {
                     output.accept(BlockRegHandler.SMOOTH_SMOKED_QUARTZ_WALL);
                 }
 
-                output.accept(BlockRegHandler.BURNT_QUARTZ_BLOCK);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_STAIRS);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_SLAB);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_WALL);
+                if(isBlockSetEnabled(enableBurntQuartz, enableBurntQuartzBlockSet)){
+                    output.accept(BlockRegHandler.BURNT_QUARTZ_BLOCK);
+                    output.accept(BlockRegHandler.BURNT_QUARTZ_STAIRS);
+                    output.accept(BlockRegHandler.BURNT_QUARTZ_SLAB);
+                    output.accept(BlockRegHandler.BURNT_QUARTZ_WALL);
 
-                output.accept(BlockRegHandler.CHISELED_BURNT_QUARTZ_BLOCK);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICKS);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_STAIRS);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_SLAB);
-                output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_WALL);
+                    output.accept(BlockRegHandler.CHISELED_BURNT_QUARTZ_BLOCK);
+                    output.accept(BlockRegHandler.BURNT_QUARTZ_BRICKS);
+                    output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_STAIRS);
+                    output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_SLAB);
+                    output.accept(BlockRegHandler.BURNT_QUARTZ_BRICK_WALL);
 
-                output.accept(BlockRegHandler.BURNT_QUARTZ_PILLAR);
+                    output.accept(BlockRegHandler.BURNT_QUARTZ_PILLAR);
 
-                output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ);
-                output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS);
-                output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB);
-                output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL);
+                    output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ);
+                    output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS);
+                    output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB);
+                    output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL);
+                }
             }).build());
 
 

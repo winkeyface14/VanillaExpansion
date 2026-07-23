@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "armadillo_scute_armor"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {

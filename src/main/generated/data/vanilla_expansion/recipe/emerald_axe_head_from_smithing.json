@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "emerald_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:axes",
+  "result": {
+    "id": "vanilla_expansion:emerald_axe_head"
+  },
+  "template": "minecraft:emerald"
+}

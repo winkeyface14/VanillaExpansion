@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "reinforced_leather"
+    }
+  ],
+  "type": "minecraft:blasting",
+  "experience": 0.7,
+  "group": "reinforced_leather",
+  "ingredient": "vanilla_expansion:raw_reinforced_leather",
+  "result": {
+    "id": "vanilla_expansion:reinforced_leather"
+  }
+}

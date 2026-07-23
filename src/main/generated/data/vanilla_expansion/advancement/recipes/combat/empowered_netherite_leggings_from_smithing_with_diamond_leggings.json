@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "empowered_netherite_armor"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_netherite_upgrade_smithing_template": {

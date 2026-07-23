@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "empowered_netherite"
+    }
+  ],
   "type": "minecraft:crafting_shapeless",
   "group": "empowered_netherite",
   "ingredients": [

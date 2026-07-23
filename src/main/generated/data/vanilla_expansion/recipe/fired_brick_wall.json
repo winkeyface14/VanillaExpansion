@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "fired_bricks_block_set"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "group": "fired_brick_wall",

@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_cut_red_sandstone_block_set"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "group": "cut_red_sandstone_wall",

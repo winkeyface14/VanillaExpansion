@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "iron_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:axes",
+  "result": {
+    "id": "vanilla_expansion:iron_axe_head"
+  },
+  "template": "minecraft:iron_ingot"
+}

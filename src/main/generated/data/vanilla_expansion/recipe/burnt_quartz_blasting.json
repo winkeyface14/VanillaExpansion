@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "burnt_quartz"
+    }
+  ],
   "type": "minecraft:blasting",
   "experience": 0.7,
   "group": "burnt_quartz",

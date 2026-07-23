@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "burnt_quartz_heads"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "vanilla_expansion:burnt_quartz",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "xxx",
+    " y "
+  ],
+  "result": {
+    "id": "vanilla_expansion:burnt_quartz_pickaxe_head"
+  }
+}

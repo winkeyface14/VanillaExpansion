@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "experience": 0.7,
-  "group": "fired_brick",
-  "ingredient": "minecraft:brick",
-  "result": {
-    "id": "vanilla_expansion:fired_brick"
-  }
-}

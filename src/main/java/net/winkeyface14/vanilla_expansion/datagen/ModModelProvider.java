@@ -162,6 +162,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_HOE_HEAD, ModelTemplates.FLAT_ITEM);
 
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_AXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
@@ -189,6 +196,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_AXE_HEAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_AXE_HEAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_HOE_HEAD, ModelTemplates.FLAT_ITEM);
 
         //Tool Upgrade Template
         itemModelGenerators.generateFlatItem(ItemRegHandler.BASE_TEMPLATE, ModelTemplates.FLAT_ITEM);

@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "empowered_netherite"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "crop_from_blocks",
+  "ingredients": [
+    "vanilla_expansion:empowered_netherite_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "vanilla_expansion:empowered_netherite_ingot"
+  }
+}

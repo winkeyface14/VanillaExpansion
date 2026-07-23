@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "emerald_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:hoes",
+  "result": {
+    "id": "vanilla_expansion:emerald_shovel_head"
+  },
+  "template": "minecraft:emerald"
+}

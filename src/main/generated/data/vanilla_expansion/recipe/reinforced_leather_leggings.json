@@ -1,4 +1,10 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "reinforced_leather_armor"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {

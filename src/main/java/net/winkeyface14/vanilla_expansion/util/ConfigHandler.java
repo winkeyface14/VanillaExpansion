@@ -8,94 +8,151 @@ public class ConfigHandler extends MidnightConfig {
     public static final String BLOCKS = "blocks";
 
     //Items
-    @Comment(category = ITEMS, centered = true, name = "§lTool and Weapon Heads") public static Comment headsSectionComment;
+    @Comment(category = ITEMS, centered = true) public static Comment headsSectionComment;
     @Entry(category = ITEMS) public static boolean enableBaseTemplate = true;
     @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = ITEMS, name="Stone Tool and Weapon Heads") public static boolean enableStoneHeads = true;
+    @Entry(category = ITEMS) public static boolean enableStoneHeads = true;
 
     @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = ITEMS, name="Copper Tool and Weapon Heads") public static boolean enableCopperHeads = true;
+    @Entry(category = ITEMS) public static boolean enableCopperHeads = true;
 
     @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = ITEMS, name="Iron Tool and Weapon Heads") public static boolean enableIronHeads = true;
+    @Entry(category = ITEMS) public static boolean enableIronHeads = true;
 
     @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = ITEMS, name="Golden Tool and Weapon Heads") public static boolean enableGoldenHeads = true;
+    @Entry(category = ITEMS) public static boolean enableGoldenHeads = true;
 
     @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = ITEMS, name="Diamond Tool and Weapon Heads") public static boolean enableDiamondHeads = true;
+    @Entry(category = ITEMS) public static boolean enableDiamondHeads = true;
 
-    @Comment(category = ITEMS, centered = true, name = "§lMiscellaneous Items") public static Comment MiscItemsSectionComment;
-    @Entry(category = ITEMS, name="Bundled Sticks") public static boolean enableBundledSticks = true;
-    @Entry(category = ITEMS, name="Pile of Paper") public static boolean enablePileOfPaper = true;
-    @Entry(category = ITEMS, name="Coal Chunk") public static boolean enableCoalChunk = true;
-    @Entry(category = ITEMS, name="Charcoal Chunk") public static boolean enableCharcoalChunk = true;
-    @Entry(category = ITEMS, name="Emerald Shard") public static boolean enableEmeraldShard = true;
-    @Entry(category = ITEMS, name="Diamond Shard") public static boolean enableDiamondShard = true;
-    @Entry(category = ITEMS, name="Quartz Shard") public static boolean enableQuartzShard = true;
-
-    @Entry(category = ITEMS, name="Smoked Quartz") public static boolean enableSmokedQuartz = true;
-    @Condition(requiredOption = "enableSmokedQuartz", requiredValue = "true")
-    @Entry(category = ITEMS, name="Smoked Quartz Shard") public static boolean enableSmokedQuartzShard = true;
-
-    //Gear
-    //Emerald Gear
-    @Comment(category = GEAR, centered = true, name = "§lEmerald Tools, Weapons, and Armor") public static Comment emeraldSectionComment;
-    @Entry(category = GEAR) public static boolean enableEmeraldTools = true;
-    @Condition(requiredOption = "enableEmeraldTools", requiredValue = "true")
-    @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = GEAR, name="Emerald Tool and Weapon Heads") public static boolean enableEmeraldHeads = true;
-    @Entry(category = GEAR, name="Emerald Armor") public static boolean enableEmeraldArmor = true;
-
-    //Redstone Gear
-    //@Comment(category = GEAR) public static Comment spacerRedstoneSection;
-    @Comment(category = GEAR, centered = true, name = "§lRedstone Tools and Weapons") public static Comment redstoneSectionComment;
-    @Entry(category = GEAR) public static boolean enableRedstoneTools = true;
-    @Condition(requiredOption = "enableRedstoneTools", requiredValue = "true")
-    @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = GEAR, name = "Redstone Tool and Weapon Heads") public static boolean enableRedstoneHeads = true;
-
-    //Lapis Lazuli Gear
-    //@Comment(category = GEAR) public static Comment spacerLapisSection;
-    @Comment(category = GEAR, centered = true, name = "§lLapis Lazuli Tools, Weapons, and Armor") public static Comment lapisSectionComment;
-    @Entry(category = GEAR, name="Lapiz Lazuli Tools") public static boolean enableLapisLazuliTools = true;
-
-    /*
     @Condition(requiredOption = "enableLapisLazuliTools", requiredValue = "true")
     @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = GEAR, name = "Lapis Lazuli Tool and Weapon Heads") public static boolean enableLapisLazuliHeads = true;
-     */
-    @Entry(category = GEAR, name="Lapis Lazuli Armor") public static boolean enableLapisLazuliArmor = true;
+    @Entry(category = ITEMS) public static boolean enableLapisLazuliHeads = true;
 
-    @Comment(category = GEAR, centered = true, name = "§lQuartz Tools, Weapons, and Armor") public static Comment quartzSectionComment;
-    @Entry(category = GEAR) public static boolean enableQuartzTools = true;
+    @Condition(requiredOption = "enableRedstoneTools", requiredValue = "true")
+    @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
+    @Entry(category = ITEMS) public static boolean enableRedstoneHeads = true;
+
     @Condition(requiredOption = "enableQuartzTools", requiredValue = "true")
     @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = GEAR, name="Quartz Tool and Weapon Heads") public static boolean enableQuartzHeads = true;
+    @Entry(category = ITEMS) public static boolean enableQuartzHeads = true;
 
-    @Condition(requiredOption = "enableSmokedQuartz", requiredValue = "true")
-    @Comment(category = GEAR, centered = true, name = "§lSmoked Quartz Tools, Weapons, and Armor") public static Comment smokedQuartzSectionComment;
-    @Condition(requiredOption = "enableSmokedQuartz", requiredValue = "true")
-    @Entry(category = GEAR) public static boolean enableSmokedQuartzTools = true;
     @Condition(requiredOption = "enableSmokedQuartz", requiredValue = "true")
     @Condition(requiredOption = "enableSmokedQuartzTools", requiredValue = "true")
     @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
-    @Entry(category = GEAR, name="Quartz Tool and Weapon Heads") public static boolean enableSmokedQuartzHeads = true;
+    @Entry(category = ITEMS) public static boolean enableSmokedQuartzHeads = true;
+
+    @Condition(requiredOption = "enableBurntQuartz", requiredValue = "true")
+    @Condition(requiredOption = "enableBurntQuartzTools", requiredValue = "true")
+    @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
+    @Entry(category = ITEMS) public static boolean enableBurntQuartzHeads = true;
+
+    @Condition(requiredOption = "enableEmeraldTools", requiredValue = "true")
+    @Condition(requiredOption = "enableBaseTemplate", requiredValue = "true")
+    @Entry(category = ITEMS) public static boolean enableEmeraldHeads = true;
+
+    @Comment(category = ITEMS, centered = true, name = "§lMiscellaneous Items") public static Comment MiscItemsSectionComment;
+    @Entry(category = ITEMS) public static boolean enableBundledSticks = true;
+    @Entry(category = ITEMS) public static boolean enablePileOfPaper = true;
+    @Entry(category = ITEMS) public static boolean enableFiredBricks = true;
+    @Entry(category = ITEMS) public static boolean enableReinforcedLeather = true;
+    @Entry(category = ITEMS) public static boolean enableCoalChunk = true;
+    @Entry(category = ITEMS) public static boolean enableCharcoalChunk = true;
+    @Entry(category = ITEMS) public static boolean enableEmeraldShard = true;
+    @Entry(category = ITEMS) public static boolean enableDiamondShard = true;
+    @Entry(category = ITEMS) public static boolean enableQuartzShard = true;
+
+    @Entry(category = ITEMS) public static boolean enableSmokedQuartz = true;
+    @Condition(requiredOption = "enableSmokedQuartz", requiredValue = "true")
+    @Entry(category = ITEMS) public static boolean enableSmokedQuartzShard = true;
+
+    @Entry(category = ITEMS) public static boolean enableBurntQuartz = true;
+    @Condition(requiredOption = "enableBurntQuartz", requiredValue = "true")
+    @Entry(category = ITEMS) public static boolean enableBurntQuartzShard = true;
+
+    @Entry(category = ITEMS) public static boolean enableEmpoweredNetherite = true;
+
+    //Gear
+    //Emerald Gear
+    @Comment(category = GEAR, centered = true) public static Comment emeraldSectionComment;
+    @Entry(category = GEAR) public static boolean enableEmeraldTools = true;
+    @Entry(category = GEAR) public static boolean enableEmeraldArmor = true;
+
+    //Redstone Gear
+    //@Comment(category = GEAR) public static Comment spacerRedstoneSection;
+    @Comment(category = GEAR, centered = true) public static Comment redstoneSectionComment;
+    @Entry(category = GEAR) public static boolean enableRedstoneTools = true;
+
+    //Lapis Lazuli Gear
+    //@Comment(category = GEAR) public static Comment spacerLapisSection;
+    @Comment(category = GEAR, centered = true) public static Comment lapisSectionComment;
+    @Entry(category = GEAR) public static boolean enableLapisLazuliTools = true;
+    @Entry(category = GEAR) public static boolean enableLapisLazuliArmor = true;
+
+    // Quartz Gear
+    @Comment(category = GEAR, centered = true) public static Comment quartzSectionComment;
+    @Entry(category = GEAR) public static boolean enableQuartzTools = true;
+
+    // Smoked Quartz Gear
+    @Condition(requiredOption = "enableSmokedQuartz", requiredValue = "true")
+    @Comment(category = GEAR, centered = true) public static Comment smokedQuartzSectionComment;
+    @Condition(requiredOption = "enableSmokedQuartz", requiredValue = "true")
+    @Entry(category = GEAR) public static boolean enableSmokedQuartzTools = true;
+
+    //Burnt Quartz Gear
+    @Condition(requiredOption = "enableBurntQuartz", requiredValue = "true")
+    @Comment(category = GEAR, centered = true) public static Comment burntQuartzSectionComment;
+    @Condition(requiredOption = "enableBurntQuartz", requiredValue = "true")
+    @Entry(category = GEAR) public static boolean enableBurntQuartzTools = true;
+
+    //Empowered Netherite Gear
+    @Condition(requiredOption = "enableEmpoweredNetherite", requiredValue = "true")
+    @Comment(category = GEAR, centered = true) public static Comment empoweredNetheriteSectionComment;
+    @Condition(requiredOption = "enableEmpoweredNetherite", requiredValue = "true")
+    @Entry(category = GEAR) public static boolean enableEmpoweredNetheriteTools = true;
+    @Condition(requiredOption = "enableEmpoweredNetherite", requiredValue = "true")
+    @Entry(category = GEAR) public static boolean enableEmpoweredNetheriteArmor = true;
+
+    //Reinforced Leather Gear
+    @Condition(requiredOption = "enableReinforcedLeather", requiredValue = "true")
+    @Comment(category = GEAR, centered = true) public static Comment empoweredReinforcedLeatherComment;
+    @Condition(requiredOption = "enableReinforcedLeather", requiredValue = "true")
+    @Entry(category = GEAR) public static boolean enableReinforcedLeatherArmor = true;
+
+    //Armadillo Scute Gear
+    @Comment(category = GEAR, centered = true) public static Comment empoweredArmadilloScuteComment;
+    @Entry(category = GEAR) public static boolean enableArmadilloScuteArmor = true;
 
     //Blocks
-    @Entry(category = BLOCKS, name = "Compact Crop Blocks") public static boolean enableCompactCropBlocks = true;
-    @Entry(category = BLOCKS, name = "Charcoal Block") public static boolean enableCharcoalBlock = true;
+    @Entry(category = BLOCKS) public static boolean enableCompactCropBlocks = true;
+    @Entry(category = BLOCKS) public static boolean enableCharcoalBlock = true;
 
     @Condition(requiredOption = "enableBundledSticks", requiredValue = "true")
-    @Entry(category = BLOCKS, name = "Block of Bundled Sticks") public static boolean enableBlockOfBundledSticks = true;
+    @Entry(category = BLOCKS) public static boolean enableBlockOfBundledSticks = true;
 
-    @Entry(category = BLOCKS, name = "Additional Quartz Block Set") public static boolean enableAddQuartzBlockSet = true;
+    @Condition(requiredOption = "enableFiredBricks", requiredValue = "true")
+    @Entry(category = BLOCKS) public static boolean enableFiredBricksBlockSet = true;
 
     @Condition(requiredOption = "enableSmokedQuartz", requiredValue = "true")
-    @Entry(category = BLOCKS, name = "Smoked Quartz Block Set") public static boolean enableSmokedQuartzBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableSmokedQuartzBlockSet = true;
+
+    @Condition(requiredOption = "enableBurntQuartz", requiredValue = "true")
+    @Entry(category = BLOCKS) public static boolean enableBurntQuartzBlockSet = true;
+
+    @Comment(category = BLOCKS, centered = true) public static Comment additionalVanillaBlocksComment;
+    @Entry(category = BLOCKS) public static boolean enableAddQuartzBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableAddSmoothStoneBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableAddSmoothSandstoneBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableAddSmoothRedSandstoneBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableAddCutSandstoneBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableAddCutRedSandstoneBlockSet = true;
 
     public static boolean isVanillaHeadsEnabled(boolean enableVanillaHeads, boolean enableToolSet) {
         return enableBaseTemplate && enableToolSet && enableVanillaHeads;
+    }
+
+    public static boolean isModdedArmorEnabled(boolean enableBaseItem, boolean enableArmorSet) {
+        return enableBaseItem && enableArmorSet;
     }
 
     public static boolean isModdedToolsEnabled(boolean enableBaseItem, boolean enableToolSet) {

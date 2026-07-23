@@ -1,11 +1,17 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "fired_bricks_block_set"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_fired_brick": {
+    "has_quartz": {
       "conditions": {
         "items": [
           {
-            "items": "vanilla_expansion:fired_brick"
+            "items": "minecraft:quartz"
           }
         ]
       },
@@ -21,7 +27,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_fired_brick"
+      "has_quartz"
     ]
   ],
   "rewards": {
