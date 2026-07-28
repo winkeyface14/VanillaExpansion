@@ -11,9 +11,8 @@
     "y": "vanilla_expansion:base_template"
   },
   "pattern": [
-    "x",
-    "x",
-    "y"
+    "xx",
+    " y"
   ],
   "result": {
     "id": "vanilla_expansion:stone_hoe_head"

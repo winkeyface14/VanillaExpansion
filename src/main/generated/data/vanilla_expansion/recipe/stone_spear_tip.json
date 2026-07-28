@@ -11,9 +11,9 @@
     "y": "vanilla_expansion:base_template"
   },
   "pattern": [
-    "x",
-    "x",
-    "y"
+    "  x",
+    " x ",
+    "y  "
   ],
   "result": {
     "id": "vanilla_expansion:stone_spear_tip"

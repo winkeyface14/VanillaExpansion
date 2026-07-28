@@ -11,9 +11,8 @@
     "y": "vanilla_expansion:base_template"
   },
   "pattern": [
-    "x",
-    "x",
-    "y"
+    "xx",
+    "xy"
   ],
   "result": {
     "id": "vanilla_expansion:stone_axe_head"

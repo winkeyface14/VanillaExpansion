@@ -11,9 +11,8 @@
     "y": "vanilla_expansion:base_template"
   },
   "pattern": [
-    "x",
-    "x",
-    "y"
+    "xxx",
+    " y "
   ],
   "result": {
     "id": "vanilla_expansion:stone_pickaxe_head"

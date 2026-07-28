@@ -440,9 +440,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Pickaxe Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_PICKAXE_HEAD)
-                        .pattern("x")
-                        .pattern("x")
-                        .pattern("y")
+                        .pattern("xxx")
+                        .pattern(" y ")
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
@@ -450,9 +449,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Axe Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_AXE_HEAD)
-                        .pattern("x")
-                        .pattern("x")
-                        .pattern("y")
+                        .pattern("xx")
+                        .pattern("xy")
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
@@ -460,7 +458,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Shovel Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_SHOVEL_HEAD)
-                        .pattern("x")
                         .pattern("x")
                         .pattern("y")
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
@@ -470,9 +467,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Hoe Head Recipes
                 this.shaped(RecipeCategory.MISC, STONE_HOE_HEAD)
-                        .pattern("x")
-                        .pattern("x")
-                        .pattern("y")
+                        .pattern("xx")
+                        .pattern(" y")
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
@@ -480,9 +476,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Spear Tip Recipes
                 this.shaped(RecipeCategory.MISC, STONE_SPEAR_TIP)
-                        .pattern("x")
-                        .pattern("x")
-                        .pattern("y")
+                        .pattern("  x")
+                        .pattern(" x ")
+                        .pattern("y  ")
                         .define('x', ItemTags.STONE_TOOL_MATERIALS)
                         .define('y', base_template)
                         .unlockedBy(getHasName(base_template), has(base_template))
@@ -503,16 +499,83 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerCustomNetheriteUpgrade(empoweredNetheriteArmorOutput, EMPOWERED_NETHERITE, DIAMOND_LEGGINGS, EMPOWERED_NETHERITE_LEGGINGS, RecipeCategory.COMBAT);
                 registerCustomNetheriteUpgrade(empoweredNetheriteArmorOutput, EMPOWERED_NETHERITE, DIAMOND_BOOTS, EMPOWERED_NETHERITE_BOOTS, RecipeCategory.COMBAT);
 
-                registerCustomToolSetUpgrade(ironHeadsOutput, IRON_INGOT, IRON_SWORD_BLADE,IRON_SPEAR_TIP, IRON_PICKAXE_HEAD, IRON_AXE_HEAD, IRON_SHOVEL_HEAD, IRON_HOE_HEAD);
-                registerCustomToolSetUpgrade(copperHeadsOutput, COPPER_INGOT, COPPER_SWORD_BLADE,COPPER_SPEAR_TIP, COPPER_PICKAXE_HEAD, COPPER_AXE_HEAD, COPPER_SHOVEL_HEAD, COPPER_HOE_HEAD);
-                registerCustomToolSetUpgrade(goldenHeadsOutput, GOLD_INGOT, GOLD_SWORD_BLADE,GOLD_SPEAR_TIP, GOLD_PICKAXE_HEAD, GOLD_AXE_HEAD, GOLD_SHOVEL_HEAD, GOLD_HOE_HEAD);
-                registerCustomToolSetUpgrade(diamondHeadsOutput, DIAMOND, DIAMOND_SWORD_BLADE,DIAMOND_SPEAR_TIP, DIAMOND_PICKAXE_HEAD, DIAMOND_AXE_HEAD, DIAMOND_SHOVEL_HEAD, DIAMOND_HOE_HEAD);
-                registerCustomToolSetUpgrade(emeraldHeadsOutput, EMERALD, EMERALD_SWORD_BLADE,EMERALD_SPEAR_TIP, EMERALD_PICKAXE_HEAD, EMERALD_AXE_HEAD, EMERALD_SHOVEL_HEAD, EMERALD_HOE_HEAD);
-                registerCustomToolSetUpgrade(redstoneHeadsOutput, REDSTONE_BLOCK, REDSTONE_SWORD_BLADE,REDSTONE_SPEAR_TIP, REDSTONE_PICKAXE_HEAD, REDSTONE_AXE_HEAD, REDSTONE_SHOVEL_HEAD, REDSTONE_HOE_HEAD);
-                registerCustomToolSetUpgrade(lapisHeadsOutput, LAPIS_LAZULI, LAPIS_LAZULI_SWORD_BLADE,LAPIS_LAZULI_SPEAR_TIP, LAPIS_LAZULI_PICKAXE_HEAD, LAPIS_LAZULI_AXE_HEAD, LAPIS_LAZULI_SHOVEL_HEAD, LAPIS_LAZULI_HOE_HEAD);
-                registerCustomToolSetUpgrade(quartzHeadsOutput, QUARTZ, QUARTZ_SWORD_BLADE, QUARTZ_SPEAR_TIP, QUARTZ_PICKAXE_HEAD, QUARTZ_AXE_HEAD, QUARTZ_SHOVEL_HEAD, QUARTZ_HOE_HEAD);
-                registerCustomToolSetUpgrade(smokedQuartzHeadsOutput, SMOKED_QUARTZ, SMOKED_QUARTZ_SWORD_BLADE, SMOKED_QUARTZ_SPEAR_TIP, SMOKED_QUARTZ_PICKAXE_HEAD, SMOKED_QUARTZ_AXE_HEAD, SMOKED_QUARTZ_SHOVEL_HEAD, SMOKED_QUARTZ_HOE_HEAD);
-                registerCustomToolSetUpgrade(burntQuartzHeadsOutput, BURNT_QUARTZ, BURNT_QUARTZ_SWORD_BLADE, BURNT_QUARTZ_SPEAR_TIP, BURNT_QUARTZ_PICKAXE_HEAD, BURNT_QUARTZ_AXE_HEAD, BURNT_QUARTZ_SHOVEL_HEAD, BURNT_QUARTZ_HOE_HEAD);
+                registerCustomToolSetUpgrade(stoneHeadsOutput,
+                        STONE_SWORD_BLADE, STONE_SWORD,
+                        STONE_SPEAR_TIP, STONE_SPEAR,
+                        STONE_PICKAXE_HEAD, STONE_PICKAXE,
+                        STONE_AXE_HEAD,STONE_AXE,
+                        STONE_SHOVEL_HEAD, STONE_SHOVEL,
+                        STONE_HOE_HEAD, STONE_HOE);
+                registerCustomToolSetUpgrade(ironHeadsOutput,
+                        IRON_SWORD_BLADE, IRON_SWORD,
+                        IRON_SPEAR_TIP, IRON_SPEAR,
+                        IRON_PICKAXE_HEAD, IRON_PICKAXE,
+                        IRON_AXE_HEAD,IRON_AXE,
+                        IRON_SHOVEL_HEAD, IRON_SHOVEL,
+                        IRON_HOE_HEAD, IRON_HOE);
+                registerCustomToolSetUpgrade(copperHeadsOutput,
+                        COPPER_SWORD_BLADE, COPPER_SWORD,
+                        COPPER_SPEAR_TIP, COPPER_SPEAR,
+                        COPPER_PICKAXE_HEAD, COPPER_PICKAXE,
+                        COPPER_AXE_HEAD,COPPER_AXE,
+                        COPPER_SHOVEL_HEAD, COPPER_SHOVEL,
+                        COPPER_HOE_HEAD, COPPER_HOE);
+                registerCustomToolSetUpgrade(goldenHeadsOutput,
+                        GOLD_SWORD_BLADE, GOLDEN_SWORD,
+                        GOLD_SPEAR_TIP, GOLDEN_SPEAR,
+                        GOLD_PICKAXE_HEAD, GOLDEN_PICKAXE,
+                        GOLD_AXE_HEAD,GOLDEN_AXE,
+                        GOLD_SHOVEL_HEAD, GOLDEN_SHOVEL,
+                        GOLD_HOE_HEAD, GOLDEN_HOE);
+                registerCustomToolSetUpgrade(diamondHeadsOutput,
+                        DIAMOND_SWORD_BLADE, DIAMOND_SWORD,
+                        DIAMOND_SPEAR_TIP, DIAMOND_SPEAR,
+                        DIAMOND_PICKAXE_HEAD, DIAMOND_PICKAXE,
+                        DIAMOND_AXE_HEAD,DIAMOND_AXE,
+                        DIAMOND_SHOVEL_HEAD, DIAMOND_SHOVEL,
+                        DIAMOND_HOE_HEAD, DIAMOND_HOE);
+                registerCustomToolSetUpgrade(emeraldToolsOutput,
+                        EMERALD_SWORD_BLADE, EMERALD_SWORD,
+                        EMERALD_SPEAR_TIP, EMERALD_SPEAR,
+                        EMERALD_PICKAXE_HEAD, EMERALD_PICKAXE,
+                        EMERALD_AXE_HEAD,EMERALD_AXE,
+                        EMERALD_SHOVEL_HEAD, EMERALD_SHOVEL,
+                        EMERALD_HOE_HEAD, EMERALD_HOE);
+                registerCustomToolSetUpgrade(redstoneHeadsOutput,
+                        REDSTONE_SWORD_BLADE, REDSTONE_SWORD,
+                        REDSTONE_SPEAR_TIP, REDSTONE_SPEAR,
+                        REDSTONE_PICKAXE_HEAD, REDSTONE_PICKAXE,
+                        REDSTONE_AXE_HEAD,REDSTONE_AXE,
+                        REDSTONE_SHOVEL_HEAD, REDSTONE_SHOVEL,
+                        REDSTONE_HOE_HEAD, REDSTONE_HOE);
+                registerCustomToolSetUpgrade(lapisHeadsOutput,
+                        LAPIS_LAZULI_SWORD_BLADE, LAPIS_LAZULI_SWORD,
+                        LAPIS_LAZULI_SPEAR_TIP, LAPIS_LAZULI_SPEAR,
+                        LAPIS_LAZULI_PICKAXE_HEAD, LAPIS_LAZULI_PICKAXE,
+                        LAPIS_LAZULI_AXE_HEAD,LAPIS_LAZULI_AXE,
+                        LAPIS_LAZULI_SHOVEL_HEAD, LAPIS_LAZULI_SHOVEL,
+                        LAPIS_LAZULI_HOE_HEAD, LAPIS_LAZULI_HOE);
+                registerCustomToolSetUpgrade(quartzHeadsOutput,
+                        QUARTZ_SWORD_BLADE, QUARTZ_SWORD,
+                        QUARTZ_SPEAR_TIP, QUARTZ_SPEAR,
+                        QUARTZ_PICKAXE_HEAD, QUARTZ_PICKAXE,
+                        QUARTZ_AXE_HEAD,QUARTZ_AXE,
+                        QUARTZ_SHOVEL_HEAD, QUARTZ_SHOVEL,
+                        QUARTZ_HOE_HEAD, QUARTZ_HOE);
+                registerCustomToolSetUpgrade(smokedQuartzHeadsOutput,
+                        SMOKED_QUARTZ_SWORD_BLADE, SMOKED_QUARTZ_SWORD,
+                        SMOKED_QUARTZ_SPEAR_TIP, SMOKED_QUARTZ_SPEAR,
+                        SMOKED_QUARTZ_PICKAXE_HEAD, SMOKED_QUARTZ_PICKAXE,
+                        SMOKED_QUARTZ_AXE_HEAD,SMOKED_QUARTZ_AXE,
+                        SMOKED_QUARTZ_SHOVEL_HEAD, SMOKED_QUARTZ_SHOVEL,
+                        SMOKED_QUARTZ_HOE_HEAD, SMOKED_QUARTZ_HOE);
+                registerCustomToolSetUpgrade(burntQuartzHeadsOutput,
+                        BURNT_QUARTZ_SWORD_BLADE, BURNT_QUARTZ_SWORD,
+                        BURNT_QUARTZ_SPEAR_TIP, BURNT_QUARTZ_SPEAR,
+                        BURNT_QUARTZ_PICKAXE_HEAD, BURNT_QUARTZ_PICKAXE,
+                        BURNT_QUARTZ_AXE_HEAD,BURNT_QUARTZ_AXE,
+                        BURNT_QUARTZ_SHOVEL_HEAD, BURNT_QUARTZ_SHOVEL,
+                        BURNT_QUARTZ_HOE_HEAD, BURNT_QUARTZ_HOE);
             }
 
 
@@ -530,19 +593,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(outputType, getItemName(upgradedResult) + "_from_smithing");
             }
 
-            private void registerCustomToolSetUpgrade(RecipeOutput outputType, Item headItem, Item resultSword, Item resultShovel, Item resultPickaxe, Item resultAxe, Item resultHoe, Item resultSpear){
+            private void registerCustomToolSetUpgrade(RecipeOutput outputType, Item headSword, Item resultSword, Item headSpear, Item resultSpear, Item headPickaxe, Item resultPickaxe, Item headAxe, Item resultAxe, Item headShovel, Item resultShovel, Item headHoe, Item resultHoe){
                 //Sword
-                registerCustomToolUpgrade(outputType, headItem, ItemTags.SWORDS, resultSword, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(outputType, headSword, ItemTags.SWORDS, resultSword, RecipeCategory.COMBAT);
                 //Spear
-                registerCustomToolUpgrade(outputType, headItem, ItemTags.SPEARS, resultSpear, RecipeCategory.COMBAT);
+                registerCustomToolUpgrade(outputType, headSpear, ItemTags.SPEARS, resultSpear, RecipeCategory.COMBAT);
                 //Pickaxe
-                registerCustomToolUpgrade(outputType, headItem, ItemTags.PICKAXES, resultPickaxe, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(outputType, headPickaxe, ItemTags.PICKAXES, resultPickaxe, RecipeCategory.TOOLS);
                 //Axe
-                registerCustomToolUpgrade(outputType, headItem, ItemTags.AXES, resultAxe, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(outputType, headAxe, ItemTags.AXES, resultAxe, RecipeCategory.TOOLS);
                 //Shovel
-                registerCustomToolUpgrade(outputType, headItem, ItemTags.SHOVELS, resultShovel, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(outputType, headShovel, ItemTags.SHOVELS, resultShovel, RecipeCategory.TOOLS);
                 //Hoe
-                registerCustomToolUpgrade(outputType, headItem, ItemTags.HOES, resultHoe, RecipeCategory.TOOLS);
+                registerCustomToolUpgrade(outputType, headHoe, ItemTags.HOES, resultHoe, RecipeCategory.TOOLS);
             }
 
             private void registerCustomNetheriteUpgrade(RecipeOutput outputType, Item material, Item baseItem, Item upgradedResult, RecipeCategory category) {
