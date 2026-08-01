@@ -1,4 +1,36 @@
 # The Vanilla Expansion Changelog
+
+## 0.2.0-beta-26.2-fabric
+**Added**
+
+Blocks:
+- Smooth Stone Stairs and Wall
+- Smooth Sandstone Wall 
+- Smooth Red Sandstone Wall 
+- Cut Sandstone Stairs and Wall 
+- Cut Red Sandstone Stairs and Wall
+
+Items:
+- Quartz Tool and Weapon Heads 
+- Smoked Quartz Tool and Weapon Heads 
+- Burnt Quartz Tool and Weapon Heads 
+- Lapis Lazuli Tool and Weapons
+
+Armor:
+- Armadillo Scute Armor Set 
+- Reinforced Leather Armor Set
+
+**Fixes**
+- Baby Armor Textures for Emerald, Empowered Netherite, and Lapis Lazuli
+
+**Other Changes**
+- Implemented config files using MidnightLib built in. This gives you a way to customize which features are enabled when this mod is installed. Works well with Mod Menu. 
+  - This should work for client and servers, please report any issues you may encounter with the config system 
+  - As the mod is still in beta, I’m open for feedback for the config layout or addition customization you may 
+- Improved and cleaned up code to make it easier to add blocks and items in future releases 
+- Updated Emerald Armor Texture 
+- Updated version naming to better align with the beta label, last release should’ve been 0.1.0-beta but I have goofed up and kept the alpha naming scheme
+
 ## 0.0.12-beta-26.2-fabric (0.1.0-beta)
 **Ported from 1.16.5 Forge to 26.2 Fabric**
 
