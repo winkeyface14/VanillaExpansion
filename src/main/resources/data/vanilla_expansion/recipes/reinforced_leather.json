@@ -1,8 +1,0 @@
-
-{
-  "type": "minecraft:smoking",
-  "experience": 0.7,
-  "cookingtime": 100,
-  "ingredient": "vanilla_expansion:raw_reinforced_leather",
-  "result": {"vanilla_expansion:reinforced_leather"}
-}

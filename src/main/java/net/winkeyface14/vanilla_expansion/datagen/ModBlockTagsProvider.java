@@ -91,6 +91,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.BARREL_OF_APPLES_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BARREL_OF_POTATOES_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BARREL_OF_CARROTS_BLOCK))
+                .add(BlockRegHandler.getRK(BlockRegHandler.BARREL_OF_BEETROOTS_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BARREL_OF_SWEETBERRIES_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BARREL_OF_CHORUS_BLOCK));
 

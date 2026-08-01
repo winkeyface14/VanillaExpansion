@@ -24,33 +24,26 @@ public class BlockRegHandler {
             .sound(SoundType.NETHERITE_BLOCK)
             .requiresCorrectToolForDrops()));
     public static final Block BARREL_OF_APPLES_BLOCK = registerBlock("barrel_of_apples", properties -> new RotatedPillarBlock(properties
-            .strength(2.0f, 4.0f)
-            .sound(SoundType.WOOD)
-            .requiresCorrectToolForDrops()));
+            .strength(1.0f, 4.0f)
+            .sound(SoundType.WOOD)));
     public static final Block BARREL_OF_POTATOES_BLOCK = registerBlock("barrel_of_potatoes", properties -> new RotatedPillarBlock(properties
-            .strength(2.0f, 4.0f)
-            .sound(SoundType.WOOD)
-            .requiresCorrectToolForDrops()));
+            .strength(1.0f, 4.0f)
+            .sound(SoundType.WOOD)));
     public static final Block BARREL_OF_CARROTS_BLOCK = registerBlock("barrel_of_carrots", properties -> new RotatedPillarBlock(properties
-            .strength(2.0f, 4.0f)
-            .sound(SoundType.WOOD)
-            .requiresCorrectToolForDrops()));
+            .strength(1.0f, 4.0f)
+            .sound(SoundType.WOOD)));
     public static final Block BARREL_OF_CHORUS_BLOCK = registerBlock("barrel_of_chorus_fruits", properties -> new RotatedPillarBlock(properties
-            .strength(2.0f, 4.0f)
-            .sound(SoundType.WOOD)
-            .requiresCorrectToolForDrops()));
+            .strength(1.0f, 4.0f)
+            .sound(SoundType.WOOD)));
     public static final Block BARREL_OF_SWEETBERRIES_BLOCK = registerBlock("barrel_of_sweet_berries", properties -> new RotatedPillarBlock(properties
-            .strength(2.0f, 4.0f)
-            .sound(SoundType.WOOD)
-            .requiresCorrectToolForDrops()));
+            .strength(1.0f, 4.0f)
+            .sound(SoundType.WOOD)));
     public static final Block BARREL_OF_BEETROOTS_BLOCK = registerBlock("barrel_of_beetroots", properties -> new RotatedPillarBlock(properties
-            .strength(2.0f, 4.0f)
-            .sound(SoundType.WOOD)
-            .requiresCorrectToolForDrops()));
+            .strength(1.0f, 4.0f)
+            .sound(SoundType.WOOD)));
     public static final Block BUNDLED_STICKS_BLOCK = registerBlock("block_of_bundled_sticks", properties -> new RotatedPillarBlock(properties
-            .strength(2.0f, 4.0f)
-            .sound(SoundType.WOOD)
-            .requiresCorrectToolForDrops()));
+            .strength(0.5f, 4.0f)
+            .sound(SoundType.WOOD)));
 
     //Fired Bricks
     public static final Block FIRED_BRICKS = registerBlock("fired_bricks", properties -> new Block(properties
