@@ -24,7 +24,7 @@ Armor:
 - Baby Armor Textures for Emerald, Empowered Netherite, and Lapis Lazuli
 
 **Other Changes**
-- Implemented config files using MidnightLib built in. This gives you a way to customize which features are enabled when this mod is installed. Works well with Mod Menu. 
+- Implemented config files using MidnightLib, that is built in with the mod. This gives you a way to customize which features are enabled when this mod is installed. Works well with Mod Menu. 
   - This should work for client and servers, please report any issues you may encounter with the config system 
   - As the mod is still in beta, I’m open for feedback for the config layout or addition customization you may 
 - Improved and cleaned up code to make it easier to add blocks and items in future releases 
