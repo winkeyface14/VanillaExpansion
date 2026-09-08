@@ -1,0 +1,13 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_concrete_block_set"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:yellow_concrete",
+  "result": {
+    "id": "vanilla_expansion:yellow_concrete_wall"
+  }
+}

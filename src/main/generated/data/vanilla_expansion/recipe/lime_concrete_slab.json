@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_concrete_block_set"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "lime_concrete_slab",
+  "key": {
+    "#": "minecraft:lime_concrete"
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "vanilla_expansion:lime_concrete_slab"
+  }
+}

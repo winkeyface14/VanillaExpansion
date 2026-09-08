@@ -1,0 +1,38 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_terracotta_block_set"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_light_blue_terracotta": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:light_blue_terracotta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "vanilla_expansion:light_blue_terracotta_slab_from_light_blue_terracotta_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_light_blue_terracotta"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vanilla_expansion:light_blue_terracotta_slab_from_light_blue_terracotta_stonecutting"
+    ]
+  }
+}

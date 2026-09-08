@@ -1,0 +1,20 @@
+// 26.2	-999999999-01-01T00:00:00	The Vanilla Expansion/Tags for minecraft:item
+420c058a82eacca9bdd9dab1495b4cb6ef3a1a23 data/minecraft/tags/item/axes.json
+a33deddfd8865479af623f61c19084fca43956fe data/minecraft/tags/item/chest_armor.json
+33252cc8faa08f27ad24eab7bd50da83d04eb9b0 data/minecraft/tags/item/foot_armor.json
+b1f3f7fc00ebacfe26a1909079ebc677a1a56e3e data/minecraft/tags/item/head_armor.json
+a2cfb45d2d24ba278812cd3c08964440f6bb7741 data/minecraft/tags/item/hoes.json
+e40069e9ac50ab2fe99fc74a38ffb1d328c4e784 data/minecraft/tags/item/leg_armor.json
+841533e0f5cb1b57cf782e4951125ce9c3be1900 data/minecraft/tags/item/pickaxes.json
+85b2880ead9e388c0bc50e654d50126f67bf0243 data/minecraft/tags/item/shovels.json
+2c40143b5db0f235ab54e9d7ca840229b4cf0114 data/minecraft/tags/item/spears.json
+f05f5a7b1dccd21144331e9b36b363c2dcce3f38 data/minecraft/tags/item/swords.json
+e4d0998ecbbe327f788fea7237dc739a9f6d128d data/vanilla_expansion/tags/item/armadillo_scute_repair.json
+aa9e85dbbf43d26c7e82c2feb09daf47375d60e8 data/vanilla_expansion/tags/item/burnt_quartz_repair.json
+8c4f379d97e2cd8c7f9297bf4fab7e60083ecb0d data/vanilla_expansion/tags/item/emerald_repair.json
+a5e0c29289d1fe8c0a37046c03d0d15533f63138 data/vanilla_expansion/tags/item/empowered_netherite_repair.json
+056929b7ab3fd6b71312bcc7bae8661d4f4a5df0 data/vanilla_expansion/tags/item/lapis_lazuli_repair.json
+42605e6989bb70ecdd5f2ded50fbb315b1c185ec data/vanilla_expansion/tags/item/quartz_repair.json
+82a5ce9d51d09b093be2c4b1934357352e43f3b5 data/vanilla_expansion/tags/item/redstone_repair.json
+9866fddc9dafb52b5c37873c2635cd32f0be3f02 data/vanilla_expansion/tags/item/reinforced_leather_repair.json
+1b6e728618ac5a41884580ddb45dddbee9054f57 data/vanilla_expansion/tags/item/smoked_quartz_repair.json
