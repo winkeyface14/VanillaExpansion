@@ -12,13 +12,16 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
+
     public ModBlockTagsProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
         super(output, registryLookupFuture);
     }
 
     @Override
     protected void addTags(HolderLookup.@NonNull Provider registries) {
-        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+
+        var mineablePickaxeTagBuilder = tag(BlockTags.MINEABLE_WITH_PICKAXE)
+
                 .add(BlockRegHandler.getRK(BlockRegHandler.CHARCOAL_BLOCK))
                 .add(BlockRegHandler.getRK(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK))
 
@@ -81,7 +84,11 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_WALL))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICK_WALL))
-                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL));
+                .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.TERRACOTTA_STAIRS))
+                .add(BlockRegHandler.getRK(BlockRegHandler.TERRACOTTA_SLAB))
+                .add(BlockRegHandler.getRK(BlockRegHandler.TERRACOTTA_WALL));
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(BlockRegHandler.getRK(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK));
@@ -126,7 +133,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         tag(BlockTags.BEACON_BASE_BLOCKS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.EMPOWERED_NETHERITE_BLOCK));
 
-        tag(BlockTags.WALLS)
+        var wallTagBuilder = tag(BlockTags.WALLS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_STONE_WALL))
 
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_SANDSTONE_WALL))
@@ -149,9 +156,11 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICK_WALL))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL))
 
-                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_WALL));
+                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_WALL))
 
-        tag(BlockTags.STAIRS)
+                .add(BlockRegHandler.getRK(BlockRegHandler.TERRACOTTA_WALL));
+
+        var stairsTagBuilder = tag(BlockTags.STAIRS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_STONE_STAIRS))
 
                 .add(BlockRegHandler.getRK(BlockRegHandler.CUT_SANDSTONE_STAIRS))
@@ -168,9 +177,12 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICK_STAIRS))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_STAIRS))
 
-                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_STAIRS));
+                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_STAIRS))
 
-        tag(BlockTags.SLABS)
+                .add(BlockRegHandler.getRK(BlockRegHandler.TERRACOTTA_STAIRS));
+
+
+        var slabTagBuilder = tag(BlockTags.SLABS)
                 .add(BlockRegHandler.getRK(BlockRegHandler.QUARTZ_BRICK_SLAB))
 
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOKED_QUARTZ_SLAB))
@@ -180,6 +192,53 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.BURNT_QUARTZ_BRICK_SLAB))
                 .add(BlockRegHandler.getRK(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB))
-                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_SLAB));
+                .add(BlockRegHandler.getRK(BlockRegHandler.FIRED_BRICK_SLAB))
+
+                .add(BlockRegHandler.getRK(BlockRegHandler.TERRACOTTA_SLAB));
+
+        BlockRegHandler.DYED_TERRACOTTA_STAIRS.values().forEach(block ->
+                stairsTagBuilder.add(BlockRegHandler.getRK(block)));
+        BlockRegHandler.DYED_TERRACOTTA_STAIRS.values().forEach(block ->
+                mineablePickaxeTagBuilder.add(BlockRegHandler.getRK(block)));
+
+        BlockRegHandler.DYED_TERRACOTTA_SLAB.values().forEach(block ->
+                slabTagBuilder.add(BlockRegHandler.getRK(block)));
+        BlockRegHandler.DYED_TERRACOTTA_SLAB.values().forEach(block ->
+                mineablePickaxeTagBuilder.add(BlockRegHandler.getRK(block)));
+
+        BlockRegHandler.DYED_TERRACOTTA_WALL.values().forEach(block ->
+                wallTagBuilder.add(BlockRegHandler.getRK(block)));
+        BlockRegHandler.DYED_TERRACOTTA_WALL.values().forEach(block ->
+                mineablePickaxeTagBuilder.add(BlockRegHandler.getRK(block)));
+
+        BlockRegHandler.DYED_WOOL_STAIRS.values().forEach(block ->
+                stairsTagBuilder.add(BlockRegHandler.getRK(block)));
+        BlockRegHandler.DYED_WOOL_STAIRS.values().forEach(block ->
+                mineablePickaxeTagBuilder.add(BlockRegHandler.getRK(block)));
+
+        BlockRegHandler.DYED_WOOL_SLAB.values().forEach(block ->
+                slabTagBuilder.add(BlockRegHandler.getRK(block)));
+        BlockRegHandler.DYED_WOOL_SLAB.values().forEach(block ->
+                mineablePickaxeTagBuilder.add(BlockRegHandler.getRK(block)));
+
+        BlockRegHandler.DYED_WOOL_WALL.values().forEach(block ->
+                wallTagBuilder.add(BlockRegHandler.getRK(block)));
+        BlockRegHandler.DYED_WOOL_WALL.values().forEach(block ->
+                mineablePickaxeTagBuilder.add(BlockRegHandler.getRK(block)));
+
+        BlockRegHandler.DYED_CONCRETE_STAIRS.values().forEach(block ->
+                stairsTagBuilder.add(BlockRegHandler.getRK(block)));
+        BlockRegHandler.DYED_CONCRETE_STAIRS.values().forEach(block ->
+                mineablePickaxeTagBuilder.add(BlockRegHandler.getRK(block)));
+
+        BlockRegHandler.DYED_CONCRETE_SLAB.values().forEach(block ->
+                slabTagBuilder.add(BlockRegHandler.getRK(block)));
+        BlockRegHandler.DYED_CONCRETE_SLAB.values().forEach(block ->
+                mineablePickaxeTagBuilder.add(BlockRegHandler.getRK(block)));
+
+        BlockRegHandler.DYED_CONCRETE_WALL.values().forEach(block ->
+                wallTagBuilder.add(BlockRegHandler.getRK(block)));
+        BlockRegHandler.DYED_CONCRETE_WALL.values().forEach(block ->
+                mineablePickaxeTagBuilder.add(BlockRegHandler.getRK(block)));
     }
 }

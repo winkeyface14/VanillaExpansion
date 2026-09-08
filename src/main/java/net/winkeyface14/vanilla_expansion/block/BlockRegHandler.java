@@ -6,14 +6,27 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.winkeyface14.vanilla_expansion.VanillaExpansion;
 
+import java.util.EnumMap;
+import java.util.Map;
 import java.util.function.Function;
 
 public class BlockRegHandler {
+    public static final Map<DyeColor, Block> DYED_TERRACOTTA_STAIRS = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, Block> DYED_TERRACOTTA_SLAB = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, Block> DYED_TERRACOTTA_WALL = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, Block> DYED_WOOL_STAIRS = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, Block> DYED_WOOL_SLAB = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, Block> DYED_WOOL_WALL = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, Block> DYED_CONCRETE_STAIRS = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, Block> DYED_CONCRETE_SLAB = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, Block> DYED_CONCRETE_WALL = new EnumMap<>(DyeColor.class);
+
     // Full Blocks
     public static final Block CHARCOAL_BLOCK = registerBlock("charcoal_block", properties -> new Block(properties
             .strength(5.0f, 6.0f)
@@ -238,6 +251,127 @@ public class BlockRegHandler {
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
 
+    //Dyed Blocks
+
+    //Terracotta
+    public static final Block TERRACOTTA_STAIRS = registerBlock("terracotta_stairs", properties -> new StairBlock(Blocks.TERRACOTTA.defaultBlockState(), properties
+            .strength(1.25f,4.2f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+
+    public static void registerDyedStairs() {
+        for (DyeColor color : DyeColor.values()) {
+            String blockTerracotta = color.getName() + "_terracotta_stairs";
+            String blockWool = color.getName() + "_wool_stairs";
+            String blockConcrete = color.getName() + "_concrete_stairs";
+
+            Block baseTerracotta = BuiltInRegistries.BLOCK.getValue(
+                    Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_terracotta")
+            );
+            Block baseWool = BuiltInRegistries.BLOCK.getValue(
+                    Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_wool")
+            );
+            Block baseConcrete = BuiltInRegistries.BLOCK.getValue(
+                    Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_concrete")
+            );
+
+            Block stairsTerracotta = registerBlock(blockTerracotta, properties ->
+                    new StairBlock(baseTerracotta.defaultBlockState(), properties
+                            .strength(1.25f, 4.2f)
+                            .sound(SoundType.STONE)
+                            .requiresCorrectToolForDrops())
+            );
+            Block stairsWool = registerBlock(blockWool, properties ->
+                    new StairBlock(baseWool.defaultBlockState(), properties
+                            .strength(0.8f, 0.8f)
+                            .sound(SoundType.WOOL)
+                            .requiresCorrectToolForDrops())
+            );
+            Block stairsConcrete = registerBlock(blockConcrete, properties ->
+                    new StairBlock(baseConcrete.defaultBlockState(), properties
+                            .strength(1.8f, 1.8f)
+                            .sound(SoundType.STONE)
+                            .requiresCorrectToolForDrops())
+            );
+
+            DYED_TERRACOTTA_STAIRS.put(color, stairsTerracotta);
+            DYED_WOOL_STAIRS.put(color, stairsWool);
+            DYED_CONCRETE_STAIRS.put(color, stairsConcrete);
+        }
+    }
+
+    public static final Block TERRACOTTA_SLAB = registerBlock("terracotta_slab", properties -> new SlabBlock(properties
+            .strength(1.25f,4.2f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+
+    public static void registerDyedSlabs() {
+        for (DyeColor color : DyeColor.values()) {
+            String blockTerracotta = color.getName() + "_terracotta_slab";
+            String blockWool = color.getName() + "_wool_slab";
+            String blockConcrete = color.getName() + "_concrete_slab";
+
+            Block slabTerracotta = registerBlock(blockTerracotta, properties ->
+                    new SlabBlock(properties
+                            .strength(1.25f, 4.2f)
+                            .sound(SoundType.STONE)
+                            .requiresCorrectToolForDrops())
+            );
+            Block slabWool = registerBlock(blockWool, properties ->
+                    new SlabBlock(properties
+                            .strength(0.8f, 0.8f)
+                            .sound(SoundType.WOOL)
+                            .requiresCorrectToolForDrops())
+            );
+            Block slabConcrete = registerBlock(blockConcrete, properties ->
+                    new SlabBlock(properties
+                            .strength(1.8f, 1.8f)
+                            .sound(SoundType.STONE)
+                            .requiresCorrectToolForDrops())
+            );
+
+            DYED_TERRACOTTA_SLAB.put(color, slabTerracotta);
+            DYED_WOOL_SLAB.put(color, slabWool);
+            DYED_CONCRETE_SLAB.put(color, slabConcrete);
+        }
+    }
+
+    public static final Block TERRACOTTA_WALL = registerBlock("terracotta_wall", properties -> new WallBlock(properties
+            .strength(1.25f,4.2f)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+
+    public static void registerDyedWall() {
+        for (DyeColor color : DyeColor.values()) {
+            String blockTerracotta = color.getName() + "_terracotta_wall";
+            String blockWool = color.getName() + "_wool_wall";
+            String blockConcrete = color.getName() + "_concrete_wall";
+
+            Block wallTerracotta = registerBlock(blockTerracotta, properties ->
+                    new WallBlock(properties
+                            .strength(1.25f, 4.2f)
+                            .sound(SoundType.STONE)
+                            .requiresCorrectToolForDrops())
+            );
+            Block wallWool = registerBlock(blockWool, properties ->
+                    new WallBlock(properties
+                            .strength(0.8f, 0.8f)
+                            .sound(SoundType.WOOL)
+                            .requiresCorrectToolForDrops())
+            );
+            Block wallConcrete = registerBlock(blockConcrete, properties ->
+                    new WallBlock(properties
+                            .strength(1.8f, 1.8f)
+                            .sound(SoundType.STONE)
+                            .requiresCorrectToolForDrops())
+            );
+
+            DYED_TERRACOTTA_WALL.put(color, wallTerracotta);
+            DYED_WOOL_WALL.put(color, wallWool);
+            DYED_CONCRETE_WALL.put(color, wallConcrete);
+        }
+    }
+
     public static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function){
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(VanillaExpansion.MOD_ID, name))));
         registerBlockItem(name, toRegister);
@@ -252,6 +386,10 @@ public class BlockRegHandler {
 
     public static void registerModBlocks(){
         VanillaExpansion.LOGGER.info("Registering Blocks for " + VanillaExpansion.MOD_ID);
+
+        registerDyedStairs();
+        registerDyedSlabs();
+        registerDyedWall();
     }
 
     public static ResourceKey<Block> getRK(Block block) {

@@ -6,6 +6,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.winkeyface14.vanilla_expansion.VanillaExpansion;
 import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
@@ -346,6 +347,34 @@ public class CreativeTab {
                     output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_SLAB);
                     output.accept(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL);
                 }
+
+                if(enableAddWoolBlockSet){
+                    for (DyeColor color : DyeColor.values()){
+                        output.accept(BlockRegHandler.DYED_WOOL_STAIRS.get(color));
+                        output.accept(BlockRegHandler.DYED_WOOL_SLAB.get(color));
+                        output.accept(BlockRegHandler.DYED_WOOL_WALL.get(color));
+                    }
+                }
+
+                if(enableAddTerracottaBlockSet){
+                    output.accept(BlockRegHandler.TERRACOTTA_STAIRS);
+                    output.accept(BlockRegHandler.TERRACOTTA_SLAB);
+                    output.accept(BlockRegHandler.TERRACOTTA_WALL);
+                    for (DyeColor color : DyeColor.values()){
+                        output.accept(BlockRegHandler.DYED_TERRACOTTA_STAIRS.get(color));
+                        output.accept(BlockRegHandler.DYED_TERRACOTTA_SLAB.get(color));
+                        output.accept(BlockRegHandler.DYED_TERRACOTTA_WALL.get(color));
+                    }
+                }
+
+                if(enableAddConcreteBlockSet){
+                    for (DyeColor color : DyeColor.values()){
+                        output.accept(BlockRegHandler.DYED_CONCRETE_STAIRS.get(color));
+                        output.accept(BlockRegHandler.DYED_CONCRETE_SLAB.get(color));
+                        output.accept(BlockRegHandler.DYED_CONCRETE_WALL.get(color));
+                    }
+                }
+
             }).build());
 
 

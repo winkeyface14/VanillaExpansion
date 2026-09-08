@@ -146,6 +146,9 @@ public class ConfigHandler extends MidnightConfig {
     @Entry(category = BLOCKS) public static boolean enableAddSmoothRedSandstoneBlockSet = true;
     @Entry(category = BLOCKS) public static boolean enableAddCutSandstoneBlockSet = true;
     @Entry(category = BLOCKS) public static boolean enableAddCutRedSandstoneBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableAddTerracottaBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableAddWoolBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableAddConcreteBlockSet = true;
 
     public static boolean isVanillaHeadsEnabled(boolean enableVanillaHeads, boolean enableToolSet) {
         return enableBaseTemplate && enableToolSet && enableVanillaHeads;

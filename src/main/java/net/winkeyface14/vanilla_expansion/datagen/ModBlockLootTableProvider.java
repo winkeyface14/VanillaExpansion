@@ -79,5 +79,21 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(BlockRegHandler.BURNT_QUARTZ_WALL);
         dropSelf(BlockRegHandler.BURNT_QUARTZ_BRICK_WALL);
         dropSelf(BlockRegHandler.SMOOTH_BURNT_QUARTZ_WALL);
+
+        dropSelf(BlockRegHandler.TERRACOTTA_STAIRS);
+        BlockRegHandler.DYED_TERRACOTTA_STAIRS.values().forEach(this::dropSelf);
+        BlockRegHandler.DYED_WOOL_STAIRS.values().forEach(this::dropSelf);
+        BlockRegHandler.DYED_CONCRETE_STAIRS.values().forEach(this::dropSelf);
+
+        dropSelf(BlockRegHandler.TERRACOTTA_SLAB);
+        BlockRegHandler.DYED_TERRACOTTA_SLAB.values().forEach(this::dropSelf);
+        BlockRegHandler.DYED_WOOL_SLAB.values().forEach(this::dropSelf);
+        BlockRegHandler.DYED_CONCRETE_SLAB.values().forEach(this::dropSelf);
+
+        dropSelf(BlockRegHandler.TERRACOTTA_WALL);
+        BlockRegHandler.DYED_TERRACOTTA_WALL.values().forEach(this::dropSelf);
+        BlockRegHandler.DYED_WOOL_WALL.values().forEach(this::dropSelf);
+        BlockRegHandler.DYED_CONCRETE_WALL.values().forEach(this::dropSelf);
+
     }
 }

@@ -6,7 +6,10 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.resources.model.sprite.Material;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.winkeyface14.vanilla_expansion.item.ArmorMaterialBase;
@@ -105,6 +108,53 @@ public class ModModelProvider extends FabricModelProvider {
                 TexturedModel.COLUMN
         );
         blockModelGenerators.createAxisAlignedPillarBlock(BlockRegHandler.BURNT_QUARTZ_PILLAR, TexturedModel.COLUMN);
+
+        //Terracotta Block Sets
+        customBlockSetModelGen(Blocks.TERRACOTTA, BlockRegHandler.TERRACOTTA_STAIRS, BlockRegHandler.TERRACOTTA_SLAB, BlockRegHandler.TERRACOTTA_WALL, "", blockModelGenerators);
+
+        for (DyeColor color : DyeColor.values()) {
+            Block baseBlock = BuiltInRegistries.BLOCK.getValue(
+                    Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_terracotta")
+            );
+
+            Block stairs = BlockRegHandler.DYED_TERRACOTTA_STAIRS.get(color);
+            Block slab = BlockRegHandler.DYED_TERRACOTTA_SLAB.get(color);
+            Block wall = BlockRegHandler.DYED_TERRACOTTA_WALL.get(color);
+
+            if (stairs != null && slab != null && wall != null) {
+                customBlockSetModelGen(baseBlock, stairs, slab, wall, "", blockModelGenerators);
+            }
+        }
+
+        //Wool Block Sets
+        for (DyeColor color : DyeColor.values()) {
+            Block baseBlock = BuiltInRegistries.BLOCK.getValue(
+                    Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_wool")
+            );
+
+            Block stairs = BlockRegHandler.DYED_WOOL_STAIRS.get(color);
+            Block slab = BlockRegHandler.DYED_WOOL_SLAB.get(color);
+            Block wall = BlockRegHandler.DYED_WOOL_WALL.get(color);
+
+            if (stairs != null && slab != null && wall != null) {
+                customBlockSetModelGen(baseBlock, stairs, slab, wall, "", blockModelGenerators);
+            }
+        }
+
+        //Concrete Block Sets
+        for (DyeColor color : DyeColor.values()) {
+            Block baseBlock = BuiltInRegistries.BLOCK.getValue(
+                    Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_concrete")
+            );
+
+            Block stairs = BlockRegHandler.DYED_CONCRETE_STAIRS.get(color);
+            Block slab = BlockRegHandler.DYED_CONCRETE_SLAB.get(color);
+            Block wall = BlockRegHandler.DYED_CONCRETE_WALL.get(color);
+
+            if (stairs != null && slab != null && wall != null) {
+                customBlockSetModelGen(baseBlock, stairs, slab, wall, "", blockModelGenerators);
+            }
+        }
     }
 
     @Override
@@ -127,130 +177,142 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE, ModelTemplates.FLAT_ITEM);
 
         //Tool and Weapon Heads
-        itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.STONE_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+        Item[] flatTips = {
+                ItemRegHandler.STONE_SWORD_BLADE,
+                ItemRegHandler.STONE_SPEAR_TIP,
+                ItemRegHandler.STONE_SHOVEL_HEAD,
+                ItemRegHandler.STONE_PICKAXE_HEAD,
+                ItemRegHandler.STONE_AXE_HEAD,
+                ItemRegHandler.STONE_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.COPPER_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.COPPER_SWORD_BLADE,
+                ItemRegHandler.COPPER_SPEAR_TIP,
+                ItemRegHandler.COPPER_SHOVEL_HEAD,
+                ItemRegHandler.COPPER_PICKAXE_HEAD,
+                ItemRegHandler.COPPER_AXE_HEAD,
+                ItemRegHandler.COPPER_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.IRON_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.IRON_SWORD_BLADE,
+                ItemRegHandler.IRON_SPEAR_TIP,
+                ItemRegHandler.IRON_SHOVEL_HEAD,
+                ItemRegHandler.IRON_PICKAXE_HEAD,
+                ItemRegHandler.IRON_AXE_HEAD,
+                ItemRegHandler.IRON_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.GOLD_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.GOLD_SWORD_BLADE,
+                ItemRegHandler.GOLD_SPEAR_TIP,
+                ItemRegHandler.GOLD_SHOVEL_HEAD,
+                ItemRegHandler.GOLD_PICKAXE_HEAD,
+                ItemRegHandler.GOLD_AXE_HEAD,
+                ItemRegHandler.GOLD_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.DIAMOND_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.DIAMOND_SWORD_BLADE,
+                ItemRegHandler.DIAMOND_SPEAR_TIP,
+                ItemRegHandler.DIAMOND_SHOVEL_HEAD,
+                ItemRegHandler.DIAMOND_PICKAXE_HEAD,
+                ItemRegHandler.DIAMOND_AXE_HEAD,
+                ItemRegHandler.DIAMOND_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.LAPIS_LAZULI_SWORD_BLADE,
+                ItemRegHandler.LAPIS_LAZULI_SPEAR_TIP,
+                ItemRegHandler.LAPIS_LAZULI_SHOVEL_HEAD,
+                ItemRegHandler.LAPIS_LAZULI_PICKAXE_HEAD,
+                ItemRegHandler.LAPIS_LAZULI_AXE_HEAD,
+                ItemRegHandler.LAPIS_LAZULI_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.REDSTONE_SWORD_BLADE,
+                ItemRegHandler.REDSTONE_SPEAR_TIP,
+                ItemRegHandler.REDSTONE_SHOVEL_HEAD,
+                ItemRegHandler.REDSTONE_PICKAXE_HEAD,
+                ItemRegHandler.REDSTONE_AXE_HEAD,
+                ItemRegHandler.REDSTONE_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.EMERALD_SWORD_BLADE,
+                ItemRegHandler.EMERALD_SPEAR_TIP,
+                ItemRegHandler.EMERALD_SHOVEL_HEAD,
+                ItemRegHandler.EMERALD_PICKAXE_HEAD,
+                ItemRegHandler.EMERALD_AXE_HEAD,
+                ItemRegHandler.EMERALD_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.QUARTZ_SWORD_BLADE,
+                ItemRegHandler.QUARTZ_SPEAR_TIP,
+                ItemRegHandler.QUARTZ_SHOVEL_HEAD,
+                ItemRegHandler.QUARTZ_PICKAXE_HEAD,
+                ItemRegHandler.QUARTZ_AXE_HEAD,
+                ItemRegHandler.QUARTZ_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.SMOKED_QUARTZ_SWORD_BLADE,
+                ItemRegHandler.SMOKED_QUARTZ_SPEAR_TIP,
+                ItemRegHandler.SMOKED_QUARTZ_SHOVEL_HEAD,
+                ItemRegHandler.SMOKED_QUARTZ_PICKAXE_HEAD,
+                ItemRegHandler.SMOKED_QUARTZ_AXE_HEAD,
+                ItemRegHandler.SMOKED_QUARTZ_HOE_HEAD,
 
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SWORD_BLADE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SPEAR_TIP, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SHOVEL_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_PICKAXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_AXE_HEAD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_HOE_HEAD, ModelTemplates.FLAT_ITEM);
+                ItemRegHandler.BURNT_QUARTZ_SWORD_BLADE,
+                ItemRegHandler.BURNT_QUARTZ_SPEAR_TIP,
+                ItemRegHandler.BURNT_QUARTZ_SHOVEL_HEAD,
+                ItemRegHandler.BURNT_QUARTZ_PICKAXE_HEAD,
+                ItemRegHandler.BURNT_QUARTZ_AXE_HEAD,
+                ItemRegHandler.BURNT_QUARTZ_HOE_HEAD,
+        };
+
+        for (Item item : flatTips) {
+            itemModelGenerators.generateFlatItem(item, ModelTemplates.FLAT_ITEM);
+        }
 
         //Tool Upgrade Template
         itemModelGenerators.generateFlatItem(ItemRegHandler.BASE_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
-        //Sword
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        Item[] flatToolWeapon = {
+                //Sword
+                ItemRegHandler.EMERALD_SWORD,
+                ItemRegHandler.LAPIS_LAZULI_SWORD,
+                ItemRegHandler.REDSTONE_SWORD,
+                ItemRegHandler.QUARTZ_SWORD,
+                ItemRegHandler.SMOKED_QUARTZ_SWORD,
+                ItemRegHandler.BURNT_QUARTZ_SWORD,
+                ItemRegHandler.EMPOWERED_NETHERITE_SWORD,
 
-        //Shovel
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+                //Shovel
+                ItemRegHandler.EMERALD_SHOVEL,
+                ItemRegHandler.LAPIS_LAZULI_SHOVEL,
+                ItemRegHandler.REDSTONE_SHOVEL,
+                ItemRegHandler.QUARTZ_SHOVEL,
+                ItemRegHandler.SMOKED_QUARTZ_SHOVEL,
+                ItemRegHandler.BURNT_QUARTZ_SHOVEL,
+                ItemRegHandler.EMPOWERED_NETHERITE_SHOVEL,
 
-        //Pickaxe
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+                //Pickaxe
+                ItemRegHandler.EMERALD_PICKAXE,
+                ItemRegHandler.LAPIS_LAZULI_PICKAXE,
+                ItemRegHandler.REDSTONE_PICKAXE,
+                ItemRegHandler.QUARTZ_PICKAXE,
+                ItemRegHandler.SMOKED_QUARTZ_PICKAXE,
+                ItemRegHandler.BURNT_QUARTZ_PICKAXE,
+                ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE,
 
-        //Axe
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+                //Axe
+                ItemRegHandler.EMERALD_AXE,
+                ItemRegHandler.LAPIS_LAZULI_AXE,
+                ItemRegHandler.REDSTONE_AXE,
+                ItemRegHandler.QUARTZ_AXE,
+                ItemRegHandler.SMOKED_QUARTZ_AXE,
+                ItemRegHandler.BURNT_QUARTZ_AXE,
+                ItemRegHandler.EMPOWERED_NETHERITE_AXE,
 
-        //Hoes
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMERALD_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.LAPIS_LAZULI_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.REDSTONE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.QUARTZ_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.SMOKED_QUARTZ_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.BURNT_QUARTZ_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerators.generateFlatItem(ItemRegHandler.EMPOWERED_NETHERITE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+                //Hoes
+                ItemRegHandler.EMERALD_HOE,
+                ItemRegHandler.LAPIS_LAZULI_HOE,
+                ItemRegHandler.REDSTONE_HOE,
+                ItemRegHandler.QUARTZ_HOE,
+                ItemRegHandler.SMOKED_QUARTZ_HOE,
+                ItemRegHandler.BURNT_QUARTZ_HOE,
+                ItemRegHandler.EMPOWERED_NETHERITE_HOE,
+        };
+
+        for (Item item : flatToolWeapon) {
+            itemModelGenerators.generateFlatItem(item, ModelTemplates.FLAT_ITEM);
+        }
 
         //Spears
         itemModelGenerators.generateSpear(ItemRegHandler.EMERALD_SPEAR);
@@ -288,6 +350,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.ARMADILLO_SCUTE_BOOTS, ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_BOOTS, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+    }
+
+    public void customBlockSetModelGen (Block blockBase, Block stairsResult, Block slabResult, Block wallResult, String textureSuffix, BlockModelGenerators blockModelGenerators){
+        customStairsModelGen(blockBase, stairsResult, textureSuffix, blockModelGenerators);
+        customSlabModelGen(blockBase, slabResult, textureSuffix, blockModelGenerators);
+        customWallModelGen(blockBase, wallResult, textureSuffix, blockModelGenerators);
     }
 
     public void customWallModelGen (Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators){

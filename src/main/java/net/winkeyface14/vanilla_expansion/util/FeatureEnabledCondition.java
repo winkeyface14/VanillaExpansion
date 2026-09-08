@@ -96,6 +96,9 @@ public record FeatureEnabledCondition(String featureName) implements ResourceCon
             case "add_smooth_red_sandstone_block_set" -> enableAddSmoothRedSandstoneBlockSet;
             case "add_cut_sandstone_block_set" -> enableAddCutSandstoneBlockSet;
             case "add_cut_red_sandstone_block_set" -> enableAddCutRedSandstoneBlockSet;
+            case "add_terracotta_block_set" -> enableAddTerracottaBlockSet;
+            case "add_wool_block_set" -> enableAddWoolBlockSet;
+            case "add_concrete_block_set" -> enableAddConcreteBlockSet;
             default -> true;
         };
     }

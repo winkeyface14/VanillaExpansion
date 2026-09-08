@@ -10,7 +10,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ColorCollection;
+import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
 import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
 import net.winkeyface14.vanilla_expansion.util.FeatureEnabledCondition;
 import org.jspecify.annotations.NonNull;
@@ -95,6 +98,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 RecipeOutput addSmoothRedSandstoneQuartzBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_smooth_red_sandstone_block_set"));
                 RecipeOutput addCutSandstoneQuartzBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_cut_sandstone_block_set"));
                 RecipeOutput addCutRedSandstoneQuartzBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_cut_red_sandstone_block_set"));
+                RecipeOutput addTerracottaBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_terracotta_block_set"));
+                RecipeOutput addWoolBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_wool_block_set"));
+                RecipeOutput addConcreteBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_concrete_block_set"));
 
                 List<ItemLike> REINFORCED_LEATHER_BLASTABLE = List.of(RAW_REINFORCED_LEATHER);
                 List<ItemLike> BRICK_SMELTABLE = List.of(BRICK);
@@ -351,6 +357,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         CUT_RED_SANDSTONE_WALL.asItem(),
                         null,
                         addCutRedSandstoneQuartzBlockSetOutput);
+
+                //Terracotta Base Set
+                registerBlockSetRecipes(
+                        TERRACOTTA,
+                        TERRACOTTA_SLAB.asItem(),
+                        TERRACOTTA_STAIRS.asItem(),
+                        TERRACOTTA_WALL.asItem(),
+                        null,
+                        addTerracottaBlockSetOutput);
+
+                //Dyed Blocks Set
+                registerDyedTerracottaSetRecipes(addTerracottaBlockSetOutput);
+                registerDyedWoolSetRecipes(addWoolBlockSetOutput);
+                registerDyedConcreteSetRecipes(addConcreteBlockSetOutput);
 
                 //Empowered Netherite
                 this.shapeless(RecipeCategory.MISC, EMPOWERED_NETHERITE)
@@ -815,6 +835,135 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                             .unlockedBy(getHasName(baseItem), has(baseItem))
                             .group(getItemName(resultFence))
                             .save(outputType);
+                }
+            }
+
+            private void registerDyedTerracottaSetRecipes(RecipeOutput outputType) {
+                RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+
+                for (net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
+
+                    Block baseBlock = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getValue(
+                            net.minecraft.resources.Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_terracotta")
+                    );
+
+                    Block resultSlab = BlockRegHandler.DYED_TERRACOTTA_SLAB.get(color);
+                    Block resultStairs = BlockRegHandler.DYED_TERRACOTTA_STAIRS.get(color);
+                    Block resultWall = BlockRegHandler.DYED_TERRACOTTA_WALL.get(color);
+
+                    // Slab
+                    if (resultSlab != null) {
+                        helper.stonecutterResultFromBase(categoryBuilding, resultSlab, baseBlock, 2);
+                        this.slabBuilder(categoryBuilding, resultSlab, Ingredient.of(baseBlock))
+                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
+                                .group(getItemName(resultSlab))
+                                .save(outputType);
+                    }
+
+                    // Stairs
+                    if (resultStairs != null) {
+                        helper.stonecutterResultFromBase(categoryBuilding, resultStairs, baseBlock, 1);
+                        this.stairBuilder(resultStairs, Ingredient.of(baseBlock))
+                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
+                                .group(getItemName(resultStairs))
+                                .save(outputType);
+                    }
+
+                    // Wall
+                    if (resultWall != null) {
+                        helper.stonecutterResultFromBase(categoryBuilding, resultWall, baseBlock, 1);
+                        this.wallBuilder(categoryBuilding, resultWall, Ingredient.of(baseBlock))
+                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
+                                .group(getItemName(resultWall))
+                                .save(outputType);
+                    }
+                }
+            }
+
+            private void registerDyedWoolSetRecipes(RecipeOutput outputType) {
+                RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+
+                for (net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
+
+                    Block baseBlock = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getValue(
+                            net.minecraft.resources.Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_wool")
+                    );
+
+                    Block resultSlab = BlockRegHandler.DYED_WOOL_SLAB.get(color);
+                    Block resultStairs = BlockRegHandler.DYED_WOOL_STAIRS.get(color);
+                    Block resultWall = BlockRegHandler.DYED_WOOL_WALL.get(color);
+
+                    // Slab
+                    if (resultSlab != null) {
+                        helper.stonecutterResultFromBase(categoryBuilding, resultSlab, baseBlock, 2);
+                        this.slabBuilder(categoryBuilding, resultSlab, Ingredient.of(baseBlock))
+                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
+                                .group(getItemName(resultSlab))
+                                .save(outputType);
+                    }
+
+                    // Stairs
+                    if (resultStairs != null) {
+                        helper.stonecutterResultFromBase(categoryBuilding, resultStairs, baseBlock, 1);
+                        this.stairBuilder(resultStairs, Ingredient.of(baseBlock))
+                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
+                                .group(getItemName(resultStairs))
+                                .save(outputType);
+                    }
+
+                    // Wall
+                    if (resultWall != null) {
+                        helper.stonecutterResultFromBase(categoryBuilding, resultWall, baseBlock, 1);
+                        this.wallBuilder(categoryBuilding, resultWall, Ingredient.of(baseBlock))
+                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
+                                .group(getItemName(resultWall))
+                                .save(outputType);
+                    }
+                }
+            }
+
+            private void registerDyedConcreteSetRecipes(RecipeOutput outputType) {
+                RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+
+                for (net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
+
+                    Block baseBlock = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getValue(
+                            net.minecraft.resources.Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_concrete")
+                    );
+
+                    Block resultSlab = BlockRegHandler.DYED_CONCRETE_SLAB.get(color);
+                    Block resultStairs = BlockRegHandler.DYED_CONCRETE_STAIRS.get(color);
+                    Block resultWall = BlockRegHandler.DYED_CONCRETE_WALL.get(color);
+
+                    // Slab
+                    if (resultSlab != null) {
+                        helper.stonecutterResultFromBase(categoryBuilding, resultSlab, baseBlock, 2);
+                        this.slabBuilder(categoryBuilding, resultSlab, Ingredient.of(baseBlock))
+                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
+                                .group(getItemName(resultSlab))
+                                .save(outputType);
+                    }
+
+                    // Stairs
+                    if (resultStairs != null) {
+                        helper.stonecutterResultFromBase(categoryBuilding, resultStairs, baseBlock, 1);
+                        this.stairBuilder(resultStairs, Ingredient.of(baseBlock))
+                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
+                                .group(getItemName(resultStairs))
+                                .save(outputType);
+                    }
+
+                    // Wall
+                    if (resultWall != null) {
+                        helper.stonecutterResultFromBase(categoryBuilding, resultWall, baseBlock, 1);
+                        this.wallBuilder(categoryBuilding, resultWall, Ingredient.of(baseBlock))
+                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
+                                .group(getItemName(resultWall))
+                                .save(outputType);
+                    }
                 }
             }
 
