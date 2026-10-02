@@ -6,128 +6,136 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.references.BlockItemIds;
 import net.minecraft.references.ItemIds;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.winkeyface14.vanilla_expansion.tags.TagRegHandler;
-import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
 import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
+// Static import lets us drop "ItemRegHandler." everywhere
+import static net.winkeyface14.vanilla_expansion.item.ItemRegHandler.*;
+
 public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
+
     public ModItemTagsProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
         super(output, registryLookupFuture);
     }
 
     @Override
     protected void addTags(HolderLookup.@NonNull Provider registries) {
-        tag(ItemTags.SWORDS)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_SWORD))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_SWORD))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REDSTONE_SWORD))
-                .add(ItemRegHandler.getRK(ItemRegHandler.QUARTZ_SWORD))
-                .add(ItemRegHandler.getRK(ItemRegHandler.SMOKED_QUARTZ_SWORD))
-                .add(ItemRegHandler.getRK(ItemRegHandler.BURNT_QUARTZ_SWORD))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_SWORD));
 
-        tag(ItemTags.SHOVELS)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_SHOVEL))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_SHOVEL))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REDSTONE_SHOVEL))
-                .add(ItemRegHandler.getRK(ItemRegHandler.QUARTZ_SHOVEL))
-                .add(ItemRegHandler.getRK(ItemRegHandler.SMOKED_QUARTZ_SHOVEL))
-                .add(ItemRegHandler.getRK(ItemRegHandler.BURNT_QUARTZ_SHOVEL))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_SHOVEL));
+        // --- Tools ---
+        addItems(ItemTags.SWORDS,
+                EMERALD_SWORD,
+                LAPIS_LAZULI_SWORD,
+                REDSTONE_SWORD,
+                QUARTZ_SWORD,
+                SMOKED_QUARTZ_SWORD,
+                BURNT_QUARTZ_SWORD,
+                EMPOWERED_NETHERITE_SWORD
+        );
 
-        tag(ItemTags.PICKAXES)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_PICKAXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_PICKAXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REDSTONE_PICKAXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.QUARTZ_PICKAXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.SMOKED_QUARTZ_PICKAXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.BURNT_QUARTZ_PICKAXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_PICKAXE));
+        addItems(ItemTags.SHOVELS,
+                EMERALD_SHOVEL,
+                LAPIS_LAZULI_SHOVEL,
+                REDSTONE_SHOVEL,
+                QUARTZ_SHOVEL,
+                SMOKED_QUARTZ_SHOVEL,
+                BURNT_QUARTZ_SHOVEL,
+                EMPOWERED_NETHERITE_SHOVEL
+        );
 
-        tag(ItemTags.AXES)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_AXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_AXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REDSTONE_AXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.QUARTZ_AXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.SMOKED_QUARTZ_AXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.BURNT_QUARTZ_AXE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_AXE));
+        addItems(ItemTags.PICKAXES,
+                EMERALD_PICKAXE,
+                LAPIS_LAZULI_PICKAXE,
+                REDSTONE_PICKAXE,
+                QUARTZ_PICKAXE,
+                SMOKED_QUARTZ_PICKAXE,
+                BURNT_QUARTZ_PICKAXE,
+                EMPOWERED_NETHERITE_PICKAXE
+        );
 
-        tag(ItemTags.HOES)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_HOE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_HOE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REDSTONE_HOE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.QUARTZ_HOE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.SMOKED_QUARTZ_HOE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.BURNT_QUARTZ_HOE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_HOE));
+        addItems(ItemTags.AXES,
+                EMERALD_AXE,
+                LAPIS_LAZULI_AXE,
+                REDSTONE_AXE,
+                QUARTZ_AXE,
+                SMOKED_QUARTZ_AXE,
+                BURNT_QUARTZ_AXE,
+                EMPOWERED_NETHERITE_AXE
+        );
 
-        tag(ItemTags.SPEARS)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_SPEAR))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_SPEAR))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REDSTONE_SPEAR))
-                .add(ItemRegHandler.getRK(ItemRegHandler.QUARTZ_SPEAR))
-                .add(ItemRegHandler.getRK(ItemRegHandler.SMOKED_QUARTZ_SPEAR))
-                .add(ItemRegHandler.getRK(ItemRegHandler.BURNT_QUARTZ_SPEAR))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_SPEAR));
+        addItems(ItemTags.HOES,
+                EMERALD_HOE,
+                LAPIS_LAZULI_HOE,
+                REDSTONE_HOE,
+                QUARTZ_HOE,
+                SMOKED_QUARTZ_HOE,
+                BURNT_QUARTZ_HOE,
+                EMPOWERED_NETHERITE_HOE
+        );
 
-        tag(ItemTags.HEAD_ARMOR)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_HELMET))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_HELMET))
-                .add(ItemRegHandler.getRK(ItemRegHandler.ARMADILLO_SCUTE_HELMET))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_HELMET))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REINFORCED_LEATHER_HELMET));
+        addItems(ItemTags.SPEARS,
+                EMERALD_SPEAR,
+                LAPIS_LAZULI_SPEAR,
+                REDSTONE_SPEAR,
+                QUARTZ_SPEAR,
+                SMOKED_QUARTZ_SPEAR,
+                BURNT_QUARTZ_SPEAR,
+                EMPOWERED_NETHERITE_SPEAR
+        );
 
-        tag(ItemTags.CHEST_ARMOR)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_CHESTPLATE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_CHESTPLATE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.ARMADILLO_SCUTE_CHESTPLATE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_CHESTPLATE))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE));
+        // --- Armor ---
+        addItems(ItemTags.HEAD_ARMOR,
+                EMERALD_HELMET,
+                LAPIS_LAZULI_HELMET,
+                ARMADILLO_SCUTE_HELMET,
+                EMPOWERED_NETHERITE_HELMET,
+                REINFORCED_LEATHER_HELMET
+        );
 
-        tag(ItemTags.LEG_ARMOR)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_LEGGINGS))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_LEGGINGS))
-                .add(ItemRegHandler.getRK(ItemRegHandler.ARMADILLO_SCUTE_LEGGINGS))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_LEGGINGS))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS));
+        addItems(ItemTags.CHEST_ARMOR,
+                EMERALD_CHESTPLATE,
+                LAPIS_LAZULI_CHESTPLATE,
+                ARMADILLO_SCUTE_CHESTPLATE,
+                EMPOWERED_NETHERITE_CHESTPLATE,
+                REINFORCED_LEATHER_CHESTPLATE
+        );
 
-        tag(ItemTags.FOOT_ARMOR)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMERALD_BOOTS))
-                .add(ItemRegHandler.getRK(ItemRegHandler.LAPIS_LAZULI_BOOTS))
-                .add(ItemRegHandler.getRK(ItemRegHandler.ARMADILLO_SCUTE_BOOTS))
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS))
-                .add(ItemRegHandler.getRK(ItemRegHandler.REINFORCED_LEATHER_BOOTS));
+        addItems(ItemTags.LEG_ARMOR,
+                EMERALD_LEGGINGS,
+                LAPIS_LAZULI_LEGGINGS,
+                ARMADILLO_SCUTE_LEGGINGS,
+                EMPOWERED_NETHERITE_LEGGINGS,
+                REINFORCED_LEATHER_LEGGINGS
+        );
 
+        addItems(ItemTags.FOOT_ARMOR,
+                EMERALD_BOOTS,
+                LAPIS_LAZULI_BOOTS,
+                ARMADILLO_SCUTE_BOOTS,
+                EMPOWERED_NETHERITE_BOOTS,
+                REINFORCED_LEATHER_BOOTS
+        );
 
+        // --- Repair Materials ---
+        tag(TagRegHandler.Items.EMERALD_REPAIR).add(ItemIds.EMERALD);
+        tag(TagRegHandler.Items.LAPIS_LAZULI_REPAIR).add(ItemIds.LAPIS_LAZULI);
+        tag(TagRegHandler.Items.REDSTONE_REPAIR).add(BlockItemIds.REDSTONE_BLOCK.item());
+        tag(TagRegHandler.Items.QUARTZ_REPAIR).add(ItemIds.QUARTZ);
+        tag(TagRegHandler.Items.ARMADILLO_SCUTE_REPAIR).add(ItemIds.ARMADILLO_SCUTE);
 
-        tag(TagRegHandler.Items.EMERALD_REPAIR)
-                .add(ItemIds.EMERALD);
+        tag(TagRegHandler.Items.SMOKED_QUARTZ_REPAIR).add(getRK(SMOKED_QUARTZ));
+        tag(TagRegHandler.Items.BURNT_QUARTZ_REPAIR).add(getRK(BURNT_QUARTZ));
+        tag(TagRegHandler.Items.EMPOWERED_NETHERITE_REPAIR).add(getRK(EMPOWERED_NETHERITE));
+        tag(TagRegHandler.Items.REINFORCED_LEATHER_REPAIR).add(getRK(REINFORCED_LEATHER));
+    }
 
-        tag(TagRegHandler.Items.LAPIS_LAZULI_REPAIR)
-                .add(ItemIds.LAPIS_LAZULI);
-
-        tag(TagRegHandler.Items.REDSTONE_REPAIR)
-                .add(BlockItemIds.REDSTONE_BLOCK.item());
-
-        tag(TagRegHandler.Items.QUARTZ_REPAIR)
-                .add(ItemIds.QUARTZ);
-
-        tag(TagRegHandler.Items.ARMADILLO_SCUTE_REPAIR)
-                .add(ItemIds.ARMADILLO_SCUTE);
-
-        tag(TagRegHandler.Items.SMOKED_QUARTZ_REPAIR)
-                .add(ItemRegHandler.getRK(ItemRegHandler.SMOKED_QUARTZ));
-
-        tag(TagRegHandler.Items.BURNT_QUARTZ_REPAIR)
-                .add(ItemRegHandler.getRK(ItemRegHandler.BURNT_QUARTZ));
-
-        tag(TagRegHandler.Items.EMPOWERED_NETHERITE_REPAIR)
-                .add(ItemRegHandler.getRK(ItemRegHandler.EMPOWERED_NETHERITE));
-
-        tag(TagRegHandler.Items.REINFORCED_LEATHER_REPAIR)
-                .add(ItemRegHandler.getRK(ItemRegHandler.REINFORCED_LEATHER));
+    private void addItems(TagKey<Item> tagKey, Item... items) {
+        var builder = tag(tagKey);
+        for (Item item : items) {
+            builder.add(getRK(item));
+        }
     }
 }

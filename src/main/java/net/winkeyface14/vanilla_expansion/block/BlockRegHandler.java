@@ -251,8 +251,185 @@ public class BlockRegHandler {
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
 
-    //Dyed Blocks
+    //Wood Sets
+    public static final Block OAK_WOOD_SLAB = registerBlock("oak_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block OAK_WOOD_STAIRS = registerBlock("oak_wood_stairs", properties -> new StairBlock(Blocks.OAK_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block OAK_WOOD_FENCE = registerBlock("oak_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
 
+    public static final Block SPRUCE_WOOD_SLAB = registerBlock("spruce_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block SPRUCE_WOOD_STAIRS = registerBlock("spruce_wood_stairs", properties -> new StairBlock(Blocks.SPRUCE_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block SPRUCE_WOOD_FENCE = registerBlock("spruce_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block BIRCH_WOOD_SLAB = registerBlock("birch_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block BIRCH_WOOD_STAIRS = registerBlock("birch_wood_stairs", properties -> new StairBlock(Blocks.BIRCH_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block BIRCH_WOOD_FENCE = registerBlock("birch_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block JUNGLE_WOOD_SLAB = registerBlock("jungle_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block JUNGLE_WOOD_STAIRS = registerBlock("jungle_wood_stairs", properties -> new StairBlock(Blocks.JUNGLE_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block JUNGLE_WOOD_FENCE = registerBlock("jungle_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block ACACIA_WOOD_SLAB = registerBlock("acacia_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block ACACIA_WOOD_STAIRS = registerBlock("acacia_wood_stairs", properties -> new StairBlock(Blocks.ACACIA_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block ACACIA_WOOD_FENCE = registerBlock("acacia_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block DARK_OAK_WOOD_SLAB = registerBlock("dark_oak_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block DARK_OAK_WOOD_STAIRS = registerBlock("dark_oak_wood_stairs", properties -> new StairBlock(Blocks.DARK_OAK_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block DARK_OAK_WOOD_FENCE = registerBlock("dark_oak_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block MANGROVE_WOOD_SLAB = registerBlock("mangrove_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block MANGROVE_WOOD_STAIRS = registerBlock("mangrove_wood_stairs", properties -> new StairBlock(Blocks.MANGROVE_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block MANGROVE_WOOD_FENCE = registerBlock("mangrove_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block CHERRY_WOOD_SLAB = registerBlock("cherry_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block CHERRY_WOOD_STAIRS = registerBlock("cherry_wood_stairs", properties -> new StairBlock(Blocks.CHERRY_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.CHERRY_WOOD)));
+    public static final Block CHERRY_WOOD_FENCE = registerBlock("cherry_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block PALE_OAK_WOOD_SLAB = registerBlock("pale_oak_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block PALE_OAK_WOOD_STAIRS = registerBlock("pale_oak_wood_stairs", properties -> new StairBlock(Blocks.PALE_OAK_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block PALE_OAK_WOOD_FENCE = registerBlock("pale_oak_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block CRIMSON_HYPHAE_SLAB = registerBlock("crimson_hyphae_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.STEM)));
+    public static final Block CRIMSON_HYPHAE_STAIRS = registerBlock("crimson_hyphae_stairs", properties -> new StairBlock(Blocks.CRIMSON_HYPHAE.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.STEM)));
+    public static final Block CRIMSON_HYPHAE_FENCE = registerBlock("crimson_hyphae_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.STEM)));
+
+    public static final Block WARPED_HYPHAE_SLAB = registerBlock("warped_hyphae_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.STEM)));
+    public static final Block WARPED_HYPHAE_STAIRS = registerBlock("warped_hyphae_stairs", properties -> new StairBlock(Blocks.WARPED_HYPHAE.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.STEM)));
+    public static final Block WARPED_HYPHAE_FENCE = registerBlock("warped_hyphae_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.STEM)));
+
+    //Stripped Wood
+    public static final Block STRIPPED_OAK_WOOD_SLAB = registerBlock("stripped_oak_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_OAK_WOOD_STAIRS = registerBlock("stripped_oak_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_OAK_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_OAK_WOOD_FENCE = registerBlock("stripped_oak_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block STRIPPED_SPRUCE_WOOD_SLAB = registerBlock("stripped_spruce_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_SPRUCE_WOOD_STAIRS = registerBlock("stripped_spruce_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_SPRUCE_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_SPRUCE_WOOD_FENCE = registerBlock("stripped_spruce_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block STRIPPED_BIRCH_WOOD_SLAB = registerBlock("stripped_birch_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_BIRCH_WOOD_STAIRS = registerBlock("stripped_birch_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_BIRCH_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_BIRCH_WOOD_FENCE = registerBlock("stripped_birch_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block STRIPPED_JUNGLE_WOOD_SLAB = registerBlock("stripped_jungle_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_JUNGLE_WOOD_STAIRS = registerBlock("stripped_jungle_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_JUNGLE_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_JUNGLE_WOOD_FENCE = registerBlock("stripped_jungle_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block STRIPPED_ACACIA_WOOD_SLAB = registerBlock("stripped_acacia_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_ACACIA_WOOD_STAIRS = registerBlock("stripped_acacia_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_ACACIA_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_ACACIA_WOOD_FENCE = registerBlock("stripped_acacia_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block STRIPPED_DARK_OAK_WOOD_SLAB = registerBlock("stripped_dark_oak_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_DARK_OAK_WOOD_STAIRS = registerBlock("stripped_dark_oak_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_DARK_OAK_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_DARK_OAK_WOOD_FENCE = registerBlock("stripped_dark_oak_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block STRIPPED_MANGROVE_WOOD_SLAB = registerBlock("stripped_mangrove_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_MANGROVE_WOOD_STAIRS = registerBlock("stripped_mangrove_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_MANGROVE_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_MANGROVE_WOOD_FENCE = registerBlock("stripped_mangrove_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block STRIPPED_CHERRY_WOOD_SLAB = registerBlock("stripped_cherry_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_CHERRY_WOOD_STAIRS = registerBlock("stripped_cherry_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_CHERRY_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.CHERRY_WOOD)));
+    public static final Block STRIPPED_CHERRY_WOOD_FENCE = registerBlock("stripped_cherry_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block STRIPPED_PALE_OAK_WOOD_SLAB = registerBlock("stripped_pale_oak_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_PALE_OAK_WOOD_STAIRS = registerBlock("stripped_pale_oak_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_PALE_OAK_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_PALE_OAK_WOOD_FENCE = registerBlock("stripped_pale_oak_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
+    public static final Block STRIPPED_CRIMSON_HYPHAE_SLAB = registerBlock("stripped_crimson_hyphae_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.STEM)));
+    public static final Block STRIPPED_CRIMSON_HYPHAE_STAIRS = registerBlock("stripped_crimson_hyphae_stairs", properties -> new StairBlock(Blocks.STRIPPED_CRIMSON_HYPHAE.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.STEM)));
+    public static final Block STRIPPED_CRIMSON_HYPHAE_FENCE = registerBlock("stripped_crimson_hyphae_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.STEM)));
+
+    public static final Block STRIPPED_WARPED_HYPHAE_SLAB = registerBlock("stripped_warped_hyphae_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.STEM)));
+    public static final Block STRIPPED_WARPED_HYPHAE_STAIRS = registerBlock("stripped_warped_hyphae_stairs", properties -> new StairBlock(Blocks.STRIPPED_WARPED_HYPHAE.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.STEM)));
+    public static final Block STRIPPED_WARPED_HYPHAE_FENCE = registerBlock("stripped_warped_hyphae_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.STEM)));
+
+    //Dyed Blocks
     //Terracotta
     public static final Block TERRACOTTA_STAIRS = registerBlock("terracotta_stairs", properties -> new StairBlock(Blocks.TERRACOTTA.defaultBlockState(), properties
             .strength(1.25f,4.2f)

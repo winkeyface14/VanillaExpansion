@@ -99,6 +99,9 @@ public record FeatureEnabledCondition(String featureName) implements ResourceCon
             case "add_terracotta_block_set" -> enableAddTerracottaBlockSet;
             case "add_wool_block_set" -> enableAddWoolBlockSet;
             case "add_concrete_block_set" -> enableAddConcreteBlockSet;
+            case "add_wood_block_set" -> enableAddWoodBlockSet;
+
+            case "add_wood_stonecutter_recipe" -> enableWoodStonecutterRecipe;
             default -> true;
         };
     }

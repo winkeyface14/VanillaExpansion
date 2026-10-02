@@ -155,6 +155,51 @@ public class ModModelProvider extends FabricModelProvider {
                 customBlockSetModelGen(baseBlock, stairs, slab, wall, "", blockModelGenerators);
             }
         }
+
+        //Wood Set
+        customWoodenSetModelGen(Blocks.OAK_WOOD, BlockRegHandler.OAK_WOOD_STAIRS, BlockRegHandler.OAK_WOOD_SLAB, BlockRegHandler.OAK_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.SPRUCE_WOOD, BlockRegHandler.SPRUCE_WOOD_STAIRS, BlockRegHandler.SPRUCE_WOOD_SLAB, BlockRegHandler.SPRUCE_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.BIRCH_WOOD, BlockRegHandler.BIRCH_WOOD_STAIRS, BlockRegHandler.BIRCH_WOOD_SLAB, BlockRegHandler.BIRCH_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.JUNGLE_WOOD, BlockRegHandler.JUNGLE_WOOD_STAIRS, BlockRegHandler.JUNGLE_WOOD_SLAB, BlockRegHandler.JUNGLE_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.ACACIA_WOOD, BlockRegHandler.ACACIA_WOOD_STAIRS, BlockRegHandler.ACACIA_WOOD_SLAB, BlockRegHandler.ACACIA_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.DARK_OAK_WOOD, BlockRegHandler.DARK_OAK_WOOD_STAIRS, BlockRegHandler.DARK_OAK_WOOD_SLAB, BlockRegHandler.DARK_OAK_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.MANGROVE_WOOD, BlockRegHandler.MANGROVE_WOOD_STAIRS, BlockRegHandler.MANGROVE_WOOD_SLAB, BlockRegHandler.MANGROVE_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.CHERRY_WOOD, BlockRegHandler.CHERRY_WOOD_STAIRS, BlockRegHandler.CHERRY_WOOD_SLAB, BlockRegHandler.CHERRY_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.PALE_OAK_WOOD, BlockRegHandler.PALE_OAK_WOOD_STAIRS, BlockRegHandler.PALE_OAK_WOOD_SLAB, BlockRegHandler.PALE_OAK_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.CRIMSON_HYPHAE, BlockRegHandler.CRIMSON_HYPHAE_STAIRS, BlockRegHandler.CRIMSON_HYPHAE_SLAB, BlockRegHandler.CRIMSON_HYPHAE_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.WARPED_HYPHAE, BlockRegHandler.WARPED_HYPHAE_STAIRS, BlockRegHandler.WARPED_HYPHAE_SLAB, BlockRegHandler.WARPED_HYPHAE_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_OAK_WOOD, BlockRegHandler.STRIPPED_OAK_WOOD_STAIRS, BlockRegHandler.STRIPPED_OAK_WOOD_SLAB, BlockRegHandler.STRIPPED_OAK_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_SPRUCE_WOOD, BlockRegHandler.STRIPPED_SPRUCE_WOOD_STAIRS, BlockRegHandler.STRIPPED_SPRUCE_WOOD_SLAB, BlockRegHandler.STRIPPED_SPRUCE_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_BIRCH_WOOD, BlockRegHandler.STRIPPED_BIRCH_WOOD_STAIRS, BlockRegHandler.STRIPPED_BIRCH_WOOD_SLAB, BlockRegHandler.STRIPPED_BIRCH_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_JUNGLE_WOOD, BlockRegHandler.STRIPPED_JUNGLE_WOOD_STAIRS, BlockRegHandler.STRIPPED_JUNGLE_WOOD_SLAB, BlockRegHandler.STRIPPED_JUNGLE_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_ACACIA_WOOD, BlockRegHandler.STRIPPED_ACACIA_WOOD_STAIRS, BlockRegHandler.STRIPPED_ACACIA_WOOD_SLAB, BlockRegHandler.STRIPPED_ACACIA_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_DARK_OAK_WOOD, BlockRegHandler.STRIPPED_DARK_OAK_WOOD_STAIRS, BlockRegHandler.STRIPPED_DARK_OAK_WOOD_SLAB, BlockRegHandler.STRIPPED_DARK_OAK_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_MANGROVE_WOOD, BlockRegHandler.STRIPPED_MANGROVE_WOOD_STAIRS, BlockRegHandler.STRIPPED_MANGROVE_WOOD_SLAB, BlockRegHandler.STRIPPED_MANGROVE_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_CHERRY_WOOD, BlockRegHandler.STRIPPED_CHERRY_WOOD_STAIRS, BlockRegHandler.STRIPPED_CHERRY_WOOD_SLAB, BlockRegHandler.STRIPPED_CHERRY_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_PALE_OAK_WOOD, BlockRegHandler.STRIPPED_PALE_OAK_WOOD_STAIRS, BlockRegHandler.STRIPPED_PALE_OAK_WOOD_SLAB, BlockRegHandler.STRIPPED_PALE_OAK_WOOD_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_CRIMSON_HYPHAE, BlockRegHandler.STRIPPED_CRIMSON_HYPHAE_STAIRS, BlockRegHandler.STRIPPED_CRIMSON_HYPHAE_SLAB, BlockRegHandler.STRIPPED_CRIMSON_HYPHAE_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_WARPED_HYPHAE, BlockRegHandler.STRIPPED_WARPED_HYPHAE_STAIRS, BlockRegHandler.STRIPPED_WARPED_HYPHAE_SLAB, BlockRegHandler.STRIPPED_WARPED_HYPHAE_FENCE,"",  blockModelGenerators);
     }
 
     @Override
@@ -314,14 +359,20 @@ public class ModModelProvider extends FabricModelProvider {
             itemModelGenerators.generateFlatItem(item, ModelTemplates.FLAT_ITEM);
         }
 
-        //Spears
-        itemModelGenerators.generateSpear(ItemRegHandler.EMERALD_SPEAR);
-        itemModelGenerators.generateSpear(ItemRegHandler.LAPIS_LAZULI_SPEAR);
-        itemModelGenerators.generateSpear(ItemRegHandler.REDSTONE_SPEAR);
-        itemModelGenerators.generateSpear(ItemRegHandler.QUARTZ_SPEAR);
-        itemModelGenerators.generateSpear(ItemRegHandler.SMOKED_QUARTZ_SPEAR);
-        itemModelGenerators.generateSpear(ItemRegHandler.BURNT_QUARTZ_SPEAR);
-        itemModelGenerators.generateSpear(ItemRegHandler.EMPOWERED_NETHERITE_SPEAR);
+        Item[] flatSpearWeapon = {
+            //Spears
+            ItemRegHandler.EMERALD_SPEAR,
+            ItemRegHandler.LAPIS_LAZULI_SPEAR,
+            ItemRegHandler.REDSTONE_SPEAR,
+            ItemRegHandler.QUARTZ_SPEAR,
+            ItemRegHandler.SMOKED_QUARTZ_SPEAR,
+            ItemRegHandler.BURNT_QUARTZ_SPEAR,
+            ItemRegHandler.EMPOWERED_NETHERITE_SPEAR,
+        };
+
+        for (Item item : flatSpearWeapon) {
+            itemModelGenerators.generateSpear(item);
+        }
 
         //Helmet
         itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_HELMET, ArmorMaterialBase.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
@@ -358,8 +409,45 @@ public class ModModelProvider extends FabricModelProvider {
         customWallModelGen(blockBase, wallResult, textureSuffix, blockModelGenerators);
     }
 
-    public void customWallModelGen (Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators){
+    public void customWoodenSetModelGen (Block blockBase, Block stairsResult, Block slabResult, Block wallResult, String textureSuffix, BlockModelGenerators blockModelGenerators){
+        customStairsModelGen(blockBase, stairsResult, textureSuffix, blockModelGenerators);
+        customSlabModelGen(blockBase, slabResult, textureSuffix, blockModelGenerators);
+        customFenceModelGen(blockBase, wallResult, textureSuffix, blockModelGenerators);
+    }
 
+    public void customFenceModelGen (Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators){
+        Identifier blockId = ModelLocationUtils.getModelLocation(blockBase);
+
+        String updatedPath = blockId.getPath().replace("_wood", "_log");
+        updatedPath = updatedPath.replace("_hyphae", "_stem");
+
+        Identifier updatedBlockId = Identifier.fromNamespaceAndPath(blockId.getNamespace(), updatedPath);
+
+        Material blockTexture = new Material(updatedBlockId);
+
+        TextureMapping fenceTextures = new TextureMapping()
+                .put(TextureSlot.TEXTURE, blockTexture)
+                .put(TextureSlot.PARTICLE, blockTexture);
+
+        Identifier post = ModelTemplates.FENCE_POST.create(blockResult, fenceTextures, blockModelGenerators.modelOutput);
+        Identifier side = ModelTemplates.FENCE_SIDE.create(blockResult, fenceTextures, blockModelGenerators.modelOutput);
+
+        blockModelGenerators.blockStateOutput.accept(
+                BlockModelGenerators.createFence(
+                        blockResult,
+                        BlockModelGenerators.plainVariant(post),
+                        BlockModelGenerators.plainVariant(side)
+                )
+        );
+
+        ModelTemplates.FENCE_INVENTORY.create(
+                ModelLocationUtils.getModelLocation(blockResult),
+                fenceTextures,
+                blockModelGenerators.modelOutput
+        );
+    }
+
+    public void customWallModelGen (Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators){
         Material blockTexture = TextureMapping.getBlockTexture(blockBase, textureSuffix);
 
         TextureMapping wallTextures = new TextureMapping()
@@ -388,7 +476,14 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     public void customStairsModelGen(Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators) {
-        Material blockTexture = TextureMapping.getBlockTexture(blockBase, textureSuffix);
+        Identifier blockId = ModelLocationUtils.getModelLocation(blockBase);
+
+        String updatedPath = blockId.getPath().replace("_wood", "_log");
+        updatedPath = updatedPath.replace("_hyphae", "_stem");
+
+        Identifier updatedBlockId = Identifier.fromNamespaceAndPath(blockId.getNamespace(), updatedPath);
+
+        Material blockTexture = new Material(updatedBlockId);
 
         TextureMapping stairTextures = new TextureMapping()
                 .put(TextureSlot.BOTTOM, blockTexture)
@@ -410,7 +505,14 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     public void customSlabModelGen(Block blockBase, Block blockResult, String textureSuffix, BlockModelGenerators blockModelGenerators) {
-        Material blockTexture = TextureMapping.getBlockTexture(blockBase, textureSuffix);
+        Identifier blockId = ModelLocationUtils.getModelLocation(blockBase);
+
+        String updatedPath = blockId.getPath().replace("_wood", "_log");
+        updatedPath = updatedPath.replace("_hyphae", "_stem");
+
+        Identifier updatedBlockId = Identifier.fromNamespaceAndPath(blockId.getNamespace(), updatedPath);
+
+        Material blockTexture = new Material(updatedBlockId);
 
         TextureMapping slabTextures = new TextureMapping()
                 .put(TextureSlot.BOTTOM, blockTexture)

@@ -1,5 +1,21 @@
 # The Vanilla Expansion Changelog
 
+## 0.3.0-beta-26.2-fabric
+**Added**
+
+Blocks:
+- Wool Walls, Stairs and Slabs
+- Terracotta Slabs, Stairs, and Walls
+- Concrete Slabs, Stairs, and Walls
+- Wood and Stripped Wood Stairs, Slabs, and Walls (Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Pale Oak)
+
+Recipes:
+- Stonecutter Recipes for Wooden Planks Slabs and Stairs
+
+Other Changes:
+- Cleaned up a lot of the code for easier future additions
+
+
 ## 0.2.0-beta-26.2-fabric
 **Added**
 

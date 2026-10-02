@@ -3,6 +3,10 @@
     {
       "id": "#minecraft:needs_diamond_tool",
       "required": false
+    },
+    {
+      "id": "#minecraft:needs_diamond_tool",
+      "required": false
     }
   ]
 }

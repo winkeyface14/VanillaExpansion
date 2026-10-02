@@ -234,6 +234,94 @@
   "block.vanilla_expansion.red_concrete_wall": "Red Concrete Wall",
   "block.vanilla_expansion.black_concrete_wall": "Black Concrete Wall",
 
+  "block.vanilla_expansion.oak_wood_stairs": "Oak Wood Stairs",
+  "block.vanilla_expansion.oak_wood_slab": "Oak Wood Slab",
+  "block.vanilla_expansion.oak_wood_fence": "Oak Wood Fence",
+
+  "block.vanilla_expansion.spruce_wood_stairs": "Spruce Wood Stairs",
+  "block.vanilla_expansion.spruce_wood_slab": "Spruce Wood Slab",
+  "block.vanilla_expansion.spruce_wood_fence": "Spruce Wood Fence",
+
+  "block.vanilla_expansion.birch_wood_stairs": "Birch Wood Stairs",
+  "block.vanilla_expansion.birch_wood_slab": "Birch Wood Slab",
+  "block.vanilla_expansion.birch_wood_fence": "Birch Wood Fence",
+
+  "block.vanilla_expansion.jungle_wood_stairs": "Jungle Wood Stairs",
+  "block.vanilla_expansion.jungle_wood_slab": "Jungle Wood Slab",
+  "block.vanilla_expansion.jungle_wood_fence": "Jungle Wood Fence",
+
+  "block.vanilla_expansion.acacia_wood_stairs": "Acacia Wood Stairs",
+  "block.vanilla_expansion.acacia_wood_slab": "Acacia Wood Slab",
+  "block.vanilla_expansion.acacia_wood_fence": "Acacia Wood Fence",
+
+  "block.vanilla_expansion.dark_oak_wood_stairs": "Dark Oak Wood Stairs",
+  "block.vanilla_expansion.dark_oak_wood_slab": "Dark Oak Wood Slab",
+  "block.vanilla_expansion.dark_oak_wood_fence": "Dark Oak Wood Fence",
+
+  "block.vanilla_expansion.mangrove_wood_stairs": "Mangrove Wood Stairs",
+  "block.vanilla_expansion.mangrove_wood_slab": "Mangrove Wood Slab",
+  "block.vanilla_expansion.mangrove_wood_fence": "Mangrove Wood Fence",
+
+  "block.vanilla_expansion.cherry_wood_stairs": "Cherry Wood Stairs",
+  "block.vanilla_expansion.cherry_wood_slab": "Cherry Wood Slab",
+  "block.vanilla_expansion.cherry_wood_fence": "Cherry Wood Fence",
+
+  "block.vanilla_expansion.pale_oak_wood_stairs": "Pale Oak Wood Stairs",
+  "block.vanilla_expansion.pale_oak_wood_slab": "Pale Oak Wood Slab",
+  "block.vanilla_expansion.pale_oak_wood_fence": "Pale Oak Wood Fence",
+
+  "block.vanilla_expansion.stripped_oak_wood_stairs": "Stripped Oak Wood Stairs",
+  "block.vanilla_expansion.stripped_oak_wood_slab": "Stripped Oak Wood Slab",
+  "block.vanilla_expansion.stripped_oak_wood_fence": "Stripped Oak Wood Fence",
+
+  "block.vanilla_expansion.stripped_spruce_wood_stairs": "Stripped Spruce Wood Stairs",
+  "block.vanilla_expansion.stripped_spruce_wood_slab": "Stripped Spruce Wood Slab",
+  "block.vanilla_expansion.stripped_spruce_wood_fence": "Stripped Spruce Wood Fence",
+
+  "block.vanilla_expansion.stripped_birch_wood_stairs": "Stripped Birch Wood Stairs",
+  "block.vanilla_expansion.stripped_birch_wood_slab": "Stripped Birch Wood Slab",
+  "block.vanilla_expansion.stripped_birch_wood_fence": "Stripped Birch Wood Fence",
+
+  "block.vanilla_expansion.stripped_jungle_wood_stairs": "Stripped Jungle Wood Stairs",
+  "block.vanilla_expansion.stripped_jungle_wood_slab": "Stripped Jungle Wood Slab",
+  "block.vanilla_expansion.stripped_jungle_wood_fence": "Stripped Jungle Wood Fence",
+
+  "block.vanilla_expansion.stripped_acacia_wood_stairs": "Stripped Acacia Wood Stairs",
+  "block.vanilla_expansion.stripped_acacia_wood_slab": "Stripped Acacia Wood Slab",
+  "block.vanilla_expansion.stripped_acacia_wood_fence": "Stripped Acacia Wood Fence",
+
+  "block.vanilla_expansion.stripped_dark_oak_wood_stairs": "Stripped Dark Oak Wood Stairs",
+  "block.vanilla_expansion.stripped_dark_oak_wood_slab": "Stripped Dark Oak Wood Slab",
+  "block.vanilla_expansion.stripped_dark_oak_wood_fence": "Stripped Dark Oak Wood Fence",
+
+  "block.vanilla_expansion.stripped_mangrove_wood_stairs": "Stripped Mangrove Wood Stairs",
+  "block.vanilla_expansion.stripped_mangrove_wood_slab": "Stripped Mangrove Wood Slab",
+  "block.vanilla_expansion.stripped_mangrove_wood_fence": "Stripped Mangrove Wood Fence",
+
+  "block.vanilla_expansion.stripped_cherry_wood_stairs": "Stripped Cherry Wood Stairs",
+  "block.vanilla_expansion.stripped_cherry_wood_slab": "Stripped Cherry Wood Slab",
+  "block.vanilla_expansion.stripped_cherry_wood_fence": "Stripped Cherry Wood Fence",
+
+  "block.vanilla_expansion.stripped_pale_oak_wood_stairs": "Stripped Pale Oak Wood Stairs",
+  "block.vanilla_expansion.stripped_pale_oak_wood_slab": "Stripped Pale Oak Wood Slab",
+  "block.vanilla_expansion.stripped_pale_oak_wood_fence": "Stripped Pale Oak Wood Fence",
+
+  "block.vanilla_expansion.crimson_hyphae_stairs": "Crimson Hyphae Stairs",
+  "block.vanilla_expansion.crimson_hyphae_slab": "Crimson Hyphae Slab",
+  "block.vanilla_expansion.crimson_hyphae_fence": "Crimson Hyphae Fence",
+
+  "block.vanilla_expansion.stripped_crimson_hyphae_stairs": "Stripped Crimson Hyphae Stairs",
+  "block.vanilla_expansion.stripped_crimson_hyphae_slab": "Stripped Crimson Hyphae Slab",
+  "block.vanilla_expansion.stripped_crimson_hyphae_fence": "Stripped Crimson Hyphae Fence",
+
+  "block.vanilla_expansion.warped_hyphae_stairs": "Warped Hyphae Stairs",
+  "block.vanilla_expansion.warped_hyphae_slab": "Warped Hyphae Slab",
+  "block.vanilla_expansion.warped_hyphae_fence": "Warped Hyphae Fence",
+
+  "block.vanilla_expansion.stripped_warped_hyphae_stairs": "Stripped Warped Hyphae Stairs",
+  "block.vanilla_expansion.stripped_warped_hyphae_slab": "Stripped Warped Hyphae Slab",
+  "block.vanilla_expansion.stripped_warped_hyphae_fence": "Stripped Warped Hyphae Fence",
+
   "item.vanilla_expansion.coal_chunk": "Coal Chunk",
   "item.vanilla_expansion.charcoal_chunk": "Charcoal Chunk",
 
@@ -505,11 +593,18 @@
   "vanilla_expansion.midnightconfig.enableAddCutRedSandstoneBlockSet": "Cut Red Sandstone",
   "vanilla_expansion.midnightconfig.enableAddCutRedSandstoneBlockSet.label.tooltip": "Adds stairs and wall",
   "vanilla_expansion.midnightconfig.enableAddTerracottaBlockSet": "Terracotta",
-  "vanilla_expansion.midnightconfig.enableAddTerracottaBlockSet.label.tooltip": "Adds stairs and wall",
+  "vanilla_expansion.midnightconfig.enableAddTerracottaBlockSet.label.tooltip": "Adds stairs, slabs, and wall",
   "vanilla_expansion.midnightconfig.enableAddWoolBlockSet": "Wool",
-  "vanilla_expansion.midnightconfig.enableAddWoolBlockSet.label.tooltip": "Adds stairs and wall",
+  "vanilla_expansion.midnightconfig.enableAddWoolBlockSet.label.tooltip": "Adds stairs, slabs, and wall",
   "vanilla_expansion.midnightconfig.enableAddConcreteBlockSet": "Concrete",
-  "vanilla_expansion.midnightconfig.enableAddConcreteBlockSet.label.tooltip": "Adds stairs and wall",
+  "vanilla_expansion.midnightconfig.enableAddConcreteBlockSet.label.tooltip": "Adds stairs, slabs, and wall",
+  "vanilla_expansion.midnightconfig.enableAddWoodBlockSet": "Wood and Stripped Wood",
+  "vanilla_expansion.midnightconfig.enableAddWoodBlockSet.label.tooltip": "Adds stairs, slabs, and fence",
+
+  "vanilla_expansion.midnightconfig.category.recipes": "Recipes",
+  "vanilla_expansion.midnightconfig.enableWoodStonecutterRecipe": "Stonecutter Recipes for Vanilla Wooden Block Sets",
+  "vanilla_expansion.midnightconfig.enableWoodStonecutterRecipe.label.tooltip": "Adds stonecutter recipes for Wooden Stairs and Slabs",
+
 
   "vanilla_expansion.midnightconfig.title":"Vanilla Expansion"
 }

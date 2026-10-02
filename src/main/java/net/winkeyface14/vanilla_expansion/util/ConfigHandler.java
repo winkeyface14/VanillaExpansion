@@ -6,6 +6,7 @@ public class ConfigHandler extends MidnightConfig {
     public static final String ITEMS = "items";
     public static final String GEAR = "gear";
     public static final String BLOCKS = "blocks";
+    public static final String RECIPES = "recipes";
 
     //Items
     @Comment(category = ITEMS, centered = true) public static Comment headsSectionComment;
@@ -149,6 +150,10 @@ public class ConfigHandler extends MidnightConfig {
     @Entry(category = BLOCKS) public static boolean enableAddTerracottaBlockSet = true;
     @Entry(category = BLOCKS) public static boolean enableAddWoolBlockSet = true;
     @Entry(category = BLOCKS) public static boolean enableAddConcreteBlockSet = true;
+    @Entry(category = BLOCKS) public static boolean enableAddWoodBlockSet = true;
+
+    //@Comment(category = RECIPES, centered = true) public static Comment headsRecipeSectionComment;
+    @Entry(category = RECIPES) public static boolean enableWoodStonecutterRecipe = true;
 
     public static boolean isVanillaHeadsEnabled(boolean enableVanillaHeads, boolean enableToolSet) {
         return enableBaseTemplate && enableToolSet && enableVanillaHeads;

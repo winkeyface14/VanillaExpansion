@@ -3,6 +3,10 @@
     {
       "id": "#minecraft:needs_stone_tool",
       "required": false
+    },
+    {
+      "id": "#minecraft:needs_stone_tool",
+      "required": false
     }
   ]
 }

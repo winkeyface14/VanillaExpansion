@@ -101,6 +101,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 RecipeOutput addTerracottaBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_terracotta_block_set"));
                 RecipeOutput addWoolBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_wool_block_set"));
                 RecipeOutput addConcreteBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_concrete_block_set"));
+                RecipeOutput addWoodBlockSetOutput = withConditions(output, new FeatureEnabledCondition("add_wood_block_set"));
+                RecipeOutput addWoodStonecutterRecipe = withConditions(output, new FeatureEnabledCondition("add_wood_stonecutter_recipe"));
 
                 List<ItemLike> REINFORCED_LEATHER_BLASTABLE = List.of(RAW_REINFORCED_LEATHER);
                 List<ItemLike> BRICK_SMELTABLE = List.of(BRICK);
@@ -372,6 +374,72 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerDyedWoolSetRecipes(addWoolBlockSetOutput);
                 registerDyedConcreteSetRecipes(addConcreteBlockSetOutput);
 
+                //Wood Sets
+                registerBlockSetRecipes(OAK_WOOD, OAK_WOOD_SLAB.asItem(), OAK_WOOD_STAIRS.asItem(), null, OAK_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(SPRUCE_WOOD, SPRUCE_WOOD_SLAB.asItem(), SPRUCE_WOOD_STAIRS.asItem(), null, SPRUCE_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(BIRCH_WOOD, BIRCH_WOOD_SLAB.asItem(), BIRCH_WOOD_STAIRS.asItem(), null, BIRCH_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(JUNGLE_WOOD, JUNGLE_WOOD_SLAB.asItem(), JUNGLE_WOOD_STAIRS.asItem(), null, JUNGLE_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(ACACIA_WOOD, ACACIA_WOOD_SLAB.asItem(), ACACIA_WOOD_STAIRS.asItem(), null, ACACIA_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(DARK_OAK_WOOD, DARK_OAK_WOOD_SLAB.asItem(), DARK_OAK_WOOD_STAIRS.asItem(), null, DARK_OAK_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(MANGROVE_WOOD, MANGROVE_WOOD_SLAB.asItem(), MANGROVE_WOOD_STAIRS.asItem(), null, MANGROVE_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(CHERRY_WOOD, CHERRY_WOOD_SLAB.asItem(), CHERRY_WOOD_STAIRS.asItem(), null, CHERRY_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(PALE_OAK_WOOD, PALE_OAK_WOOD_SLAB.asItem(), PALE_OAK_WOOD_STAIRS.asItem(), null, PALE_OAK_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(CRIMSON_HYPHAE, CRIMSON_HYPHAE_SLAB.asItem(), CRIMSON_HYPHAE_STAIRS.asItem(), null, CRIMSON_HYPHAE_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(WARPED_HYPHAE, WARPED_HYPHAE_SLAB.asItem(), WARPED_HYPHAE_STAIRS.asItem(), null, WARPED_HYPHAE_FENCE.asItem(), addWoodBlockSetOutput);
+
+                //Stripped Wood Sets
+                registerBlockSetRecipes(STRIPPED_OAK_WOOD, STRIPPED_OAK_WOOD_SLAB.asItem(), STRIPPED_OAK_WOOD_STAIRS.asItem(), null, STRIPPED_OAK_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_SPRUCE_WOOD, STRIPPED_SPRUCE_WOOD_SLAB.asItem(), STRIPPED_SPRUCE_WOOD_STAIRS.asItem(), null, STRIPPED_SPRUCE_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_BIRCH_WOOD, STRIPPED_BIRCH_WOOD_SLAB.asItem(), STRIPPED_BIRCH_WOOD_STAIRS.asItem(), null, STRIPPED_BIRCH_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_JUNGLE_WOOD, STRIPPED_JUNGLE_WOOD_SLAB.asItem(), STRIPPED_JUNGLE_WOOD_STAIRS.asItem(), null, STRIPPED_JUNGLE_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_ACACIA_WOOD, STRIPPED_ACACIA_WOOD_SLAB.asItem(), STRIPPED_ACACIA_WOOD_STAIRS.asItem(), null, STRIPPED_ACACIA_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_DARK_OAK_WOOD, STRIPPED_DARK_OAK_WOOD_SLAB.asItem(), STRIPPED_DARK_OAK_WOOD_STAIRS.asItem(), null, STRIPPED_DARK_OAK_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_MANGROVE_WOOD, STRIPPED_MANGROVE_WOOD_SLAB.asItem(), STRIPPED_MANGROVE_WOOD_STAIRS.asItem(), null, STRIPPED_MANGROVE_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_CHERRY_WOOD, STRIPPED_CHERRY_WOOD_SLAB.asItem(), STRIPPED_CHERRY_WOOD_STAIRS.asItem(), null, STRIPPED_CHERRY_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_PALE_OAK_WOOD, STRIPPED_PALE_OAK_WOOD_SLAB.asItem(), STRIPPED_PALE_OAK_WOOD_STAIRS.asItem(), null, STRIPPED_PALE_OAK_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_CRIMSON_HYPHAE, STRIPPED_CRIMSON_HYPHAE_SLAB.asItem(), STRIPPED_CRIMSON_HYPHAE_STAIRS.asItem(), null, STRIPPED_CRIMSON_HYPHAE_FENCE.asItem(), addWoodBlockSetOutput);
+
+                registerBlockSetRecipes(STRIPPED_WARPED_HYPHAE, STRIPPED_WARPED_HYPHAE_SLAB.asItem(), STRIPPED_WARPED_HYPHAE_STAIRS.asItem(), null, STRIPPED_WARPED_HYPHAE_FENCE.asItem(), addWoodBlockSetOutput);
+
+                //Vanilla Wood Set Stonecutter Recipes
+                registerVanillaStonecutterRecipes(OAK_PLANKS, OAK_SLAB, OAK_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(SPRUCE_PLANKS, SPRUCE_SLAB, SPRUCE_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(BIRCH_PLANKS, BIRCH_SLAB, BIRCH_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(JUNGLE_PLANKS, JUNGLE_SLAB, JUNGLE_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(ACACIA_PLANKS, ACACIA_SLAB, ACACIA_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(DARK_OAK_PLANKS, DARK_OAK_SLAB, DARK_OAK_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(MANGROVE_PLANKS, MANGROVE_SLAB, MANGROVE_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(CHERRY_PLANKS, CHERRY_SLAB, CHERRY_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(PALE_OAK_PLANKS, PALE_OAK_SLAB, PALE_OAK_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                //*Items*
                 //Empowered Netherite
                 this.shapeless(RecipeCategory.MISC, EMPOWERED_NETHERITE)
                         .requires(GOLD_INGOT, 4)
@@ -803,7 +871,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Slab
                 if(resultSlab != null){
-                    helper.stonecutterResultFromBase(categoryBuilding,resultSlab, baseItem, 2);
+                    helper.stonecutterResultFromBase(categoryBuilding, resultSlab, baseItem, 2);
                     this.slabBuilder(categoryBuilding, resultSlab, Ingredient.of(baseItem))
                             .unlockedBy(getHasName(baseItem), has(baseItem))
                             .group(getItemName(resultSlab))
@@ -830,7 +898,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Fence
                 if(resultFence != null){
-                    helper.stonecutterResultFromBase(categoryBuilding,resultFence, baseItem, 1);
+                    //helper.stonecutterResultFromBase(categoryBuilding,resultFence, baseItem, 1);
                     this.fenceBuilder(resultFence, Ingredient.of(baseItem))
                             .unlockedBy(getHasName(baseItem), has(baseItem))
                             .group(getItemName(resultFence))
@@ -1006,6 +1074,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                             .unlockedBy(getHasName(baseItem), has(baseItem))
                             .group(getItemName(resultPolished))
                             .save(outputType);
+                }
+            }
+
+            private void registerVanillaStonecutterRecipes(Item baseItem, Item resultSlab, Item resultStairs, Item resultFence, Item resultFenceGate, RecipeOutput outputType) {
+                RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
+
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+
+                //Slab
+                if(resultSlab != null){
+                    helper.stonecutterResultFromBase(categoryBuilding, resultSlab, baseItem, 2);
+                }
+
+                //Stairs
+                if(resultStairs != null){
+                    helper.stonecutterResultFromBase(categoryBuilding, resultStairs, baseItem, 1);
+                }
+
+                //Fence
+                if(resultFenceGate != null){
+                    helper.stonecutterResultFromBase(categoryBuilding, resultFence, baseItem, 1);
+                }
+
+                //Fence
+                if(resultFenceGate != null){
+                    helper.stonecutterResultFromBase(categoryBuilding, resultFenceGate, baseItem, 1);
                 }
             }
 
