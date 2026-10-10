@@ -96,6 +96,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 BARREL_OF_SWEETBERRIES_BLOCK,
                 BARREL_OF_CHORUS_BLOCK,
 
+                // Wood
                 OAK_WOOD_FENCE,
                 OAK_WOOD_SLAB,
                 OAK_WOOD_STAIRS,
@@ -132,6 +133,10 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 PALE_OAK_WOOD_SLAB,
                 PALE_OAK_WOOD_STAIRS,
 
+                POPLAR_WOOD_FENCE,
+                POPLAR_WOOD_SLAB,
+                POPLAR_WOOD_STAIRS,
+
                 CRIMSON_HYPHAE_STAIRS,
                 CRIMSON_HYPHAE_SLAB,
                 CRIMSON_HYPHAE_FENCE,
@@ -140,6 +145,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 WARPED_HYPHAE_SLAB,
                 WARPED_HYPHAE_FENCE,
 
+                // Stripped Wood
                 STRIPPED_OAK_WOOD_FENCE,
                 STRIPPED_OAK_WOOD_SLAB,
                 STRIPPED_OAK_WOOD_STAIRS,
@@ -176,6 +182,10 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 STRIPPED_PALE_OAK_WOOD_SLAB,
                 STRIPPED_PALE_OAK_WOOD_STAIRS,
 
+                STRIPPED_POPLAR_WOOD_FENCE,
+                STRIPPED_POPLAR_WOOD_SLAB,
+                STRIPPED_POPLAR_WOOD_STAIRS,
+
                 STRIPPED_CRIMSON_HYPHAE_STAIRS,
                 STRIPPED_CRIMSON_HYPHAE_SLAB,
                 STRIPPED_CRIMSON_HYPHAE_FENCE,
@@ -202,6 +212,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 PALE_OAK_WOOD_FENCE,
                 CRIMSON_HYPHAE_FENCE,
                 WARPED_HYPHAE_FENCE,
+                POPLAR_WOOD_FENCE,
 
                 STRIPPED_OAK_WOOD_FENCE,
                 STRIPPED_SPRUCE_WOOD_FENCE,
@@ -213,7 +224,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 STRIPPED_CHERRY_WOOD_FENCE,
                 STRIPPED_PALE_OAK_WOOD_FENCE,
                 STRIPPED_CRIMSON_HYPHAE_FENCE,
-                STRIPPED_WARPED_HYPHAE_FENCE
+                STRIPPED_WARPED_HYPHAE_FENCE,
+                STRIPPED_POPLAR_WOOD_FENCE
                 );
 
         // Walls
@@ -386,12 +398,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         addCollection(DYED_TERRACOTTA_SLAB.values(), BlockTags.SLABS, BlockTags.MINEABLE_WITH_PICKAXE);
         addCollection(DYED_TERRACOTTA_WALL.values(), BlockTags.WALLS, BlockTags.MINEABLE_WITH_PICKAXE);
 
-        addCollection(DYED_WOOL_STAIRS.values(), BlockTags.STAIRS, BlockTags.SHEARS_MAJOR_BREAKING_SPEED);
-        addCollection(DYED_WOOL_SLAB.values(), BlockTags.SLABS, BlockTags.SHEARS_MAJOR_BREAKING_SPEED);
         addCollection(DYED_WOOL_WALL.values(), BlockTags.WALLS, BlockTags.SHEARS_MAJOR_BREAKING_SPEED);
 
-        addCollection(DYED_CONCRETE_STAIRS.values(), BlockTags.STAIRS, BlockTags.MINEABLE_WITH_PICKAXE);
-        addCollection(DYED_CONCRETE_SLAB.values(), BlockTags.SLABS, BlockTags.MINEABLE_WITH_PICKAXE);
         addCollection(DYED_CONCRETE_WALL.values(), BlockTags.WALLS, BlockTags.MINEABLE_WITH_PICKAXE);
     }
 

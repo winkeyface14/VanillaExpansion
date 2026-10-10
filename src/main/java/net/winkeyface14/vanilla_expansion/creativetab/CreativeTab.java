@@ -304,6 +304,13 @@ public class CreativeTab {
                         STRIPPED_PALE_OAK_WOOD_SLAB,
                         STRIPPED_PALE_OAK_WOOD_FENCE,
 
+                        POPLAR_WOOD_STAIRS,
+                        POPLAR_WOOD_SLAB,
+                        POPLAR_WOOD_FENCE,
+                        STRIPPED_POPLAR_WOOD_STAIRS,
+                        STRIPPED_POPLAR_WOOD_SLAB,
+                        STRIPPED_POPLAR_WOOD_FENCE,
+
                         CRIMSON_HYPHAE_STAIRS,
                         CRIMSON_HYPHAE_SLAB,
                         CRIMSON_HYPHAE_FENCE,
@@ -363,8 +370,6 @@ public class CreativeTab {
                 // --- Colored Blocks Loops ---
                 if (enableAddWoolBlockSet) {
                     for (DyeColor color : DyeColor.values()) {
-                        output.accept(DYED_WOOL_STAIRS.get(color));
-                        output.accept(DYED_WOOL_SLAB.get(color));
                         output.accept(DYED_WOOL_WALL.get(color));
                     }
                 }
@@ -382,8 +387,6 @@ public class CreativeTab {
 
                 if (enableAddConcreteBlockSet) {
                     for (DyeColor color : DyeColor.values()) {
-                        output.accept(DYED_CONCRETE_STAIRS.get(color));
-                        output.accept(DYED_CONCRETE_SLAB.get(color));
                         output.accept(DYED_CONCRETE_WALL.get(color));
                     }
                 }

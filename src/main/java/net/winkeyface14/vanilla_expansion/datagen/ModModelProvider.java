@@ -134,12 +134,10 @@ public class ModModelProvider extends FabricModelProvider {
                     Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_wool")
             );
 
-            Block stairs = BlockRegHandler.DYED_WOOL_STAIRS.get(color);
-            Block slab = BlockRegHandler.DYED_WOOL_SLAB.get(color);
             Block wall = BlockRegHandler.DYED_WOOL_WALL.get(color);
 
-            if (stairs != null && slab != null && wall != null) {
-                customBlockSetModelGen(baseBlock, stairs, slab, wall, "", blockModelGenerators);
+            if (wall != null) {
+                customBlockSetModelGen(baseBlock, null, null, wall, "", blockModelGenerators);
             }
         }
 
@@ -149,12 +147,10 @@ public class ModModelProvider extends FabricModelProvider {
                     Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_concrete")
             );
 
-            Block stairs = BlockRegHandler.DYED_CONCRETE_STAIRS.get(color);
-            Block slab = BlockRegHandler.DYED_CONCRETE_SLAB.get(color);
             Block wall = BlockRegHandler.DYED_CONCRETE_WALL.get(color);
 
-            if (stairs != null && slab != null && wall != null) {
-                customBlockSetModelGen(baseBlock, stairs, slab, wall, "", blockModelGenerators);
+            if (wall != null) {
+                customBlockSetModelGen(baseBlock, null, null, wall, "", blockModelGenerators);
             }
         }
 
@@ -181,6 +177,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         customWoodenSetModelGen(Blocks.WARPED_HYPHAE, BlockRegHandler.WARPED_HYPHAE_STAIRS, BlockRegHandler.WARPED_HYPHAE_SLAB, BlockRegHandler.WARPED_HYPHAE_FENCE,"",  blockModelGenerators);
 
+        customWoodenSetModelGen(Blocks.POPLAR_WOOD, BlockRegHandler.POPLAR_WOOD_STAIRS, BlockRegHandler.POPLAR_WOOD_SLAB, BlockRegHandler.POPLAR_WOOD_FENCE,"",  blockModelGenerators);
+
+        // Stripped Wood
         customWoodenSetModelGen(Blocks.STRIPPED_OAK_WOOD, BlockRegHandler.STRIPPED_OAK_WOOD_STAIRS, BlockRegHandler.STRIPPED_OAK_WOOD_SLAB, BlockRegHandler.STRIPPED_OAK_WOOD_FENCE,"",  blockModelGenerators);
 
         customWoodenSetModelGen(Blocks.STRIPPED_SPRUCE_WOOD, BlockRegHandler.STRIPPED_SPRUCE_WOOD_STAIRS, BlockRegHandler.STRIPPED_SPRUCE_WOOD_SLAB, BlockRegHandler.STRIPPED_SPRUCE_WOOD_FENCE,"",  blockModelGenerators);
@@ -202,6 +201,8 @@ public class ModModelProvider extends FabricModelProvider {
         customWoodenSetModelGen(Blocks.STRIPPED_CRIMSON_HYPHAE, BlockRegHandler.STRIPPED_CRIMSON_HYPHAE_STAIRS, BlockRegHandler.STRIPPED_CRIMSON_HYPHAE_SLAB, BlockRegHandler.STRIPPED_CRIMSON_HYPHAE_FENCE,"",  blockModelGenerators);
 
         customWoodenSetModelGen(Blocks.STRIPPED_WARPED_HYPHAE, BlockRegHandler.STRIPPED_WARPED_HYPHAE_STAIRS, BlockRegHandler.STRIPPED_WARPED_HYPHAE_SLAB, BlockRegHandler.STRIPPED_WARPED_HYPHAE_FENCE,"",  blockModelGenerators);
+
+        customWoodenSetModelGen(Blocks.STRIPPED_POPLAR_WOOD, BlockRegHandler.STRIPPED_POPLAR_WOOD_STAIRS, BlockRegHandler.STRIPPED_POPLAR_WOOD_SLAB, BlockRegHandler.STRIPPED_POPLAR_WOOD_FENCE,"",  blockModelGenerators);
     }
 
     @Override
@@ -406,9 +407,15 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     public void customBlockSetModelGen (Block blockBase, Block stairsResult, Block slabResult, Block wallResult, String textureSuffix, BlockModelGenerators blockModelGenerators){
-        customStairsModelGen(blockBase, stairsResult, textureSuffix, blockModelGenerators);
-        customSlabModelGen(blockBase, slabResult, textureSuffix, blockModelGenerators);
-        customWallModelGen(blockBase, wallResult, textureSuffix, blockModelGenerators);
+        if (stairsResult != null) {
+            customStairsModelGen(blockBase, stairsResult, textureSuffix, blockModelGenerators);
+        }
+        if (slabResult != null) {
+            customSlabModelGen(blockBase, slabResult, textureSuffix, blockModelGenerators);
+        }
+        if (wallResult != null) {
+            customWallModelGen(blockBase, wallResult, textureSuffix, blockModelGenerators);
+        }
     }
 
     public void customWoodenSetModelGen (Block blockBase, Block stairsResult, Block slabResult, Block wallResult, String textureSuffix, BlockModelGenerators blockModelGenerators){

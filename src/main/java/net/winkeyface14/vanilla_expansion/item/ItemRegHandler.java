@@ -21,7 +21,7 @@ public class ItemRegHandler {
         return p.component(DataComponents.COOKING_FUEL,
                 new CookingFuel(
                         new ResolvableInt.Constant(burnTicks),
-                        ResolvableFloat.fromKey(ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER)));
+                        ResolvableFloat.fromKey(ContextFloatProviders.COOKING_NORMAL_SPEED_MULTIPLIER)));
     }
 
     //Regular Items

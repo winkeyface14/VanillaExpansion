@@ -105,11 +105,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         // Dyed Block Collections
         dropCollections(
                 DYED_TERRACOTTA_STAIRS.values(),
-                DYED_WOOL_STAIRS.values(),
-                DYED_CONCRETE_STAIRS.values(),
                 DYED_TERRACOTTA_SLAB.values(),
-                DYED_WOOL_SLAB.values(),
-                DYED_CONCRETE_SLAB.values(),
                 DYED_TERRACOTTA_WALL.values(),
                 DYED_WOOL_WALL.values(),
                 DYED_CONCRETE_WALL.values()
@@ -152,6 +148,10 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
                 PALE_OAK_WOOD_FENCE,
                 PALE_OAK_WOOD_SLAB,
                 PALE_OAK_WOOD_STAIRS,
+
+                POPLAR_WOOD_FENCE,
+                POPLAR_WOOD_SLAB,
+                POPLAR_WOOD_STAIRS,
 
                 CRIMSON_HYPHAE_STAIRS,
                 CRIMSON_HYPHAE_SLAB,
@@ -199,6 +199,10 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
                 STRIPPED_PALE_OAK_WOOD_FENCE,
                 STRIPPED_PALE_OAK_WOOD_SLAB,
                 STRIPPED_PALE_OAK_WOOD_STAIRS,
+
+                STRIPPED_POPLAR_WOOD_FENCE,
+                STRIPPED_POPLAR_WOOD_SLAB,
+                STRIPPED_POPLAR_WOOD_STAIRS,
 
                 STRIPPED_CRIMSON_HYPHAE_STAIRS,
                 STRIPPED_CRIMSON_HYPHAE_SLAB,

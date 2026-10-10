@@ -20,11 +20,7 @@ public class BlockRegHandler {
     public static final Map<DyeColor, Block> DYED_TERRACOTTA_STAIRS = new EnumMap<>(DyeColor.class);
     public static final Map<DyeColor, Block> DYED_TERRACOTTA_SLAB = new EnumMap<>(DyeColor.class);
     public static final Map<DyeColor, Block> DYED_TERRACOTTA_WALL = new EnumMap<>(DyeColor.class);
-    public static final Map<DyeColor, Block> DYED_WOOL_STAIRS = new EnumMap<>(DyeColor.class);
-    public static final Map<DyeColor, Block> DYED_WOOL_SLAB = new EnumMap<>(DyeColor.class);
     public static final Map<DyeColor, Block> DYED_WOOL_WALL = new EnumMap<>(DyeColor.class);
-    public static final Map<DyeColor, Block> DYED_CONCRETE_STAIRS = new EnumMap<>(DyeColor.class);
-    public static final Map<DyeColor, Block> DYED_CONCRETE_SLAB = new EnumMap<>(DyeColor.class);
     public static final Map<DyeColor, Block> DYED_CONCRETE_WALL = new EnumMap<>(DyeColor.class);
 
     // Full Blocks
@@ -340,6 +336,14 @@ public class BlockRegHandler {
     public static final Block WARPED_HYPHAE_FENCE = registerBlock("warped_hyphae_fence", properties -> new FenceBlock(properties.strength(2f,2f)
             .sound(SoundType.STEM)));
 
+    public static final Block POPLAR_WOOD_SLAB = registerBlock("poplar_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block POPLAR_WOOD_STAIRS = registerBlock("poplar_wood_stairs", properties -> new StairBlock(Blocks.POPLAR_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block POPLAR_WOOD_FENCE = registerBlock("poplar_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
     //Stripped Wood
     public static final Block STRIPPED_OAK_WOOD_SLAB = registerBlock("stripped_oak_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
             .sound(SoundType.WOOD)));
@@ -429,6 +433,14 @@ public class BlockRegHandler {
     public static final Block STRIPPED_WARPED_HYPHAE_FENCE = registerBlock("stripped_warped_hyphae_fence", properties -> new FenceBlock(properties.strength(2f,2f)
             .sound(SoundType.STEM)));
 
+    public static final Block STRIPPED_POPLAR_WOOD_SLAB = registerBlock("stripped_poplar_wood_slab", properties -> new SlabBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_POPLAR_WOOD_STAIRS = registerBlock("stripped_poplar_wood_stairs", properties -> new StairBlock(Blocks.STRIPPED_POPLAR_WOOD.defaultBlockState(),
+            properties.strength(2f,2f)
+                    .sound(SoundType.WOOD)));
+    public static final Block STRIPPED_POPLAR_WOOD_FENCE = registerBlock("stripped_poplar_wood_fence", properties -> new FenceBlock(properties.strength(2f,2f)
+            .sound(SoundType.WOOD)));
+
     //Dyed Blocks
     //Terracotta
     public static final Block TERRACOTTA_STAIRS = registerBlock("terracotta_stairs", properties -> new StairBlock(Blocks.TERRACOTTA.defaultBlockState(), properties
@@ -458,22 +470,8 @@ public class BlockRegHandler {
                             .sound(SoundType.STONE)
                             .requiresCorrectToolForDrops())
             );
-            Block stairsWool = registerBlock(blockWool, properties ->
-                    new StairBlock(baseWool.defaultBlockState(), properties
-                            .strength(0.8f, 0.8f)
-                            .sound(SoundType.WOOL)
-                            .requiresCorrectToolForDrops())
-            );
-            Block stairsConcrete = registerBlock(blockConcrete, properties ->
-                    new StairBlock(baseConcrete.defaultBlockState(), properties
-                            .strength(1.8f, 1.8f)
-                            .sound(SoundType.STONE)
-                            .requiresCorrectToolForDrops())
-            );
 
             DYED_TERRACOTTA_STAIRS.put(color, stairsTerracotta);
-            DYED_WOOL_STAIRS.put(color, stairsWool);
-            DYED_CONCRETE_STAIRS.put(color, stairsConcrete);
         }
     }
 
@@ -494,22 +492,8 @@ public class BlockRegHandler {
                             .sound(SoundType.STONE)
                             .requiresCorrectToolForDrops())
             );
-            Block slabWool = registerBlock(blockWool, properties ->
-                    new SlabBlock(properties
-                            .strength(0.8f, 0.8f)
-                            .sound(SoundType.WOOL)
-                            .requiresCorrectToolForDrops())
-            );
-            Block slabConcrete = registerBlock(blockConcrete, properties ->
-                    new SlabBlock(properties
-                            .strength(1.8f, 1.8f)
-                            .sound(SoundType.STONE)
-                            .requiresCorrectToolForDrops())
-            );
 
             DYED_TERRACOTTA_SLAB.put(color, slabTerracotta);
-            DYED_WOOL_SLAB.put(color, slabWool);
-            DYED_CONCRETE_SLAB.put(color, slabConcrete);
         }
     }
 

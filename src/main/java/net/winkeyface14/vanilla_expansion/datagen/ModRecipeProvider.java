@@ -402,6 +402,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 registerBlockSetRecipes(WARPED_HYPHAE, WARPED_HYPHAE_SLAB.asItem(), WARPED_HYPHAE_STAIRS.asItem(), null, WARPED_HYPHAE_FENCE.asItem(), addWoodBlockSetOutput);
 
+                registerBlockSetRecipes(POPLAR_WOOD, POPLAR_WOOD_SLAB.asItem(), POPLAR_WOOD_STAIRS.asItem(), null, POPLAR_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
                 //Stripped Wood Sets
                 registerBlockSetRecipes(STRIPPED_OAK_WOOD, STRIPPED_OAK_WOOD_SLAB.asItem(), STRIPPED_OAK_WOOD_STAIRS.asItem(), null, STRIPPED_OAK_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
 
@@ -425,6 +427,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 registerBlockSetRecipes(STRIPPED_WARPED_HYPHAE, STRIPPED_WARPED_HYPHAE_SLAB.asItem(), STRIPPED_WARPED_HYPHAE_STAIRS.asItem(), null, STRIPPED_WARPED_HYPHAE_FENCE.asItem(), addWoodBlockSetOutput);
 
+                registerBlockSetRecipes(STRIPPED_POPLAR_WOOD, STRIPPED_POPLAR_WOOD_SLAB.asItem(), STRIPPED_POPLAR_WOOD_STAIRS.asItem(), null, STRIPPED_POPLAR_WOOD_FENCE.asItem(), addWoodBlockSetOutput);
+
                 //Vanilla Wood Set Stonecutter Recipes
                 registerVanillaStonecutterRecipes(OAK_PLANKS, OAK_SLAB, OAK_STAIRS, null, null, addWoodStonecutterRecipe);
 
@@ -443,6 +447,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 registerVanillaStonecutterRecipes(CHERRY_PLANKS, CHERRY_SLAB, CHERRY_STAIRS, null, null, addWoodStonecutterRecipe);
 
                 registerVanillaStonecutterRecipes(PALE_OAK_PLANKS, PALE_OAK_SLAB, PALE_OAK_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(POPLAR_PLANKS, POPLAR_SLAB, POPLAR_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(CRIMSON_PLANKS, CRIMSON_SLAB, CRIMSON_STAIRS, null, null, addWoodStonecutterRecipe);
+
+                registerVanillaStonecutterRecipes(WARPED_PLANKS, WARPED_SLAB, WARPED_STAIRS, null, null, addWoodStonecutterRecipe);
 
                 //*Items*
                 //Empowered Netherite
@@ -982,27 +992,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                             net.minecraft.resources.Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_wool")
                     );
 
-                    Block resultSlab = BlockRegHandler.DYED_WOOL_SLAB.get(color);
-                    Block resultStairs = BlockRegHandler.DYED_WOOL_STAIRS.get(color);
                     Block resultWall = BlockRegHandler.DYED_WOOL_WALL.get(color);
-
-                    // Slab
-                    if (resultSlab != null) {
-                        helper.stonecutterResultFromBase(categoryBuilding, resultSlab, baseBlock, 2);
-                        this.slabBuilder(categoryBuilding, resultSlab, Ingredient.of(baseBlock))
-                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
-                                .group(getItemName(resultSlab))
-                                .save(outputType);
-                    }
-
-                    // Stairs
-                    if (resultStairs != null) {
-                        helper.stonecutterResultFromBase(categoryBuilding, resultStairs, baseBlock, 1);
-                        this.stairBuilder(resultStairs, Ingredient.of(baseBlock))
-                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
-                                .group(getItemName(resultStairs))
-                                .save(outputType);
-                    }
 
                     // Wall
                     if (resultWall != null) {
@@ -1025,27 +1015,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                             net.minecraft.resources.Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_concrete")
                     );
 
-                    Block resultSlab = BlockRegHandler.DYED_CONCRETE_SLAB.get(color);
-                    Block resultStairs = BlockRegHandler.DYED_CONCRETE_STAIRS.get(color);
                     Block resultWall = BlockRegHandler.DYED_CONCRETE_WALL.get(color);
-
-                    // Slab
-                    if (resultSlab != null) {
-                        helper.stonecutterResultFromBase(categoryBuilding, resultSlab, baseBlock, 2);
-                        this.slabBuilder(categoryBuilding, resultSlab, Ingredient.of(baseBlock))
-                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
-                                .group(getItemName(resultSlab))
-                                .save(outputType);
-                    }
-
-                    // Stairs
-                    if (resultStairs != null) {
-                        helper.stonecutterResultFromBase(categoryBuilding, resultStairs, baseBlock, 1);
-                        this.stairBuilder(resultStairs, Ingredient.of(baseBlock))
-                                .unlockedBy(getHasName(baseBlock), has(baseBlock))
-                                .group(getItemName(resultStairs))
-                                .save(outputType);
-                    }
 
                     // Wall
                     if (resultWall != null) {
