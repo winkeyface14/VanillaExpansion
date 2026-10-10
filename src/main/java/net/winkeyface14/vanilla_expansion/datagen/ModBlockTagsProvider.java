@@ -200,7 +200,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         addBlock(BlockTags.BEACON_BASE_BLOCKS, EMPOWERED_NETHERITE_BLOCK);
 
         // Fence
-        addBlocks(BlockTags.FENCES,
+        addBlocks(BlockTags.WOODEN_FENCES,
                 OAK_WOOD_FENCE,
                 SPRUCE_WOOD_FENCE,
                 BIRCH_WOOD_FENCE,

@@ -1,6 +1,5 @@
 // 26.3	-999999999-01-01T00:00:00	The Vanilla Expansion/Tags for minecraft:block
 047ed18c1e7eaeb6c92ff58cfdf18a6320a043c5 data/minecraft/tags/block/beacon_base_blocks.json
-28f88a323ac9929163681fd3693cd66ab90324e8 data/minecraft/tags/block/fences.json
 a8bee1872a34682592198e2245549922d84eda80 data/minecraft/tags/block/mineable/axe.json
 43a06dc0b6c726b5faeeb645e9e0cbfd38c7c8b0 data/minecraft/tags/block/mineable/pickaxe.json
 047ed18c1e7eaeb6c92ff58cfdf18a6320a043c5 data/minecraft/tags/block/needs_diamond_tool.json
@@ -8,6 +7,7 @@ a8bee1872a34682592198e2245549922d84eda80 data/minecraft/tags/block/mineable/axe.
 c3a0344f48fc2fa6214c37b5882126ff441daf7a data/minecraft/tags/block/slabs.json
 c1bc1f84884d68b1274042b75b1c0b89296f335b data/minecraft/tags/block/stairs.json
 7f42d69229f718509063ceaabbdb3e1d3589fc52 data/minecraft/tags/block/walls.json
+28f88a323ac9929163681fd3693cd66ab90324e8 data/minecraft/tags/block/wooden_fences.json
 cb294eb787c54123dd8985cab5b90a34eb548b6e data/vanilla_expansion/tags/block/incorrect_for_emerald_tool.json
 7723c90ee9895d62344fe8d4c8cfddd462a3e820 data/vanilla_expansion/tags/block/incorrect_for_lapis_lazuli_tool.json
 cb294eb787c54123dd8985cab5b90a34eb548b6e data/vanilla_expansion/tags/block/incorrect_for_quartz_tool.json
