@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "vanilla_expansion:block/block_of_bundled_sticks_top",
+    "side": "vanilla_expansion:block/block_of_bundled_sticks_side"
+  }
+}

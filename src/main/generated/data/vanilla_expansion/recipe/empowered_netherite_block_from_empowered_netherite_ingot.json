@@ -1,0 +1,25 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "empowered_netherite"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "crop_blocks",
+  "ingredients": [
+    "vanilla_expansion:empowered_netherite_ingot",
+    "vanilla_expansion:empowered_netherite_ingot",
+    "vanilla_expansion:empowered_netherite_ingot",
+    "vanilla_expansion:empowered_netherite_ingot",
+    "vanilla_expansion:empowered_netherite_ingot",
+    "vanilla_expansion:empowered_netherite_ingot",
+    "vanilla_expansion:empowered_netherite_ingot",
+    "vanilla_expansion:empowered_netherite_ingot",
+    "vanilla_expansion:empowered_netherite_ingot"
+  ],
+  "result": {
+    "id": "vanilla_expansion:empowered_netherite_block"
+  }
+}

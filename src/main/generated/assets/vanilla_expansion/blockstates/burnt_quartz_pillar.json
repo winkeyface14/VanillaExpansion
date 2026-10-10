@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "vanilla_expansion:block/burnt_quartz_pillar",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "vanilla_expansion:block/burnt_quartz_pillar"
+    },
+    "axis=z": {
+      "model": "vanilla_expansion:block/burnt_quartz_pillar",
+      "x": 90
+    }
+  }
+}

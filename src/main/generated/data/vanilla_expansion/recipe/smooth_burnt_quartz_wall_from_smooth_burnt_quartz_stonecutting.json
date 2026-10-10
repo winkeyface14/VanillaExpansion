@@ -1,0 +1,13 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "burnt_quartz_block_set"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": "vanilla_expansion:smooth_burnt_quartz",
+  "result": {
+    "id": "vanilla_expansion:smooth_burnt_quartz_wall"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_wood_stonecutter_recipe"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oak_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:oak_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "vanilla_expansion:oak_slab_from_oak_planks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oak_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vanilla_expansion:oak_slab_from_oak_planks_stonecutting"
+    ]
+  }
+}

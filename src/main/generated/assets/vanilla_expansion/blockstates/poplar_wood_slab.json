@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vanilla_expansion:block/poplar_wood_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/poplar_wood"
+    },
+    "type=top": {
+      "model": "vanilla_expansion:block/poplar_wood_slab_top"
+    }
+  }
+}

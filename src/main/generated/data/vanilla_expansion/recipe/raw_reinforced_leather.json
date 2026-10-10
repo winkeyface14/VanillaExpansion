@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "reinforced_leather"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "minecraft:iron_nugget",
+    "y": "minecraft:leather",
+    "z": "minecraft:string"
+  },
+  "pattern": [
+    "xyx",
+    "yzy",
+    "xyx"
+  ],
+  "result": {
+    "count": 4,
+    "id": "vanilla_expansion:raw_reinforced_leather"
+  }
+}

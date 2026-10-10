@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "quartz_heads"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "minecraft:quartz",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "xx",
+    "xy"
+  ],
+  "result": {
+    "id": "vanilla_expansion:quartz_axe_head"
+  }
+}

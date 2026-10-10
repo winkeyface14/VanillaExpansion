@@ -1,0 +1,38 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_cut_sandstone_block_set"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cut_sandstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cut_sandstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "vanilla_expansion:cut_sandstone_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cut_sandstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vanilla_expansion:cut_sandstone_stairs"
+    ]
+  }
+}

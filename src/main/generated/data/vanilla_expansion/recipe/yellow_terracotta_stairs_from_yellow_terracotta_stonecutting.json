@@ -1,0 +1,13 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_terracotta_block_set"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:yellow_terracotta",
+  "result": {
+    "id": "vanilla_expansion:yellow_terracotta_stairs"
+  }
+}

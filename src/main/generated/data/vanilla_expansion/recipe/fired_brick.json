@@ -1,0 +1,16 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "fired_brick"
+    }
+  ],
+  "type": "minecraft:smelting",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "fired_brick",
+  "ingredient": "minecraft:brick",
+  "result": {
+    "id": "vanilla_expansion:fired_brick"
+  }
+}

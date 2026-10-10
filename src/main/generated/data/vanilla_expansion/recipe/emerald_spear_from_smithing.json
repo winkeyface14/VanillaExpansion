@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "emerald_tools"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:spears",
+  "result": {
+    "id": "vanilla_expansion:emerald_spear"
+  },
+  "template": "vanilla_expansion:emerald_spear_tip"
+}

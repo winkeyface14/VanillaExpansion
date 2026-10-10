@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "vanilla_expansion:block/burnt_quartz_pillar_top",
+    "side": "vanilla_expansion:block/burnt_quartz_pillar_side"
+  }
+}

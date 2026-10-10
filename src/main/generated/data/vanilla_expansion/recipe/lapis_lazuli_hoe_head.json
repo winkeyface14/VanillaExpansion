@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "lapis_lazuli_heads"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "minecraft:lapis_lazuli",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "xx",
+    " y"
+  ],
+  "result": {
+    "id": "vanilla_expansion:lapis_lazuli_hoe_head"
+  }
+}

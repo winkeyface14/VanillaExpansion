@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "stone_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:swords",
+  "result": {
+    "id": "minecraft:stone_sword"
+  },
+  "template": "vanilla_expansion:stone_sword_blade"
+}

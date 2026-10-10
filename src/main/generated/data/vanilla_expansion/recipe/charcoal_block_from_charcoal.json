@@ -1,0 +1,25 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "charcoal_block"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "crop_blocks",
+  "ingredients": [
+    "minecraft:charcoal",
+    "minecraft:charcoal",
+    "minecraft:charcoal",
+    "minecraft:charcoal",
+    "minecraft:charcoal",
+    "minecraft:charcoal",
+    "minecraft:charcoal",
+    "minecraft:charcoal",
+    "minecraft:charcoal"
+  ],
+  "result": {
+    "id": "vanilla_expansion:charcoal_block"
+  }
+}

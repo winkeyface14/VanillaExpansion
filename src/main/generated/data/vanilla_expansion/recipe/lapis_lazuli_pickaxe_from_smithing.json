@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "lapis_lazuli_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:pickaxes",
+  "result": {
+    "id": "vanilla_expansion:lapis_lazuli_pickaxe"
+  },
+  "template": "vanilla_expansion:lapis_lazuli_pickaxe_head"
+}

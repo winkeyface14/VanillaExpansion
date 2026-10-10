@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "smoked_quartz_block_set"
+    }
+  ],
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "smoked_quartz_block",
+  "ingredient": "minecraft:quartz_block",
+  "result": {
+    "id": "vanilla_expansion:smoked_quartz_block"
+  }
+}

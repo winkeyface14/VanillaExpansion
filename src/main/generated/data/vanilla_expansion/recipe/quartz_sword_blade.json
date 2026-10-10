@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "quartz_heads"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": "minecraft:quartz",
+    "y": "vanilla_expansion:base_template"
+  },
+  "pattern": [
+    "x",
+    "x",
+    "y"
+  ],
+  "result": {
+    "id": "vanilla_expansion:quartz_sword_blade"
+  }
+}

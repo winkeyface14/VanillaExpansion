@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "lapis_lazuli_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:swords",
+  "result": {
+    "id": "vanilla_expansion:lapis_lazuli_sword"
+  },
+  "template": "vanilla_expansion:lapis_lazuli_sword_blade"
+}

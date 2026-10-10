@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "smoked_quartz_block_set"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "crop_blocks",
+  "key": {
+    "x": "vanilla_expansion:smoked_quartz"
+  },
+  "pattern": [
+    "xx",
+    "xx"
+  ],
+  "result": {
+    "id": "vanilla_expansion:smoked_quartz_block"
+  }
+}

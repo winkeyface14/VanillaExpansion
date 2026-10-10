@@ -1,0 +1,24 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "bundled_sticks"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "crop_blocks",
+  "ingredients": [
+    "minecraft:stick",
+    "minecraft:stick",
+    "minecraft:stick",
+    "minecraft:stick",
+    "minecraft:stick",
+    "minecraft:stick",
+    "minecraft:stick",
+    "minecraft:stick",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "vanilla_expansion:bundled_sticks"
+  }
+}

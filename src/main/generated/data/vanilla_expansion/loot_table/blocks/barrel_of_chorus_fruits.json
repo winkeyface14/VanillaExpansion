@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "vanilla_expansion:barrel_of_chorus_fruits"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

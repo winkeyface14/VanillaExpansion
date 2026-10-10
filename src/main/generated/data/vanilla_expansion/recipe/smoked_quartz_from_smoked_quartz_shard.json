@@ -1,0 +1,19 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "smoked_quartz_shard"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "crop_blocks",
+  "ingredients": [
+    "vanilla_expansion:smoked_quartz_shard",
+    "vanilla_expansion:smoked_quartz_shard",
+    "vanilla_expansion:smoked_quartz_shard",
+    "vanilla_expansion:smoked_quartz_shard"
+  ],
+  "result": {
+    "id": "vanilla_expansion:smoked_quartz"
+  }
+}

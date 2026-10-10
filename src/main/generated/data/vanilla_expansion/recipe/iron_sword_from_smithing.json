@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "iron_heads"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:flint",
+  "base": "#minecraft:swords",
+  "result": {
+    "id": "minecraft:iron_sword"
+  },
+  "template": "vanilla_expansion:iron_sword_blade"
+}

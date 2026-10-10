@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "diamond_shard"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "crop_from_blocks",
+  "ingredients": [
+    "vanilla_expansion:diamond_shard"
+  ],
+  "result": {
+    "count": 9,
+    "id": "minecraft:diamond"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "add_wood_stonecutter_recipe"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:acacia_planks",
+  "result": {
+    "count": 2,
+    "id": "minecraft:acacia_slab"
+  }
+}

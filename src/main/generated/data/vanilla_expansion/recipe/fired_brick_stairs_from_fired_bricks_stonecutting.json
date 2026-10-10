@@ -1,0 +1,13 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "fired_bricks_block_set"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": "vanilla_expansion:fired_bricks",
+  "result": {
+    "id": "vanilla_expansion:fired_brick_stairs"
+  }
+}

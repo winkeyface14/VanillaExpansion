@@ -1,0 +1,38 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "vanillaexpansion:feature_enabled",
+      "feature": "smoked_quartz_block_set"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_smoked_quartz_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "vanilla_expansion:smoked_quartz_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "vanilla_expansion:smoked_quartz_brick_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_smoked_quartz_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vanilla_expansion:smoked_quartz_brick_wall"
+    ]
+  }
+}
