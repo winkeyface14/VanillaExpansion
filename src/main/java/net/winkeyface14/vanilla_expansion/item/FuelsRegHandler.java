@@ -2,7 +2,11 @@ package net.winkeyface14.vanilla_expansion.item;
 
 import net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.component.CookingFuel;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.providers.number.floats.ContextFloatProviders;
 import net.minecraft.world.level.storage.loot.providers.number.floats.ResolvableFloat;
 import net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt;
@@ -172,6 +176,20 @@ public class FuelsRegHandler {
                     -> builder.set(DataComponents.COOKING_FUEL, fuel(150)));
             context.modify(BlockRegHandler.STRIPPED_WARPED_HYPHAE_FENCE.asItem(), builder
                     -> builder.set(DataComponents.COOKING_FUEL, fuel(300)));
+
+            //Wool Block Sets
+            for (DyeColor color : DyeColor.values()) {
+                Block baseBlock = BuiltInRegistries.BLOCK.getValue(
+                        Identifier.fromNamespaceAndPath("minecraft", color.getName() + "_wool")
+                );
+
+                Block wall = BlockRegHandler.DYED_WOOL_WALL.get(color);
+
+                if (wall != null) {
+                    context.modify(wall.asItem(), builder
+                            -> builder.set(DataComponents.COOKING_FUEL, fuel(100)));
+                }
+            }
         });
     }
 

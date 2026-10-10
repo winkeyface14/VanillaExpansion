@@ -1,12 +1,18 @@
 # The Vanilla Expansion Changelog
 
 ## 0.3.1-beta-26.3-fabric
+**Added**
+
+Blocks:
+- Poplar Wood and Stripped Wood Stairs, Slabs, and Walls
+
 **Removed**
 - Wool Stairs and Slabs (added to Vanilla in 26.3)
 - Concrete Slabs and Stairs (added to Vanilla in 26.3)
 
 Other Changes:
 - Updated to Minecraft 26.3
+- Added Fuel Values for Wood and Stripped Wood Stairs, Slabs, and Walls, and Wool Walls
 
 ## 0.3.0-beta-26.2-fabric
 **Added**
