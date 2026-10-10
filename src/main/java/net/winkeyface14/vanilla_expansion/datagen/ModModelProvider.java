@@ -16,6 +16,8 @@ import net.winkeyface14.vanilla_expansion.item.ArmorMaterialBase;
 import net.winkeyface14.vanilla_expansion.block.BlockRegHandler;
 import net.winkeyface14.vanilla_expansion.item.ItemRegHandler;
 
+import java.util.Map;
+
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricPackOutput output) {
         super(output);
@@ -375,32 +377,32 @@ public class ModModelProvider extends FabricModelProvider {
         }
 
         //Helmet
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_HELMET, ArmorMaterialBase.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_HELMET, ArmorMaterialBase.LAPIS_LAZULI_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.ARMADILLO_SCUTE_HELMET, ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_HELMET, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_HELMET, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_HELMET, ItemModelGenerators.TRIM_PREFIX_HELMET, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_HELMET, ItemModelGenerators.TRIM_PREFIX_HELMET, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.ARMADILLO_SCUTE_HELMET, ItemModelGenerators.TRIM_PREFIX_HELMET, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_HELMET, ItemModelGenerators.TRIM_PREFIX_HELMET, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_HELMET, ItemModelGenerators.TRIM_PREFIX_HELMET, false, Map.of());
 
         //Chestplate
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_CHESTPLATE, ArmorMaterialBase.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_CHESTPLATE, ArmorMaterialBase.LAPIS_LAZULI_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.ARMADILLO_SCUTE_CHESTPLATE, ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_CHESTPLATE, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_CHESTPLATE, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_CHESTPLATE, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.ARMADILLO_SCUTE_CHESTPLATE, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_CHESTPLATE, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_CHESTPLATE, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false, Map.of());
 
         //Leggings
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_LEGGINGS, ArmorMaterialBase.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_LEGGINGS, ArmorMaterialBase.LAPIS_LAZULI_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.ARMADILLO_SCUTE_LEGGINGS, ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_LEGGINGS, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_LEGGINGS, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_LEGGINGS, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.ARMADILLO_SCUTE_LEGGINGS, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_LEGGINGS, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_LEGGINGS, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false, Map.of());
 
         //Boots
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_BOOTS, ArmorMaterialBase.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_BOOTS, ArmorMaterialBase.LAPIS_LAZULI_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.ARMADILLO_SCUTE_BOOTS, ArmorMaterialBase.ARMADILLO_SCUTE_PLAYER_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS, ArmorMaterialBase.EMPOWERED_NETHERITE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
-        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_BOOTS, ArmorMaterialBase.REINFORCED_LEATHER_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMERALD_BOOTS, ItemModelGenerators.TRIM_PREFIX_BOOTS, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.LAPIS_LAZULI_BOOTS, ItemModelGenerators.TRIM_PREFIX_BOOTS, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.ARMADILLO_SCUTE_BOOTS, ItemModelGenerators.TRIM_PREFIX_BOOTS, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.EMPOWERED_NETHERITE_BOOTS, ItemModelGenerators.TRIM_PREFIX_BOOTS, false, Map.of());
+        itemModelGenerators.generateTrimmableItem(ItemRegHandler.REINFORCED_LEATHER_BOOTS, ItemModelGenerators.TRIM_PREFIX_BOOTS, false, Map.of());
     }
 
     public void customBlockSetModelGen (Block blockBase, Block stairsResult, Block slabResult, Block wallResult, String textureSuffix, BlockModelGenerators blockModelGenerators){

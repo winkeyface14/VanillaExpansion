@@ -2,13 +2,16 @@ package net.winkeyface14.vanilla_expansion.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.*;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -21,6 +24,8 @@ import org.jspecify.annotations.NonNull;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import static net.minecraft.data.recipes.RecipeProvider.getHasName;
+import static net.minecraft.data.recipes.RecipeProvider.getItemName;
 import static net.minecraft.world.item.Items.*;
 import static net.winkeyface14.vanilla_expansion.block.BlockRegHandler.*;
 import static net.winkeyface14.vanilla_expansion.item.ItemRegHandler.*;
@@ -31,8 +36,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    protected @NonNull RecipeProvider createRecipeProvider(HolderLookup.@NonNull Provider registries, @NonNull RecipeOutput output) {
-        return new RecipeProvider(registries, output) {
+    protected @NonNull RecipeProvider createRecipeProvider(HolderLookup.@NonNull Provider registries, @NonNull BootstrapContext<Recipe<?>> recipeOutput, @NonNull BootstrapContext<Advancement> advancementOutput) {
+        return new RecipeProvider(recipeOutput, advancementOutput) {
             @Override
             public void buildRecipes() {
                 RecipeOutput bundledSticksOutput = withConditions(output, new FeatureEnabledCondition("bundled_sticks"));
@@ -669,6 +674,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
             //Custom Methods
+            private class ConditionalRecipeHelper {
+                private final RecipeOutput out;
+
+                ConditionalRecipeHelper(RecipeOutput out) {
+                    this.out = out;
+                }
+
+                void stonecutterResultFromBase(RecipeCategory category, ItemLike result, ItemLike base) {
+                    stonecutterResultFromBase(category, result, base, 1);
+                }
+
+                void stonecutterResultFromBase(RecipeCategory category, ItemLike result, ItemLike base, int count) {
+                    SingleItemRecipeBuilder.stonecutting(Ingredient.of(base), category, result, count)
+                            .unlockedBy(getHasName(base), has(base))
+                            .save(out, getItemName(result) + "_from_" + getItemName(base) + "_stonecutting");
+                }
+            }
+
             private void registerCustomToolUpgrade(RecipeOutput outputType, Item template, TagKey<Item> baseItem, Item upgradedResult, RecipeCategory category) {
                 SmithingTransformRecipeBuilder.smithing(
                                 Ingredient.of(template),
@@ -867,7 +890,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             private void registerBlockSetRecipes(Item baseItem, Item resultSlab, Item resultStairs, Item resultWall, Item resultFence, RecipeOutput outputType) {
                 RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
 
-                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(outputType);
 
                 //Slab
                 if(resultSlab != null){
@@ -908,7 +931,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void registerDyedTerracottaSetRecipes(RecipeOutput outputType) {
                 RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
-                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(outputType);
 
                 for (net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
 
@@ -951,7 +974,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void registerDyedWoolSetRecipes(RecipeOutput outputType) {
                 RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
-                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(outputType);
 
                 for (net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
 
@@ -994,7 +1017,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void registerDyedConcreteSetRecipes(RecipeOutput outputType) {
                 RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
-                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(outputType);
 
                 for (net.minecraft.world.item.DyeColor color : net.minecraft.world.item.DyeColor.values()) {
 
@@ -1038,7 +1061,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             private void registerBlockVariantRecipes(Item baseItem, Item baseSlab, Item resultBricks, Item resultPillar, Item resultChiseled, Item resultPolished, RecipeOutput outputType) {
                 RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
 
-                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(outputType);
 
                 //Bricks
                 if(resultBricks != null){
@@ -1080,7 +1103,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             private void registerVanillaStonecutterRecipes(Item baseItem, Item resultSlab, Item resultStairs, Item resultFence, Item resultFenceGate, RecipeOutput outputType) {
                 RecipeCategory categoryBuilding = RecipeCategory.BUILDING_BLOCKS;
 
-                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(registries, outputType);
+                ConditionalRecipeHelper helper = new ConditionalRecipeHelper(outputType);
 
                 //Slab
                 if(resultSlab != null){
@@ -1145,38 +1168,5 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public @NonNull String getName() {
         return "The Vanilla Expansion Recipes";
-    }
-
-    private static class ConditionalRecipeHelper extends RecipeProvider {
-        public ConditionalRecipeHelper(HolderLookup.Provider registries, RecipeOutput output) {
-            super(registries, output);
-        }
-
-        @Override
-        public void buildRecipes() {}
-
-        public void stonecutter(RecipeCategory category, ItemLike result, ItemLike ingredient) {
-            this.stonecutterResultFromBase(category, result, ingredient);
-        }
-
-        public void stonecutter(RecipeCategory category, ItemLike result, ItemLike ingredient, int count) {
-            this.stonecutterResultFromBase(category, result, ingredient, count);
-        }
-
-        public void slab(RecipeCategory category, ItemLike slab, ItemLike material) {
-            this.slab(category, slab, material);
-        }
-
-        public void wall(RecipeCategory category, ItemLike wall, ItemLike material) {
-            this.wall(category, wall, material);
-        }
-
-        public void chiseled(RecipeCategory category, ItemLike chiseled, ItemLike material) {
-            this.chiseled(category, chiseled, material);
-        }
-
-        public void polished(RecipeCategory category, ItemLike polished, ItemLike material) {
-            this.polished(category, polished, material);
-        }
     }
 }

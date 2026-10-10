@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "vanilla_expansion:block/smooth_burnt_quartz",
-    "side": "vanilla_expansion:block/smooth_burnt_quartz",
-    "top": "vanilla_expansion:block/smooth_burnt_quartz"
-  }
-}

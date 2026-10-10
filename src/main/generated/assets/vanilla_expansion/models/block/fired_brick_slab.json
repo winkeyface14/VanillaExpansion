@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "vanilla_expansion:block/fired_bricks",
-    "side": "vanilla_expansion:block/fired_bricks",
-    "top": "vanilla_expansion:block/fired_bricks"
-  }
-}

@@ -1,5 +1,13 @@
 # The Vanilla Expansion Changelog
 
+## 0.3.1-beta-26.3-fabric
+**Removed**
+- Wool Stairs and Slabs (added to Vanilla in 26.3)
+- Concrete Slabs and Stairs (added to Vanilla in 26.3)
+
+Other Changes:
+- Updated to Minecraft 26.3
+
 ## 0.3.0-beta-26.2-fabric
 **Added**
 

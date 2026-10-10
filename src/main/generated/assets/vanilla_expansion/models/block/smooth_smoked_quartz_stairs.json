@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "vanilla_expansion:block/smooth_smoked_quartz",
-    "side": "vanilla_expansion:block/smooth_smoked_quartz",
-    "top": "vanilla_expansion:block/smooth_smoked_quartz"
-  }
-}

@@ -25,6 +25,7 @@ repositories {
 fabricApi {
 	configureDataGeneration {
 		client = true
+		modId = "the-vanilla-expansion"
 	}
 }
 
